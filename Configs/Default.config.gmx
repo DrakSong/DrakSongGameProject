@@ -18,9 +18,9 @@
     <option_android_arch_x86>True</option_android_arch_x86>
     <option_android_build_tools_version>23.0.1</option_android_build_tools_version>
     <option_android_build_version>0</option_android_build_version>
-    <option_android_color_depth>1</option_android_color_depth>
+    <option_android_color_depth>0</option_android_color_depth>
     <option_android_compile_sdk_version>23</option_android_compile_sdk_version>
-    <option_android_display_name>DrakSong </option_android_display_name>
+    <option_android_display_name>DarkSong2</option_android_display_name>
     <option_android_facebook_app_display_name></option_android_facebook_app_display_name>
     <option_android_facebook_appid></option_android_facebook_appid>
     <option_android_facebook_enable>0</option_android_facebook_enable>
@@ -40,7 +40,7 @@
     <option_android_icon_xxhdpi>Configs\Default\android\icons\icon_xxhdpi.png</option_android_icon_xxhdpi>
     <option_android_icon_xxxhdpi>Configs\Default\android\icons\icon_xxxhdpi.png</option_android_icon_xxxhdpi>
     <option_android_install_location>auto</option_android_install_location>
-    <option_android_interpolate>0</option_android_interpolate>
+    <option_android_interpolate>-1</option_android_interpolate>
     <option_android_licensing_enable>0</option_android_licensing_enable>
     <option_android_licensing_key></option_android_licensing_key>
     <option_android_lint>-1</option_android_lint>
@@ -58,19 +58,19 @@
     <option_android_ouya_icon>Configs\Default\android\icons\ouyaIcon.png</option_android_ouya_icon>
     <option_android_package_company>companyname</option_android_package_company>
     <option_android_package_domain>com</option_android_package_domain>
-    <option_android_package_product>DrakSong_2017</option_android_package_product>
-    <option_android_permission_flags>1</option_android_permission_flags>
+    <option_android_package_product>DarkSong2</option_android_package_product>
+    <option_android_permission_flags>8</option_android_permission_flags>
     <option_android_portrait_splash_png>Configs\Default\android\portrait_splash.png</option_android_portrait_splash_png>
     <option_android_push_enable>0</option_android_push_enable>
     <option_android_push_id></option_android_push_id>
-    <option_android_scale>0</option_android_scale>
+    <option_android_scale>-1</option_android_scale>
     <option_android_set_device_id></option_android_set_device_id>
     <option_android_sleep_margin>4</option_android_sleep_margin>
     <option_android_splash_png>Configs\Default\android\splash.png</option_android_splash_png>
     <option_android_splash_time>0</option_android_splash_time>
     <option_android_support_lib_version>23.1.1</option_android_support_lib_version>
     <option_android_target_sdk_version>23</option_android_target_sdk_version>
-    <option_android_texture_page>2048</option_android_texture_page>
+    <option_android_texture_page>1024</option_android_texture_page>
     <option_android_use_test_ads>false</option_android_use_test_ads>
     <option_androidfire_GPU_device>0</option_androidfire_GPU_device>
     <option_androidfire_adcolony_enable_V4VC>false</option_androidfire_adcolony_enable_V4VC>
@@ -95,7 +95,7 @@
     <option_androidfire_build_version>0</option_androidfire_build_version>
     <option_androidfire_color_depth>0</option_androidfire_color_depth>
     <option_androidfire_compile_sdk_version>23</option_androidfire_compile_sdk_version>
-    <option_androidfire_display_name>DrakSong 2017</option_androidfire_display_name>
+    <option_androidfire_display_name>DarkSong2</option_androidfire_display_name>
     <option_androidfire_facebook_app_display_name></option_androidfire_facebook_app_display_name>
     <option_androidfire_facebook_appid></option_androidfire_facebook_appid>
     <option_androidfire_facebook_enable>false</option_androidfire_facebook_enable>
@@ -127,7 +127,7 @@
     <option_androidfire_orient_portrait_flipped>True</option_androidfire_orient_portrait_flipped>
     <option_androidfire_package_company>companyname</option_androidfire_package_company>
     <option_androidfire_package_domain>com</option_androidfire_package_domain>
-    <option_androidfire_package_product>DrakSong_2017</option_androidfire_package_product>
+    <option_androidfire_package_product>DarkSong2</option_androidfire_package_product>
     <option_androidfire_permission_flags>8</option_androidfire_permission_flags>
     <option_androidfire_portrait_splash_png>Configs\Default\amazonfire\portrait_splash.png</option_androidfire_portrait_splash_png>
     <option_androidfire_push_enable>0</option_androidfire_push_enable>
@@ -164,7 +164,7 @@
     <option_androidtv_build_version>0</option_androidtv_build_version>
     <option_androidtv_color_depth>0</option_androidtv_color_depth>
     <option_androidtv_compile_sdk_version>23</option_androidtv_compile_sdk_version>
-    <option_androidtv_display_name>DrakSong 2017</option_androidtv_display_name>
+    <option_androidtv_display_name>DarkSong2</option_androidtv_display_name>
     <option_androidtv_facebook_app_display_name></option_androidtv_facebook_app_display_name>
     <option_androidtv_facebook_appid></option_androidtv_facebook_appid>
     <option_androidtv_facebook_enable>0</option_androidtv_facebook_enable>
@@ -191,7 +191,7 @@
     <option_androidtv_moga>0</option_androidtv_moga>
     <option_androidtv_package_company>companyname</option_androidtv_package_company>
     <option_androidtv_package_domain>com</option_androidtv_package_domain>
-    <option_androidtv_package_product>DrakSong_2017</option_androidtv_package_product>
+    <option_androidtv_package_product>DarkSong2</option_androidtv_package_product>
     <option_androidtv_permission_flags>8</option_androidtv_permission_flags>
     <option_androidtv_push_enable>0</option_androidtv_push_enable>
     <option_androidtv_push_id></option_androidtv_push_id>
@@ -211,7 +211,7 @@
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
     <option_colordepth>0</option_colordepth>
-    <option_display_name>DrakSong</option_display_name>
+    <option_display_name>GameMaker: Studio</option_display_name>
     <option_displayerrors>True</option_displayerrors>
     <option_ecma>0</option_ecma>
     <option_facebook_app_display_name></option_facebook_app_display_name>
@@ -221,8 +221,8 @@
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
     <option_fullscreen>False</option_fullscreen>
-    <option_gameguid>{02D2BD67-877A-4EC2-B9A2-7830752690B3}</option_gameguid>
-    <option_gameid>693337168</option_gameid>
+    <option_gameguid>{2773D5FA-D5AF-48CF-85EA-86C8B4ECE03B}</option_gameguid>
+    <option_gameid>419165320</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>
@@ -262,7 +262,7 @@
     <option_icon>nil</option_icon>
     <option_in_app_purchase_sandbox_mode>0</option_in_app_purchase_sandbox_mode>
     <option_information></option_information>
-    <option_interpolate>False</option_interpolate>
+    <option_interpolate>True</option_interpolate>
     <option_ios_adcolony_enable_V4VC>false</option_ios_adcolony_enable_V4VC>
     <option_ios_advertising_enable>false</option_ios_advertising_enable>
     <option_ios_advertising_key></option_ios_advertising_key>
@@ -271,7 +271,7 @@
     <option_ios_build_version>0</option_ios_build_version>
     <option_ios_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_ios_certificate>
     <option_ios_device_type>3</option_ios_device_type>
-    <option_ios_display_name>DrakSong 2017</option_ios_display_name>
+    <option_ios_display_name>DarkSong2</option_ios_display_name>
     <option_ios_facebook_app_display_name></option_ios_facebook_app_display_name>
     <option_ios_facebook_appid></option_ios_facebook_appid>
     <option_ios_facebook_enable>0</option_ios_facebook_enable>
@@ -320,17 +320,17 @@
     <option_ios_texture_page>1024</option_ios_texture_page>
     <option_ios_use_test_ads>false</option_ios_use_test_ads>
     <option_lastchanged></option_lastchanged>
-    <option_linux_display_name>DrakSong 2017</option_linux_display_name>
+    <option_linux_display_name>DarkSong2</option_linux_display_name>
     <option_linux_enable_steam>0</option_linux_enable_steam>
     <option_linux_fullscreen>0</option_linux_fullscreen>
-    <option_linux_homepage>http://www.DrakSong 2017.com</option_linux_homepage>
+    <option_linux_homepage>http://www.DarkSong2.com</option_linux_homepage>
     <option_linux_icon>Configs\Default\linux\icon64.png</option_linux_icon>
     <option_linux_interpolate>-1</option_linux_interpolate>
-    <option_linux_long_desc>DrakSong 2017</option_linux_long_desc>
+    <option_linux_long_desc>DarkSong2</option_linux_long_desc>
     <option_linux_maintainer_email></option_linux_maintainer_email>
     <option_linux_scale>-1</option_linux_scale>
     <option_linux_screenkey>-1</option_linux_screenkey>
-    <option_linux_short_desc>DrakSong 2017</option_linux_short_desc>
+    <option_linux_short_desc>DarkSong2</option_linux_short_desc>
     <option_linux_sizeable>0</option_linux_sizeable>
     <option_linux_splash_png>Configs\Default\linux\splash.png</option_linux_splash_png>
     <option_linux_steam_app_id>0</option_linux_steam_app_id>
@@ -349,7 +349,7 @@
     <option_mac_build_version>0</option_mac_build_version>
     <option_mac_copyright_info>(c)2016 CompanyName Ltd...</option_mac_copyright_info>
     <option_mac_create_app_store>-1</option_mac_create_app_store>
-    <option_mac_display_name>DrakSong 2017</option_mac_display_name>
+    <option_mac_display_name>DarkSong2</option_mac_display_name>
     <option_mac_enable_retina>0</option_mac_enable_retina>
     <option_mac_enable_steam>0</option_mac_enable_steam>
     <option_mac_fullscreen>0</option_mac_fullscreen>
@@ -358,7 +358,7 @@
     <option_mac_major_version>1</option_mac_major_version>
     <option_mac_menu_dock>0</option_mac_menu_dock>
     <option_mac_minor_version>0</option_mac_minor_version>
-    <option_mac_output_dir>~/GameMaker-Studio/DrakSong 2017</option_mac_output_dir>
+    <option_mac_output_dir>~/GameMaker-Studio/DarkSong2</option_mac_output_dir>
     <option_mac_scale>-1</option_mac_scale>
     <option_mac_screenkey>-1</option_mac_screenkey>
     <option_mac_showcursor>-1</option_mac_showcursor>
@@ -373,16 +373,12 @@
     <option_noscreensaver>true</option_noscreensaver>
     <option_ouya_packaging>0</option_ouya_packaging>
     <option_priority>0</option_priority>
-    <option_ps3_build_version>0</option_ps3_build_version>
     <option_ps3_interpolate>-1</option_ps3_interpolate>
-    <option_ps3_major_version>1</option_ps3_major_version>
-    <option_ps3_minor_version>0</option_ps3_minor_version>
     <option_ps3_nptitleid></option_ps3_nptitleid>
     <option_ps3_nptitlepassphrase>Memo1</option_ps3_nptitlepassphrase>
     <option_ps3_nptitlesecret>Memo1</option_ps3_nptitlesecret>
     <option_ps3_package_id></option_ps3_package_id>
     <option_ps3_passcode></option_ps3_passcode>
-    <option_ps3_revision_version>0</option_ps3_revision_version>
     <option_ps3_scale>0</option_ps3_scale>
     <option_ps3_texture_page>2048</option_ps3_texture_page>
     <option_ps3_version>1.00</option_ps3_version>
@@ -436,19 +432,13 @@
     <option_textureGroup1_nocropping>0</option_textureGroup1_nocropping>
     <option_textureGroup1_parent>&lt;none&gt;</option_textureGroup1_parent>
     <option_textureGroup1_scaled>0</option_textureGroup1_scaled>
-    <option_textureGroup1_targets>204472554</option_textureGroup1_targets>
-    <option_textureGroup2_border>2</option_textureGroup2_border>
-    <option_textureGroup2_nocropping>0</option_textureGroup2_nocropping>
-    <option_textureGroup2_parent>&lt;none&gt;</option_textureGroup2_parent>
-    <option_textureGroup2_scaled>0</option_textureGroup2_scaled>
-    <option_textureGroup2_targets>9223372036854775807</option_textureGroup2_targets>
-    <option_textureGroup_count>3</option_textureGroup_count>
+    <option_textureGroup1_targets>9223372036854775807</option_textureGroup1_targets>
+    <option_textureGroup_count>2</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
-    <option_textureGroups1>AndroidFont</option_textureGroups1>
-    <option_textureGroups2>WindowFont</option_textureGroups2>
-    <option_tizen_app_id>http://yourdomain/DrakSong 2017</option_tizen_app_id>
+    <option_textureGroups1>Font</option_textureGroups1>
+    <option_tizen_app_id>http://yourdomain/DarkSong2</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
-    <option_tizen_display_name>DrakSong 2017</option_tizen_display_name>
+    <option_tizen_display_name>DarkSong2</option_tizen_display_name>
     <option_tizen_flurry_enable>0</option_tizen_flurry_enable>
     <option_tizen_flurry_id></option_tizen_flurry_id>
     <option_tizen_google_analytics_enable>0</option_tizen_google_analytics_enable>
@@ -468,7 +458,7 @@
     <option_tvos_app_id></option_tvos_app_id>
     <option_tvos_build_version>0</option_tvos_build_version>
     <option_tvos_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_tvos_certificate>
-    <option_tvos_display_name>DrakSong 2017</option_tvos_display_name>
+    <option_tvos_display_name>DarkSong2</option_tvos_display_name>
     <option_tvos_icon_1280>Configs\Default\tvos\icons\icon1280.png</option_tvos_icon_1280>
     <option_tvos_icon_400>Configs\Default\tvos\icons\icon400.png</option_tvos_icon_400>
     <option_tvos_interpolate>-1</option_tvos_interpolate>
@@ -499,7 +489,7 @@
     <option_win8_analytics_id></option_win8_analytics_id>
     <option_win8_build_version>0</option_win8_build_version>
     <option_win8_certificate_location>Windows8_TemporaryKey.pfx</option_win8_certificate_location>
-    <option_win8_display_name>DrakSong 2017</option_win8_display_name>
+    <option_win8_display_name>DarkSong2</option_win8_display_name>
     <option_win8_internet_capable>0</option_win8_internet_capable>
     <option_win8_interpolate>-1</option_win8_interpolate>
     <option_win8_landscape_allowed>-1</option_win8_landscape_allowed>
@@ -528,7 +518,7 @@
     <option_win8_wide_logo>Configs\Default\Windows8\logos\logo310.png</option_win8_wide_logo>
     <option_winUAP_build_version>0</option_winUAP_build_version>
     <option_winUAP_certificate_location>WinUWPRunner_TemporaryKey.pfx</option_winUAP_certificate_location>
-    <option_winUAP_display_name>DrakSong 2017</option_winUAP_display_name>
+    <option_winUAP_display_name>DarkSong2</option_winUAP_display_name>
     <option_winUAP_internet_capable>0</option_winUAP_internet_capable>
     <option_winUAP_interpolate>-1</option_winUAP_interpolate>
     <option_winUAP_landscape_allowed>-1</option_winUAP_landscape_allowed>
@@ -557,7 +547,7 @@
     <option_winUAP_texture_page>1024</option_winUAP_texture_page>
     <option_winUAP_wide_logo>Configs\Default\WindowsUAP\logos\WideLogo.scale-100.png</option_winUAP_wide_logo>
     <option_windowcolor>clBlack</option_windowcolor>
-    <option_windows_alternate_sync_method>True</option_windows_alternate_sync_method>
+    <option_windows_alternate_sync_method>False</option_windows_alternate_sync_method>
     <option_windows_build_version>0</option_windows_build_version>
     <option_windows_company_info></option_windows_company_info>
     <option_windows_copyright_info></option_windows_copyright_info>
@@ -580,7 +570,7 @@
     <option_windows_steam_app_id>0</option_windows_steam_app_id>
     <option_windows_texture_page>8192</option_windows_texture_page>
     <option_windows_use_splash>-1</option_windows_use_splash>
-    <option_windows_vertex_buffer_method2>2</option_windows_vertex_buffer_method2>
+    <option_windows_vertex_buffer_method2>0</option_windows_vertex_buffer_method2>
     <option_winphone_480_splash_image>Configs\Default\WinPhone\SplashScreenImage480.jpg</option_winphone_480_splash_image>
     <option_winphone_720_splash_image>Configs\Default\WinPhone\SplashScreenImage720.jpg</option_winphone_720_splash_image>
     <option_winphone_768_splash_image>Configs\Default\WinPhone\SplashScreenImage.jpg</option_winphone_768_splash_image>
@@ -602,7 +592,7 @@
     <option_winphone_cycle_wide_image_8>Configs\Default\WinPhone\CycleWide8.png</option_winphone_cycle_wide_image_8>
     <option_winphone_cycle_wide_image_9>Configs\Default\WinPhone\CycleWide9.png</option_winphone_cycle_wide_image_9>
     <option_winphone_description>YourDescription</option_winphone_description>
-    <option_winphone_display_name>DrakSong 2017</option_winphone_display_name>
+    <option_winphone_display_name>DarkSong2</option_winphone_display_name>
     <option_winphone_flip_content_back></option_winphone_flip_content_back>
     <option_winphone_flip_content_front></option_winphone_flip_content_front>
     <option_winphone_flip_medium_back_image>Configs\Default\WinPhone\FlipMedBack.png</option_winphone_flip_medium_back_image>
