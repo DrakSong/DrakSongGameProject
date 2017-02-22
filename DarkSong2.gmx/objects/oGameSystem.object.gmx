@@ -68,10 +68,15 @@ var K = V[?'键盘信息'];
 
 
 
+//show_debug_message(GameInfoString())
+/*
+var B  =  base64_encode(GameInfoString())
 
+show_debug_message(B);
 
+var C = base64_decode(B);
 
-
+show_message(C)
 </string>
           </argument>
         </arguments>
@@ -300,8 +305,31 @@ if (PauseGet() = false) and  KeyGet('P',2) == true{
           <argument>
             <kind>1</kind>
             <string>///摄像鸡
-//room_speed = 99999
+
 ViewSet(0,1,1,oPlayer);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///压力测试
+if keyboard_check_pressed(vk_space){ instance_create(64,64,oEAtkBull);
+ShowMessage('怪无'+string(instance_number(oEnemy)));}
 </string>
           </argument>
         </arguments>
@@ -419,6 +447,7 @@ texture_set_interpolation(false);
 
 
 
+
 GuiSet(1);
 }
 //show_debug_overlay(Debug);
@@ -432,6 +461,7 @@ if PauseGet(){ draw_rectangle(0,0,512,288,0)
 
 }
 
+show_debug_overlay(Debug);
 texture_set_interpolation(false);
 </string>
           </argument>

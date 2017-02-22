@@ -399,6 +399,7 @@ repeat(abs(vx)) {
 CBbox.x = x;
 CBbox.y = y;
 CBbox.mask_index = sprite_index;
+
 //碰撞盒检测
 /*
 if (!Invaliding) and state != ROLL {
@@ -881,7 +882,8 @@ if PlayerNexting and RmNow != RmLast //RmNext = RmNow
             <kind>1</kind>
             <string>///对话期间不能动
 //if !global.Dialogueing = noone
-//if oDialogueBox = true kControl = false ;
+
+if instance_exists( oDialogueBox) = true kControl = false ;
 </string>
           </argument>
         </arguments>
