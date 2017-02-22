@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="6" name="datafiles">
+  <datafiles number="7" name="datafiles">
     <datafile>
       <name>GameSet.ini</name>
       <exists>-1</exists>
@@ -106,6 +106,23 @@
       </ConfigOptions>
       <filename>GT_EN.ttf</filename>
     </datafile>
+    <datafile>
+      <name>GMS_Color_v2.1.exe</name>
+      <exists>-1</exists>
+      <size>2132480</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GMS_Color_v2.1.exe</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\Iter</extension>
@@ -125,6 +142,12 @@
     <extension index="14">extensions\Virtual Joysticks</extension>
     <extension index="15">extensions\通用贴图</extension>
     <extension index="16">extensions\虚拟按钮</extension>
+    <extension index="17">extensions\SML_language</extension>
+    <extension index="18">extensions\ds_tree</extension>
+    <extension index="19">extensions\Script Essentials</extension>
+    <extension index="20">extensions\Essential Scripts</extension>
+    <extension index="21">extensions\GMS COLOR</extension>
+    <extension index="22">extensions\Multi-Object Collisions</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\SouAtk</sound>
@@ -332,6 +355,78 @@
       </scripts>
     </scripts>
     <script>scripts\PlaceMeeting.gml</script>
+    <script>scripts\README.gml</script>
+    <scripts name="NALScripts">
+      <scripts name="Nput">
+        <script>scripts\nput_init.gml</script>
+        <script>scripts\nput.gml</script>
+        <script>scripts\nput_repeater.gml</script>
+      </scripts>
+      <script>scripts\draw_text_fit.gml</script>
+      <script>scripts\draw_text_font.gml</script>
+      <script>scripts\draw_text_align.gml</script>
+      <script>scripts\draw_text_custom.gml</script>
+      <script>scripts\draw_text_circle.gml</script>
+      <script>scripts\draw_text_outline_new.gml</script>
+      <script>scripts\draw_text_shadow.gml</script>
+      <script>scripts\string_max_length.gml</script>
+      <script>scripts\string_zeroes.gml</script>
+      <script>scripts\string_thousands.gml</script>
+      <script>scripts\string_time.gml</script>
+      <script>scripts\string_blatter.gml</script>
+      <script>scripts\string_real_abbreviate.gml</script>
+      <script>scripts\clerp.gml</script>
+      <script>scripts\percent.gml</script>
+      <script>scripts\set_best_aa.gml</script>
+      <script>scripts\real_roundto.gml</script>
+      <script>scripts\real_sigfigs.gml</script>
+    </scripts>
+    <scripts name="Essential Scripts">
+      <scripts name="Drawing">
+        <script>scripts\draw_text_outlined.gml</script>
+        <script>scripts\draw_text_shadow_new.gml</script>
+        <script>scripts\draw_text_shadow_ext.gml</script>
+        <script>scripts\draw_sprite_outlined.gml</script>
+        <script>scripts\draw_sprite_shadow.gml</script>
+      </scripts>
+      <scripts name="String Manipulation">
+        <script>scripts\string_split.gml</script>
+      </scripts>
+      <scripts name="Approach Value">
+        <script>scripts\approach.gml</script>
+        <script>scripts\angle_approach.gml</script>
+        <script>scripts\smooth_approach.gml</script>
+      </scripts>
+      <scripts name="Chance Functions">
+        <script>scripts\percent_chance.gml</script>
+        <script>scripts\round_chance.gml</script>
+        <script>scripts\set_chance.gml</script>
+        <script>scripts\multi_chance.gml</script>
+      </scripts>
+      <scripts name="List Functions">
+        <script>scripts\ds_list_reverse.gml</script>
+        <script>scripts\ds_list_random.gml</script>
+        <script>scripts\ds_list_delete_all.gml</script>
+      </scripts>
+      <scripts name="Instance Functions">
+        <script>scripts\instance_list_random.gml</script>
+        <script>scripts\instance_nearest_list.gml</script>
+      </scripts>
+      <scripts name="Misc">
+        <script>scripts\mouse_over.gml</script>
+        <script>scripts\stick_to.gml</script>
+        <script>scripts\stick_to_angle.gml</script>
+        <script>scripts\within.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Multiple Collisions">
+      <script>scripts\collision_multiple.gml</script>
+      <script>scripts\collision_rectangle_multiple.gml</script>
+      <script>scripts\collision_circle_multiple.gml</script>
+      <script>scripts\collision_line_multiple.gml</script>
+      <script>scripts\collision_ellipse_multiple.gml</script>
+      <script>scripts\collision_point_multiple.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shGameBoy.shader</shader>
@@ -341,6 +436,8 @@
     <font>fonts\Font</font>
     <font>fonts\FontTitle</font>
     <font>fonts\FontS</font>
+    <font>fonts\f_norm</font>
+    <font>fonts\fNALTest</font>
   </fonts>
   <objects name="objects">
     <objects name="场景">
@@ -464,6 +561,7 @@
     <object>objects\oPause</object>
     <object>objects\oGame_new</object>
     <object>objects\oFxDust</object>
+    <object>objects\oNALTest</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>
@@ -483,7 +581,9 @@
     <room>rooms\room_night</room>
     <room>rooms\room_Eyes</room>
     <room>rooms\room_color</room>
+    <room>rooms\room0</room>
     <room>rooms\room_car</room>
+    <room>rooms\rNALTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

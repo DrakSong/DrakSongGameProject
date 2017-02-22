@@ -100,7 +100,7 @@ show_message(C)
             <string>///默认不修改部分
 //游戏设置部分
 gml_release_mode(false);//跳过错误
-display_set_windows_alternate_sync(true);//垂直同步
+display_set_windows_alternate_sync(false);//垂直同步
 display_set_windows_vertex_buffer_method(vbm_compatible);//几何顶点的缓冲抹杀
 texture_set_blending(true);//使用混色和透明变化
 texture_set_interpolation(false);//插值开启关闭
