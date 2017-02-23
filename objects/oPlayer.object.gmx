@@ -647,6 +647,16 @@ if (kJump &amp;&amp; cRight &amp;&amp; !onGround) and SlideJumpON {
 // Jump 
 if (kJump) {
         //地面起跳
+        if oGameSystem.Debug
+        {
+        
+          vy = -jumpHeight;
+
+                                yscale = 1.33;
+                                xscale = 0.67;
+        }
+        else
+        {
         if (onGround ) {
                 // Fall thru platform
                 {
@@ -670,6 +680,7 @@ if (kJump) {
                                 yscale = 1.33;
                                 xscale = 0.67;
         TowJump = false;
+        }
         }
         // Variable jumping
 } else if (kJumpRelease) {
@@ -806,7 +817,7 @@ if _DNo {
     //var _PH = bbox_bottom - bbox_top;
 
     //执行转移
-    show_debug_message('触发门' + DoorNextNo + string(_DNo) + '将要去' + room_get_name(RmNext))
+    ShowMessage('触发门' + DoorNextNo + string(_DNo) + '将要去' + room_get_name(RmNext))
     room_goto(RmNext)
 
 }
@@ -869,8 +880,8 @@ if PlayerNexting and RmNow != RmLast //RmNext = RmNow
           <argument>
             <kind>1</kind>
             <string>///对话期间不能动
-
-if !global.Dialogueing  = false kControl = false;
+//if !global.Dialogueing = noone
+//if oDialogueBox = true kControl = false ;
 </string>
           </argument>
         </arguments>
@@ -973,7 +984,7 @@ if (sprite_index == sRoll) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.Debug{
+            <string>if oGameSystem.Debug{
 var _T;
 _T[0]='room:'+room_get_name(room);
 _T[1]='FPS:'+string(fps);
@@ -1126,7 +1137,7 @@ else
           <argument>
             <kind>1</kind>
             <string>///绘制debug信息 绘制碰撞区
-if global.Debug{
+if oGameSystem.Debug{
 with(CBbox) {
     draw_set_colour(c_green);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, 1); 

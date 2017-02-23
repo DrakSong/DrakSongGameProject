@@ -68,15 +68,15 @@ if _Mode = 'Title' {
         _Sel = false;
         switch (_S) {
         case 0:
-            show_debug_message('LoadGame');
+            ShowMessage('LoadGame');
             _Mode = 'LoadGame';
             break;
         case 1:
-            show_debug_message('NewGame');
+            ShowMessage('NewGame');
             _Mode = 'NewGame';
             break;
         case 2:
-            show_debug_message('Option');
+            ShowMessage('Option');
             _Mode = 'Option';
             break;
         case 3:
@@ -150,7 +150,7 @@ if _Mode = 'Option' {
             break;
         case 3:
         if KeyGet('A',2){
-           show_debug_message('Title');  _Sel = false;_Mode = 'Title';}
+           ShowMessage('Title');  _Sel = false;_Mode = 'Title';}
             break;
 
         }
@@ -183,7 +183,7 @@ if _Mode = 'Option' {
             <string>///NewGame;
 if _Mode = 'NewGame'
 {
-BGMFree();
+BGMStop();
 instance_create(32,128,oPlayerGirl);
 //instance_create(x,y,oCamera);
 room_goto_next();
@@ -371,7 +371,7 @@ else
 surf = surface_create(1024 , 576);
 }
 _Y = (576 * (1 - 0.618));
-draw_lensflare(1024/2,_Y,0,Xs,Ys,1,choose(3,4,5),choose(1,1.2,1.5))
+//draw_lensflare(1024/2,_Y,0,Xs,Ys,1,choose(3,4,5),choose(1,1.2,1.5))
 //draw_lensflare(256/2,144*(1-0.618),0,Xs,Ys,1,choose(3,4,5),choose(1,1.2,1.5))
 texture_set_interpolation(false)
 GuiSet(1);

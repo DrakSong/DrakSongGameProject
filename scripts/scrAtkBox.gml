@@ -34,7 +34,7 @@ if argument0 and argument1 {
         
         _Def.HP -= max(0, _Atk.ATK - _Def.DEF);
         
-        show_debug_message(string(object_get_name( _Def.object_index ))+
+        ShowMessage(string(object_get_name( _Def.object_index ))+
         (' NO.'+string(_Def.id)
         +'遭受 近 距离攻击 '
         +(string(object_get_name(_Atk.object_index )))

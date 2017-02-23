@@ -3,7 +3,92 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="6" name="datafiles">
+    <datafile>
+      <name>GameSet.ini</name>
+      <exists>-1</exists>
+      <size>38</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GameSet.ini</filename>
+    </datafile>
+    <datafile>
+      <name>GT_EN.ttf</name>
+      <exists>-1</exists>
+      <size>68564</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GT_EN.ttf</filename>
+    </datafile>
+    <datafile>
+      <name>Save.ini</name>
+      <exists>-1</exists>
+      <size>35</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Save.ini</filename>
+    </datafile>
+    <datafile>
+      <name>SaveText.ini</name>
+      <exists>-1</exists>
+      <size>146</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>SaveText.ini</filename>
+    </datafile>
+    <datafile>
+      <name>txt.ini</name>
+      <exists>-1</exists>
+      <size>569</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>txt.ini</filename>
+    </datafile>
     <datafile>
       <name>GT_EN.ttf</name>
       <exists>-1</exists>
@@ -63,9 +148,6 @@
     <sound>sound\mus_Title</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="飞行道具">
-      <sprite>sprites\sFT</sprite>
-    </sprites>
     <sprites name="玩家">
       <sprites name="塔普洛">
         <sprites name="other">
@@ -76,6 +158,9 @@
         <sprites name="攻击">
           <sprite>sprites\sPlayerRollSlash</sprite>
           <sprite>sprites\sPlayerJab</sprite>
+          <sprites name="飞行道具">
+            <sprite>sprites\sFT</sprite>
+          </sprites>
         </sprites>
         <sprite>sprites\sPlayerIdle</sprite>
         <sprite>sprites\sPlayerRoll</sprite>
@@ -89,8 +174,11 @@
     <sprites name="界面">
       <sprite>sprites\sprUi</sprite>
       <sprite>sprites\sUP</sprite>
+      <sprite>sprites\sVK</sprite>
+      <sprite>sprites\sprO</sprite>
       <sprite>sprites\sprBossHp</sprite>
       <sprite>sprites\sprKuLo</sprite>
+      <sprite>sprites\sPaused</sprite>
       <sprite>sprites\sCPno</sprite>
       <sprite>sprites\sCPok</sprite>
     </sprites>
@@ -101,7 +189,22 @@
       <sprites name="墙体">
         <sprite>sprites\sBlook</sprite>
         <sprite>sprites\sJumpThru</sprite>
+        <sprites name="Rails">
+          <sprite>sprites\sRail</sprite>
+          <sprite>sprites\sRail2</sprite>
+          <sprite>sprites\sRailTop</sprite>
+          <sprite>sprites\sRailRight</sprite>
+          <sprite>sprites\sRailBottom</sprite>
+          <sprite>sprites\sRailLeft</sprite>
+        </sprites>
         <sprite>sprites\sSlopeL</sprite>
+        <sprites name="Terrain">
+          <sprite>sprites\sBlock</sprite>
+          <sprite>sprites\sRailMover</sprite>
+          <sprite>sprites\sBounceMover</sprite>
+          <sprite>sprites\sSwitchMoverH</sprite>
+          <sprite>sprites\sSwitchMoverV</sprite>
+        </sprites>
       </sprites>
       <sprites name="NPC">
         <sprite>sprites\sNPC</sprite>
@@ -118,73 +221,90 @@
         <sprite>sprites\sBBBBB</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\sprite29_4898790494772906168</sprite>
     <sprite>sprites\sGBoy</sprite>
-    <sprite>sprites\sGradient</sprite>
-    <sprite>sprites\sprite0</sprite>
-    <sprite>sprites\sprite1</sprite>
-    <sprite>sprites\sVK</sprite>
-    <sprite>sprites\sprO</sprite>
-    <sprites name="Lens Flare">
-      <sprite>sprites\Siris</sprite>
-      <sprite>sprites\Sring</sprite>
-      <sprite>sprites\Sglow</sprite>
+    <sprite>sprites\sGame</sprite>
+    <sprite>sprites\sPlayer</sprite>
+    <sprite>sprites\sDust</sprite>
+    <sprites name="AssetStore">
+      <sprite>sprites\sAvatar</sprite>
+      <sprite>sprites\sBanner</sprite>
+      <sprite>sprites\sScreen0</sprite>
     </sprites>
-    <sprites name="Not useful">
-      <sprite>sprites\spr_lamp</sprite>
-      <sprite>sprites\spr_car</sprite>
-      <sprite>sprites\spr_fire</sprite>
-      <sprite>sprites\spr_logo</sprite>
-    </sprites>
-    <sprite>sprites\sPaused</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg0</background>
     <background>background\til_platformtiles</background>
     <background>background\bg_brickwall</background>
     <background>background\BG</background>
-    <background>background\back_eyes</background>
-    <background>background\back_street</background>
     <background>background\back_tile</background>
-    <background>background\back_city2</background>
-    <background>background\back_city1</background>
-    <background>background\back_mountains1</background>
-    <background>background\back_mountains2</background>
-    <background>background\back_sky1</background>
-    <background>background\back_floor</background>
-    <background>background\back_clouds</background>
-    <background>background\back_sly2</background>
     <background>background\bg_example</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pTest0</path>
+  </paths>
   <scripts name="scripts">
-    <scripts name="对话系统">
-      <script>scripts\DialogueDraw.gml</script>
-      <script>scripts\DialogueCreate.gml</script>
-      <script>scripts\DialogueLoad.gml</script>
-      <script>scripts\DialogueTextAdd.gml</script>
-    </scripts>
-    <scripts name="玩家">
-      <script>scripts\Approach.gml</script>
-      <script>scripts\EntityStep.gml</script>
-      <script>scripts\GrassCut.gml</script>
-      <script>scripts\DrawSpriteSkew.gml</script>
-      <script>scripts\scrAtkBullet.gml</script>
-      <script>scripts\scrAtkBox.gml</script>
-      <script>scripts\OnGround.gml</script>
-      <script>scripts\scrConOFF.gml</script>
-      <script>scripts\PlatformCheck.gml</script>
-      <script>scripts\DrawSpriteSkewExt.gml</script>
-    </scripts>
-    <scripts name="摄像机">
-      <script>scripts\CameraInitGame.gml</script>
-    </scripts>
     <scripts name="游戏运行">
       <script>scripts\draw_sprite_miaobian_ext.gml</script>
       <script>scripts\GameSettingLoad.gml</script>
       <script>scripts\GameSettingSave.gml</script>
-      <scripts name="音效播放">
-        <script>scripts\SoundPaly.gml</script>
+      <scripts name="玩家">
+        <script>scripts\Approach.gml</script>
+        <script>scripts\EntityStep.gml</script>
+        <script>scripts\GrassCut.gml</script>
+        <script>scripts\PlaceMeetingException.gml</script>
+        <script>scripts\DrawSpriteSkew.gml</script>
+        <script>scripts\scrAtkBullet.gml</script>
+        <script>scripts\scrAtkBox.gml</script>
+        <script>scripts\OnGround.gml</script>
+        <script>scripts\scrConOFF.gml</script>
+        <script>scripts\PlatformCheck.gml</script>
+        <script>scripts\DrawSpriteSkewExt.gml</script>
+      </scripts>
+      <scripts name="对话系统">
+        <script>scripts\DialogueDraw.gml</script>
+        <script>scripts\DialogueCreate.gml</script>
+        <script>scripts\DialogueLoad.gml</script>
+        <script>scripts\DialogueTextAdd.gml</script>
+      </scripts>
+      <scripts name="音乐播放">
+        <script>scripts\BGMFree.gml</script>
+        <scripts name="音效播放">
+          <script>scripts\SoundPaly.gml</script>
+        </scripts>
+        <script>scripts\BGMIndex.gml</script>
+        <script>scripts\BGMStop.gml</script>
+        <script>scripts\BGMPlay.gml</script>
+      </scripts>
+      <scripts name="游戏数据处理">
+        <script>scripts\Pause.gml</script>
+        <script>scripts\ShowMessage.gml</script>
+        <script>scripts\PauseGet.gml</script>
+        <script>scripts\GameInfoString.gml</script>
+        <script>scripts\PauseSet.gml</script>
+        <script>scripts\GameInfoGet.gml</script>
+        <script>scripts\MinMax.gml</script>
+        <script>scripts\KeyGet.gml</script>
+      </scripts>
+      <scripts name="其他">
+        <script>scripts\iter.gml</script>
+        <script>scripts\isset_default.gml</script>
+      </scripts>
+      <scripts name="绘制">
+        <script>scripts\draw_text_outline.gml</script>
+        <script>scripts\DrawSelect.gml</script>
+        <script>scripts\FontAdd.gml</script>
+        <script>scripts\draw_lensflare.gml</script>
+        <script>scripts\draw_text_button.gml</script>
+      </scripts>
+      <scripts name="麦克风系列">
+        <script>scripts\MKFICreate.gml</script>
+        <script>scripts\MKFDraw.gml</script>
+        <script>scripts\MKFAudioRecording.gml</script>
+      </scripts>
+      <scripts name="画面控制">
+        <script>scripts\ViewSet.gml</script>
+        <script>scripts\WinSet.gml</script>
+        <script>scripts\GuiSet.gml</script>
       </scripts>
       <scripts name="虚拟按钮">
         <script>scripts\vstick_set_frontsprite.gml</script>
@@ -211,42 +331,6 @@
         <script>scripts\vstick_init.gml</script>
       </scripts>
     </scripts>
-    <scripts name="音乐播放">
-      <script>scripts\BGMFree.gml</script>
-      <script>scripts\BGMIndex.gml</script>
-      <script>scripts\BGMPlay.gml</script>
-    </scripts>
-    <scripts name="画面控制">
-      <script>scripts\ViewSet.gml</script>
-      <script>scripts\WinSet.gml</script>
-      <script>scripts\GuiSet.gml</script>
-    </scripts>
-    <scripts name="麦克风系列">
-      <script>scripts\MKFICreate.gml</script>
-      <script>scripts\MKFDraw.gml</script>
-      <script>scripts\MKFAudioRecording.gml</script>
-    </scripts>
-    <scripts name="游戏数据处理">
-      <script>scripts\Pause.gml</script>
-      <script>scripts\ShowMessage.gml</script>
-      <script>scripts\PauseGet.gml</script>
-      <script>scripts\GameInfoString.gml</script>
-      <script>scripts\PauseSet.gml</script>
-      <script>scripts\GameInfoGet.gml</script>
-      <script>scripts\MinMax.gml</script>
-      <script>scripts\KeyGet.gml</script>
-    </scripts>
-    <scripts name="其他">
-      <script>scripts\iter.gml</script>
-      <script>scripts\isset_default.gml</script>
-    </scripts>
-    <scripts name="绘制">
-      <script>scripts\draw_text_outline.gml</script>
-      <script>scripts\DrawSelect.gml</script>
-      <script>scripts\FontAdd.gml</script>
-      <script>scripts\draw_lensflare.gml</script>
-      <script>scripts\draw_text_button.gml</script>
-    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shGameBoy.shader</shader>
@@ -268,6 +352,23 @@
         <objects name="可动系">
           <objects name="被动">
             <object>objects\oPushBlock</object>
+          </objects>
+        </objects>
+        <objects name="Terrain">
+          <object>objects\oRailMoverH</object>
+          <object>objects\oRailMoverV</object>
+          <object>objects\oBounceMover</object>
+          <object>objects\oSwitchMoverH</object>
+          <object>objects\oSwitchMoverV</object>
+          <object>objects\oCircleMover</object>
+          <object>objects\oPathMover</object>
+          <objects name="Rail">
+            <object>objects\oRail</object>
+            <object>objects\oRail2</object>
+            <object>objects\oRailTop</object>
+            <object>objects\oRailRight</object>
+            <object>objects\oRailBottom</object>
+            <object>objects\oRailLeft</object>
           </objects>
         </objects>
       </objects>
@@ -320,11 +421,11 @@
         <object>objects\oParCrate</object>
         <object>objects\oParDecorate</object>
         <object>objects\oParCBox</object>
+        <object>objects\oParRail</object>
         <object>objects\oParSolid</object>
         <object>objects\oParJumpThru</object>
       </objects>
       <objects name="摄像机">
-        <object>objects\oCamera</object>
         <objects name="镜头特效">
           <object>objects\oGBAShader</object>
         </objects>
@@ -338,16 +439,9 @@
         <object>objects\oGame</object>
       </objects>
       <objects name="对话系统">
-        <object>objects\oDialogueBox</object>
-      </objects>
-      <objects name="菜单">
-        <object>objects\oTitle</object>
-        <object>objects\oSave</object>
-        <object>objects\oOption</object>
-        <object>objects\oLoad</object>
-      </objects>
-      <objects name="声音">
-        <object>objects\oBGM</object>
+        <objects name="旧">
+          <object>objects\oDialogueBox</object>
+        </objects>
       </objects>
       <objects name="玩家控制器">
         <object>objects\oVK</object>
@@ -355,39 +449,29 @@
     </objects>
     <objects name="主角">
       <object>objects\oPlayerGirl</object>
+      <object>objects\oFT</object>
     </objects>
     <objects name="敌人">
       <object>objects\oERun</object>
       <object>objects\oBoos</object>
       <object>objects\oEAtkBox</object>
+      <object>objects\oEFT</object>
       <object>objects\oEAtkBull</object>
     </objects>
-    <object>objects\oFT</object>
-    <object>objects\oEFT</object>
     <object>objects\oGameSystem</object>
-    <object>objects\oBGM2</object>
     <object>objects\oMeun</object>
-    <objects name="冷藏系列">
-      <object>objects\objIterDemo</object>
-      <object>objects\obj_car</object>
-      <object>objects\obj_lamp</object>
-      <object>objects\obj_eye</object>
-      <object>objects\obj_sun</object>
-      <object>objects\obj_nextroom</object>
-      <object>objects\obj_light</object>
-      <object>objects\obj_Controller</object>
-      <object>objects\obj_mic</object>
-      <object>objects\obj_fire</object>
-    </objects>
     <object>objects\oPause</object>
+    <object>objects\oGame_new</object>
+    <object>objects\oFxDust</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\rmGameStart</room>
     <room>rooms\rmTitle</room>
+    <room>rooms\rmTest0</room>
     <room>rooms\room1</room>
+    <room>rooms\rmTest1</room>
     <room>rooms\room4</room>
     <room>rooms\room8</room>
     <room>rooms\room2</room>

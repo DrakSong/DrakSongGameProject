@@ -943,7 +943,7 @@ else
           <argument>
             <kind>1</kind>
             <string>///绘制debug信息
-if global.Debug{
+if oGameSystem.Debug{
 with(CBbox) {
     draw_set_colour(c_green);
     draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, 1); 

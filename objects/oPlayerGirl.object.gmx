@@ -258,25 +258,23 @@ if (sprite_index == sAtk &amp;&amp; round(image_index) &gt; 1)and AtkMode = 'S' 
 if kControl = false scrConOFF();
 
 if kControl{
-kLeft        = keyboard_check(vk_left) 
-kRight       = keyboard_check(vk_right)
+kLeft        = KeyGet('左',0) 
+kRight       = KeyGet('右',0)
 
+kUp          = KeyGet('上',0)    
+kDown        = KeyGet('下',0)  
 
+kJump        = KeyGet('B',2)  and !attacking
+kJumpRelease = KeyGet('B',1) 
 
-kUp          = keyboard_check(vk_up)    
-kDown        = keyboard_check(vk_down)  
-
-kJump        = keyboard_check_pressed(ord('Z'))  and !attacking
-kJumpRelease = keyboard_check_released(ord('Z')) 
-
-kAction      = keyboard_check_pressed(ord('X'))  
-kActionK     = keyboard_check(ord('X'))  
-kActionR     =keyboard_check_released(ord('X')) 
+kAction      = KeyGet('A',2)  
+kActionK     = KeyGet('A',0)  
+kActionR     =KeyGet('A',1) 
 
 
 kBlock       = false
-kRollL       = keyboard_check_pressed(ord('C')) and kLeft   and (AP-16)&gt;0//and false
-kRollR       = keyboard_check_pressed(ord('C')) and kRight   and (AP-16)&gt;0//and false
+kRollL       = KeyGet('R',2) and kLeft   and (AP-16)&gt;0//and false
+kRollR       = KeyGet('R',2) and kRight   and (AP-16)&gt;0//and false
 
 }
 //滚动限制

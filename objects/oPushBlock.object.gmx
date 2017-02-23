@@ -131,7 +131,7 @@ if (cRight)
 
 if (onGround &amp;&amp; !onGroundPrev) {
     for (var i = 0; i &lt; 8; ++i) {
-        instance_create(x + random_range(0, 32), y + 32 + random_range(-2, 2), oParticlePlayer);
+        instance_create(x + random_range(0, 32), y + 32 + random_range(-2, 2), oParticle);
     }
 }
 </string>

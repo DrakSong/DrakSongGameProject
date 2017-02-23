@@ -30,7 +30,7 @@ ini_open(INI);
 //window_set_size(512,288);
 DialogueCreate();
 Next = 0;
-draw_set_font(global.TextFont);
+//draw_set_font(global.TextFont);
 
 oPlayer.kControl = false
 </string>
@@ -137,7 +137,7 @@ oPlayer.kControl = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Next = keyboard_check_pressed(ord('X'));// mouse_check_button(mb_left)
+            <string>Next = KeyGet('A',2)// keyboard_check_pressed(ord('X'));// mouse_check_button(mb_left)
 DialogueLoad();
 </string>
           </argument>

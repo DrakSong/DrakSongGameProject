@@ -85,7 +85,7 @@ vR = virtual_key_add(vRx,vRy,16*2,16,kR);
           <argument>
             <kind>1</kind>
             <string>
-if keyboard_check_pressed(vk_anykey) {show_debug_message(keyboard_key)}
+if keyboard_check_pressed(vk_anykey) {ShowMessage(keyboard_key)}
 </string>
           </argument>
         </arguments>

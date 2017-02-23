@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-99999999</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -63,20 +63,13 @@ var K = V[?'键盘信息'];
  K[?'A'] = ord('X');
  K[?'B'] = ord('Z');
  K[?'L'] = ord('A');
- K[?'R'] = ord('D');
+ K[?'R'] = ord('C');
  K[?'P'] = ord('P');
 
 
 
 
 
-
-//display_get_gui_height
-
-//ds_map_secure_save(GameInft,'GameInft.Dat')
-//global.GameInft = ds_map_secure_load('GameInft.Dat')
-
-/*"
 
 
 </string>
@@ -103,8 +96,8 @@ var K = V[?'键盘信息'];
 //游戏设置部分
 gml_release_mode(false);//跳过错误
 display_set_windows_alternate_sync(true);//垂直同步
-display_set_windows_vertex_buffer_method(vbm_fast);//几何顶点的缓冲抹杀
-texture_set_blending(false);//使用混色和透明变化
+display_set_windows_vertex_buffer_method(vbm_compatible);//几何顶点的缓冲抹杀
+texture_set_blending(true);//使用混色和透明变化
 texture_set_interpolation(false);//插值开启关闭
 show_debug_overlay(true);
 Debug = true;
@@ -112,7 +105,7 @@ Debug = true;
 //绘制画面部分
 GuiSet(1);//调整gui比例
 WinSet(2);//调整窗口比例;
-ViewSet(0,true,5,oPlayer);//调整视野
+ViewSet(0,true,1,oPlayer);//调整视野
 PauseBG = 0//surface_create(512,256);
 FontAdd();
 
@@ -290,6 +283,29 @@ if (PauseGet() = false) and  KeyGet('P',2) == true{
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///摄像鸡
+//room_speed = 99999
+ViewSet(0,1,1,oPlayer);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="73">
       <action>
@@ -335,8 +351,7 @@ V[?'麦克风音量'] = microphone_volume;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_speed = 9999;
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -406,16 +421,18 @@ texture_set_interpolation(false);
 
 GuiSet(1);
 }
-show_debug_overlay(Debug);
+//show_debug_overlay(Debug);
 if keyboard_check_pressed(ord('T')) Debug^=true;
 
 
 if PauseGet(){ draw_rectangle(0,0,512,288,0)
 
-draw_background('text.png',0,0,)
+//draw_background('text.png',0,0,)
 
 
 }
+
+texture_set_interpolation(false);
 </string>
           </argument>
         </arguments>
