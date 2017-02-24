@@ -463,6 +463,7 @@
     <object>objects\oPause</object>
     <object>objects\oGame_new</object>
     <object>objects\oFxDust</object>
+    <object>objects\oCamera</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>

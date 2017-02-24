@@ -881,7 +881,7 @@ if PlayerNexting and RmNow != RmLast //RmNext = RmNow
             <kind>1</kind>
             <string>///对话期间不能动
 //if !global.Dialogueing = noone
-//if oDialogueBox = true kControl = false ;
+if instance_exists( oDialogueBox) = true kControl = false ;
 </string>
           </argument>
         </arguments>
@@ -993,12 +993,13 @@ _T[3]='Y:'+string(y);
 _T[4]='VX:'+string(vx);
 _T[5]='VY:'+string(vy);
 _T[6]='状态:'+string(state);
+_T[7]='方向'+string(facing);
 
 
 
 draw_set_colour(c_red)
 var i;
-for (i=0; i&lt;7; i+=1)
+for (i=0; i&lt;array_length_1d(_T); i+=1)
 {
     draw_text(256-64,10*i,_T[i])
 };

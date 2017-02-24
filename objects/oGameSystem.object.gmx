@@ -301,7 +301,7 @@ if (PauseGet() = false) and  KeyGet('P',2) == true{
             <kind>1</kind>
             <string>///摄像鸡
 //room_speed = 99999
-ViewSet(0,1,1,oPlayer);
+ViewSet(0,1,1,oCamera);
 </string>
           </argument>
         </arguments>

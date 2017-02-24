@@ -146,6 +146,7 @@ if _Mode = 'Option' {
             if KeyGet('左',2)  Vol[?'窗口倍数']-=0.5;
             if KeyGet('右',2)  Vol[?'窗口倍数']+=0.5;
             Vol[?'窗口倍数'] = MinMax(Vol[?'窗口倍数'],1,5);
+            
             if KeyGet('左',2)or KeyGet('右',2){WinSet(Vol[?'窗口倍数'])}
             break;
         case 3:
