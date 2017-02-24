@@ -56,23 +56,20 @@ ViewY = 0;
 var Long = (256*(1-0.618))/2;
 var Px = oPlayer.x
 var V = 0;
-//var sp = abs(oPlayer.vx)+(1.2)*1.618;//1.618;
-var sp = 12;
+var sp = abs(oPlayer.vx)+(1.2)*1.618;//1.618;
+//var sp = 12;
 
 //x+=sp;
 if oPlayer.facing = -1
 { 
 
 
-if oPlayer.x &gt; view_xview[0]+256 - Long*2
-{
-x = max(x,Px)
-}
-//else
+
 
 {
 x-=sp;
 x =max(x, Px-Long);
+//x = min(x,Px)
 }
 
 
@@ -80,10 +77,7 @@ x =max(x, Px-Long);
 
 if oPlayer.facing = 1
 {
-if  (oPlayer.x &lt; view_xview[0]+Long*2)
-{
-x = min(x,Px);
-}
+
 //else
 {
 x+=sp;
@@ -92,6 +86,16 @@ x =min(x, Px+Long)
 }
 
 }
+
+if  (oPlayer.x &lt; view_xview[0]+Long*2)
+{
+x = min(x,Px);
+}
+if oPlayer.x &gt; view_xview[0]+256 - Long*2
+{
+x = max(x,Px)
+}
+//else
 
 //x  = min(x,view_xview[0]+Long*2);
 //x  = max(x,view_xview[0]+256-Long*2);//Long*2)
