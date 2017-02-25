@@ -22,23 +22,6 @@
       <filename>GameSet.ini</filename>
     </datafile>
     <datafile>
-      <name>GT_EN.ttf</name>
-      <exists>-1</exists>
-      <size>68564</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>GT_EN.ttf</filename>
-    </datafile>
-    <datafile>
       <name>Save.ini</name>
       <exists>-1</exists>
       <size>35</size>
