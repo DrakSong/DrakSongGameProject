@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="6" name="datafiles">
+  <datafiles number="7" name="datafiles">
     <datafile>
       <name>GameSet.ini</name>
       <exists>-1</exists>
@@ -89,6 +89,23 @@
       </ConfigOptions>
       <filename>GT_EN.ttf</filename>
     </datafile>
+    <datafile>
+      <name>GMS_Color_v2.1.exe</name>
+      <exists>-1</exists>
+      <size>2132480</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>GMS_Color_v2.1.exe</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\Iter</extension>
@@ -108,6 +125,8 @@
     <extension index="14">extensions\Virtual Joysticks</extension>
     <extension index="15">extensions\通用贴图</extension>
     <extension index="16">extensions\虚拟按钮</extension>
+    <extension index="17">extensions\FlatColors</extension>
+    <extension index="18">extensions\GMS COLOR</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\SouAtk</sound>

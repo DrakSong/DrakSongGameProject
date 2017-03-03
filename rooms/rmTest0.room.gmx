@@ -232,7 +232,7 @@
     <instance objName="oRail2" x="560" y="120" name="inst_A88A81C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="580" y="120" name="inst_C124DBAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oEAtkBull" x="80" y="80" name="inst_597CFE9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oVK" x="110" y="190" name="inst_7B71BF96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oGBAShader" x="40" y="30" name="inst_0BE9D850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
