@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>-1</persistent>
-  <parentName>oPlayer</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>sPlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">

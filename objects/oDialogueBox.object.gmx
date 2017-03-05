@@ -32,7 +32,6 @@ DialogueCreate();
 Next = 0;
 //draw_set_font(global.TextFont);
 
-oPlayer.kControl = false
 </string>
           </argument>
         </arguments>
@@ -110,11 +109,9 @@ Next = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//with(oPlayer)
+            <string>
 global.Dialogueing = false;
-oPlayer.kControl = true;
-//ini_close()
-//oNPC.D = 0
+
 </string>
           </argument>
         </arguments>

@@ -51,16 +51,14 @@ ViewY = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(oPlayer){
-//ViewX = oPlayer.x;
+            <string>if instance_exists(oParPlayer){
+//ViewX = oParPlayer.x;
 var Long = (256*(1-0.618))/2;
-var Px = oPlayer.x
+var Px = oParPlayer.x
 var V = 0;
-var sp = abs(oPlayer.vx)+(1.2)*1.618;//1.618;
-//var sp = 12;
+var sp = abs(oParPlayer.vx)+(1.2)*1.618;//1.618;
 
-//x+=sp;
-if oPlayer.facing = -1
+if oParPlayer.facing = -1
 { 
 
 
@@ -75,7 +73,7 @@ x =max(x, Px-Long);
 
 }
 
-if oPlayer.facing = 1
+if oParPlayer.facing = 1
 {
 
 //else
@@ -87,42 +85,21 @@ x =min(x, Px+Long)
 
 }
 
-if  (oPlayer.x &lt; view_xview[0]+Long*2)
+if  (oParPlayer.x &lt; view_xview[0]+Long*2)
 {
 x = min(x,Px);
 }
-if oPlayer.x &gt; view_xview[0]+256 - Long*2
+if oParPlayer.x &gt; view_xview[0]+256 - Long*2
 {
 x = max(x,Px)
 }
-//else
 
-//x  = min(x,view_xview[0]+Long*2);
-//x  = max(x,view_xview[0]+256-Long*2);//Long*2)
-
-/*
-if  (oPlayer.x &lt; view_xview[0]+Long*2)
-
-{
-show_debug_message('画面左'+string(get_timer()))
-
-}
-if oPlayer.x &gt; view_xview[0]+256 - Long*2
-{
-show_debug_message('画面右'+string(get_timer()))
-
-}
-
-*/
-//x = max(Px-Long,Px)//MinMax(x,Px-Long,Px+Long);
-
-//if Px &lt; x
 
 x = MinMax(x,Long*2,room_width-2*Long);
 
 
 
-ViewY = oPlayer.y;
+ViewY = oParPlayer.y;
 //x= ViewX
 y= ViewY;
 }
@@ -148,7 +125,7 @@ y= ViewY;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_rectangle(x-32,y-32,x+32,y+32,1)
+            <string>//draw_rectangle(x-32,y-32,x+32,y+32,1)
 </string>
           </argument>
         </arguments>

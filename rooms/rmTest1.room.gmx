@@ -150,8 +150,6 @@
     <instance objName="oBlock" x="620" y="20" name="inst_15626836" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPathMover" x="300" y="300" name="inst_CAC64112" locked="0" code="pSpd = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oBlock" x="20" y="150" name="inst_752F0122" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlayerGirl" x="280" y="180" name="inst_B38646D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGame_new" x="20" y="40" name="inst_7D9355DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

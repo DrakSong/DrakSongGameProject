@@ -53,7 +53,7 @@ global.Dialogueing = 0;
           <argument>
             <kind>1</kind>
             <string>
-if (place_meeting(x,y,oPlayer) and KeyGet('上',2)) and !global.Dialogueing
+if (place_meeting(x,y,oParPlayer) and KeyGet('上',2)) and !global.Dialogueing
  {
 
 global.INI = 'txt.ini'
@@ -91,15 +91,15 @@ draw_sprite_miaobian_ext(sprite_index,image_index,x,y,1,1,0,c_white,1)
 
 image_speed = 1/10;
 
-if place_meeting(x,y,oPlayer)
+if place_meeting(x,y,oParPlayer)
 {
 draw_sprite(sUP,0,x,y-16-8-4+4*sin(current_time)/600)
 }
 
-if oPlayer
+if oParPlayer
 {
-if oPlayer.x &gt; x image_xscale = -1
-if oPlayer.x &lt;= x image_xscale = 1
+if oParPlayer.x &gt; x image_xscale = -1
+if oParPlayer.x &lt;= x image_xscale = 1
 
 }
 

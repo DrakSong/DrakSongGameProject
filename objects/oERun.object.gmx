@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>oEnemy</parentName>
+  <parentName>oParEnemy</parentName>
   <maskName>sPlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -22,31 +22,6 @@
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-  _L = 0;_R =0;
- alarm[0] = 30
-Toughness = 0;
-HitFlyY=3.69;
-</string>
-          </argument>
-        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -108,7 +83,7 @@ Debug = true;
 MaxHP = 1;
 MaxMP = 1;
 MaxAP = 1;
-HP =  100;
+HP =  3;
 MP =  1;
 AP =  1;
 
@@ -128,6 +103,33 @@ AtkStiff = 0//攻击照成硬直
 AtkFlyH = 5;//击飞玩家
 AtkFlyV = 5;//击飞玩家
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+  _L = 0;_R =0;
+ alarm[0] = 30
+Toughness = 0;
+HitFlyY=3.69;
+
+ID = id;
 </string>
           </argument>
         </arguments>
@@ -195,7 +197,7 @@ alarm[0] = 24
             <string>///AI
 ///AI
 
-if !Stiffing{ 
+if !STI{ 
 //草ai
 if (cLeft) { _L = false ;_R = true}
 if (cRight) { _L = true _R = false}
@@ -237,42 +239,7 @@ kRight       = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///贴身会让玩家受伤攻击
-
-///攻击判定
-if AtkBox with(AtkBox) {
-        instance_destroy();
-}
-// Atk
- {
-        AtkBox = instance_create(x, y - 8, oEnemyAtkBox);
-         AtkBox.bboxleft = bbox_left;//min(x + (5 * facing), x + (30 * facing));
-        AtkBox.bboxright = bbox_right;//max(x + (5 * facing), x + (30 * facing));
-        AtkBox.bboxtop = y - 1 - 16;
-        AtkBox.bboxbottom = y + 0;
-        AtkBox.AtkStiff = 12;
-        AtkBox.AtkFlyH = 3.2;
-        AtkBox.AtkFlyV = 2.2;
-        AtkBox.ATK = 10; //irandom_range(3,6);
-        AtkBox.Pid = id
-        with(AtkBox) {
-
-                var _CE = collision_rectangle(bboxleft, bboxtop, bboxright, bboxbottom, oBboxPlayer, 0, 0); {
-                        if _CE {
-                                scrAtkBox(self, _CE.Pid);
-                        }
-
-                }
-
-               //  var _CE = collision_rectangle(bboxleft, bboxtop, bboxright, bboxbottom, oParDecorate, 0, 0); {
-              //    if _CE {
-              //                  scrAtkBox(self, _CE);
-             //           }
-
-       // }
-}
-}
-
+            <string>//show_debug_message(CBox.x)
 </string>
           </argument>
         </arguments>

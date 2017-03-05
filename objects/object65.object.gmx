@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///角色功能控制
-//键位输入初化
+            <string>///生物功能初化 也是修改部分
+//动作接口初化
+
+kControl = false;
+
 kLeft        = false;
 kRight       = false;
 kUp          = false;
@@ -40,39 +43,13 @@ kActionK     = false;
 kActionR     = false;
 
 kBlock       = false;
+
 kRollL       = false;
 kRollR       = false;
 
-//玩家指令输入锁
-kControl = true;
-//贴墙跳跃
-SlideJumpON = false;
-//开启防御
-blocking  = false;
 
-//Debug = debug_mode;
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///角色属性（一般修改地区）
+///动作功能属性
 var k = 1-0.618
 groundAccel = 1.00*k;
 groundFric  = 2.00*k;
@@ -84,16 +61,15 @@ jumpHeight  = 10*k;
 gravNorm    = 0.25;//重力速度
 gravSlide   = 0.25; //贴墙重力速度
 clingTime   = 2.0;
-RollSpeed = 0;//滚动速度
+RollSpeed = 12;//滚动速度
 RollLong = 4;//滚动距离
 TowJumpON = true;//二段跳锁
+SlideJumpON = false;//贴墙跳跃
+blocking  = false;//开启防御
 
-//修正
-BAtkFlyY = 0//击飞修正
-BAtkFlyX = 0//击飞修正
-Toughness = 0;//硬直修正 
 
-///精灵对应表
+///绘制体系
+//精灵对应表
 sIdle = sNoSP; //战立
 sRun = sNoSP;//跑动
 sRoll = sNoSP; //滚动
@@ -103,38 +79,26 @@ sJumpM = sNoSP;//维持
 sJumpD = sNoSP;//下落
 
 sAtk = sNoSP; //攻击;
-sBatk = sNoSP;//被攻击
-
-//受伤害回复的时长
-//StiffTime = 0; //硬直时间
-//InvalidTime = 0;//无敌时间
-
-//是否绘制debug信息
-//Debug = true;
+sDatk = sNoSP;//被攻击
 
 
-MaxHP = 1;
-MaxMP = 1;
-MaxAP = 1;
+///角色伤害系统属性
+maxHP = 1;
+maxMP = 0;
+maxAP = 0;
 HP =  1;
-MP =  1;
-AP =  1;
-
+MP =  0;
+AP =  0;
+//攻击
 ATK = 0;//攻击力
-DEF = 0//防御力
-
-
-/***********防御**********/
+ASTI = 0//攻击照成硬直
+AFlyH = 0;//击飞玩家
+AFlyV = 0;//击飞玩家
+//防御
 DEF = 0;//防御力
-DefStiff = 0//僵直补正
-DefFlyH = 0//击飞补正
-DefFlyV = 0//
-DefTime = 0//自身受伤后 无敌时间
-/***************攻击****************************/
-ATK = 0;//攻击力
-AtkStiff = 0//攻击照成硬直
-AtkFlyH = 0;//击飞玩家
-AtkFlyV = 0;//击飞玩家
+DSTI = 0//僵直补正
+DFlyH = 0//吹飞补正
+DFlyV = 0//击飞补正
 
 </string>
           </argument>
@@ -156,91 +120,49 @@ AtkFlyV = 0;//击飞玩家
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///room转移记录部分（player 独有）
-RmLast = NoRm
-//现在的房间
-RmNow = room1;
-//将要去往的房管间
-RmNext = NoRm;
-//进入房间时的方向
-RmNextFacing = '';
-//进入的门的编号（来往同一房间地区的是一样的）
-DoorNextNo = '';
-//经过门的编号
-DoorLastNo = '';
-
-RmNextHight = 0;
-RmNextWidth = 0;
-
-PlayerNexting = false;
-
-
-
-
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///固有属性(只读）
+            <string>///生物固有属性初化
+///固有属性(只读）
 event_inherited();//继承
 ///创建碰撞区域
+/*
 CBbox = instance_create(x,y,oBboxPlayer)
 CBbox.mask_index = sprite_index;
 CBbox.Pid = id
+*/
 
 
-facing = 1;//方向
 // States 的模式
 IDLE     = '站立';
 RUN      = '跑动';
 JUMP     = '跳跃';
 ROLL     = '滚动';
-//状体
+//状态
 state  = IDLE;
 
 xscale = 1;
-yscale = 1;///固定初化
-
+yscale = 1;
+facing = 1;//角色方向
 RollTrue  =0//反馈成功翻滚
 
 /***********攻击状态自身变化************************/
 attacking = false;//开启攻击
 AtkBox = 0;//攻击区域
-TowJump = true;//二段跳
+TowJump = true;//二段跳记录缓冲
 AtkTime = 0;//蓄力时间
 AtkMode = '';//攻击模式
 
-//Batking = false;//攻击硬直
-//BatkTime = 0;//攻击硬直时间
-
-///被攻击体系变量
-
-Stiffing  = false;//开启僵硬
-Invaliding = false//开启不吸收伤害
-//受伤害回复的时长
-StiffTime = 0; //硬直时间
-InvalidTime = 0;//无敌时间
-
 AtkHit = 0;//攻击次数
 AtkHitTime = 0;//刷新攻击段数的时间
+
+
+
+STI  = false;//开启僵硬
+INV = false//开启不吸收伤害
+//受伤害回复的时长
+STITime = 0; //硬直时间
+INVTime = 0;//无敌时间
+
+
 </string>
           </argument>
         </arguments>
@@ -394,73 +316,31 @@ repeat(abs(vx)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///碰撞盒
-//碰撞盒同步 
-CBbox.x = x;
-CBbox.y = y;
-CBbox.mask_index = sprite_index;
-//碰撞盒检测
-/*
-if (!Invaliding) and state != ROLL {
-//呼叫碰撞合检测
-        with(CBbox) {           //碰撞合 碰到东西
-                                var CE = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom , oBboxEnemy, 1, 1) //区域检测
-                               //读取xxx的数据，草谁。
-                               if CE
-                                scrAtkBox(CE.Pid,Pid)
-                            
-                               // var CEA = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom , oEnemyAtk, 1, 1);
-                              ///  if CEA
-                              //  (Pid,CEA)
-}}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///被击处理
-//Stiffing -= 1; //减少硬直
-//Invaliding -= 1; //减少无敌
-//Stiffing = max(Stiffing, 0);
-//Invaliding = max(Invaliding, 0);
+            <string>///结算硬质
 //进入硬直
-if StiffTime &gt; 0 {
-        Stiffing = true;
-        StiffTime -= 1;
+if STITime &gt; 0 {
+        STI = true;
+        STITime -= 1;
 } else {
-        Stiffing = false;
-        StFFTime = 0;
+        STI = false;
+        STITime = 0;
 }
 //进入无敌
-if InvalidTime &gt; 0 {
-        Invaliding = true;
-        InvalidTime -= 1;
-} else {
-        Invaliding = false;
-        InvalidTime = 0;
+if INVTime &gt; 0 and INV = false{
+        INV = true;
+        INVTime -= 1;
+} 
+if INVTime = 0 and INV = true {
+        INV = false;
+        INVTime = 0;
 }
 
-///硬直期间处理
-if Stiffing {
-        AtkTime = 0;
-        kControl = false;
+//硬直期间
+if STI {
+        AtkTime = 0;//打断蓄力
+        kontrol = false;
 } else {
-        kControl = true;
+        kontrol = true;
 }
 
 
@@ -747,168 +627,6 @@ yscale = Approach(yscale, 1, 0.05);
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///房间转移
-//记录现在的房间
-RmNow = room;
-
-
-
-var _DNo = 0
-//触碰器
-if !_DNo  and !PlayerNexting{
-    var _DR = collision_point(bbox_right + 1, y - 8, oDoor, false, true);
-    if _DR {
-        RmNextFacing = 'Right';
-        _DNo = _DR;
-    }
-    var _DL = collision_point(bbox_left - 1, y - 8, oDoor, false, true);
-    if _DL {
-        RmNextFacing = 'Left';
-        _DNo = _DL;
-    }
-    var _DU = collision_point(x, bbox_top - 1, oDoor, false, true);
-    if _DU  {
-        RmNextFacing = 'Up';
-        _DNo = _DU;
-    }
-    var _DD = collision_point(x, bbox_bottom + 1, oDoor, false, true);
-    if _DD  {
-    //show_message('fuck')
-        RmNextFacing = 'Down';
-        _DNo = _DD;
-    }
-    
-}
-//启动触发器
-if _DNo {
-    PlayerNexting = true;//开始进行转移
-    ///记录信息
-    //现在的房间
-    //将要去的房间；(读取门的信息）
-    RmNext = _DNo.RmNext;
-    //之前的房间
-    RmLast = room
-    //进入门的编号；
-    DoorNextNo = _DNo.DoorNo;
-    //经过门的编号
-    DoorLastNo = _DNo.DoorNo;;
-
-    
-    //记录底部的差距；
-    RmNextHight = _DNo.bbox_bottom - bbox_bottom;
-    RmNextWidth = max(12,bbox_left - _DNo.bbox_left);
-    RmNextWidth = min(RmNextWidth,_DNo.bbox_right-12);
-    //var _PH = bbox_bottom - bbox_top;
-
-    //执行转移
-    ShowMessage('触发门' + DoorNextNo + string(_DNo) + '将要去' + room_get_name(RmNext))
-    room_goto(RmNext)
-
-}
-
-//进入房间后调整
-if PlayerNexting and RmNow != RmLast //RmNext = RmNow
-{
-    //坐标调整
-    with(oDoor) {
-        //if DoorNo = oPlayer
-        
-        if oPlayer.DoorLastNo = DoorNo 
-        switch (oPlayer.RmNextFacing) {
-        case 'Right':
-            oPlayer.x = bbox_right + 12;
-            oPlayer.y = bbox_bottom - oPlayer.RmNextHight;
-            break;
-        case 'Left':
-            oPlayer.x = bbox_left - 12;
-            oPlayer.y = bbox_bottom - oPlayer.RmNextHight;
-            break;
-        case 'Up':
-            oPlayer.x = bbox_left+oPlayer.RmNextWidth;
-            oPlayer.y = bbox_top-4;
-            break;
-        case 'Down':
-            oPlayer.x = bbox_left+oPlayer.RmNextWidth;
-            oPlayer.y = bbox_bottom+8+4;
-            break;
-            
-        }
-
-    }
-
-    //清理
-    RmNextFacing = '';
-    DoorNextNo = '';
-    RmNext = false;
-    RmNextHight = false;
-    PlayerNexting = false;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///对话期间不能动
-//if !global.Dialogueing = noone
-if instance_exists( oDialogueBox) = true kControl = false ;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>AtkHitTime-=1;
-AtkHitTime = max(AtkHitTime,0)
-if AtkHitTime = 0 AtkHit = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="7" enumb="7">
       <action>
@@ -940,74 +658,6 @@ if (sprite_index == sRoll) {
  //{ kRight= 0 kLeft = 0}
 // if kLeft and kRight {kLeft = false ; kRight = false;}
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if oGameSystem.Debug{
-var _T;
-_T[0]='room:'+room_get_name(room);
-_T[1]='FPS:'+string(fps);
-_T[2]='X:'+string(x);
-_T[3]='Y:'+string(y);
-_T[4]='VX:'+string(vx);
-_T[5]='VY:'+string(vy);
-_T[6]='状态:'+string(state);
-_T[7]='方向'+string(facing);
-
-
-
-draw_set_colour(c_red)
-var i;
-for (i=0; i&lt;array_length_1d(_T); i+=1)
-{
-    draw_text(256-64,10*i,_T[i])
-};
-//draw_text(0,0,_T[i])
-draw_set_colour(c_white)
-}
-
-
 </string>
           </argument>
         </arguments>
@@ -1058,14 +708,14 @@ if (!attacking) {
             // Mid jump   
             if (!(place_meeting(x, y + 2, oParSolid) &amp;&amp; vy != 0) &amp;&amp; vy &gt;= -1.0 &amp;&amp; vy &lt;= 1.0) {  
                 if (blocking)
-                    sprite_index = sJumpMShield;
+                    sprite_index = sNoSP//sJumpMShield;
                else
                     sprite_index = sJumpM;  
            } else { 
                 // Rise + fall
                 if (vy &lt;= 0) {
                     if (blocking)
-                        sprite_index = sJumpUShield;
+                        sprite_index = sNoSP//sJumpUShield;
                     else  
                         sprite_index = sJumpU;  
                 } else {
@@ -1079,80 +729,44 @@ if (!attacking) {
             // When against a wall   (封印)
             if (cRight || cLeft)and false
                 if (blocking)
-                    sprite_index = sSlideShield;
+                    sprite_index = sNoSP//sSlideShield;
                 else
                    sprite_index = sSlide;  
         break;
         
         case ROLL:
             // Don't do stuff here    
+           
         break;
     }
 }
 
+    
 
-
-
-
-/// 画精灵
+        //draw_self();/// 画精灵
    //绘制无敌效果
-   if Invaliding
+   if INV
 { image_alpha =   1/2sin(current_time)}
  else
  image_alpha = 1
  //判断僵直
-    if Stiffing
+    if STI
     {
-   draw_sprite_miaobian_ext(sBatk, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, image_alpha);    
+   draw_sprite_ext(sBatk, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, image_alpha);    
     }
     else
     {
     if (onGround)
-    draw_sprite_miaobian_ext(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, image_alpha);    
+    draw_sprite_ext(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, image_alpha);    
 else
-    draw_sprite_miaobian_ext(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, image_alpha);
+    draw_sprite_ext(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, image_alpha);
 }    
    
     
   
+
    
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///绘制debug信息 绘制碰撞区
-if oGameSystem.Debug{
-with(CBbox) {
-    draw_set_colour(c_green);
-    draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, 1); 
-    //draw_sprite(mask_index,1,x,y);
-        }
-if self.AtkBox
-with(self.AtkBox)
-{draw_set_colour(c_red);
- draw_rectangle(bboxleft, bboxtop, bboxright, bboxbottom, 1);  
-
-}
-    
-  // draw_text(x,y-32,vx)
-}
 </string>
           </argument>
         </arguments>

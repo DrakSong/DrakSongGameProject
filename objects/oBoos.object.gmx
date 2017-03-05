@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>oEnemy</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>sPlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -165,7 +165,7 @@ AtkFlyV = 5;//击飞玩家
           <argument>
             <kind>1</kind>
             <string>///贴身会让玩家受伤攻击
-
+/*
 ///攻击判定
 if AtkBox with(AtkBox) {
         instance_destroy();

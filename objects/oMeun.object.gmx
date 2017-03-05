@@ -185,8 +185,6 @@ if _Mode = 'Option' {
 if _Mode = 'NewGame'
 {
 BGMStop();
-instance_create(32,128,oPlayerGirl);
-//instance_create(x,y,oCamera);
 room_goto_next();
 }
 </string>

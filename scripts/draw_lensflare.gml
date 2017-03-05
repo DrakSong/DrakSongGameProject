@@ -52,7 +52,7 @@ GlowOpacity = argument7
                     center_y = room_height/2
                 } 
                 
-                   
+  /*                 
         //Getting the Direction
         LensDir = point_direction(xx,yy,center_x,center_y)
         

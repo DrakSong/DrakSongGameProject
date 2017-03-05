@@ -73,24 +73,7 @@
       <filename>txt.ini</filename>
     </datafile>
     <datafile>
-      <name>GT_EN.ttf</name>
-      <exists>-1</exists>
-      <size>68564</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>GT_EN.ttf</filename>
-    </datafile>
-    <datafile>
-      <name>GMS_Color_v2.1.exe</name>
+      <name>GMsadf1.exe</name>
       <exists>-1</exists>
       <size>2132480</size>
       <exportAction>2</exportAction>
@@ -104,7 +87,7 @@
           <CopyToMask>9223372036854775807</CopyToMask>
         </Config>
       </ConfigOptions>
-      <filename>GMS_Color_v2.1.exe</filename>
+      <filename>GMsadf1.exe</filename>
     </datafile>
   </datafiles>
   <NewExtensions>
@@ -127,6 +110,8 @@
     <extension index="16">extensions\虚拟按钮</extension>
     <extension index="17">extensions\FlatColors</extension>
     <extension index="18">extensions\GMS COLOR</extension>
+    <extension index="19">extensions\Essential Scripts</extension>
+    <extension index="20">extensions\Multi-Object Collisions</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\SouAtk</sound>
@@ -281,6 +266,44 @@
         <script>scripts\Pause.gml</script>
         <script>scripts\ShowMessage.gml</script>
         <script>scripts\PauseGet.gml</script>
+        <scripts name="Essential Scripts">
+          <scripts name="Drawing">
+            <script>scripts\draw_text_outlined.gml</script>
+            <script>scripts\draw_text_shadow.gml</script>
+            <script>scripts\draw_text_shadow_ext.gml</script>
+            <script>scripts\draw_sprite_outlined.gml</script>
+            <script>scripts\draw_sprite_shadow.gml</script>
+          </scripts>
+          <scripts name="String Manipulation">
+            <script>scripts\string_split.gml</script>
+          </scripts>
+          <scripts name="Approach Value">
+            <script>scripts\approach.gml</script>
+            <script>scripts\angle_approach.gml</script>
+            <script>scripts\smooth_approach.gml</script>
+          </scripts>
+          <scripts name="Chance Functions">
+            <script>scripts\percent_chance.gml</script>
+            <script>scripts\round_chance.gml</script>
+            <script>scripts\set_chance.gml</script>
+            <script>scripts\multi_chance.gml</script>
+          </scripts>
+          <scripts name="List Functions">
+            <script>scripts\ds_list_reverse.gml</script>
+            <script>scripts\ds_list_random.gml</script>
+            <script>scripts\ds_list_delete_all.gml</script>
+          </scripts>
+          <scripts name="Instance Functions">
+            <script>scripts\instance_list_random.gml</script>
+            <script>scripts\instance_nearest_list.gml</script>
+          </scripts>
+          <scripts name="Misc">
+            <script>scripts\mouse_over.gml</script>
+            <script>scripts\stick_to.gml</script>
+            <script>scripts\stick_to_angle.gml</script>
+            <script>scripts\within.gml</script>
+          </scripts>
+        </scripts>
         <script>scripts\GameInfoString.gml</script>
         <script>scripts\PauseSet.gml</script>
         <script>scripts\GameInfoGet.gml</script>
@@ -333,6 +356,17 @@
         <script>scripts\vstick_init.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Multiple Collisions">
+      <script>scripts\collision_multiple.gml</script>
+      <script>scripts\collision_rectangle_multiple.gml</script>
+      <script>scripts\collision_circle_multiple.gml</script>
+      <script>scripts\collision_line_multiple.gml</script>
+      <script>scripts\collision_ellipse_multiple.gml</script>
+      <script>scripts\collision_point_multiple.gml</script>
+    </scripts>
+    <script>scripts\AtkBoxCollisonRectangle.gml</script>
+    <script>scripts\AtkBoxCollison.gml</script>
+    <script>scripts\AtkBoxStep.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shGameBoy.shader</shader>
@@ -397,29 +431,11 @@
     </objects>
     <objects name="游戏运行部件">
       <objects name="通用父对象">
-        <objects name="主角体系父对象">
-          <object>objects\oPlayer</object>
-          <object>objects\oBboxPlayer</object>
-          <objects name="攻击">
-            <object>objects\oPlayerAtk</object>
-            <objects name="飞行物">
-              <object>objects\oPlayerBullet</object>
-            </objects>
-            <objects name="近身">
-              <object>objects\oPlayerAtkBox</object>
-            </objects>
-          </objects>
-        </objects>
-        <objects name="敌人体系父对象">
-          <object>objects\oEnemy</object>
-          <object>objects\oBboxEnemy</object>
-          <objects name="攻击">
-            <object>objects\oEnemyAtk</object>
-            <object>objects\oEnemyBullet</object>
-            <object>objects\oEnemyAtkBox</object>
-          </objects>
-        </objects>
         <object>objects\oParEntity</object>
+        <object>objects\oParBarrage</object>
+        <object>objects\oParPlayer</object>
+        <object>objects\oParEnemy</object>
+        <object>objects\oParLife</object>
         <object>objects\oParCrate</object>
         <object>objects\oParDecorate</object>
         <object>objects\oParCBox</object>
@@ -428,6 +444,7 @@
         <object>objects\oParJumpThru</object>
       </objects>
       <objects name="摄像机">
+        <object>objects\oCamera</object>
         <objects name="镜头特效">
           <object>objects\oGBAShader</object>
         </objects>
@@ -438,7 +455,11 @@
         <object>objects\oCratePoof</object>
       </objects>
       <objects name="游戏中枢">
-        <object>objects\oGame</object>
+        <object>objects\oPause</object>
+        <object>objects\oMeun</object>
+        <object>objects\oGameSystem</object>
+        <object>objects\oGameSystemNo</object>
+        <object>objects\object71</object>
       </objects>
       <objects name="对话系统">
         <objects name="旧">
@@ -450,22 +471,19 @@
       </objects>
     </objects>
     <objects name="主角">
-      <object>objects\oPlayerGirl</object>
+      <object>objects\oTaPuLo</object>
       <object>objects\oFT</object>
     </objects>
     <objects name="敌人">
       <object>objects\oERun</object>
+      <object>objects\oIdle</object>
       <object>objects\oBoos</object>
-      <object>objects\oEAtkBox</object>
       <object>objects\oEFT</object>
       <object>objects\oEAtkBull</object>
     </objects>
-    <object>objects\oGameSystem</object>
-    <object>objects\oMeun</object>
-    <object>objects\oPause</object>
-    <object>objects\oGame_new</object>
     <object>objects\oFxDust</object>
-    <object>objects\oCamera</object>
+    <object>objects\oCol</object>
+    <object>objects\object77</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>
@@ -473,6 +491,8 @@
   <rooms name="rooms">
     <room>rooms\rmTitle</room>
     <room>rooms\rmTest0</room>
+    <room>rooms\room15</room>
+    <room>rooms\room_car</room>
     <room>rooms\room1</room>
     <room>rooms\rmTest1</room>
     <room>rooms\room4</room>
@@ -485,7 +505,6 @@
     <room>rooms\room_night</room>
     <room>rooms\room_Eyes</room>
     <room>rooms\room_color</room>
-    <room>rooms\room_car</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

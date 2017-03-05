@@ -34,7 +34,7 @@ vy = 0;
 cx = 0;
 cy = 0;
 
-playerAbove = place_meeting(x, y - 1, oPlayer);
+playerAbove = place_meeting(x, y - 1, oParPlayer);
 
 // Move speed when player is above
 spd = 1;
@@ -139,7 +139,7 @@ yscale = Approach(yscale, 1, 0.1);
           <argument>
             <kind>1</kind>
             <string>var playerAbovePrev = playerAbove;
-playerAbove         = place_meeting(x, y - 1, oPlayer);
+playerAbove         = place_meeting(x, y - 1, oParPlayer);
 
 // If it's the first frame of player contact
 if (playerAbove &amp;&amp; !playerAbovePrev) {

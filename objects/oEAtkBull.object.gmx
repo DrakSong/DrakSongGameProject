@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>oEnemy</parentName>
+  <parentName>oParEnemy</parentName>
   <maskName>sPlayerMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -110,7 +110,7 @@ Debug = true;
 MaxHP = 1;
 MaxMP = 1;
 MaxAP = 1;
-HP =  100;
+HP =  3;
 MP =  1;
 AP =  1;
 
@@ -168,7 +168,7 @@ AtkFlyV = 5;//击飞玩家
             <kind>1</kind>
             <string>///远程攻击
 
-if (!kBlock ) and !attacking and state !=ROLL and !Stiffing {
+if (!kBlock ) and !attacking and state !=ROLL and !STI {
    AtkMode = 'L';
     image_index = 0;
     image_speed = 0.1;
@@ -182,18 +182,16 @@ if (!kBlock ) and !attacking and state !=ROLL and !Stiffing {
     D.vspeed = -8.18;
     D.gravity = 0.7;
     D.gravity_direction = 270;
-    //D.image_xscale = facing;
-    //D.image_yscale = 1 
     D.image_angle+=24
     D.friction = 0.08
     D.HP = 10
     attacking = true;
     D.ATK =1;
-    D.AtkStiff = 30;
-   D.AtkStiff = 30;
-    D.AtkFlyV = 2;
-    D.AtkFlyH = 3.2/2;
-    D.Pid = id
+    D.ASTI = 30;
+   
+    D.AFlyV = 2;
+    D.AFlyH = 3.2/2;
+   // D.Pid = id
     MP-=8
 D.Invaliding = false//开启不吸收伤害
 }

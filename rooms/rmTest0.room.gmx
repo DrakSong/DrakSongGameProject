@@ -153,13 +153,12 @@
     <instance objName="oRail" x="80" y="280" name="inst_3472DBDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRailBottom" x="80" y="300" name="inst_BD1025F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRailMoverV" x="90" y="250" name="inst_E98BFDFD" locked="0" code="vy = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRailBottom" x="160" y="300" name="inst_0208A3FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRail" x="160" y="280" name="inst_F533CB47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRailBottom" x="160" y="280" name="inst_0208A3FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail" x="160" y="260" name="inst_F44E7EF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail" x="160" y="240" name="inst_19DA1138" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail" x="160" y="220" name="inst_81ABE972" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail" x="160" y="200" name="inst_82612A74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oRailMoverV" x="170" y="310" name="inst_59FDB5AC" locked="0" code="vy = -2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oRailMoverV" x="160" y="272" name="inst_59FDB5AC" locked="0" code="vy = -2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRailTop" x="160" y="180" name="inst_7557E17A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRailLeft" x="240" y="300" name="inst_33D22BC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="260" y="300" name="inst_F0E94887" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -203,7 +202,7 @@
     <instance objName="oBounceMover" x="420" y="150" name="inst_67CE9B3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oNPC" x="70" y="340" name="inst_6894AB8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPushBlock" x="110" y="280" name="inst_B364383B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oCamera" x="30" y="170" name="inst_D479C141" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oCamera" x="20" y="30" name="inst_D479C141" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="60" y="120" name="inst_A381B0D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="80" y="120" name="inst_9F86A55D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="100" y="120" name="inst_001F8509" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -231,8 +230,13 @@
     <instance objName="oRail2" x="540" y="120" name="inst_8080F822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="560" y="120" name="inst_A88A81C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oRail2" x="580" y="120" name="inst_C124DBAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oEAtkBull" x="80" y="80" name="inst_597CFE9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGBAShader" x="40" y="30" name="inst_0BE9D850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oTaPuLo" x="90" y="190" name="inst_94B185CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIdle" x="140" y="300" name="inst_7591E68A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIdle" x="180" y="310" name="inst_19BE3EE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oIdle" x="210" y="300" name="inst_D9893395" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oERun" x="340" y="310" name="inst_9EF702C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oERun" x="190" y="190" name="inst_F1D1F817" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oEAtkBull" x="100" y="310" name="inst_96FB7E15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -1,3 +1,4 @@
+/*
 switch (sprite_index) {
     case sFgGrass1:
         sprite_index = choose(sFgGrass1B, sFgGrass1B, sFgGrass1C);
