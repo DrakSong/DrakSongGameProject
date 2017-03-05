@@ -102,14 +102,14 @@ texture_set_interpolation(false);//插值开启关闭
 show_debug_overlay(true);
 Debug = false;
 
-/*
+
 //绘制画面部分
 GuiSet(1);//调整gui比例
 WinSet(2);//调整窗口比例;
 ViewSet(0,true,1,oParPlayer);//调整视野
 PauseBG = 0//surface_create(512,256);
 FontAdd();
-*/
+
 //音乐部分
 MKFICreate();//创建获取麦克风音量器
 

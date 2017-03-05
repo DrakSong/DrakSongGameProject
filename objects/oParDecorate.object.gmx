@@ -101,7 +101,7 @@ instance_destroy();
 
 if ATK &gt; 0
 {
-scrAtkBox(self,other.Pid)
+//scrAtkBox(self,other.Pid)
 }
 </string>
           </argument>

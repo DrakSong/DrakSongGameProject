@@ -1,4 +1,4 @@
-
+/*
 global.i=0;
 global.beijing="";
 global.lihuil="";

@@ -1,4 +1,4 @@
-
+/*
 if (Next )
 {if (global.jishu<global.zishu)
  {

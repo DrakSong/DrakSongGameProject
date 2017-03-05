@@ -72,23 +72,6 @@
       </ConfigOptions>
       <filename>txt.ini</filename>
     </datafile>
-    <datafile>
-      <name>GMsadf1.exe</name>
-      <exists>-1</exists>
-      <size>2132480</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>GMsadf1.exe</filename>
-    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\Iter</extension>
@@ -235,13 +218,11 @@
       <script>scripts\GameSettingLoad.gml</script>
       <script>scripts\GameSettingSave.gml</script>
       <scripts name="玩家">
-        <script>scripts\Approach.gml</script>
         <script>scripts\EntityStep.gml</script>
         <script>scripts\GrassCut.gml</script>
         <script>scripts\PlaceMeetingException.gml</script>
+        <script>scripts\Approach.gml</script>
         <script>scripts\DrawSpriteSkew.gml</script>
-        <script>scripts\scrAtkBullet.gml</script>
-        <script>scripts\scrAtkBox.gml</script>
         <script>scripts\OnGround.gml</script>
         <script>scripts\scrConOFF.gml</script>
         <script>scripts\PlatformCheck.gml</script>
@@ -278,7 +259,6 @@
             <script>scripts\string_split.gml</script>
           </scripts>
           <scripts name="Approach Value">
-            <script>scripts\approach.gml</script>
             <script>scripts\angle_approach.gml</script>
             <script>scripts\smooth_approach.gml</script>
           </scripts>
@@ -484,6 +464,7 @@
     <object>objects\oFxDust</object>
     <object>objects\oCol</object>
     <object>objects\object77</object>
+    <object>objects\object58</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>

@@ -52,7 +52,7 @@ global.Dialogueing = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/*
 if (place_meeting(x,y,oParPlayer) and KeyGet('上',2)) and !global.Dialogueing
  {
 
