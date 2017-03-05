@@ -8,8 +8,14 @@ var Obj = argument4;
 
 //if Obj = oParLife
 
-
+if Obj = oParEnemy or oParPlayer
 var C = collision_rectangle_multiple(X, Y, X2, Y2,oParCBox, 1, 0);
+if Obj = oParDecorate
+var C = collision_rectangle_multiple(X, Y, X2, Y2,oParDecorate, 0, 0);
+
+if Obj = oParBarrage
+var C = collision_rectangle_multiple(X, Y, X2, Y2,oParBarrage, 0, 0);
+
  
 if C  {
    

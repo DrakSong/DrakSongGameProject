@@ -26,27 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///这玩意是场景道具
-
+Cid = id;
 //写入属性 
 HP = 1;
-/***********防御**********/
-DEF = 0;//防御力
-DefStiff = 0//僵直补正
-DefFlyH = 0//击飞补正
-DefFlyV = 0//
-DefTime = 0//自身无敌时间
-/***************攻击****************************/
-ATK = 0;//攻击力
-AtkStiff = 0//攻击照成硬直
-AtkFlyH = 0;//击飞玩家
-AtkFlyV = 0;//击飞玩家
-
-
-Invaliding = false//物品是否无敌无法击破
-
-state  = 12;
-Pid = id;
-ROLL = false;
+INV = false;
 </string>
           </argument>
         </arguments>
@@ -70,38 +53,15 @@ ROLL = false;
           <argument>
             <kind>1</kind>
             <string>///破坏就会自爆
-if HP&lt;=0
+if HP&lt;=0 and !INV 
 {
-instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="oParCBox">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///攻击路过的
-//无伤害就攻击
+instance_create(x + 8, y + 8, oCratePoof);
 
-if ATK &gt; 0
-{
-//scrAtkBox(self,other.Pid)
+var coins = random_range(4, 8);
+
+for (var i = 0; i &lt; coins; ++i)
+    instance_create(x , y - 16, oCoin);
+instance_destroy();
 }
 </string>
           </argument>

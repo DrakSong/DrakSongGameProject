@@ -39,10 +39,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>ATK = 1;
 ASTI = 20;
 AFlyV = 3.4;
 RollSpeed = 0.35
+
+RollSpeed = 0.5;//滚动速度
+RollLong = 3.25;//滚动距离
 </string>
           </argument>
         </arguments>
@@ -129,9 +132,11 @@ if (sprite_index == sAtk and  round( image_index)&gt; 1) and AtkMode = 'S' {
    AtkBoxU = y-8;
    AtkBoxD = y;
   
- 
+    AtkBoxCol = c_red
    AtkBoxCollisonRectangle(AtkBoxL,AtkBoxU,AtkBoxR,AtkBoxD,oParEnemy)
-       
+   AtkBoxCollisonRectangle(AtkBoxL,AtkBoxU,AtkBoxR,AtkBoxD,oParBarrage)
+      AtkBoxCollisonRectangle(AtkBoxL,AtkBoxU,AtkBoxR,AtkBoxD,oParDecorate)
+  
    }
   /* 
    if (sprite_index == sAtk &amp;&amp; (image_index) &gt; 2.9) and AtkMode = 'S' 

@@ -53,7 +53,6 @@
   <instances>
     <instance objName="oGameSystem" x="0" y="0" name="inst_DB964560" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oMeun" x="0" y="32" name="inst_C4A31B03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oVK" x="32" y="32" name="inst_D8955860" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -39,7 +39,14 @@ for (var i = 0; i < ds_list_size(argument0); i += 1) {
                 ;
                 break;
 
-            }
+            
+             case oParBarrage:
+            T.HP -= self.ATK;//max( - T.DEF, 0); //砍子弹HP处理
+                break;
+                case oParDecorate:
+            T.HP -= self.ATK;//show_message('触发');
+                break;
+                }
 
             ds_list_add(AtkList, T)
         }

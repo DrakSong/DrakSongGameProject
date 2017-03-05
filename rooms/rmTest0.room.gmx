@@ -237,6 +237,9 @@
     <instance objName="oERun" x="340" y="310" name="inst_9EF702C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oERun" x="190" y="190" name="inst_F1D1F817" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oEAtkBull" x="100" y="310" name="inst_96FB7E15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object60" x="410" y="320" name="inst_CC77B100" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object60" x="260" y="240" name="inst_5D275978" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object60" x="170" y="320" name="inst_935370D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

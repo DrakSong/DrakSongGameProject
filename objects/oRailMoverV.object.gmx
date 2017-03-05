@@ -134,7 +134,7 @@ yscale = Approach(yscale, 1, 0.1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, 0, c_white, image_alpha);
+            <string>draw_sprite_outlined(sprite_index, image_index, x, y, xscale, yscale, 0, c_white, c_black);
 </string>
           </argument>
         </arguments>

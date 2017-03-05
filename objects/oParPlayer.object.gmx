@@ -321,6 +321,7 @@ kControl = true
             <kind>1</kind>
             <string>///左上角的hp mp ap
 //////////////////红HP////////////////////////
+depth = -999999
 var Xs = 16+8;//开始
 var Xe = 16+MaxHP;//结束
 var Y = 8//y
@@ -406,7 +407,7 @@ draw_sprite_ext(sprUi,9,16-8,8-1,1,1,0,c_white,1);
 
 //左空位
 
-
+depth = 0
 </string>
           </argument>
         </arguments>

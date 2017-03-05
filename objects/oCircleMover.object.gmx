@@ -36,6 +36,8 @@ radius = 10;
 // Set both of these (same)
 speed  = 2;
 spd    = 2;
+ xscale = 1;
+ yscale = 1;
 </string>
           </argument>
         </arguments>
@@ -174,8 +176,8 @@ vy = lengthdir_y(spd, direction);
           <argument>
             <kind>1</kind>
             <string>draw_circle_colour(xstart, ystart - (radius * 2), (radius * 2), make_colour_rgb(20, 0, 48), make_colour_rgb(20, 0, 48), true);
-
-draw_self();
+draw_sprite_outlined(sprite_index, image_index, x, y, xscale, yscale, 0, c_white, c_black);
+//draw_self();
 </string>
           </argument>
         </arguments>

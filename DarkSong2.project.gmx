@@ -335,6 +335,11 @@
         <script>scripts\vstick_step.gml</script>
         <script>scripts\vstick_init.gml</script>
       </scripts>
+      <scripts name="攻击体系">
+        <script>scripts\AtkBoxCollisonRectangle.gml</script>
+        <script>scripts\AtkBoxCollison.gml</script>
+        <script>scripts\AtkBoxStep.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Multiple Collisions">
       <script>scripts\collision_multiple.gml</script>
@@ -344,9 +349,6 @@
       <script>scripts\collision_ellipse_multiple.gml</script>
       <script>scripts\collision_point_multiple.gml</script>
     </scripts>
-    <script>scripts\AtkBoxCollisonRectangle.gml</script>
-    <script>scripts\AtkBoxCollison.gml</script>
-    <script>scripts\AtkBoxStep.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shGameBoy.shader</shader>
@@ -419,6 +421,7 @@
         <object>objects\oParCrate</object>
         <object>objects\oParDecorate</object>
         <object>objects\oParCBox</object>
+        <object>objects\oParNPC</object>
         <object>objects\oParRail</object>
         <object>objects\oParSolid</object>
         <object>objects\oParJumpThru</object>
@@ -465,6 +468,7 @@
     <object>objects\oCol</object>
     <object>objects\object77</object>
     <object>objects\object58</object>
+    <object>objects\object60</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>

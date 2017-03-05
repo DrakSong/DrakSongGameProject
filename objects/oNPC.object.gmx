@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>oParNPC</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -52,7 +52,7 @@ global.Dialogueing = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>
 if (place_meeting(x,y,oParPlayer) and KeyGet('上',2)) and !global.Dialogueing
  {
 

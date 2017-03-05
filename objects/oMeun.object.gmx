@@ -315,7 +315,7 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///绘制背景
 
 texture_set_interpolation(true)
 display_set_gui_size(1024,576);

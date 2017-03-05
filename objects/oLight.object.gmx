@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = 2;
-image_yscale = 2;
+            <string>image_xscale = 1;
+image_yscale = 1;
 image_alpha = 0.5;
 image_blend = make_colour_hsv(random(255), 128, 255);
 

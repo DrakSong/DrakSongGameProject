@@ -72,6 +72,7 @@ AtkBoxU = 0;
 AtkBoxD = 0;
 AtkBoxL = 0;
 AtkBoxR = 0;
+AtkBoxCol = c_white
 </string>
           </argument>
         </arguments>
@@ -129,7 +130,7 @@ gravNorm    = 0.25;//重力速度
 gravSlide   = 0.25; //贴墙重力速度
 clingTime   = 2.0;
 RollSpeed = 0.5;//滚动速度
-RollLong = 4;//滚动距离
+RollLong = 2.5;//滚动距离
 TowJumpON = true;//二段跳锁
 SlideJumpON = false;//贴墙跳跃
 blocking  = false;//开启防御
@@ -844,10 +845,11 @@ else
             <kind>1</kind>
             <string>///绘制攻击区域
 
-if (sprite_index == sAtk )
+if (sprite_index == sAtk  ) and  AtkBoxCol != c_white
 {
-
+    draw_set_colour(AtkBoxCol)
      draw_rectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD,1);
+     AtkBoxCol = c_white
 }
 </string>
           </argument>
