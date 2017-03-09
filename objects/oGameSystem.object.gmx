@@ -26,9 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///修改游戏标题
-window_set_caption("DarkSong");/*+
-"RAM "+string(ram_application()/1024/1024)+" MB"+" / "+
-"CPU : "+string(cpu_usage())+"%");
+window_set_caption("DarkSong")
 </string>
           </argument>
         </arguments>
@@ -50,8 +48,12 @@ window_set_caption("DarkSong");/*+
           <argument>
             <kind>1</kind>
             <string>///第一次打开游戏
-global. GameInfo = json_decode(GameInfoString()
-)
+var p_map = ds_map_secure_load("GameInfo.fuck");
+ShowMessage(p_map)
+if p_map &lt; 0 //or true//强制初化
+{
+
+global. GameInfo = json_decode(GameInfoString())
 //载入初步的键盘信息；
 var V=global.GameInfo[?'设置'];
 var K = V[?'键盘信息'];
@@ -65,11 +67,15 @@ var K = V[?'键盘信息'];
  K[?'L'] = ord('A');
  K[?'R'] = ord('C');
  K[?'P'] = ord('P');
-
-
-
-
-
+ 
+ ds_map_secure_save(global.GameInfo,'GameInfo.fuck')
+ ShowMessage('第一次打开信息初化')
+}
+else 
+{
+global.GameInfo = p_map;
+ShowMessage('读取')
+}
 
 
 </string>
@@ -105,7 +111,11 @@ Debug = false;
 
 //绘制画面部分
 GuiSet(1);//调整gui比例
-WinSet(2);//调整窗口比例;
+
+var W = global.GameInfo[?'设置']
+W= W[?'窗口倍数']
+WinSet(W);//调整窗口比例;
+
 ViewSet(0,true,1,oParPlayer);//调整视野
 PauseBG = 0//surface_create(512,256);
 FontAdd();
@@ -262,13 +272,12 @@ G[?'暂停'] ^=true;
 }
                 
  //暂停 
-if (PauseGet() = true) and  KeyGet('P',2)== true{
+if (PauseGet() = true) and  KeyGet('P',2)== true and room!= rmTitle{
               
-   // surface_save(application_surface, "test.png");
-    
+  
                 audio_pause_all();
                 instance_create(x,y,oPause);
-                //surface_save(application_surface, "test.png");
+             
         
         }
 //恢复

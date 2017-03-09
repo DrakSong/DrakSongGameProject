@@ -79,7 +79,8 @@ vx = Approach(vx, 0, 0.05);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_outlined(sprite_index,image_xscale,x,y,image_xscale,image_yscale,image_angle,c_white,c_black);
+            <string>draw_self();
+//draw_sprite_outlined(sprite_index,image_xscale,x,y,image_xscale,image_yscale,image_angle,c_white,c_black);
 </string>
           </argument>
         </arguments>

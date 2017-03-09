@@ -151,7 +151,7 @@ if _Mode = 'Option' {
             break;
         case 3:
         if KeyGet('A',2){
-           ShowMessage('Title');  _Sel = false;_Mode = 'Title';}
+           ShowMessage('Title');  _Sel = false;_Mode = 'Title'; GameInfoSave();}
             break;
 
         }

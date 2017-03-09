@@ -209,14 +209,10 @@
     <background>background\back_tile</background>
     <background>background\bg_example</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\pTest0</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="游戏运行">
       <script>scripts\draw_sprite_miaobian_ext.gml</script>
-      <script>scripts\GameSettingLoad.gml</script>
-      <script>scripts\GameSettingSave.gml</script>
       <scripts name="玩家">
         <script>scripts\EntityStep.gml</script>
         <script>scripts\GrassCut.gml</script>
@@ -286,6 +282,8 @@
         </scripts>
         <script>scripts\GameInfoString.gml</script>
         <script>scripts\PauseSet.gml</script>
+        <script>scripts\GameInfoSave.gml</script>
+        <script>scripts\GameVarInfoCreat.gml</script>
         <script>scripts\GameInfoGet.gml</script>
         <script>scripts\MinMax.gml</script>
         <script>scripts\KeyGet.gml</script>
@@ -355,9 +353,6 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\fWindow</font>
-    <font>fonts\Font</font>
-    <font>fonts\FontTitle</font>
-    <font>fonts\FontS</font>
   </fonts>
   <objects name="objects">
     <objects name="场景">
@@ -392,6 +387,7 @@
       </objects>
       <objects name="可破坏道具">
         <object>objects\oLing</object>
+        <object>objects\object60</object>
       </objects>
       <objects name="陷阱">
         <object>objects\object45</object>
@@ -442,7 +438,6 @@
         <object>objects\oMeun</object>
         <object>objects\oGameSystem</object>
         <object>objects\oGameSystemNo</object>
-        <object>objects\object71</object>
       </objects>
       <objects name="对话系统">
         <objects name="旧">
@@ -454,8 +449,8 @@
       </objects>
     </objects>
     <objects name="主角">
-      <object>objects\oTaPuLo</object>
       <object>objects\oFT</object>
+      <object>objects\oTaPuLo</object>
     </objects>
     <objects name="敌人">
       <object>objects\oERun</object>
@@ -465,31 +460,15 @@
       <object>objects\oEAtkBull</object>
     </objects>
     <object>objects\oFxDust</object>
-    <object>objects\oCol</object>
-    <object>objects\object77</object>
-    <object>objects\object58</object>
-    <object>objects\object60</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\TextAdd</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\rmTitle</room>
+    <room>rooms\rmFirst</room>
     <room>rooms\rmTest0</room>
-    <room>rooms\room15</room>
-    <room>rooms\room_car</room>
-    <room>rooms\room1</room>
     <room>rooms\rmTest1</room>
-    <room>rooms\room4</room>
-    <room>rooms\room8</room>
-    <room>rooms\room2</room>
-    <room>rooms\NoRm</room>
-    <room>rooms\room7</room>
-    <room>rooms\rTest</room>
-    <room>rooms\room_day</room>
-    <room>rooms\room_night</room>
-    <room>rooms\room_Eyes</room>
-    <room>rooms\room_color</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
