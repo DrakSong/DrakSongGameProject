@@ -1,0 +1,6 @@
+alpha = 0;
+focus = 0;
+next_tmp = 0;
+next = 0;
+global.Dialogueing = 0;
+

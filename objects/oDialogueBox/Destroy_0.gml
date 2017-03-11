@@ -1,0 +1,4 @@
+
+global.Dialogueing = false;
+
+
