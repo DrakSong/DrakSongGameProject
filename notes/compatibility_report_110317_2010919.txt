@@ -1,0 +1,545 @@
+Converting GML script : ${project_dir}\scripts\SoundPaly\SoundPaly.gml
+Converted string : line 2 : '设置' -> "设置"
+Converted string : line 3 : '音效音量' -> "音效音量"
+Converted string : line 4 : '实时变量' -> "实时变量"
+
+Converting GML script : ${project_dir}\scripts\BGMFree\BGMFree.gml
+Converted string : line 2 : '实时变量' -> "实时变量"
+Converted string : line 3 : 'BGM引索' -> "BGM引索"
+
+Converting GML script : ${project_dir}\scripts\BGMIndex\BGMIndex.gml
+Converted string : line 1 : '实时变量' -> "实时变量"
+Converted string : line 2 : 'BGM引索' -> "BGM引索"
+
+Converting GML script : ${project_dir}\scripts\BGMPlay\BGMPlay.gml
+Converted string : line 2 : '设置' -> "设置"
+Converted string : line 3 : 'BGM音量' -> "BGM音量"
+Converted string : line 4 : '实时变量' -> "实时变量"
+Converted string : line 7 : 'BGM' -> "BGM"
+Converted string : line 8 : 'BGM引索' -> "BGM引索"
+
+Converting GML script : ${project_dir}\scripts\BGMStop\BGMStop.gml
+Converted string : line 2 : '实时变量' -> "实时变量"
+Converted string : line 3 : 'BGM引索' -> "BGM引索"
+
+Converting GML script : ${project_dir}\scripts\Pause\Pause.gml
+Converted string : line 5 : '暂停' -> "暂停"
+Converted string : line 8 : '暂停' -> "暂停"
+
+Converting GML script : ${project_dir}\scripts\GameInfoString\GameInfoString.gml
+Converted string : line 2 : '{
+    "设置": {
+        "BGM音量": 80,
+        
+        "音效音量": 100,
+        "窗口倍数": 2,
+        "键盘信息": {
+            "上": 0,
+            "下": 0,
+            "左": 0,
+            "右": 0,
+            "A": 0,
+            "B": 0,
+            "L": 0,
+            "R": 0,
+            "P": 0
+        }
+    },
+    "记录": {
+        "存档使用": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        }
+    },
+    "游戏固定设置": {
+        "游戏原始宽度": 256,
+        "游戏原始高度": 144
+    },
+    "实时变量": {
+    "暂停":0,
+        "BGM" :0,
+        "BGM引索":0,
+        "麦克风音量": 0,
+        "键盘信息": {
+            "按住": {
+                "上": 0,
+                "下": 0,
+                "左": 0,
+                "右": 0,
+                "A": 0,
+                "B": 0,
+                "L": 0,
+                "R": 0,
+                "P": 0
+            },
+            "按下": {
+                "上": 0,
+                "下": 0,
+                "左": 0,
+                "右": 0,
+                "A": 0,
+                "B": 0,
+                "L": 0,
+                "R": 0,
+                "P": 0
+            },
+            "松开": {
+                "上": 0,
+                "下": 0,
+                "左": 0,
+                "右": 0,
+                "A": 0,
+                "B": 0,
+                "L": 0,
+                "R": 0,
+                "P": 0
+            }
+        }
+    }
+}' -> "{
+    "+"\""+@"设置"+"\""+@": {
+        "+"\""+@"BGM音量"+"\""+@": 80,
+        
+        "+"\""+@"音效音量"+"\""+@": 100,
+        "+"\""+@"窗口倍数"+"\""+@": 2,
+        "+"\""+@"键盘信息"+"\""+@": {
+            "+"\""+@"上"+"\""+@": 0,
+            "+"\""+@"下"+"\""+@": 0,
+            "+"\""+@"左"+"\""+@": 0,
+            "+"\""+@"右"+"\""+@": 0,
+            "+"\""+@"A"+"\""+@": 0,
+            "+"\""+@"B"+"\""+@": 0,
+            "+"\""+@"L"+"\""+@": 0,
+            "+"\""+@"R"+"\""+@": 0,
+            "+"\""+@"P"+"\""+@": 0
+        }
+    },
+    "+"\""+@"记录"+"\""+@": {
+        "+"\""+@"存档使用"+"\""+@": {
+            "+"\""+@"1"+"\""+@": 0,
+            "+"\""+@"2"+"\""+@": 0,
+            "+"\""+@"3"+"\""+@": 0
+        }
+    },
+    "+"\""+@"游戏固定设置"+"\""+@": {
+        "+"\""+@"游戏原始宽度"+"\""+@": 256,
+        "+"\""+@"游戏原始高度"+"\""+@": 144
+    },
+    "+"\""+@"实时变量"+"\""+@": {
+    "+"\""+@"暂停"+"\""+@":0,
+        "+"\""+@"BGM"+"\""+@" :0,
+        "+"\""+@"BGM引索"+"\""+@":0,
+        "+"\""+@"麦克风音量"+"\""+@": 0,
+        "+"\""+@"键盘信息"+"\""+@": {
+            "+"\""+@"按住"+"\""+@": {
+                "+"\""+@"上"+"\""+@": 0,
+                "+"\""+@"下"+"\""+@": 0,
+                "+"\""+@"左"+"\""+@": 0,
+                "+"\""+@"右"+"\""+@": 0,
+                "+"\""+@"A"+"\""+@": 0,
+                "+"\""+@"B"+"\""+@": 0,
+                "+"\""+@"L"+"\""+@": 0,
+                "+"\""+@"R"+"\""+@": 0,
+                "+"\""+@"P"+"\""+@": 0
+            },
+            "+"\""+@"按下"+"\""+@": {
+                "+"\""+@"上"+"\""+@": 0,
+                "+"\""+@"下"+"\""+@": 0,
+                "+"\""+@"左"+"\""+@": 0,
+                "+"\""+@"右"+"\""+@": 0,
+                "+"\""+@"A"+"\""+@": 0,
+                "+"\""+@"B"+"\""+@": 0,
+                "+"\""+@"L"+"\""+@": 0,
+                "+"\""+@"R"+"\""+@": 0,
+                "+"\""+@"P"+"\""+@": 0
+            },
+            "+"\""+@"松开"+"\""+@": {
+                "+"\""+@"上"+"\""+@": 0,
+                "+"\""+@"下"+"\""+@": 0,
+                "+"\""+@"左"+"\""+@": 0,
+                "+"\""+@"右"+"\""+@": 0,
+                "+"\""+@"A"+"\""+@": 0,
+                "+"\""+@"B"+"\""+@": 0,
+                "+"\""+@"L"+"\""+@": 0,
+                "+"\""+@"R"+"\""+@": 0,
+                "+"\""+@"P"+"\""+@": 0
+            }
+        }
+    }
+}"
+
+Converting GML script : ${project_dir}\scripts\GameInfoSave\GameInfoSave.gml
+Converted string : line 6 : '实时变量' -> "实时变量"
+Converted string : line 8 : '实时变量' -> "实时变量"
+Converted string : line 9 : 'GameInfo.fuck' -> "GameInfo.fuck"
+
+Converting GML script : ${project_dir}\scripts\KeyGet\KeyGet.gml
+Converted string : line 3 : '键盘信息' -> "键盘信息"
+Converted string : line 4 : '按住' -> "按住"
+Converted string : line 5 : '松开' -> "松开"
+Converted string : line 6 : '按下' -> "按下"
+
+Converting GML script : ${project_dir}\scripts\GameVarInfoCreat\GameVarInfoCreat.gml
+Converted string : line 1 : '{
+    "暂停":"测试",
+        "BGM" :0,
+        "BGM引索":0,
+        "麦克风音量": 0,
+        "键盘信息": {
+            "按住": {
+                "上": 0,
+                "下": 0,
+                "左": 0,
+                "右": 0,
+                "A": 0,
+                "B": 0,
+                "L": 0,
+                "R": 0,
+                "P": 0
+            },
+            "按下": {
+                "上": 0,
+                "下": 0,
+                "左": 0,
+                "右": 0,
+                "A": 0,
+                "B": 0,
+                "L": 0,
+                "R": 0,
+                "P": 0
+            },
+            "松开": {
+                "上": 0,
+                "下": 0,
+                "左": 0,
+                "右": 0,
+                "A": 0,
+                "B": 0,
+                "L": 0,
+                "R": 0,
+                "P": 0
+            }
+        }}' -> "{
+    "+"\""+@"暂停"+"\""+@":"+"\""+@"测试"+"\""+@",
+        "+"\""+@"BGM"+"\""+@" :0,
+        "+"\""+@"BGM引索"+"\""+@":0,
+        "+"\""+@"麦克风音量"+"\""+@": 0,
+        "+"\""+@"键盘信息"+"\""+@": {
+            "+"\""+@"按住"+"\""+@": {
+                "+"\""+@"上"+"\""+@": 0,
+                "+"\""+@"下"+"\""+@": 0,
+                "+"\""+@"左"+"\""+@": 0,
+                "+"\""+@"右"+"\""+@": 0,
+                "+"\""+@"A"+"\""+@": 0,
+                "+"\""+@"B"+"\""+@": 0,
+                "+"\""+@"L"+"\""+@": 0,
+                "+"\""+@"R"+"\""+@": 0,
+                "+"\""+@"P"+"\""+@": 0
+            },
+            "+"\""+@"按下"+"\""+@": {
+                "+"\""+@"上"+"\""+@": 0,
+                "+"\""+@"下"+"\""+@": 0,
+                "+"\""+@"左"+"\""+@": 0,
+                "+"\""+@"右"+"\""+@": 0,
+                "+"\""+@"A"+"\""+@": 0,
+                "+"\""+@"B"+"\""+@": 0,
+                "+"\""+@"L"+"\""+@": 0,
+                "+"\""+@"R"+"\""+@": 0,
+                "+"\""+@"P"+"\""+@": 0
+            },
+            "+"\""+@"松开"+"\""+@": {
+                "+"\""+@"上"+"\""+@": 0,
+                "+"\""+@"下"+"\""+@": 0,
+                "+"\""+@"左"+"\""+@": 0,
+                "+"\""+@"右"+"\""+@": 0,
+                "+"\""+@"A"+"\""+@": 0,
+                "+"\""+@"B"+"\""+@": 0,
+                "+"\""+@"L"+"\""+@": 0,
+                "+"\""+@"R"+"\""+@": 0,
+                "+"\""+@"P"+"\""+@": 0
+            }
+        }}"
+
+Converting GML script : ${project_dir}\scripts\draw_lensflare\draw_lensflare.gml
+Converted builtin : line 41 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 42 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 41 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 42 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 44 : view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\scripts\ViewSet\ViewSet.gml
+Converted builtin : line 15 : view_wview[ID] = Width*argument2 -> __view_set( e__VW.WView, ID, Width*argument2 )
+Converted builtin : line 16 : view_hview[ID] = Height*argument2 -> __view_set( e__VW.HView, ID, Height*argument2 )
+Converted builtin : line 19 : view_hborder[ID] = 512*(1-0.618)/2 -> __view_set( e__VW.HBorder, ID, 512*(1-0.618)/2 )
+Converted builtin : line 20 : view_vborder[ID] = 144*(1-0.618) -> __view_set( e__VW.VBorder, ID, 144*(1-0.618) )
+Converted builtin : line 21 : view_object[ID] = argument3 -> __view_set( e__VW.Object, ID, argument3 )
+Converted builtin : line 11 : view_visible[ID] = Use -> __view_set( e__VW.Visible, ID, Use )
+Converted builtin : line 17 : view_xport[ID] = 0 -> __view_set( e__VW.XPort, ID, 0 )
+Converted builtin : line 18 : view_yport[ID] = 0 -> __view_set( e__VW.YPort, ID, 0 )
+Converted builtin : line 13 : view_wport[ID] = Width*argument2 -> __view_set( e__VW.WPort, ID, Width*argument2 )
+Converted builtin : line 14 : view_hport[ID] = Height*argument2 -> __view_set( e__VW.HPort, ID, Height*argument2 )
+Converted string : line 6 : '游戏固定设置' -> "游戏固定设置"
+Converted string : line 7 : '游戏原始宽度' -> "游戏原始宽度"
+Converted string : line 8 : '游戏原始高度' -> "游戏原始高度"
+
+Converting GML script : ${project_dir}\scripts\GuiSet\GuiSet.gml
+Converted string : line 3 : '游戏固定设置' -> "游戏固定设置"
+Converted string : line 4 : '游戏原始宽度' -> "游戏原始宽度"
+Converted string : line 5 : '游戏原始高度' -> "游戏原始高度"
+
+Converting GML script : ${project_dir}\scripts\WinSet\WinSet.gml
+Converted string : line 3 : '游戏固定设置' -> "游戏固定设置"
+Converted string : line 4 : '游戏原始宽度' -> "游戏原始宽度"
+Converted string : line 5 : '游戏原始高度' -> "游戏原始高度"
+
+Converting GML script : ${project_dir}\objects\oNPCSave\Step_0.gml
+Converted string : line 9 : 'SaveText.ini' -> "SaveText.ini"
+
+Converting GML script : ${project_dir}\objects\oNPC\Step_0.gml
+Converted string : line 2 : '上' -> "上"
+Converted string : line 5 : 'txt.ini' -> "txt.ini"
+
+!!! Font fWindow uses a font (微软雅黑) not installed on this system. Font has NOT been regenerated.
+Converting GML script : ${project_dir}\objects\oParLife\Create_0.gml
+Converted string : line 13 : '站立' -> "站立"
+Converted string : line 14 : '跑动' -> "跑动"
+Converted string : line 15 : '跳跃' -> "跳跃"
+Converted string : line 16 : '滚动' -> "滚动"
+Converted string : line 30 : '' -> ""
+
+Converting GML script : ${project_dir}\objects\oCamera\Step_0.gml
+Converted builtin : line 35 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 39 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+
+Converting GML script : ${project_dir}\objects\oPause\Create_0.gml
+Converted builtin : line 3 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 4 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 3 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 5 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\oPause\Draw_64.gml
+Converted builtin : line 8 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 13 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 8 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 13 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\oPause\Draw_0.gml
+Converted builtin : line 5 : view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 5 : view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 9 : view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 9 : view_hview[0] -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\oMeun\Create_0.gml
+Converted string : line 2 : 'Title' -> "Title"
+
+Converting GML script : ${project_dir}\objects\oMeun\Step_0.gml
+Converted string : line 2 : 'Title' -> "Title"
+Converted string : line 3 : '上' -> "上"
+Converted string : line 6 : '下' -> "下"
+Converted string : line 11 : 'A' -> "A"
+Converted string : line 16 : 'LoadGame' -> "LoadGame"
+Converted string : line 17 : 'LoadGame' -> "LoadGame"
+Converted string : line 20 : 'NewGame' -> "NewGame"
+Converted string : line 21 : 'NewGame' -> "NewGame"
+Converted string : line 24 : 'Option' -> "Option"
+Converted string : line 25 : 'Option' -> "Option"
+Converted string : line 41 : 'Option' -> "Option"
+Converted string : line 42 : '上' -> "上"
+Converted string : line 45 : '下' -> "下"
+Converted string : line 54 : '设置' -> "设置"
+Converted string : line 59 : '左' -> "左"
+Converted string : line 59 : 'BGM音量' -> "BGM音量"
+Converted string : line 60 : '右' -> "右"
+Converted string : line 60 : 'BGM音量' -> "BGM音量"
+Converted string : line 61 : 'BGM音量' -> "BGM音量"
+Converted string : line 61 : 'BGM音量' -> "BGM音量"
+Converted string : line 62 : '左' -> "左"
+Converted string : line 62 : '右' -> "右"
+Converted string : line 63 : 'BGM音量' -> "BGM音量"
+Converted string : line 68 : '左' -> "左"
+Converted string : line 68 : '音效音量' -> "音效音量"
+Converted string : line 69 : '右' -> "右"
+Converted string : line 69 : '音效音量' -> "音效音量"
+Converted string : line 70 : '音效音量' -> "音效音量"
+Converted string : line 70 : '音效音量' -> "音效音量"
+Converted string : line 73 : '左' -> "左"
+Converted string : line 73 : '窗口倍数' -> "窗口倍数"
+Converted string : line 74 : '右' -> "右"
+Converted string : line 74 : '窗口倍数' -> "窗口倍数"
+Converted string : line 75 : '窗口倍数' -> "窗口倍数"
+Converted string : line 75 : '窗口倍数' -> "窗口倍数"
+Converted string : line 77 : '左' -> "左"
+Converted string : line 77 : '右' -> "右"
+Converted string : line 77 : '窗口倍数' -> "窗口倍数"
+Converted string : line 80 : 'A' -> "A"
+Converted string : line 81 : 'Title' -> "Title"
+Converted string : line 81 : 'Title' -> "Title"
+Converted string : line 94 : 'NewGame' -> "NewGame"
+Converted string : line 102 : 'LoadGame' -> "LoadGame"
+Converted string : line 106 : '上' -> "上"
+Converted string : line 109 : '下' -> "下"
+Converted string : line 114 : 'A' -> "A"
+Converted string : line 128 : 'Title' -> "Title"
+Converted string : line 128 : 'Title' -> "Title"
+
+Converting GML script : ${project_dir}\objects\oMeun\Draw_64.gml
+Converted string : line 66 : 'Title' -> "Title"
+Converted string : line 68 : '读取' -> "读取"
+Converted string : line 69 : '新游戏' -> "新游戏"
+Converted string : line 70 : '设置' -> "设置"
+Converted string : line 71 : '退出' -> "退出"
+Converted string : line 84 : 'LoadGame' -> "LoadGame"
+Converted string : line 87 : '记录' -> "记录"
+Converted string : line 88 : '存档使用' -> "存档使用"
+Converted string : line 92 : '存档' -> "存档"
+Converted string : line 94 : '无存档' -> "无存档"
+Converted string : line 102 : '返回' -> "返回"
+Converted string : line 119 : 'Option' -> "Option"
+Converted string : line 121 : '设置' -> "设置"
+Converted string : line 122 : 'BGM音量' -> "BGM音量"
+Converted string : line 122 : 'BGM音量' -> "BGM音量"
+Converted string : line 123 : '音效音量' -> "音效音量"
+Converted string : line 123 : '音效音量' -> "音效音量"
+Converted string : line 124 : '窗口倍数' -> "窗口倍数"
+Converted string : line 124 : '窗口倍数' -> "窗口倍数"
+Converted string : line 125 : '返回' -> "返回"
+
+Converting GML script : ${project_dir}\objects\oGameSystemNo\Create_0.gml
+Converted string : line 5 : '设置' -> "设置"
+Converted string : line 6 : '键盘信息' -> "键盘信息"
+Converted string : line 8 : '上' -> "上"
+Converted string : line 9 : '下' -> "下"
+Converted string : line 10 : '左' -> "左"
+Converted string : line 11 : '右' -> "右"
+Converted string : line 12 : 'A' -> "A"
+Converted string : line 12 : 'X' -> "X"
+Converted string : line 13 : 'B' -> "B"
+Converted string : line 13 : 'Z' -> "Z"
+Converted string : line 14 : 'L' -> "L"
+Converted string : line 14 : 'A' -> "A"
+Converted string : line 15 : 'R' -> "R"
+Converted string : line 15 : 'C' -> "C"
+Converted string : line 16 : 'P' -> "P"
+Converted string : line 16 : 'P' -> "P"
+
+Converting GML script : ${project_dir}\objects\oDialogueBox\Step_0.gml
+Converted string : line 1 : 'A' -> "A"
+
+Converting GML script : ${project_dir}\objects\oDialogueBox\Draw_64.gml
+Converted string : line 12 : 'TextEnd' -> "TextEnd"
+
+Converting GML script : ${project_dir}\objects\oVK\Create_0.gml
+Converted string : line 10 : 'X' -> "X"
+Converted string : line 11 : 'Z' -> "Z"
+Converted string : line 12 : 'A' -> "A"
+Converted string : line 13 : 'C' -> "C"
+
+Converting GML script : ${project_dir}\objects\oTaPuLo\Step_0.gml
+Converted string : line 13 : 'L' -> "L"
+Converted string : line 31 : 'S' -> "S"
+Converted string : line 45 : 'S' -> "S"
+Converted string : line 85 : '左' -> "左"
+Converted string : line 86 : '右' -> "右"
+Converted string : line 88 : '上' -> "上"
+Converted string : line 89 : '下' -> "下"
+Converted string : line 91 : 'B' -> "B"
+Converted string : line 92 : 'B' -> "B"
+Converted string : line 94 : 'A' -> "A"
+Converted string : line 95 : 'A' -> "A"
+Converted string : line 96 : 'A' -> "A"
+Converted string : line 100 : 'R' -> "R"
+Converted string : line 101 : 'R' -> "R"
+
+Converting GML script : ${project_dir}\objects\oGameSystem\Create_0.gml
+Converted string : line 12 : '设置' -> "设置"
+Converted string : line 13 : '键盘信息' -> "键盘信息"
+Converted string : line 15 : '上' -> "上"
+Converted string : line 16 : '下' -> "下"
+Converted string : line 17 : '左' -> "左"
+Converted string : line 18 : '右' -> "右"
+Converted string : line 19 : 'A' -> "A"
+Converted string : line 19 : 'X' -> "X"
+Converted string : line 20 : 'B' -> "B"
+Converted string : line 20 : 'Z' -> "Z"
+Converted string : line 21 : 'L' -> "L"
+Converted string : line 21 : 'A' -> "A"
+Converted string : line 22 : 'R' -> "R"
+Converted string : line 22 : 'C' -> "C"
+Converted string : line 23 : 'P' -> "P"
+Converted string : line 23 : 'P' -> "P"
+Converted string : line 25 : 'GameInfo.fuck' -> "GameInfo.fuck"
+Converted string : line 26 : '第一次打开信息初化' -> "第一次打开信息初化"
+Converted string : line 31 : '读取' -> "读取"
+Converted string : line 50 : '设置' -> "设置"
+Converted string : line 51 : '窗口倍数' -> "窗口倍数"
+
+Converting GML script : ${project_dir}\objects\oGameSystem\Step_0.gml
+Converted string : line 4 : '键盘信息' -> "键盘信息"
+Converted string : line 6 : '按住' -> "按住"
+Converted string : line 7 : '松开' -> "松开"
+Converted string : line 8 : '按下' -> "按下"
+Converted string : line 10 : '设置' -> "设置"
+Converted string : line 10 : '键盘信息' -> "键盘信息"
+Converted string : line 14 : '上' -> "上"
+Converted string : line 15 : '下' -> "下"
+Converted string : line 16 : '左' -> "左"
+Converted string : line 17 : '右' -> "右"
+Converted string : line 18 : 'A' -> "A"
+Converted string : line 19 : 'B' -> "B"
+Converted string : line 20 : 'L' -> "L"
+Converted string : line 21 : 'R' -> "R"
+Converted string : line 22 : 'P' -> "P"
+Converted string : line 94 : '键盘信息' -> "键盘信息"
+Converted string : line 95 : '按住' -> "按住"
+Converted string : line 96 : '松开' -> "松开"
+Converted string : line 97 : '按下' -> "按下"
+Converted string : line 104 : 'P' -> "P"
+Converted string : line 105 : '暂停' -> "暂停"
+Converted string : line 109 : 'P' -> "P"
+Converted string : line 118 : 'P' -> "P"
+Converted string : line 135 : 'R' -> "R"
+Converted string : line 136 : 'T' -> "T"
+
+Converting GML script : ${project_dir}\objects\oGameSystem\Other_73.gml
+Converted string : line 4 : '实时变量' -> "实时变量"
+Converted string : line 5 : '麦克风音量' -> "麦克风音量"
+
+Converting GML script : ${project_dir}\objects\oGameSystem\Draw_64.gml
+Converted string : line 14 : '%' -> "%"
+Converted string : line 15 : 'FPS :' -> "FPS :"
+Converted string : line 16 : 'FPS_REAL :' -> "FPS_REAL :"
+Converted string : line 17 : 'draw text outline' -> "draw text outline"
+Converted string : line 18 : 'draw text button ' -> "draw text button "
+
+Converting GML script : ${project_dir}\objects\oEAtkBull\Step_0.gml
+Converted string : line 5 : 'L' -> "L"
+
+Converting GML script : instance DDD creation code
+Converted string : line 3 : 'first' -> "first"
+
+Converting GML script : instance BBB creation code
+Converted string : line 2 : 'first -> "first
+
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit.
+Resource name collision '____' already exists, renamed to '_____extensions'
+Resource name collision '____' already exists, renamed to '_____extensions_0'
+game speed set to 30
+added compatibility script action/action_inherited.gml
+added compatibility script action/action_kill_object.gml
+added compatibility script action/action_timeline_set.gml
+added compatibility script d3d/d3d_set_fog.gml
+added compatibility script draw/draw_enable_alphablend.gml
+added compatibility script draw/draw_set_blend_mode.gml
+added compatibility script instance/instance_create.gml
+added compatibility script object/object_get_depth.gml
+added compatibility script texture/texture_set_blending.gml
+added compatibility script texture/texture_set_interpolation.gml
+added compatibility script view/__view_get.gml
+added compatibility script view/__view_set.gml
+added compatibility script view/__view_set_internal.gml
+added compatibility script action/__init_action.gml
+added compatibility script d3d/__init_d3d.gml
+added compatibility script view/__init_view.gml
+added compatibility script __init_global.gml
+added compatibility script __global_object_depths.gml
