@@ -1,1 +1,0 @@
-DoorSet（rm2,Dr1to2,6);
