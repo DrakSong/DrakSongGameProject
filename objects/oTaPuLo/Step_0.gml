@@ -55,7 +55,6 @@ if sprite_index != sRoll and ! attacking {
 }
 MP += 0.025 * 0.7;
 AP = min(MaxAP, AP) MP = min(MaxMP, MP) HP = min(MaxHP, HP)
-/* */
 ///键入
 //关闭控制后全部不可用
 if kControl = false scrConOFF();
@@ -72,16 +71,15 @@ if RollTrue = true {
     AP -= 16 RollTrue = false;
 }
 AP = min(MaxAP, AP)
-/* */
-/*  */
-/**/
+
 }
+
+//门碰撞系统
 var D = instance_place(x,y,oDoor)
 if D and tightRoomGoOn = false
 {
-//show_message(D.id)
-
 //开始跳转
+tightDRF = D.tightDRF;
 tightRM = D.tightRM;
 tightDR = D.tightDR;
 tightRoomGoOn = true;
@@ -91,4 +89,3 @@ room_goto(tightRM )
 
 
 
-//room_goto_previous()

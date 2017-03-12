@@ -1,0 +1,1 @@
+DoorSet（rm2,DoorA,6);

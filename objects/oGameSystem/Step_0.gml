@@ -111,7 +111,7 @@ if (PauseGet() = true) and  KeyGet("P",2)== true and room!= rmTitle{
   
                 audio_pause_all();
                 instance_create(x,y,oPause);
-             
+             //show_message("?")
         
         }
 //恢复

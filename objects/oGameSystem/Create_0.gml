@@ -51,7 +51,7 @@ var W = global.GameInfo[?"设置"]
 W= W[?"窗口倍数"]
 WinSet(W);//调整窗口比例;
 
-ViewSet(0,true,1,oParPlayer);//调整视野
+ViewSet(0,true,1,-1);//调整视野
 PauseBG = 0//surface_create(512,256);
 FontAdd();
 

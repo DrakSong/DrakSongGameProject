@@ -29,12 +29,5 @@ GuiSet(1);
 if keyboard_check_pressed(vk_f1) Debug^=true;
 
 
-if PauseGet(){ draw_rectangle(0,0,512,288,0)
-
-//draw_background('text.png',0,0,)
-
-
-}
-
 texture_set_interpolation(false);
 

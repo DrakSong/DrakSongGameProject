@@ -50,4 +50,5 @@ ViewY = oParPlayer.y;
 //x= ViewX
 y= ViewY;
 }
-
+else 
+{x=0 y=0}

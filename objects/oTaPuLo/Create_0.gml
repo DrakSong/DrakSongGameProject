@@ -8,6 +8,7 @@ RollSpeed = 0.5;//滚动速度
 RollLong = 3.25;//滚动距离
 }
 
-tightRM = false;
-tightDR = false;
+tightRM =-1;
+tightDR = -1;
 tightRoomGoOn = false;
+tightDRF = -1

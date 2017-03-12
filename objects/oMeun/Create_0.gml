@@ -1,6 +1,6 @@
 _Sel = false;
 _Mode = "Title"
-BGMPlay(mus_titlescreen,true)
+BGMPlay(SouTitle,true)
 surf = -1;
 
    
