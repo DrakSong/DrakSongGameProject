@@ -137,12 +137,7 @@ if _Mode = "LoadGame"
 
 
 
-/* */
-surface_set_target(surf);
-//draw_background(BG, 0,0);
-//surface_set_target(surf);
 
+surface_set_target(surf);
 surface_reset_target();
 
-/* */
-/*  */

@@ -1,5 +1,11 @@
 ///绘制背景
 
+
+
+
+
+
+
 GuiSet(1024/256);
 var _Y, van, fuck;
 van = (0.12450 / 4) * (sin(current_time / 450));

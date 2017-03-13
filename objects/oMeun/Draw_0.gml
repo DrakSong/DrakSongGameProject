@@ -1,3 +1,7 @@
+draw_set_alpha(1);
+//draw_sprite(sTitleLogo,image_index,0,0)
+
+
 /*ViewSet(0,true,1,false);
 
 texture_set_interpolation(true)
