@@ -1623,6 +1623,14 @@
             }
         },
         {
+            "Key": "8d9d8cd1-def0-4f48-9600-9a85578ec9e4",
+            "Value": {
+                "id": "ffdf8953-41a0-440d-8e1f-b2afc4efc78d",
+                "resourcePath": "datafiles_yy\\5306c1d3gw1eh01ggcn38g202v04btg6.gif.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "8dcee79a-5a89-4319-879d-3147edc366e6",
             "Value": {
                 "id": "522db262-fc87-4e3e-99b9-10ddbe49db1c",

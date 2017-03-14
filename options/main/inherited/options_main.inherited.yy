@@ -1,8 +1,10 @@
 1.0.0←ed6a955d-5826-4f98-a450-10b414266c27←ed6a955d-5826-4f98-a450-10b414266c27|{
     "option_gameguid": "127385b4-71bb-4337-86d9-5dd293603171",
     "option_steam_app_id": "0",
-    "option_lastchanged": "11 March 2017 10:24:22",
-    "option_sci_usesci": true
+    "option_lastchanged": "14 March 2017 9:27:31",
+    "option_sci_usesci": true,
+    "option_author": "jilcky",
+    "option_game_speed": 60
 }←be5f1418-b31b-48af-a023-f04cdf6e5121|{
     "textureGroups": {
         "Additions": [
