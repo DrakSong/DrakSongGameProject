@@ -6,25 +6,21 @@ if _Mode = "Title" {
     if KeyGet("下", 2) {
         _Sel++
     };
-    _Sel = MinMax(_Sel, 0, 3);
+    _Sel = MinMax(_Sel, 0,2);
     //触发选中
     if KeyGet("A", 2) {
         var _S = _Sel;
         _Sel = false;
-        switch (_S) {
+        switch (_S) {  
         case 0:
-            ShowMessage("LoadGame");
-            _Mode = "LoadGame";
-            break;
-        case 1:
-            ShowMessage("NewGame");
+            ShowMessage("进入Game");
             _Mode = "NewGame";
             break;
-        case 2:
+        case 1:
             ShowMessage("Option");
             _Mode = "Option";
             break;
-        case 3:
+        case 2:
             game_end();
             break;
 
@@ -72,13 +68,14 @@ if _Mode = "Option" {
         case 2:
             if KeyGet("左",2)  Vol[?"窗口倍数"]-=0.5;
             if KeyGet("右",2)  Vol[?"窗口倍数"]+=0.5;
-            Vol[?"窗口倍数"] = MinMax(Vol[?"窗口倍数"],1,5);
+            Vol[?"窗口倍数"] = MinMax(Vol[?"窗口倍数"],1,10);
             
             if KeyGet("左",2)or KeyGet("右",2){WinSet(Vol[?"窗口倍数"])}
             break;
         case 3:
         if KeyGet("A",2){
-           ShowMessage("Title");  _Sel = false;_Mode = "Title"; GameInfoSave();}
+           ShowMessage("Title");  _Sel = false;_Mode = "Title"; 
+		   ds_map_secure_save(global.GameInfo[?"设置"],"GameOption");}
             break;
 
         }
@@ -87,50 +84,14 @@ if _Mode = "Option" {
 }
 
 
-/*
 
-/* */
 ///NewGame;
 if _Mode = "NewGame"
 {
 BGMStop();
-room_goto_next();
-}
+room_goto(rm1);
 
-/* */
-///LoadGame
-if _Mode = "LoadGame"
-{
-
-
-    if KeyGet("上", 2) {
-        _Sel--
-    };
-    if KeyGet("下", 2) {
-        _Sel++
-    };
-    _Sel = MinMax(_Sel, 0, 3);
-    //触发选中
-    if KeyGet("A", 2) {
-        var _S = _Sel;
-      
-        switch (_S) {
-        case 0:
-       
-            break;
-        case 1:
-        
-            break;
-        case 2:
-           
-            break;
-        case 3:
-           ShowMessage("Title");  _Sel = false; ;_Mode= "Title";
-            break;
-
-        }
-    }
-
+//这里根据读取的存档 进入对应的房间
 }
 
 
@@ -138,6 +99,4 @@ if _Mode = "LoadGame"
 
 
 
-surface_set_target(surf);
-surface_reset_target();
 

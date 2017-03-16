@@ -1,17 +1,29 @@
 ///修改游戏标题
 window_set_caption("DarkSong")
-
 ///第一次打开游戏
-var p_map = ds_map_secure_load("GameInfo.fuck");
-ShowMessage(p_map)
-if p_map < 0 //or true//强制初化
-{
+global. GameInfo =  ds_map_create();
 
-global. GameInfo = json_decode(GameInfoString())
+var GameOption = ds_map_secure_load("GameOption")
+if GameOption<0
+{ GameOption = json_decode(GameOptionInfo());}
+ds_map_add(global. GameInfo,"设置",GameOption);
+
+var GameKey = ds_map_secure_load("GameKer")
+if GameKey<0
+{ GameKey  = json_decode(GameKeyInfo())}
+ds_map_add(global. GameInfo,"键盘信息",GameKey);
+
+
+var GameVar = json_decode(GameVarInfoCreat());
+ds_map_add(global. GameInfo,"实时变量",GameVar);
+
+var G = json_decode("{"+"\""+@"游戏原始宽度"+"\""+@": 256,
+ "+"\""+@"游戏原始高度"+"\""+@": 144}")
+ds_map_add(global. GameInfo,"游戏固定设置",G);
+
+
 //载入初步的键盘信息；
-var V=global.GameInfo[?"设置"];
-var K = V[?"键盘信息"];
-
+var K =global.GameInfo[?"键盘信息"];
  K[?"上"] = vk_up;
  K[?"下"] = vk_down;
  K[?"左"] = vk_left;
@@ -22,15 +34,7 @@ var K = V[?"键盘信息"];
  K[?"R"] = ord("C");
  K[?"P"] = ord("P");
  
- ds_map_secure_save(global.GameInfo,"GameInfo.fuck")
- ShowMessage("第一次打开信息初化")
-}
-else 
-{
-global.GameInfo = p_map;
-ShowMessage("读取")
-}
-
+ 
 
 
 ///默认不修改部分
@@ -52,7 +56,7 @@ W= W[?"窗口倍数"]
 WinSet(W);//调整窗口比例;
 
 ViewSet(0,true,1,-1);//调整视野
-PauseBG = 0//surface_create(512,256);
+PauseBG = 0
 FontAdd();
 
 //音乐部分

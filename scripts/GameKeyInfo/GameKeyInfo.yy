@@ -1,8 +1,8 @@
 {
-    "id": "8c0e8c5d-f574-476b-8b2c-710df06bd995",
+    "id": "140838e5-c8c2-422a-b157-749941301f2f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "GameInfoString",
+    "name": "GameKeyInfo",
     "IsCompatibility": false,
     "IsDnD": false
 }

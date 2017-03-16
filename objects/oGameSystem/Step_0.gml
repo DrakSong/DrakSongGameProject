@@ -7,7 +7,7 @@ var K = V[?"按住"];
 var KR = V[?"松开"];
 var KP = V[?"按下"];
 
-var GV = global.GameInfo[?"设置"];GV = GV[?"键盘信息"];
+var GV = global.GameInfo[?"键盘信息"];//GV = GV[?""];
 
 var Key;
  

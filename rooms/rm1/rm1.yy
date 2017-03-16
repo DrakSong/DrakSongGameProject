@@ -5,7 +5,7 @@
     "name": "rm1",
     "IsDnD": false,
     "creationCodeFile": "RoomCreationCode.gml",
-    "inheritCode": false,
+    "inheritCode": true,
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
@@ -23,61 +23,11 @@
         "f9c485c3-2b1e-4287-8ef2-bb4ca5e5ad4d",
         "5bbd8b8d-3d30-4bcc-a090-91cfc606e00e",
         "c0317ae3-1373-4d9f-892e-e6f12534a032",
-        "da248c59-9a74-4b3a-968c-c744616598ac",
         "2a68ede8-800a-480e-84ca-b4649040c575",
         "d94cf5ae-b1fc-4e6c-ac3c-7610afe7faae",
         "8d366153-d938-4d8a-9db4-566158f63b1a"
     ],
     "layers": [
-        {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "id": "79b4a874-a5a7-43b4-bbcf-e3c0d15d7447",
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "depth": 0,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "layers": [
-                
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "name": "UI",
-            "userdefined_depth": false,
-            "visible": true,
-            "instances": [
-                {
-                    "id": "da248c59-9a74-4b3a-968c-c744616598ac",
-                    "modelName": "GMRInstance",
-                    "mvc": "1.0",
-                    "ignore": false,
-                    "inheritItemSettings": false,
-                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
-                    "m_serialiseFrozen": false,
-                    "name": "inst_22C428F8",
-                    "x": 128,
-                    "y": 128,
-                    "IsDnD": false,
-                    "colour": {
-                        "Value": 4294967295
-                    },
-                    "creationCodeFile": "",
-                    "creationCodeType": "",
-                    "inheritCode": false,
-                    "name_with_no_file_rename": "inst_22C428F8",
-                    "objId": "bff8b25c-bddf-4890-8d9d-133466f209a5",
-                    "rotation": 0,
-                    "scaleX": 1,
-                    "scaleY": 1
-                }
-            ]
-        },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "id": "b72dcaf2-7bb3-4e3b-9fdf-d6a9ce5f8452",
@@ -610,7 +560,7 @@
             "y": 0
         }
     ],
-    "parentId": "00000000-0000-0000-0000-000000000000",
+    "parentId": "0cac417e-1eff-4540-a211-435fad702ea0",
     "physicsSettings": {
         "id": "b1a78af7-6c13-480e-9284-0c6502e06970",
         "modelName": "GMRoomPhysicsSettings",

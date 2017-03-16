@@ -2,12 +2,10 @@
 
 
 
-if (place_meeting(x,y,oParPlayer) and oParPlayer.kUp) and !global.Dialogueing
+if (place_meeting(x,y,oParPlayer) and oParPlayer.kUp) 
 {
 
-//instance_create(x,y,oSave);
-globalvar  INI; INI = "SaveText.ini"
-global.Dialogueing = instance_create(x,y,oDialogueBox)
+
 
 }
 
