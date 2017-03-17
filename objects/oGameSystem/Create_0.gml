@@ -1,3 +1,6 @@
+
+file_grid = load_csv("To.csv");
+
 ///修改游戏标题
 window_set_caption("DarkSong")
 ///第一次打开游戏
