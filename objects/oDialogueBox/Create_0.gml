@@ -1,5 +1,5 @@
-
-ini_open(INI);
+//INI = "";
+ini_open(global.INI);
 //window_set_size(512,288);
 DialogueCreate();
 Next = 0;

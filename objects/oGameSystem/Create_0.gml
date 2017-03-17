@@ -35,7 +35,7 @@ var K =global.GameInfo[?"键盘信息"];
  K[?"P"] = ord("P");
  
  
-
+FontAdd();
 
 ///默认不修改部分
 //游戏设置部分

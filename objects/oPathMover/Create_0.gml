@@ -9,7 +9,7 @@ cy = 0;
 
 // Whether or not to reverse at the end of path
 reverse = true; 
-path    = pTest0;
+path    =0// pTest0;
 
 // Starting pos
 pPos = 0;
