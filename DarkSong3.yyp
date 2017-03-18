@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "1522d9be-39ef-4e79-abd2-0b9dcd4be770",
+            "Value": {
+                "id": "4b96d9cf-5373-43a0-9a6e-750a88a96c2a",
+                "resourcePath": "extensions\\extension_20\\extension_20.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "15e89b5e-4677-4f98-a078-c36c3714c76e",
             "Value": {
                 "id": "aff5acf0-5d29-4421-9cbd-d6042bfd33f8",
@@ -1279,6 +1287,14 @@
             }
         },
         {
+            "Key": "5b0c360e-1d63-4e1f-9063-243d29db068f",
+            "Value": {
+                "id": "07870bcf-0209-431f-92c9-80f4aedb00cb",
+                "resourcePath": "scripts\\csv_read\\csv_read.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5b68de1c-e345-40df-9a98-0d44d9d42117",
             "Value": {
                 "id": "a5b6e566-5c1c-4bb8-86cc-970fdefd90cd",
@@ -1455,6 +1471,14 @@
             }
         },
         {
+            "Key": "6828d8a0-1255-4241-864a-fef7a01dad3e",
+            "Value": {
+                "id": "140d1988-da49-456f-962d-1e66465deb50",
+                "resourcePath": "datafiles_yy\\CSVRead.yy.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "683e33dc-7409-4d3d-b13a-4eb9f4822615",
             "Value": {
                 "id": "7c0e6ccd-3a24-492b-90bf-af092f48052b",
@@ -1548,6 +1572,14 @@
                 "id": "e2a17ce3-6da4-43c1-9fe1-e0f07f0b13e0",
                 "resourcePath": "scripts\\vstick_init\\vstick_init.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "728217b3-4566-4175-a941-a64d661d91b9",
+            "Value": {
+                "id": "2eb3296c-f0b4-4a75-b136-e156183a380f",
+                "resourcePath": "datafiles_yy\\To2.csv.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2295,6 +2327,14 @@
             }
         },
         {
+            "Key": "a6b5ef4e-2071-4183-a31a-613896200e37",
+            "Value": {
+                "id": "c9da0d15-533d-4ecd-b82b-418fc4de0380",
+                "resourcePath": "scripts\\array_explode_escape\\array_explode_escape.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a7074f3e-e655-4456-8c91-96a816cca1fc",
             "Value": {
                 "id": "82202ce7-a355-4d2f-a4ab-aeafba8ff5e9",
@@ -2927,6 +2967,14 @@
             }
         },
         {
+            "Key": "cf853835-c71e-4f85-a4dd-cf45d38e43d3",
+            "Value": {
+                "id": "71aaf8b0-2be1-4100-9ce8-f8e747b0d619",
+                "resourcePath": "scripts\\ds_list_add_map\\ds_list_add_map.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d0210ab6-7089-46de-a0a5-f2b9e4c0b34d",
             "Value": {
                 "id": "a7bd599a-d65a-450e-823b-bd6d9e55e52b",
@@ -3423,6 +3471,14 @@
             }
         },
         {
+            "Key": "e7a791e5-2b0e-4df0-94d6-ac15bb7492b1",
+            "Value": {
+                "id": "c391ab5f-d9b4-4da2-92ce-84e64b30d318",
+                "resourcePath": "scripts\\ds_list_add_list\\ds_list_add_list.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e83844a5-b280-46ad-967a-ef7287624530",
             "Value": {
                 "id": "17f5dcad-2d48-46ae-b20b-ac5ffcf1ec8b",
@@ -3877,7 +3933,11 @@
         "8fd17b84-0620-429e-aec0-0833778a6316",
         "bb10c703-dfc5-4ba1-8e86-77963fdf5620",
         "35ba4dc7-d272-4380-a796-ddef4e1ba3fb",
-        "140838e5-c8c2-422a-b157-749941301f2f"
+        "140838e5-c8c2-422a-b157-749941301f2f",
+        "5b0c360e-1d63-4e1f-9063-243d29db068f",
+        "cf853835-c71e-4f85-a4dd-cf45d38e43d3",
+        "a6b5ef4e-2071-4183-a31a-613896200e37",
+        "e7a791e5-2b0e-4df0-94d6-ac15bb7492b1"
     ],
     "tutorial": ""
 }

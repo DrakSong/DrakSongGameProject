@@ -1,17 +1,15 @@
 {
-    "id": "676960f7-e1fd-40f0-9640-3cf531692444",
+    "id": "1522d9be-39ef-4e79-abd2-0b9dcd4be770",
     "modelName": "GMExtension",
     "mvc": "1.0",
-    "name": "Iter",
+    "name": "extension_20",
     "IncludedResources": [
-        "Scripts\\iter",
-        "Scripts\\isset_default",
-        "Objects\\objIterDemo"
+        
     ],
     "androidPermissions": [
         
     ],
-    "androidProps": true,
+    "androidProps": false,
     "androidactivityinject": "",
     "androidclassname": "",
     "androidinject": "",
@@ -19,7 +17,7 @@
     "androidsourcedir": "",
     "author": "",
     "classname": "",
-    "date": "2017-01-11 02:03:08",
+    "date": "2017-55-18 04:03:54",
     "description": "",
     "extensionName": "",
     "files": [
@@ -28,7 +26,7 @@
     "gradleinject": "",
     "helpfile": "",
     "installdir": "",
-    "iosProps": true,
+    "iosProps": false,
     "iosSystemFrameworkEntries": [
         
     ],
@@ -36,12 +34,12 @@
         
     ],
     "iosplistinject": "",
-    "license": "Free to use, also for commercial games.",
+    "license": "",
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
-    "packageID": "me.eladga.iteratemap",
+    "packageID": "",
     "productID": "",
     "sourcedir": "",
-    "version": "1.0.0"
+    "version": "0.0.1"
 }

@@ -1,4 +1,5 @@
 
+ 
 if (Next )
 {if (global.jishu<global.zishu)
  {
@@ -6,19 +7,34 @@ if (Next )
      Next = 0;
  }
  else
+ { //ShowMessage(global.i)
+//  if ds_list_size(C)<=global.i
+  
+   
+
+
+  global.i+=1;
+ if global.i =  ds_list_size(C)
  {
-    global.i+=1;
-    global.beijing=ini_read_string("txt"+string(global.i),"beijing","");
-    global.lihuil=ini_read_string("txt"+string(global.i),"lihil","");
-    global.lihuir=ini_read_string("txt"+string(global.i),"lihuir","");
-    global.textk=ini_read_real("txt"+string(global.i),"textk","");
-    global.namek=ini_read_real("txt"+string(global.i),"namek","");
-    global.text=ini_read_string("txt"+string(global.i),"text","");
-    global.name=ini_read_string("txt"+string(global.i),"name","");
+instance_destroy();
+ exit;
+// show_message("????")
+ }  
+ 
+	 
+	
+   // global.beijing=ini_read_string("txt"+string(global.i),"beijing","");
+    //global.lihuil=ini_read_string("txt"+string(global.i),"lihil","");
+    //global.lihuir=ini_read_string("txt"+string(global.i),"lihuir","");
+   // global.textk=ini_read_real("txt"+string(global.i),"textk","");
+ //   global.namek=ini_read_real("txt"+string(global.i),"namek","");
+    var T = C[|global.i]
+    global.text=T[?"Text"]//ini_read_string("txt"+string(global.i),"text","");
+    global.name=T[?"Name"]//ini_read_string("txt"+string(global.i),"name","");
     global.huanchun="";
     global.zishu=string_length(global.text)+1;
     global.jishu=0;
-    mouse_clear(mb_left);
+    //mouse_clear(mb_left);
     
     
  };
