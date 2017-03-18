@@ -8,11 +8,11 @@ if (Next )
  else
  {
     global.i+=1;
-   // global.beijing=ini_read_string("txt"+string(global.i),"beijing","");
-    //global.lihuil=ini_read_string("txt"+string(global.i),"lihil","");
-    //global.lihuir=ini_read_string("txt"+string(global.i),"lihuir","");
-    //global.textk=ini_read_real("txt"+string(global.i),"textk","");
-    //global.namek=ini_read_real("txt"+string(global.i),"namek","");
+    global.beijing=ini_read_string("txt"+string(global.i),"beijing","");
+    global.lihuil=ini_read_string("txt"+string(global.i),"lihil","");
+    global.lihuir=ini_read_string("txt"+string(global.i),"lihuir","");
+    global.textk=ini_read_real("txt"+string(global.i),"textk","");
+    global.namek=ini_read_real("txt"+string(global.i),"namek","");
     global.text=ini_read_string("txt"+string(global.i),"text","");
     global.name=ini_read_string("txt"+string(global.i),"name","");
     global.huanchun="";

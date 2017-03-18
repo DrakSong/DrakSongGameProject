@@ -3071,14 +3071,6 @@
             }
         },
         {
-            "Key": "d5621eca-4fc9-4947-a54f-c39fd68d0330",
-            "Value": {
-                "id": "9102004d-9c39-4316-bdfd-5170c5c50289",
-                "resourcePath": "datafiles_yy\\To.csv.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "d56edd39-6e24-4bad-9208-f776038e444d",
             "Value": {
                 "id": "cc6fb073-a9e4-4fa6-98bf-0986899c1175",
@@ -3420,14 +3412,6 @@
                 "id": "834a122b-9478-493f-8dba-ecf2e2be6b12",
                 "resourcePath": "views\\e6ebbc75-1c65-4c21-aaa8-0d87d5938192.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "e6f7a87d-d53a-4c04-b031-8eae3380d183",
-            "Value": {
-                "id": "22300dfe-d179-4ce7-a9c0-68b00705872c",
-                "resourcePath": "datafiles_yy\\Bate.cvs.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
