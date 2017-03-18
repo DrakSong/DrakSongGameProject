@@ -15,7 +15,7 @@
     "option_windows_icon": "${options_dir}\\windows\\runner_icon.ico",
     "option_windows_installer_finished": "${options_dir}\\windows\\Runner_finish.bmp",
     "option_windows_installer_header": "${options_dir}\\windows\\Runner_header.bmp",
-    "option_windows_interpolate_pixels": true,
+    "option_windows_interpolate_pixels": false,
     "option_windows_license": "${options_dir}\\windows\\installer\\license.txt",
     "option_windows_nsis_file": "${options_dir}\\windows\\installer\\runnerinstaller.nsi",
     "option_windows_product_info": "",
@@ -23,15 +23,15 @@
     "option_windows_save_location": 0,
     "option_windows_scale": 0,
     "option_windows_sleep_margin": 1,
-    "option_windows_splash_screen": "${options_dir}\\windows\\splash.png",
+    "option_windows_splash_screen": "${options_dir}\\windows\\splash\\splash.png",
     "option_windows_start_fullscreen": false,
     "option_windows_texture_page": "8192x8192",
-    "option_windows_use_splash": false,
+    "option_windows_use_splash": true,
     "option_windows_version": {
         "build": 0,
         "major": 1,
         "minor": 0,
         "revision": 0
     },
-    "option_windows_vsync": false
+    "option_windows_vsync": true
 }

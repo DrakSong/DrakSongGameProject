@@ -1,5 +1,5 @@
 //INI = "";\
-C = csv_read("To2.csv");
+Text = csv_read("To2.csv");
 ini_open(global.INI);
 //window_set_size(512,288);
 DialogueCreate();
@@ -10,7 +10,7 @@ Next = 0;
 //Next = 1// mouse_check_button(mb_left)
 //DialogueLoad();
 //Next = 0;
-var T = C[|global.i]
+var T = Text[|global.i]
 	
     global.text=T[?"Text"]//ini_read_string("txt"+string(global.i),"text","");
     global.name=T[?"Name"]

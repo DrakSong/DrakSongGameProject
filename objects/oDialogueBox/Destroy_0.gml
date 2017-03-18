@@ -1,5 +1,5 @@
 
 global.Dialogueing = false;
 
-//ds_grid_destroy(C)
+ds_list_destroy(Text)
 ini_close()

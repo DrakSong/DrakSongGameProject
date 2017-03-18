@@ -1,5 +1,6 @@
 ///debug信息
 if Debug{
+GuiSet(8);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 draw_set_font(fWindow)
@@ -28,6 +29,6 @@ GuiSet(1);
 //show_debug_overlay(Debug);
 if keyboard_check_pressed(vk_f1) Debug^=true;
 
-
+show_debug_overlay(Debug)
 texture_set_interpolation(false);
 

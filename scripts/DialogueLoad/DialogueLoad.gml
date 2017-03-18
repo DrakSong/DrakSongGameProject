@@ -14,7 +14,7 @@ if (Next )
 
 
   global.i+=1;
- if global.i =  ds_list_size(C)
+ if global.i =  ds_list_size(Text)
  {
 instance_destroy();
  exit;
@@ -28,7 +28,7 @@ instance_destroy();
     //global.lihuir=ini_read_string("txt"+string(global.i),"lihuir","");
    // global.textk=ini_read_real("txt"+string(global.i),"textk","");
  //   global.namek=ini_read_real("txt"+string(global.i),"namek","");
-    var T = C[|global.i]
+    var T = Text[|global.i]
     global.text=T[?"Text"]//ini_read_string("txt"+string(global.i),"text","");
     global.name=T[?"Name"]//ini_read_string("txt"+string(global.i),"name","");
     global.huanchun="";
