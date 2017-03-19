@@ -1,3 +1,3 @@
 action_inherited();
-//AtkBoxCollison(x,y,oParPlayer);
+AtkBoxCollison(x,y,oParPlayer);
 

@@ -14,9 +14,12 @@
     }
     else
     {
-    if (onGround)
-    draw_sprite_outlined(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, C);    
+    if (onGround){
+	//if state = RUN
+	//image_speed= abs(vx)/3;
+    draw_sprite_outlined(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, C);    }
 else
+	
     draw_sprite_outlined(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, C);
 }    
    
