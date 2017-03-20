@@ -1,141 +1,170 @@
 action_inherited();
 ///攻击
-if onGround && attacking {
-        vx = 0
-}
-
-if KeyGet("L", 2) {
-        if OtherAtkMode = "BS" {
-                OtherAtkMode = "FT"exit;
-        }
-        if OtherAtkMode = "FT" {
-                OtherAtkMode = "BS"exit;
+if Mode = 1 {
+        ChangeModeTime -= 0.25;
+        if ChangeModeTime = 30 {
+                ChangeModeTime = 0;
+                Mode = 0;
         }
 }
-//上A
-if (kUp && kAction) and ! attacking and state != ROLL and kControl {
 
-        // Atk in place
-        AtkMode = "L";
-        image_index = 0;
-        image_speed = 0.25;
-        sprite_index = sAtk;
-        attacking = true;
-
-        if OtherAtkMode = "BS" {
-                var F = instance_create(x, y, oFT);
-                F.sprite_index = sBS;
-                F.mask_index = sBS;
-                F.hspeed = facing *4.3;
-                F.image_xscale = facing;
-
+if Mode = 0 {
+        if onGround && attacking {
+                vx = 0
         }
-        if OtherAtkMode = "FT" {
-                var F = instance_create(x, y, oFT);
-                F.sprite_index = sFT;
-                F.mask_index = sFT;
-                //F = instance_create(x, y, oFT) ;
-                F.hspeed = facing * 1.45;
-                F.vspeed = -6.80;
-                F.gravity = 0.5;
-                F.image_xscale = facing;
-
+        //换模式
+        if KeyGet("L", 0) and ! STI {
+                ChangeModeTime++;
         }
 
-        SoundPaly(SouAtk);
-}
-if (kDown && kAction) and ! attacking and state != ROLL and kControl and !onGround {
-
-        // Atk in place
-        AtkMode = "L";
-        image_index = 0;
-        image_speed = 0.25;
-        sprite_index = sAtk;
-        attacking = true;
-
-        if OtherAtkMode = "BS" {
-                var F = instance_create(x+facing*8, y, oFT);
-                F.sprite_index = sBS;
-                F.mask_index = sBS;
-				if facing =-1
-				F.direction = (180+45);
-				if facing = 1
-					F.direction = (360-45);
-					F.image_angle  =F.direction
-                F.speed =  4.3;
-				
-                F.image_xscale = facing;
-
+        //轻按下换武器 
+        if KeyGet("L", 1) and ChangeModeTime < 90 {
+                if ChangeModeTime <= 30 {
+				  ChangeModeTime = 0;
+                        if OtherAtkMode = "BS" {
+                                OtherAtkMode = "FT"exit;
+                        }
+                        if OtherAtkMode = "FT" {
+                                OtherAtkMode = "BS"exit;
+                        }
+                      
+                }
+                ChangeModeTime = 0;
         }
-       
-        SoundPaly(SouAtk);
-}
+		if ChangeModeTime>30
+		{
+		scrConOFF();
+		}
+        if ChangeModeTime = 90 {
+                if KeyGet("L", 1) Mode = 1;
+        }
 
+        ChangeModeTime = min(ChangeModeTime, 90)
+        //被打断就没有了
+        if STI {
+                ChangeModeTime = 0;
+        }
 
+        //上A
+        if (kUp && kAction) and ! attacking and state != ROLL and kControl {
 
-
-//if keyboard_check(vk_pageup) G += 0.1;
-//if keyboard_check(vk_pagedown) G -= 0.1;
-//if AP - 8 > 0
-//通常A
-if (kAction) and ! attacking and state != ROLL and kControl {
-
-        // Atk in place
-        AtkMode = "S";
-        image_index = 0;
-        image_speed = 0.45;
-        sprite_index = sAtk;
-        attacking = true;
-        SoundPaly(SouAtk);
-        //AP -= 8;
-}
-
-//蓄力攻击
-if kActionK {
-        AtkTime++
-
-}
-if kActionR {
-        if AtkTime > 90 {
-
+                // Atk in place
                 AtkMode = "L";
                 image_index = 0;
                 image_speed = 0.25;
                 sprite_index = sAtk;
                 attacking = true;
-                var F = instance_create(x, y, oFT);
-                F.sprite_index = sBS;
-                F.mask_index = sBS;
-                F.hspeed = facing * 4.2;
-                F.image_xscale = facing * 2 F.image_yscale = 2
+
+                if OtherAtkMode = "BS" {
+                        var F = instance_create(x, y, oFT);
+                        F.sprite_index = sBS;
+                        F.mask_index = sBS;
+                        F.hspeed = facing * 4.3;
+                        F.image_xscale = facing;
+
+                }
+                if OtherAtkMode = "FT" {
+                        var F = instance_create(x, y, oFT);
+                        F.sprite_index = sFT;
+                        F.mask_index = sFT;
+                        //F = instance_create(x, y, oFT) ;
+                        F.hspeed = facing * 1.45;
+                        F.vspeed = -6.80;
+                        F.gravity = 0.5;
+                        F.image_xscale = facing;
+
+                }
+
+                SoundPaly(SouAtk);
+        }
+        if (kDown && kAction) and ! attacking and state != ROLL and kControl and ! onGround {
+
+                // Atk in place
+                AtkMode = "L";
+                image_index = 0;
+                image_speed = 0.25;
+                sprite_index = sAtk;
+                attacking = true;
+
+                if OtherAtkMode = "BS" {
+                        var F = instance_create(x + facing * 8, y, oFT);
+                        F.sprite_index = sBS;
+                        F.mask_index = sBS;
+                        if facing = -1 F.direction = (180 + 45);
+                        if facing = 1 F.direction = (360 - 45);
+                        F.image_angle = F.direction F.speed = 4.3;
+
+                        F.image_xscale = facing;
+
+                }
+
+                SoundPaly(SouAtk);
+        }
+
+        //通常A
+        if (kAction) and ! attacking and state != ROLL and kControl {
+
+                // Atk in place
+                AtkMode = "S";
+                image_index = 0;
+                image_speed = 0.45;
+                sprite_index = sAtk;
+                attacking = true;
+                SoundPaly(SouAtk);
+                //AP -= 8;
+        }
+
+        //蓄力攻击
+        if kActionK {
+                AtkTime++;
 
         }
-        AtkTime = 0;
-} //蓄力期间减速
-if AtkTime > 30 {
-        vxMax = 1;
-} else {
-        vxMax = 5.5 * (1 - 0.618)
+        if kActionR {
+                if AtkTime > 90 {
+
+                        AtkMode = "L";
+                        image_index = 0;
+                        image_speed = 0.25;
+                        sprite_index = sAtk;
+                        attacking = true;
+                        var F = instance_create(x, y, oFT);
+                        F.sprite_index = sBS;
+                        F.mask_index = sBS;
+                        F.hspeed = facing * 4.2;
+                        F.image_xscale = facing * 2 F.image_yscale = 2
+
+                }
+                AtkTime = 0;
+        } //蓄力期间减速
+        if AtkTime > 30 {
+                vxMax = 1;
+        } else {
+                vxMax = 5.5 * (1 - 0.618)
+        }
+
+        ///攻击判定
+        AtkBox = 0
+        // Atk
+        if (sprite_index == sAtk and round(image_index) > 1) and AtkMode = "S" {
+                AtkBoxL = min(x + (5 * facing), x + (18 * facing));
+                AtkBoxR = max(x + (5 * facing), x + (18 * facing));
+                AtkBoxU = y - 9;
+                AtkBoxD = y - 5;
+                AtkBoxCol = c_red AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemy);
+                AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParBarrageE);
+                AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParDecorate)
+        }
+
+        ///数值回复(不进行动作后缓慢恢复）
+        if sprite_index != sRoll and ! attacking {
+                AP += 100;
+        }
+        MP += 0.025 * 0.7;
 }
 
-///攻击判定
-AtkBox = 0
-// Atk
-if (sprite_index == sAtk and round(image_index) > 1) and AtkMode = "S" {
-        AtkBoxL = min(x + (5 * facing), x + (18 * facing));
-        AtkBoxR = max(x + (5 * facing), x + (18 * facing));
-        AtkBoxU = y - 9;
-        AtkBoxD = y - 5;
-        AtkBoxCol = c_red AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemy);
-        AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParBarrageE);
-        AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParDecorate)
-}
-///数值回复
-if sprite_index != sRoll and ! attacking {
-        AP += 100
-}
-MP += 0.025 * 0.7;
-AP = min(MaxAP, AP) MP = min(MaxMP, MP) HP = min(MaxHP, HP)
+AP = min(MaxAP, AP);
+MP = min(MaxMP, MP);
+HP = min(MaxHP, HP);
 ///键入
 //关闭控制后全部不可用
 if kControl = false scrConOFF();

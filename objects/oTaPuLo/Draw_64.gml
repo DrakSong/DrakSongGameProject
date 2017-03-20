@@ -10,4 +10,4 @@ draw_sprite_ext(sprUi,10,16-8,8-1,1,1,0,c_white,1);
 if OtherAtkMode ="FT"
 draw_sprite_ext(sprUi,11,16-8,8-1,1,1,0,c_white,1);
 
-//draw_text(128,0,G)
+draw_text(128,0,vx)

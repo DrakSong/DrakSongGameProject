@@ -15,5 +15,6 @@ tightDRF = -1
 
 //AtkMode
 OtherAtkMode = "FT";
-
+ChangeModeTime =0;
 G =0;
+Mode=0;

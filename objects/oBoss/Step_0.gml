@@ -45,10 +45,16 @@ motion_add(jiao_du,0.1)
 if(i>180&&i<240){
 motion_add(jiao_du+180-3,0.2)
 }
-if(i>60*4){
+if(i>60*oBoss.VG){
 instance_destroy()
 }
 }
 i+=1
 }
 //room_caption="fps:"+string(fps)+"|i:"+string(i)+"|obj:"+string(instance_count)
+
+if keyboard_check(vk_pageup)
+VG-=0.1;
+if keyboard_check(vk_pagedown)
+VG+=0.1;
+VG = max(0,VG);

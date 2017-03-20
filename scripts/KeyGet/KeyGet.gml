@@ -1,4 +1,4 @@
-///KeyGet(key,0按住/1松开/2按下);
+///@description KeyGet(key,0按住/1松开/2按下);
 var G = global.GameInfo[?"实时变量"];
 var V= G[?"键盘信息"];
 var K = V[?"按住"];
