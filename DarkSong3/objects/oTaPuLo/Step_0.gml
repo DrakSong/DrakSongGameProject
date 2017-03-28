@@ -1,4 +1,4 @@
-action_inherited();
+action_inherited();//令人奇怪
 ///攻击
 if Mode = 1 {
         ChangeModeTime -= 0.25;
