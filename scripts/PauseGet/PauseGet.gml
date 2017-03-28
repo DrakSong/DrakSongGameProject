@@ -1,1 +1,0 @@
-return Pause(noone);
