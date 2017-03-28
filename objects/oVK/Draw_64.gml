@@ -1,4 +1,4 @@
-//display_set_gui_size(512,288);
+display_set_gui_size(512,288);
 draw_set_alpha(0.5)
 var _x,_y,_U,_R,_D,_L;
 

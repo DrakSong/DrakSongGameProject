@@ -1,4 +1,4 @@
-/// @description 在这里插入描述
+/// @description  （ 在这里插入描述）
 // 你可以在这个编辑器中写入代码
 var V = 100/60;
 V = min((AtkTime-30) *V,100);
