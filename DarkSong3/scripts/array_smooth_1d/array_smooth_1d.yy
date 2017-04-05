@@ -1,8 +1,8 @@
 {
-    "id": "cf853835-c71e-4f85-a4dd-cf45d38e43d3",
+    "id": "e095ee57-b3d7-4686-8aed-e141a05fdf8a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "ds_list_add_map",
+    "name": "array_smooth_1d",
     "IsCompatibility": false,
     "IsDnD": false
 }

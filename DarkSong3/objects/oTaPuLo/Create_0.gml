@@ -16,3 +16,4 @@ ChangeModeTime =0;
 G =0;
 Mode=0;
 
+//__pos = 0;

@@ -148,7 +148,7 @@ if (kExit)
 
 if keyboard_check_pressed(vk_home) global.Debug ^=true
 
-game_set_speed(60,gamespeed_fps)
+
 
 if keyboard_check_pressed(ord("I"))
 {
@@ -160,4 +160,9 @@ for (var i = 0; i < 10; i += 1)
 }
 }
 
+
+game_set_speed(60,gamespeed_fps)
+
 //ShowMessage()
+
+//game_set_speed(9999999999,gamespeed_microseconds)
