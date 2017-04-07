@@ -54,7 +54,7 @@ Converted string : line 2 : '{
     },
     "游戏固定设置": {
         "游戏原始宽度": 256,
-        "游戏原始高度": 144
+        "游戏原始高度": 112
     },
     "实时变量": {
     "暂停":0,
@@ -124,7 +124,7 @@ Converted string : line 2 : '{
     },
     "+"\""+@"游戏固定设置"+"\""+@": {
         "+"\""+@"游戏原始宽度"+"\""+@": 256,
-        "+"\""+@"游戏原始高度"+"\""+@": 144
+        "+"\""+@"游戏原始高度"+"\""+@": 112
     },
     "+"\""+@"实时变量"+"\""+@": {
     "+"\""+@"暂停"+"\""+@":0,
@@ -272,7 +272,7 @@ Converting GML script : ${project_dir}\scripts\ViewSet\ViewSet.gml
 Converted builtin : line 15 : view_wview[ID] = Width*argument2 -> __view_set( e__VW.WView, ID, Width*argument2 )
 Converted builtin : line 16 : view_hview[ID] = Height*argument2 -> __view_set( e__VW.HView, ID, Height*argument2 )
 Converted builtin : line 19 : view_hborder[ID] = 512*(1-0.618)/2 -> __view_set( e__VW.HBorder, ID, 512*(1-0.618)/2 )
-Converted builtin : line 20 : view_vborder[ID] = 144*(1-0.618) -> __view_set( e__VW.VBorder, ID, 144*(1-0.618) )
+Converted builtin : line 20 : view_vborder[ID] = 112*(1-0.618) -> __view_set( e__VW.VBorder, ID, 112*(1-0.618) )
 Converted builtin : line 21 : view_object[ID] = argument3 -> __view_set( e__VW.Object, ID, argument3 )
 Converted builtin : line 11 : view_visible[ID] = Use -> __view_set( e__VW.Visible, ID, Use )
 Converted builtin : line 17 : view_xport[ID] = 0 -> __view_set( e__VW.XPort, ID, 0 )
