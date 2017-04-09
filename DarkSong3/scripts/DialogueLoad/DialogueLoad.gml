@@ -31,9 +31,11 @@ instance_destroy();
     var T = Text[|global.i]
     global.text=T[?"Text"]//ini_read_string("txt"+string(global.i),"text","");
     global.name=T[?"Name"]//ini_read_string("txt"+string(global.i),"name","");
+	global.Lihui = T[?"Image"];
     global.huanchun="";
     global.zishu=string_length(global.text)+1;
     global.jishu=0;
+	
     //mouse_clear(mb_left);
     
     

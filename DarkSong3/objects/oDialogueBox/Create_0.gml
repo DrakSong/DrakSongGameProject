@@ -17,4 +17,5 @@ var T = Text[|global.i]
 	global.huanchun="";
     global.zishu=string_length(global.text)+1;
     global.jishu=0;
+	global.Lihui = 0
 action_timeline_set(TextAdd, 0, 0, 1);
