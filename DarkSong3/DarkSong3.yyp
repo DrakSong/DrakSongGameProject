@@ -1511,14 +1511,6 @@
             }
         },
         {
-            "Key": "6828d8a0-1255-4241-864a-fef7a01dad3e",
-            "Value": {
-                "id": "140d1988-da49-456f-962d-1e66465deb50",
-                "resourcePath": "datafiles_yy\\CSVRead.yy.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "683e33dc-7409-4d3d-b13a-4eb9f4822615",
             "Value": {
                 "id": "7c0e6ccd-3a24-492b-90bf-af092f48052b",
@@ -1668,14 +1660,6 @@
                 "id": "edd17b0a-0906-4f89-8a87-5b6b50b5248c",
                 "resourcePath": "sounds\\SouBOOSBGM\\SouBOOSBGM.yy",
                 "resourceType": "GMSound"
-            }
-        },
-        {
-            "Key": "74daa9a0-11c1-4a82-8fc8-9edd1dc5d6ff",
-            "Value": {
-                "id": "61317b59-cb2a-41a9-9a67-10fb987a31aa",
-                "resourcePath": "extensions\\GameBao\\GameBao.yy",
-                "resourceType": "GMExtension"
             }
         },
         {

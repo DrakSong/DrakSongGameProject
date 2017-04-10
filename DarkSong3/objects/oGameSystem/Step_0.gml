@@ -161,9 +161,7 @@ for (var i = 0; i < 10; i += 1)
 }
 
 
-
-   game_set_speed(60, gamespeed_fps);
-  //game_set_speed(33333/2, gamespeed_microseconds);
+game_set_speed(60,gamespeed_fps)
 
 //ShowMessage()
 
