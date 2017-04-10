@@ -1671,6 +1671,14 @@
             }
         },
         {
+            "Key": "74daa9a0-11c1-4a82-8fc8-9edd1dc5d6ff",
+            "Value": {
+                "id": "61317b59-cb2a-41a9-9a67-10fb987a31aa",
+                "resourcePath": "extensions\\GameBao\\GameBao.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "75ba267e-c6af-400c-b758-6a97b4f7875f",
             "Value": {
                 "id": "7c5f3441-0b02-4fba-b237-3961cbbb1d01",

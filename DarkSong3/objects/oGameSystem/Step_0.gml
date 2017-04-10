@@ -160,8 +160,15 @@ for (var i = 0; i < 10; i += 1)
 }
 }
 
-
-game_set_speed(60,gamespeed_fps)
+/*
+if os_browser == browser_not_a_browser
+    {
+    game_set_speed(80, gamespeed_fps);
+    }
+else
+    {
+    game_set_speed(30, gamespeed_fps);
+    }
 
 //ShowMessage()
 
