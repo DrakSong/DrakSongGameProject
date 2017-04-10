@@ -18,7 +18,7 @@ var GameVar = json_decode(GameVarInfoCreat());
 ds_map_add(global. GameInfo,"实时变量",GameVar);
 
 var G = json_decode("{"+"\""+@"游戏原始宽度"+"\""+@": 256,
- "+"\""+@"游戏原始高度"+"\""+@": 144}")
+ "+"\""+@"游戏原始高度"+"\""+@": 112}")
 ds_map_add(global. GameInfo,"游戏固定设置",G);
 
 
