@@ -17,5 +17,5 @@ __view_set( e__VW.HView, ID, Height*argument2 );
 __view_set( e__VW.XPort, ID, 0 ); 
 __view_set( e__VW.YPort, ID, 0 );
 __view_set( e__VW.HBorder, ID, 512*(1-0.618)/2 );
-__view_set( e__VW.VBorder, ID, 144*(1-0.618) );
+__view_set( e__VW.VBorder, ID, 112*(1-0.618) );
 __view_set( e__VW.Object, ID, argument3 )
