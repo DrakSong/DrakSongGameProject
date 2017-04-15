@@ -8,11 +8,11 @@ if Obj = oParEnemy or oParPlayer//if Obj = oParDecorate
 var C = collision_multiple(X, Y, oParCBox)
 if Obj = oParDecorate
 var C = collision_multiple(X, Y, oParDecorate);
-if Obj = oParBarrage
-var C = collision_multiple(X, Y, oParDecorate);
-if Obj = oParBarrageE
-var C = collision_multiple(X, Y, oParBarrageE);
+if Obj = oParPlayerBarrage
+var C = collision_multiple(X, Y, oParPlayerBarrage);
+if Obj = oParEnemyBarrage
+var C = collision_multiple(X, Y, oParEnemyBarrage);
 if C  {
-   
+// if object_get_parent(self.object_index) = oParPlayerBarrage
  AtkBoxStep(C,Obj);
 }

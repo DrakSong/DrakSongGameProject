@@ -18,7 +18,7 @@ draw_text(20,i*5,string_hash_to_newline("MKF volume"+string(microphone_volume/25
 draw_text(20,i*6,string_hash_to_newline("FPS :"+string(fps)));
 draw_text(20,i*7,string_hash_to_newline("FPS_REAL :"+string(fps_real)));
 draw_text(20,i*8,string_hash_to_newline("场上有多少怪物： "+string(instance_number(oParEnemy))))
-draw_text(20,i*9,string_hash_to_newline("弹幕数量： "+string(instance_number(oParBarrage)+instance_number(oParBarrageE))))
+draw_text(20,i*9,string_hash_to_newline("弹幕数量： "+string(instance_number(oParPlayerBarrage)+instance_number(oParEnemyBarrage))))
 //draw_text_outline(20,180,"draw text outline",2,c_fuchsia,12)
 //draw_text_button(20,200,"draw text button ",2,c_white,c_fuchsia)
 texture_set_interpolation(false);

@@ -1,12 +1,24 @@
 //INI = "";\
 Text = csv_read("To2.csv");
-ini_open(global.INI);
+//TE = load_csv("To2.csv")
+//ini_open(global.INI);
 //window_set_size(512,288);
-DialogueCreate();
+
 Next = 0;
 //draw_set_font(global.TextFont);
 
 
+global.i=0;
+global.beijing="";
+global.lihuil="";
+global.lihuir="";
+global.textk="";
+global.namek="";
+global.text="";
+global.name="";
+global.huanchun="";
+global.zishu=0;
+global.jishu=0;
 //Next = 1// mouse_check_button(mb_left)
 //DialogueLoad();
 //Next = 0;

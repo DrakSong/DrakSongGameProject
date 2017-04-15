@@ -18,14 +18,13 @@ if (!kBlock ) and !attacking and state !=ROLL and !STI {
     D.image_angle+=24
     D.friction = 0.08
    // D.HP = 10
+   
     attacking = true;
     D.ATK =1;
-    D.ASTI = 30;
-   
+    D.ASTI = 12;
     D.AFlyV = 2;
-    D.AFlyH = 3.2/2;
-   // D.Pid = id
-    MP-=8
-D.Invaliding = false//开启不吸收伤害
+    D.AFlyH = 1.6;
+
+    D.Invaliding = false//开启不吸收伤害
 }
 

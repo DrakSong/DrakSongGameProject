@@ -30,7 +30,7 @@ else
 
 
 ///绘制攻击区域
-
+if oGameSystem.Debug
 if (sprite_index == sAtk  ) and  AtkBoxCol != c_white
 {
     draw_set_colour(AtkBoxCol)

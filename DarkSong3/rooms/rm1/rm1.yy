@@ -26,9 +26,59 @@
         "2a68ede8-800a-480e-84ca-b4649040c575",
         "d94cf5ae-b1fc-4e6c-ac3c-7610afe7faae",
         "8d366153-d938-4d8a-9db4-566158f63b1a",
-        "56882129-8300-4a9e-94ae-78b552a29c6c"
+        "56882129-8300-4a9e-94ae-78b552a29c6c",
+        "b99903ef-1582-4101-8815-6a1ebd1c6446"
     ],
     "layers": [
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "id": "73aa7772-9d5c-49be-b12f-de17d2f0df73",
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "depth": 0,
+            "grid_x": 16,
+            "grid_y": 16,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "layers": [
+                
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "name": "other",
+            "userdefined_depth": false,
+            "visible": true,
+            "instances": [
+                {
+                    "id": "b99903ef-1582-4101-8815-6a1ebd1c6446",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_741A2526",
+                    "x": 272,
+                    "y": 448,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_741A2526",
+                    "objId": "6f5a8aae-7765-4e6d-930e-20942ddc04ee",
+                    "rotation": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                }
+            ]
+        },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "id": "b72dcaf2-7bb3-4e3b-9fdf-d6a9ce5f8452",
@@ -609,7 +659,7 @@
         "id": "0b205b6a-3c61-4dc6-9e3e-21d2fe6cd691",
         "modelName": "GMRoomViewSettings",
         "mvc": "1.0",
-        "clearDisplayBuffer": true,
+        "clearDisplayBuffer": false,
         "clearViewBackground": false,
         "enableViews": false,
         "inheritViewSettings": false

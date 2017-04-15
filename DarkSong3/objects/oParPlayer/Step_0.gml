@@ -97,3 +97,20 @@ kControl = true
 /* */
 }
 /*  */
+
+
+
+////被攻击的部分
+
+/*
+var P = instance_place(x,y,oParEnemyBarrage)
+if P
+with (P)
+{
+//action_inherited();
+AtkBoxCollison(x,y,oParPlayer);
+};
+  
+
+
+

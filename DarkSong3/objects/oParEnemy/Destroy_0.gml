@@ -1,1 +1,1 @@
-ds_list_clear(AtkList);
+ds_list_destroy(AtkList);

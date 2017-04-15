@@ -39,7 +39,7 @@ INV = false//开启不吸收伤害
 //受伤害回复的时长
 STITime = 0; //硬直时间
 INVTime = 0;//无敌时间
-mask_index = sPlayerMask
+mask_index = sEnemyMask;
 Parent = object_get_parent(self)
 AtkBoxU = 0;
 AtkBoxD = 0;
@@ -123,6 +123,3 @@ DSTI = 0//僵直补正
 DFlyH = 0//吹飞补正
 DFlyV = 0//击飞补正
 
-
-/* */
-/*  */

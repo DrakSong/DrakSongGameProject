@@ -11,9 +11,11 @@ tightDR = -1;
 tightRoomGoOn = false;
 tightDRF = -1
 //AtkMode
-OtherAtkMode = "FT";
+OtherAtkMode = 0//"FT";
 ChangeModeTime =0;
 G =0;
 Mode=0;
 
 //__pos = 0;
+OtherAtkModeMax = 1;//默认刚开始有1把
+
