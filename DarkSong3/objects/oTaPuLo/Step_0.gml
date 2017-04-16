@@ -1,7 +1,24 @@
 action_inherited(); //令人奇怪
 ///滚动
 
-///滚动部分
+//爬楼梯
+
+var LT  =instance_place(x,y,oLT)
+
+if LT and ((kUp and LT.Up) or (kDown and LT.Down))and !attacking and state != ROLL and kControl 
+{
+x = LT.x+8
+vy = 0;
+vx = 0;
+xscale = 1;
+yscale = 1;
+instance_change(oTaPuLoPa,0)
+}
+
+//if onGround show_debug_message("Fuck")
+
+
+
 // Roll
 if (onGround && !attacking) {
         if (state != ROLL) {

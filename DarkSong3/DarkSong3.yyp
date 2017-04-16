@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "060e464b-06bc-49cd-88c1-e3cd93d978c9",
+            "Value": {
+                "id": "1acff2c2-e393-48ba-9c4c-bf1bae1cc657",
+                "resourcePath": "views\\060e464b-06bc-49cd-88c1-e3cd93d978c9.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "07246ab2-3029-443e-9a54-ba67cc032420",
             "Value": {
                 "id": "8bbde854-fd71-4a5d-99e8-aa1624cd316e",
@@ -711,6 +719,14 @@
             }
         },
         {
+            "Key": "30167c42-f468-4ba0-930d-59ddc4dc3941",
+            "Value": {
+                "id": "b51e7103-ec93-4d40-94ef-02ce8725595e",
+                "resourcePath": "views\\30167c42-f468-4ba0-930d-59ddc4dc3941.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3094486c-e8a7-4ac5-b2c4-77229ad8ea34",
             "Value": {
                 "id": "75d7818d-2f53-4b3c-9bb3-f7f550aae0c0",
@@ -987,6 +1003,14 @@
             "Value": {
                 "id": "67532df7-5bc3-4cb4-b57e-dbb60886fa50",
                 "resourcePath": "objects\\oParRail\\oParRail.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3ee9bfdc-5307-4d92-a9ac-21aa0b296645",
+            "Value": {
+                "id": "678f346f-c86b-474c-9119-73bf6e0ef30f",
+                "resourcePath": "objects\\oTaPuLoPa\\oTaPuLoPa.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1578,7 +1602,7 @@
             "Key": "6f5a8aae-7765-4e6d-930e-20942ddc04ee",
             "Value": {
                 "id": "021105bc-e357-412a-8983-3584914a7b75",
-                "resourcePath": "objects\\object_62\\object_62.yy",
+                "resourcePath": "objects\\oGetFT\\oGetFT.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1615,10 +1639,18 @@
             }
         },
         {
+            "Key": "72599f1a-2bcc-4b7d-8fc9-8db785f3654c",
+            "Value": {
+                "id": "0f0400b8-3265-414f-849a-331006fc1f4b",
+                "resourcePath": "objects\\oLT\\oLT.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "728217b3-4566-4175-a941-a64d661d91b9",
             "Value": {
                 "id": "2eb3296c-f0b4-4a75-b136-e156183a380f",
-                "resourcePath": "datafiles_yy\\To2.csv.yy",
+                "resourcePath": "datafiles_yy\\TextCS.csv.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -1716,6 +1748,14 @@
                 "id": "e87bdfd6-589a-4689-add7-61f43536593a",
                 "resourcePath": "scripts\\@__init_d3d\\__init_d3d.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "78f7b74f-d323-4693-8ac6-eb0c1d1e1219",
+            "Value": {
+                "id": "0666239c-cfdf-4f90-b31f-f6b55c2eb25e",
+                "resourcePath": "views\\78f7b74f-d323-4693-8ac6-eb0c1d1e1219.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2495,6 +2535,14 @@
             }
         },
         {
+            "Key": "ab4ec559-d29b-4605-bc3a-7f5479e0afbb",
+            "Value": {
+                "id": "9b6c2055-4ff2-4a40-a5c0-f5385a2891a4",
+                "resourcePath": "datafiles_yy\\GetFT.csv.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "ad133f26-5233-42bc-874f-23917872594c",
             "Value": {
                 "id": "89459e4d-f33f-4f0e-812c-f2a77b075e04",
@@ -3132,6 +3180,14 @@
                 "id": "97d760c3-44b4-447a-a18b-51faac022db3",
                 "resourcePath": "views\\d1a588c7-42dc-4db7-8951-00a9e068f1d3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d1a930f1-9496-4476-8500-4db868bec4bc",
+            "Value": {
+                "id": "11b5cf8d-3104-4da9-a06a-f43803ab6c38",
+                "resourcePath": "sprites\\sprite_66\\sprite_66.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

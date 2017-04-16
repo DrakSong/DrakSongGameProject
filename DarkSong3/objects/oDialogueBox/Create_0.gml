@@ -1,5 +1,5 @@
 //INI = "";\
-Text = csv_read("To2.csv");
+Text = csv_read(global.Text);
 //TE = load_csv("To2.csv")
 //ini_open(global.INI);
 //window_set_size(512,288);
@@ -29,5 +29,5 @@ var T = Text[|global.i]
 	global.huanchun="";
     global.zishu=string_length(global.text)+1;
     global.jishu=0;
-	global.Lihui = 0
+	global.Lihui = T[?"Image"]
 action_timeline_set(TextAdd, 0, 0, 1);

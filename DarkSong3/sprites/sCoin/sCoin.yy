@@ -120,7 +120,7 @@
         }
     ],
     "origin": 0,
-    "playbackSpeed": 1,
+    "playbackSpeed": 12,
     "playbackSpeedType": 0,
     "sepmasks": false,
     "swatchColours": null,

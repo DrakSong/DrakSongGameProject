@@ -4,5 +4,5 @@
 other.OtherAtkModeMax++;
 instance_destroy()
 
-global.INI = "txt.ini"
+global.Text = "GetFT.csv"
  instance_create(x,y,oDialogueBox)
