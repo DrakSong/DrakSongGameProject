@@ -5,7 +5,7 @@
 
 xscale = 1;
 yscale = 1;
-if KeyGet("B", 0) {
+if KeyGet("B", 0) and ! KeyGet("上", 0)  {
         vy = -3;
         instance_change(oTaPuLo, 0)
 }
@@ -20,7 +20,7 @@ if KeyGet("下", 0) {
 if KeyGet("上", 0) if instance_place(x, y - 16, oLT) {
         y -= 2
 };
-if KeyGet("上", 2) if ! instance_place(x, y - 16, oLT) {
+if KeyGet("上", 0) and KeyGet("B", 0)  and ! instance_place(x, y - 16, oLT) {
         vy = -2.2;vx=1.5*facing
         instance_change(oTaPuLo, 0)
 };

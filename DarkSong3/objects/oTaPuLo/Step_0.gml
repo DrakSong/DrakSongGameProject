@@ -5,7 +5,7 @@ action_inherited(); //令人奇怪
 
 var LT  =instance_place(x,y,oLT)
 
-if LT and ((kUp and LT.Up) or (kDown and LT.Down))and !attacking and state != ROLL and kControl 
+if LT and  !STI and ((kUp and LT.Up) or (kDown and LT.Down))and !attacking and state != ROLL and kControl 
 {
 x = LT.x+8
 vy = 0;
