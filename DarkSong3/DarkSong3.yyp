@@ -218,7 +218,7 @@
             "Key": "0eaf2492-466d-4041-939a-453655206237",
             "Value": {
                 "id": "22403d25-1db6-4258-b85a-83749bc06b71",
-                "resourcePath": "sprites\\sSlope2L_0\\sSlope2L_0.yy",
+                "resourcePath": "sprites\\sSlope30L\\sSlope30L.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -244,14 +244,6 @@
                 "id": "47caa2b1-86bd-4335-bf73-33a469a473b8",
                 "resourcePath": "scripts\\GameKeyInfo\\GameKeyInfo.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "145027a7-2b02-463d-9dc7-47358b993471",
-            "Value": {
-                "id": "e9695752-f4ea-4e2e-b860-f2debb15e19c",
-                "resourcePath": "rooms\\rm1\\rm1.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -572,6 +564,14 @@
                 "id": "acab5916-e5d7-4b61-b3fa-6464427d87c9",
                 "resourcePath": "objects\\oParNPC\\oParNPC.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "26452ac3-2f5c-4d29-a785-2c4692373902",
+            "Value": {
+                "id": "6dd93f80-aa79-4668-b891-3f707db1d1c8",
+                "resourcePath": "datafiles_yy\\T3.csv.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -911,6 +911,14 @@
             }
         },
         {
+            "Key": "3a4d1d9a-0cee-4a09-a78f-e8c0b70c2089",
+            "Value": {
+                "id": "3a2b2185-dfbd-4f74-bf95-f64a48854a3f",
+                "resourcePath": "datafiles_yy\\T2.csv.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "3b109584-c3e3-4621-b0a6-0fdc37c6f869",
             "Value": {
                 "id": "01f746d2-2688-47ae-a4b1-697e9f7b2fcc",
@@ -1100,14 +1108,6 @@
                 "id": "bff62418-eeba-49a4-bbdc-f672d4fa6319",
                 "resourcePath": "objects\\oVK\\oVK.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "441836d7-5ba5-4682-af04-5e1a7f49f29c",
-            "Value": {
-                "id": "8028b69d-2235-47a1-8f7d-ece3acef08a6",
-                "resourcePath": "rooms\\rm2\\rm2.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -1583,6 +1583,14 @@
             }
         },
         {
+            "Key": "6c9b5e69-5dac-475c-bd73-2394dfa83b2d",
+            "Value": {
+                "id": "b93582cf-1a5e-4368-b462-70a9fdca9328",
+                "resourcePath": "rooms\\GameRm_Child_1\\GameRm_Child_1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "6cc2de00-fa7f-4422-af08-fe4ac2c40d89",
             "Value": {
                 "id": "1f1cd0f6-cde2-44eb-b7d6-f7c40273bd78",
@@ -1612,6 +1620,14 @@
                 "id": "021105bc-e357-412a-8983-3584914a7b75",
                 "resourcePath": "objects\\oGetFT\\oGetFT.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6f9bca29-c249-4600-be46-98f8f7bb9fd1",
+            "Value": {
+                "id": "4a81a06a-e990-486e-acb3-9c41f4297776",
+                "resourcePath": "rooms\\GameRm_Child_0\\GameRm_Child_0.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -2463,6 +2479,14 @@
             }
         },
         {
+            "Key": "a6685218-da17-4858-8f34-1c9eeec8f6b1",
+            "Value": {
+                "id": "bcb5486a-88fd-45fa-9d63-6079fbe2c65d",
+                "resourcePath": "objects\\oDoor2\\oDoor2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a69f554a-0a6f-452f-be59-69e9d6dd04cf",
             "Value": {
                 "id": "a5b6ea94-498a-475b-95e0-ddf704b0fe61",
@@ -2572,6 +2596,14 @@
                 "id": "587c71dc-c85c-477b-9acd-6664522738dc",
                 "resourcePath": "objects\\oBoos\\oBoos.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ade10a1f-6ce6-4d06-a6f4-b3584e94cd00",
+            "Value": {
+                "id": "f494b18b-dfa5-4f45-a87f-5af9ab0cb118",
+                "resourcePath": "datafiles_yy\\T1.csv.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -3836,14 +3868,6 @@
                 "id": "ec22294b-f670-447e-a9f4-280ee4f4451d",
                 "resourcePath": "scripts\\@__init_global\\__init_global.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "f2ed9018-2ca7-452e-a1d4-ae82c00a55aa",
-            "Value": {
-                "id": "7c8d7c9d-8eba-4eaf-a20c-7ed29978e35f",
-                "resourcePath": "objects\\MO\\MO.yy",
-                "resourceType": "GMObject"
             }
         },
         {

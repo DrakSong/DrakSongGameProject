@@ -29,7 +29,7 @@ var I = 64/8
 GuiSet(I);
 for (i=0; i<3; i+=1)
 {
-   DrawSelect(0,(80 + 12*i)*I,_Muen[i],_Sel=i);
+   DrawSelect(0,(64 + 12*i)*I,_Muen[i],_Sel=i);
 };
 }
 ///Option
@@ -45,7 +45,7 @@ var I = 64/8
 GuiSet(I);
 for (i=0; i<4; i+=1)
 {
-   DrawSelect(0,(80 + 12*i)*I,_Muen[i],_Sel=i);
+   DrawSelect(0,(64 + 12*i)*I,_Muen[i],_Sel=i);
 };
 GuiSet(1);
 }

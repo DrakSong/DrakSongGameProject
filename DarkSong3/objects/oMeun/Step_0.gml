@@ -89,7 +89,8 @@ if _Mode = "Option" {
 if _Mode = "NewGame"
 {
 BGMStop();
-room_goto(rm1);
+room_goto_next()
+instance_create(32,32,oTaPuLo)
 
 //这里根据读取的存档 进入对应的房间
 }
