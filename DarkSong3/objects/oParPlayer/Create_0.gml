@@ -2,7 +2,7 @@
 //继承
 event_inherited();
 kControl = true;//指令输入锁
-
+CBox.mask_index = sPlayerMask;
 
 ///动作功能属性
 var k = 1-0.618

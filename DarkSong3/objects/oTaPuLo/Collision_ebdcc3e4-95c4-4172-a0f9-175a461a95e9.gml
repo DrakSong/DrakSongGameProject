@@ -1,6 +1,6 @@
 ///Splash water
 if is_water_surface_collision {
- var __vspd = (vx)/2, //This instance's vertical speed
+ var __vspd = (vx), //This instance's vertical speed
  __pos = mean(bbox_left,bbox_right); //And it's horizontal center
  with other {
   __pos -= x; //Compared to the water's placement

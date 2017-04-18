@@ -4,9 +4,9 @@ Next = KeyGet("A",2)// keyboard_check_pressed(ord('X'));// mouse_check_button(mb
  
  
 if (Next )
-{if (global.jishu<global.zishu)
+{if (jishu<zishu)
  {
-     global.jishu=global.zishu;
+    jishu=zishu;
      Next = 0;
  }
  else
@@ -16,8 +16,8 @@ if (Next )
    
 
 
-  global.i+=1;
- if global.i =  ds_list_size(Text)
+ i+=1;
+ if i =  ds_list_size(Text)
  {
 instance_destroy();
  exit;
@@ -31,13 +31,13 @@ instance_destroy();
     //global.lihuir=ini_read_string("txt"+string(global.i),"lihuir","");
    // global.textk=ini_read_real("txt"+string(global.i),"textk","");
  //   global.namek=ini_read_real("txt"+string(global.i),"namek","");
-    var T = Text[|global.i]
-    global.text=T[?"Text"]//ini_read_string("txt"+string(global.i),"text","");
-    global.name=T[?"Name"]//ini_read_string("txt"+string(global.i),"name","");
-	global.Lihui = T[?"Image"];
-    global.huanchun="";
-    global.zishu=string_length(global.text)+1;
-    global.jishu=0;
+    var T = Text[|i]
+   text=T[?"Text"]//ini_read_string("txt"+string(global.i),"text","");
+   name=T[?"Name"]//ini_read_string("txt"+string(global.i),"name","");
+	Lihui = T[?"Image"];
+    huanchun="";
+    zishu=string_length(text)+1;
+   jishu=0;
 	
     //mouse_clear(mb_left);
     

@@ -1,6 +1,6 @@
 
-if (global.jishu<=global.zishu)
+if (jishu<=zishu)
 {
-    global.huanchun=string_copy(global.text,1,global.jishu);
-    global.jishu+=1
+   huanchun=string_copy(text,1,jishu);
+    jishu+=1
 };

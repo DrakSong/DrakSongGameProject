@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "0eaf2492-466d-4041-939a-453655206237",
+            "Value": {
+                "id": "22403d25-1db6-4258-b85a-83749bc06b71",
+                "resourcePath": "sprites\\sSlope2L_0\\sSlope2L_0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0ee0c2cf-c0b7-4f38-a179-85b9f0d647cd",
             "Value": {
                 "id": "82952c0c-0da8-45e7-b40f-6841ca938b6f",
@@ -2519,6 +2527,14 @@
             }
         },
         {
+            "Key": "a96b5d55-52fa-404d-91ed-8833eb92655e",
+            "Value": {
+                "id": "5c928c5b-48af-48b1-b925-f89199f47c87",
+                "resourcePath": "objects\\oSlope30\\oSlope30.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a9b5e66a-7b43-4757-8ac1-d545c20d0cfa",
             "Value": {
                 "id": "c30fe8b2-8203-4f97-a429-922fd99d1f7a",
@@ -3324,6 +3340,14 @@
                 "id": "6dfab5cc-9a6b-40f2-a80a-66b23b72ddcc",
                 "resourcePath": "views\\d62cdacd-6c15-453e-a488-5dab93e3d613.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d6a7c7ab-be0b-4253-bc39-aa9f69466810",
+            "Value": {
+                "id": "6ee1a157-4185-4af0-9653-a7b28163d33c",
+                "resourcePath": "sprites\\sLifeMask\\sLifeMask.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

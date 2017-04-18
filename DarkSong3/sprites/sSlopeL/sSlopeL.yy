@@ -56,7 +56,7 @@
     "origin": 0,
     "playbackSpeed": 1,
     "playbackSpeedType": 1,
-    "sepmasks": true,
+    "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
     "textureGroup": 0,
