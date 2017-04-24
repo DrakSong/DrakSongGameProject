@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "2b2a0386-1f70-43cb-b70e-62041fb14b14",
+            "Value": {
+                "id": "dbe4b082-4bee-4fa3-9efc-1e6a70aee6d3",
+                "resourcePath": "objects\\object_66\\object_66.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2b3c82c8-4b63-4103-a855-a45be7edeac0",
             "Value": {
                 "id": "737dc1f1-9fe6-40ad-9689-6b1119b3e966",
@@ -1743,6 +1751,14 @@
             }
         },
         {
+            "Key": "7784b53d-d66e-4786-99dd-e57b94bb9a7f",
+            "Value": {
+                "id": "4f7d829b-01f2-459d-ba05-4912963a5281",
+                "resourcePath": "sprites\\sprite_69\\sprite_69.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7810e0b9-7ead-4864-84d6-65be501fa09d",
             "Value": {
                 "id": "56d7b30a-b224-494a-8761-4cd55ebb1c80",
@@ -2175,6 +2191,14 @@
             }
         },
         {
+            "Key": "931bd6a6-cf53-445e-9de7-4aad8f1ba3c8",
+            "Value": {
+                "id": "a152194e-1c81-4ad7-b860-e9fb11f044ca",
+                "resourcePath": "sprites\\spineboy\\spineboy.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9403c759-5adb-4623-ae31-ba08bb185824",
             "Value": {
                 "id": "bd6af36e-bcbf-42ba-9bb2-a8efd8facb52",
@@ -2295,19 +2319,19 @@
             }
         },
         {
-            "Key": "9a77200d-4e51-4e4b-a069-4b3037a37467",
-            "Value": {
-                "id": "374b7e84-0c35-4ccc-bba7-47ef5bd5c1f4",
-                "resourcePath": "views\\145027a7-2b02-463d-9dc7-47358b993471-room.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "9a92c78e-314a-49fa-bf84-d022837d61b4",
             "Value": {
                 "id": "0620cfc6-4ee8-4df7-8469-d2c6b73192ab",
                 "resourcePath": "views\\9a92c78e-314a-49fa-bf84-d022837d61b4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9b252280-b7f5-4339-a812-899913c09e06",
+            "Value": {
+                "id": "cc3a7dc7-9bb5-4c88-b1ee-f447f8ebae26",
+                "resourcePath": "sprites\\Rooster_Ani\\Rooster_Ani.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2975,6 +2999,14 @@
             }
         },
         {
+            "Key": "c39dbb8b-40d7-499f-b2ce-a4b39056cbc2",
+            "Value": {
+                "id": "3f8b6156-7835-4bca-99d2-3e9d0cba54e6",
+                "resourcePath": "datafiles_yy\\SwordsMan.json.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "c3abbd43-f71b-4ad6-bab1-c617ee88ac44",
             "Value": {
                 "id": "f3535287-2dba-4bb6-b342-3157220324ee",
@@ -3388,6 +3420,14 @@
                 "id": "6d8e76ac-7cb9-4691-960d-deb4b92094a9",
                 "resourcePath": "views\\d7a27221-caa7-4fa5-bc81-5a37909fe621.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d7d1ca3a-0941-4b51-ba66-bb5ca4527085",
+            "Value": {
+                "id": "d67ec8c8-3428-4e01-9220-2001da87603e",
+                "resourcePath": "datafiles_yy\\Sheep_Ani_ske.json.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
