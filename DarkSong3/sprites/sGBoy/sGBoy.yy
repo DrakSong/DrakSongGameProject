@@ -5,7 +5,7 @@
     "name": "sGBoy",
     "For3D": false,
     "HTile": false,
-    "VTile": false,
+    "VTile": true,
     "bbox_bottom": 207,
     "bbox_left": 0,
     "bbox_right": 135,
