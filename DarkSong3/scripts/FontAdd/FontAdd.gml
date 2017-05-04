@@ -1,6 +1,10 @@
 ///载入游戏字体；
+globalvar fWindow16;
+fWindow16 = font_add("FZDHTJW.TTF", 16,0, 0, 0, 65535)
+
 globalvar fWindow;
 fWindow = font_add("FZDHTJW.TTF", 64,0, 0, 0, 65535)
+
 /*
 globalvar Font_En_Gt_32;
 Font_En_Gt_32 = font_add("GT_EN.ttf", 32, 0, 0, 0, 65535)

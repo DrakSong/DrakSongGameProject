@@ -190,6 +190,7 @@ instance_change(oTaPuLoPa,0)
         }
 
         //蓄力攻击
+		/*
         if kActionK {
                 AtkTime+=room_speed/24;
 
@@ -217,7 +218,7 @@ instance_change(oTaPuLoPa,0)
                 vxMax = 1;
         } else {
                 vxMax = 5.5 * (1 - 0.618)
-        }
+        }*/
 
         ///攻击判定
         AtkBox = 0

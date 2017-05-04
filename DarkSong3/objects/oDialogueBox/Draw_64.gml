@@ -1,7 +1,7 @@
 ////绘制
 //display_set_gui_size(512,288)
 
-
+draw_set_font(fWindow )
 draw_set_colour(c_black);;
 draw_set_alpha(0.75)
 draw_rectangle(0,96-16-8,256,112,0)

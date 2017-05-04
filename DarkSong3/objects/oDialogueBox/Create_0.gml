@@ -1,4 +1,5 @@
 //INI = "";\
+
 Text = csv_read(global.Text);
 //TE = load_csv("To2.csv")
 //ini_open(global.INI);

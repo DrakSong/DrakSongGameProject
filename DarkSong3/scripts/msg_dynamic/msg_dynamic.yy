@@ -1,8 +1,8 @@
 {
-    "id": "0bb43e39-824d-4e0c-88aa-1c34bca07137",
+    "id": "713d0635-e8c9-451b-8539-5722a9e8eacc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "FontAdd",
+    "name": "msg_dynamic",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,0 +1,1 @@
+if (variable_instance_exists(id, "char")) char = 0;
