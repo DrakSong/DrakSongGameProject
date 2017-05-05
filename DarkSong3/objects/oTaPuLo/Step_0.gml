@@ -3,9 +3,14 @@ action_inherited(); //令人奇怪
 
 //爬楼梯
 
+//背包的系统准备
+var A = Map[?"A"]
+var AN = A[?"名字"]
+var AS = A[?"数量"]
 
-
-//if onGround show_debug_message("Fuck")
+var B = Map[?"B"]
+var BN = B[?"名字"]
+var BS = B[?"数量"]
 
 
 
@@ -92,8 +97,13 @@ instance_change(oTaPuLoPa,0)
 				
 				
                         ChangeModeTime = 0;
-						 OtherAtkMode++;
-                        if OtherAtkMode = OtherAtkModeMax {OtherAtkMode=0}
+if( B[?"名字"]!="" and  A[?"名字"] != "")
+ {
+var H = Map[?"B"];
+Map[?"B"] = Map[?"A"];
+Map[?"A"] = H;
+}
+
                        
 
 
@@ -126,7 +136,8 @@ instance_change(oTaPuLoPa,0)
                 sprite_index = sAtk;
                 attacking = true;
 
-                if OtherAtkMode = 0 {
+
+                if A[?"名字"] = "小刀" {
                         var F = instance_create(x, y, oFT);
                         F.sprite_index = sBS;
                         F.mask_index = sBS;
@@ -135,7 +146,7 @@ instance_change(oTaPuLoPa,0)
 						F.AtkListMax = 0;
 
                 }
-                if OtherAtkMode = 1 {
+                if A[?"名字"] = "斧头" {
                         var F = instance_create(x, y, oFT);
                         F.sprite_index = sFT;
                         F.mask_index = sFT;
@@ -148,6 +159,30 @@ instance_change(oTaPuLoPa,0)
                 }
 
                 SoundPaly(SouAtk);
+				
+				if AS != -1//排除无限使用道具
+		{
+		if AS -1 >= 0 //使用后还有剩余的
+			{
+				A[?"数量"] = AS-1;
+				
+			}
+		if AS -1 = 0
+			{
+			A[?"数量"] = AS - 1;
+			A[?"名字"]  = "";
+			
+			//现有的 被清理后把如果备用的有 就吧备用的拿上来 
+			if BN != ""
+				{
+					var H = Map[?"B"];
+					Map[?"B"] = Map[?"A"];
+					Map[?"A"] = H;
+				}	
+			
+			}	
+		}
+
         }
 		
 		//下A
@@ -274,3 +309,19 @@ var D = instance_place(x, y, oDoor) if D and tightRoomGoOn = false {
         tightRoomGoOn = true;
         room_goto(tightRM)
 }
+
+/// @description 在这里插入描述
+// 你可以在这个编辑器中写入代码
+
+
+
+//当两个物品都有东西后 来回切换
+
+//消耗物品
+if keyboard_check_pressed(ord("U")) 
+{
+	
+}
+
+//添加物体
+

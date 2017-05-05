@@ -1791,14 +1791,6 @@
             }
         },
         {
-            "Key": "744ce495-8d61-49f7-a1d6-beb91dcb429c",
-            "Value": {
-                "id": "07fe4528-9b28-44ed-b9e7-408fc2740d0d",
-                "resourcePath": "rooms\\room_4\\room_4.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "75ba267e-c6af-400c-b758-6a97b4f7875f",
             "Value": {
                 "id": "7c5f3441-0b02-4fba-b237-3961cbbb1d01",
@@ -2452,6 +2444,14 @@
                 "id": "2fe01efc-23ea-4e56-8dcb-d8fd47e70760",
                 "resourcePath": "sprites\\bg_brickwall\\bg_brickwall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9e7be6f0-111c-4b14-a95f-08c417b5c187",
+            "Value": {
+                "id": "7eb6b09d-ccdf-452c-8d52-5083ecea8f43",
+                "resourcePath": "objects\\oGetFD\\oGetFD.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3908,6 +3908,14 @@
                 "id": "bdc2f2c4-bf6f-4971-aead-0fd60b6202ba",
                 "resourcePath": "sounds\\mus_jingle01\\mus_jingle01.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "ed52ab40-f30a-4827-b8d0-bbf6c5a2b0bf",
+            "Value": {
+                "id": "85bc0b87-d122-46b3-bd5d-79dd2c5ec0d3",
+                "resourcePath": "objects\\oGetFD_1\\oGetFD_1.yy",
+                "resourceType": "GMObject"
             }
         },
         {
