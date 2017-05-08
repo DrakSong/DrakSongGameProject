@@ -217,7 +217,7 @@ Map[?"A"] = H;
         }
 */
         //通常A
-        if (kAction) and ! attacking and state != ROLL and kControl {
+        if (kAction) and ! attacking and state != ROLL and kControl and AP-6>0{
 
                 // Atk in place
                 AtkMode = "S";
@@ -226,7 +226,7 @@ Map[?"A"] = H;
                 sprite_index = sAtk;
                 attacking = true;
                 SoundPaly(SouAtk);
-                //AP -= 8;
+                AP -= 6;
         }
 
         //蓄力攻击

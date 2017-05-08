@@ -34,28 +34,33 @@ draw_text(0,64,"在后备箱的物品B 名字:"+string(BN)+" 数量:"+string(BS)
 GuiSet(1)
 */
 //绘制上限
-for (i=0; i<MaxHP; i+=1)
+for (i=0; i<MaxHP*0.618; i+=1)
 {
    draw_sprite_ext(sHP,0,20-12+20+i,8-2,1,1,0,c_white,0.416);//HP
 };
    draw_sprite_ext(sHP,1,20-12+20+i,8-2,1,1,0,c_white,1);//HP
+  
    //绘制现有
-   for (i=0; i<HP; i+=1)
+   for (i=0; i<HP*0.618; i+=1)
 {
    draw_sprite_ext(sHP,0,20-12+20+i,8-2,1,1,0,c_white,1);//HP
 };
+   draw_sprite_ext(sHP,1,20-12+20,8-2,1,1,0,c_white,1);//HP
+   
 //这是绘制Ap的
 
-for (i=0; i<MaxAP; i+=1)
+for (i=0; i<MaxAP*0.618; i+=1)
 {
    draw_sprite_ext(sAP,0,20-12+20+i,8-2+5,1,1,0,c_white,0.416);//HP
 };
    draw_sprite_ext(sAP,1,20-12+20+i,8-2+5,1,1,0,c_white,1);//HP
+    
    //绘制现有
-   for (i=0; i<AP; i+=1)
+   for (i=0; i<AP*0.618; i+=1)
 {
    draw_sprite_ext(sAP,0,20-12+20+i,8-2+5,1,1,0,c_white,1);//HP
 };
+ draw_sprite_ext(sAP,1,20-12+20,8-2+5,1,1,0,c_white,1);//HP
 //绘制现在所使用的
 draw_sprite_ext(sUI2,0,20-12,8-2,1,1,0,c_white,1);//界面框
 draw_sprite_ext(sUI2,1,20-12,8-2,1,1,0,c_white,0.4);//界面框
