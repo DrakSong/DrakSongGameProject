@@ -15,7 +15,7 @@ var BS = B[?"数量"]
 
 
 // Roll
-if (onGround && !attacking) {
+if (onGround && !attacking) and AP-16 > 0 {
         if (state != ROLL) {
                 if (kRollL) {
                         facing = -1;
@@ -138,7 +138,8 @@ Map[?"A"] = H;
 
 
                 if A[?"名字"] = "小刀" {
-                        var F = instance_create(x, y, oFT);
+                        var F = instance_create(x, y-16, oFT);
+						
                         F.sprite_index = sBS;
                         F.mask_index = sBS;
                         F.hspeed = facing * 4.3;
@@ -147,11 +148,15 @@ Map[?"A"] = H;
 
                 }
                 if A[?"名字"] = "斧头" {
-                        var F = instance_create(x, y, oFT);
+                        var F = instance_create(x, y-16, oFT);
                         F.sprite_index = sFT;
                         F.mask_index = sFT;
                         //F = instance_create(x, y, oFT) ;
-                        F.hspeed = facing * 1.45;
+						var AX = 0;
+						if onGround AX=0
+						else 
+						AX = vx;
+                        F.hspeed = facing * 1.45+AX;
                         F.vspeed = -6.80;
                         F.gravity = 0.5;
                         F.image_xscale = facing;
@@ -270,13 +275,13 @@ Map[?"A"] = H;
 
         ///数值回复(不进行动作后缓慢恢复）
         if sprite_index != sRoll and ! attacking {
-                AP += 100;
+                AP += 0.618/2;
         }
-        MP += 0.025 * 0.7;
+      //  MP += 0.025 * 0.7;
 }
 
 AP = min(MaxAP, AP);
-MP = min(MaxMP, MP);
+//MP = min(MaxMP, MP);
 HP = min(MaxHP, HP);
 ///键入
 //关闭控制后全部不可用

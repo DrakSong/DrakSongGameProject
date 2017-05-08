@@ -6,8 +6,8 @@
     "children": [
         "30167c42-f468-4ba0-930d-59ddc4dc3941",
         "78f7b74f-d323-4693-8ac6-eb0c1d1e1219",
-        "97f64d16-6613-4993-ae99-fff6cc0b4e7f",
-        "3ee9bfdc-5307-4d92-a9ac-21aa0b296645"
+        "917c187e-ff99-44f5-9930-fdbeab97f273",
+        "97f64d16-6613-4993-ae99-fff6cc0b4e7f"
     ],
     "filterType": "GMObject",
     "folderName": "塔普洛",
