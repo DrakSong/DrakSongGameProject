@@ -12,7 +12,8 @@
         "8c5d462c-150d-48cb-8c49-bb8315939cbe",
         "fdeb3c7a-bfb6-45d0-87b4-d8cef87d5dce",
         "ff8f8bcc-85dd-4f2f-9add-1ed74a7e1a48",
-        "3c7afbff-df09-45d6-acc4-82fdc80bc552"
+        "3c7afbff-df09-45d6-acc4-82fdc80bc552",
+        "76dc8b90-cbd5-4288-abc6-487c3558b630"
     ],
     "filterType": "GMSprite",
     "folderName": "塔普洛",

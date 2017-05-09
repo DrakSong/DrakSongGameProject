@@ -25,11 +25,11 @@ Map = ds_map_create();
 var A = ds_map_create();
 ds_map_add(A,"名字","小刀");
 ds_map_add(A,"数量",2);
-ds_map_add(A,"持有上限",5);
+ds_map_add(A,"持有上限",12);
 ds_map_add(Map,"A",A);
 
 var B = ds_map_create();
-ds_map_add(B,"名字","斧头");
-ds_map_add(B,"数量",-1);
-ds_map_add(B,"持有上限",-1);
+ds_map_add(B,"名字","");
+ds_map_add(B,"数量",0);
+ds_map_add(B,"持有上限",0);
 ds_map_add(Map,"B",B);

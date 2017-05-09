@@ -137,32 +137,14 @@ Map[?"A"] = H;
                 attacking = true;
 
 
-                if A[?"名字"] = "小刀" {
-                        var F = instance_create(x, y-16, oFT);
-						
-                        F.sprite_index = sBS;
-                        F.mask_index = sBS;
-                        F.hspeed = facing * 4.3;
-                        F.image_xscale = facing;
-						F.AtkListMax = 0;
-
-                }
                 if A[?"名字"] = "斧头" {
-                        var F = instance_create(x, y-16, oFT);
-                        F.sprite_index = sFT;
-                        F.mask_index = sFT;
-                        //F = instance_create(x, y, oFT) ;
-						var AX = 0;
-						if onGround AX=0
-						else 
-						AX = vx;
-                        F.hspeed = facing * 1.45+AX;
-                        F.vspeed = -6.80;
-                        F.gravity = 0.5;
-                        F.image_xscale = facing;
-
+                       instance_create(x,y-16,oAxe)
                 }
-
+				   if A[?"名字"] = "小刀" {
+                       instance_create(x,y-16,oDagger)
+                }
+				
+				
                 SoundPaly(SouAtk);
 				
 				if AS != -1//排除无限使用道具
@@ -190,32 +172,7 @@ Map[?"A"] = H;
 
         }
 		
-		//下A
-		/*
-        if (kDown && kAction) and ! attacking and state != ROLL and kControl and ! onGround {
-
-                // Atk in place
-                AtkMode = "L";
-                image_index = 0;
-                image_speed = 0.25;
-                sprite_index = sAtk;
-                attacking = true;
-
-                if OtherAtkMode = "BS" {
-                        var F = instance_create(x + facing * 8, y, oFT);
-                        F.sprite_index = sBS;
-                        F.mask_index = sBS;
-                        if facing = -1 F.direction = (180 + 45);
-                        if facing = 1 F.direction = (360 - 45);
-                        F.image_angle = F.direction F.speed = 4.3;
-
-                        F.image_xscale = facing;
-
-                }
-
-                SoundPaly(SouAtk);
-        }
-*/
+		
         //通常A
         if (kAction) and ! attacking and state != ROLL and kControl and AP-6>0{
 
@@ -244,8 +201,8 @@ Map[?"A"] = H;
                         sprite_index = sAtk;
                         attacking = true;
                         var F = instance_create(x, y, oAtkMax);
-                        F.sprite_index = sBS;
-                        F.mask_index = sBS;
+                        F.sprite_index = sDagger;
+                        F.mask_index = sDagger;
                         F.hspeed = facing * .4;
                         F.image_xscale = facing * 2
 						F.x=x+facing*16;

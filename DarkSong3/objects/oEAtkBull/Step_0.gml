@@ -9,7 +9,7 @@ if (!kBlock ) and !attacking and state !=ROLL and !STI {
 
     var D;
     D = instance_create(x+facing*8, y, oEFT);
-    D.sprite_index = sFT;
+    D.sprite_index = sAxe;
     D.image_speed = 0.1;
     D.hspeed = 2.4 * facing;
     D.vspeed = -8.18;

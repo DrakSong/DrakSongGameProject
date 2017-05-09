@@ -42,7 +42,7 @@
             "Key": "017a37d8-e2b9-4f2d-b996-d3682ea28943",
             "Value": {
                 "id": "a1feb31e-9937-4ecc-b39c-ebdb5aac1ca4",
-                "resourcePath": "sprites\\sHuo\\sHuo.yy",
+                "resourcePath": "sprites\\sHolyWater\\sHolyWater.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -148,6 +148,14 @@
                 "id": "da0ced3f-c31d-4b59-b77d-5ba7e4d1aa07",
                 "resourcePath": "views\\08b51069-cdc2-4396-a38a-98a64b4e9896.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "09729e15-ceac-4e20-a232-f0ac29812574",
+            "Value": {
+                "id": "988ad10a-4704-466b-ae15-cc04b93ebbc0",
+                "resourcePath": "sprites\\sCantGet\\sCantGet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -567,6 +575,14 @@
             }
         },
         {
+            "Key": "255024be-319d-41ec-953e-ac622149f18e",
+            "Value": {
+                "id": "3fcdedf1-15f1-4b8b-b509-adc303e870d8",
+                "resourcePath": "objects\\oGetAxe\\oGetAxe.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "25c09ce8-2ccb-4d95-ac6f-557affe761df",
             "Value": {
                 "id": "acab5916-e5d7-4b61-b3fa-6464427d87c9",
@@ -756,6 +772,14 @@
                 "id": "b51e7103-ec93-4d40-94ef-02ce8725595e",
                 "resourcePath": "views\\30167c42-f468-4ba0-930d-59ddc4dc3941.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "30622bc8-b52d-49af-8d6f-1607788217f6",
+            "Value": {
+                "id": "0a118e07-a9fc-4eec-8889-cd07ad489fe2",
+                "resourcePath": "objects\\oHolyWater\\oHolyWater.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1139,6 +1163,14 @@
             "Value": {
                 "id": "bff62418-eeba-49a4-bbdc-f672d4fa6319",
                 "resourcePath": "objects\\oVK\\oVK.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "44c40ce3-dab4-4e37-9862-e477e2062fa9",
+            "Value": {
+                "id": "d3342e9e-bdd7-4d34-ab58-23f9c66837af",
+                "resourcePath": "objects\\oBoomerang\\oBoomerang.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1567,6 +1599,14 @@
             }
         },
         {
+            "Key": "6773aed4-610e-43f2-8055-46bcf384bff8",
+            "Value": {
+                "id": "6d1006e5-ce1d-41d6-a6ce-6401154e1fbd",
+                "resourcePath": "objects\\oDagger\\oDagger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "67dece40-0e54-4556-8a23-73cc155abfde",
             "Value": {
                 "id": "6cde8b62-23e1-43f1-a493-8bc2d5b71f9c",
@@ -1652,14 +1692,6 @@
                 "id": "082f025f-fd3b-4211-aa89-cc91fa8f12ec",
                 "resourcePath": "views\\6e7158ae-f729-4ee7-9c5f-a378eda8ed86.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "6f5a8aae-7765-4e6d-930e-20942ddc04ee",
-            "Value": {
-                "id": "021105bc-e357-412a-8983-3584914a7b75",
-                "resourcePath": "objects\\oGetFT\\oGetFT.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1799,6 +1831,14 @@
             }
         },
         {
+            "Key": "76dc8b90-cbd5-4288-abc6-487c3558b630",
+            "Value": {
+                "id": "f27f299c-99e1-4c43-be33-ee1a5eb40662",
+                "resourcePath": "views\\76dc8b90-cbd5-4288-abc6-487c3558b630.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7810e0b9-7ead-4864-84d6-65be501fa09d",
             "Value": {
                 "id": "56d7b30a-b224-494a-8761-4cd55ebb1c80",
@@ -1850,7 +1890,7 @@
             "Key": "79e01035-e27d-429e-a123-c65667bf6170",
             "Value": {
                 "id": "05746e50-c7aa-4eb0-84b5-327a5d17f63a",
-                "resourcePath": "sprites\\sBS\\sBS.yy",
+                "resourcePath": "sprites\\sDagger\\sDagger.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2303,6 +2343,14 @@
             }
         },
         {
+            "Key": "95da277a-946a-4f2a-8efc-bb9f417c6aa3",
+            "Value": {
+                "id": "19422777-fe94-415e-a89c-c8cbe13605bb",
+                "resourcePath": "objects\\oGet\\oGet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "96ef4bf0-99e6-4ebc-9d2f-fc5a2b263a14",
             "Value": {
                 "id": "6170f832-74b9-499c-b8d9-023e37ad641f",
@@ -2394,7 +2442,7 @@
             "Key": "9a9a3352-4e8c-48f8-bf27-61cc4124f3c8",
             "Value": {
                 "id": "1f3ef8b5-f700-44d4-9e32-09a721e16b36",
-                "resourcePath": "sprites\\sFT\\sFT.yy",
+                "resourcePath": "sprites\\sAxe\\sAxe.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2458,7 +2506,7 @@
             "Key": "9e7be6f0-111c-4b14-a95f-08c417b5c187",
             "Value": {
                 "id": "7eb6b09d-ccdf-452c-8d52-5083ecea8f43",
-                "resourcePath": "objects\\oGetFD\\oGetFD.yy",
+                "resourcePath": "objects\\oGetDagger\\oGetDagger.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2564,6 +2612,14 @@
                 "id": "0174279d-03ab-4cc3-aac8-d9296a229403",
                 "resourcePath": "objects\\oRailMoverV\\oRailMoverV.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a537303a-283a-4b83-a3b7-e0ddfd22d317",
+            "Value": {
+                "id": "4c335699-a8d6-4d8c-89ee-ab0f265762d2",
+                "resourcePath": "sprites\\sBoomerang\\sBoomerang.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2799,6 +2855,14 @@
             }
         },
         {
+            "Key": "b4c9f2fa-50f8-40ef-8c5a-3f79dd4a42dc",
+            "Value": {
+                "id": "8c747fce-dca1-4150-9da2-97863545d8e6",
+                "resourcePath": "sprites\\8469\\8469.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b4ce3bb5-9fb8-4465-aae8-60a6d9fe3be1",
             "Value": {
                 "id": "b3585e1a-5221-4ca8-96d6-05fb4e2c65bc",
@@ -2844,6 +2908,14 @@
                 "id": "2a2bf8b6-af16-465f-a28b-9440257c980a",
                 "resourcePath": "sprites\\sBlook\\sBlook.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b96dbbcc-79c6-41b5-bac0-f3afe7508a23",
+            "Value": {
+                "id": "b9ceaf68-5987-4fd5-a0ae-ba882c5ff53f",
+                "resourcePath": "objects\\oGetBoomerang\\oGetBoomerang.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3023,6 +3095,14 @@
             }
         },
         {
+            "Key": "bea22f61-59d0-4b4a-b255-053604b7894f",
+            "Value": {
+                "id": "5d357ec1-a0e1-43d1-9ce6-69361bb2d4d1",
+                "resourcePath": "objects\\oGetHolyWater\\oGetHolyWater.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bf2302d2-e1e9-4229-bce0-69b6ee3f2eb7",
             "Value": {
                 "id": "281d36fc-54ce-4c68-9d84-9f1ac014fc02",
@@ -3079,6 +3159,14 @@
             }
         },
         {
+            "Key": "c225d494-b8f3-48d3-b84d-994c79c3311a",
+            "Value": {
+                "id": "f878c87a-a809-4b0c-932f-424723d30ee8",
+                "resourcePath": "sprites\\sHolyWaterFire\\sHolyWaterFire.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c39dbb8b-40d7-499f-b2ce-a4b39056cbc2",
             "Value": {
                 "id": "3f8b6156-7835-4bca-99d2-3e9d0cba54e6",
@@ -3132,6 +3220,14 @@
                 "id": "b0f0c64d-eb3f-4422-b182-188f436a4cb0",
                 "resourcePath": "views\\c68f6c03-af8d-4f9a-b1ab-d860b51880a6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c69d6f62-b9f0-410a-8954-52c82a492c10",
+            "Value": {
+                "id": "88174053-6d8a-40cf-9432-61f20d059b10",
+                "resourcePath": "objects\\oHolyWaterFire\\oHolyWaterFire.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -3466,7 +3562,7 @@
             "Key": "d589844a-d325-4db2-8ffc-46886beac935",
             "Value": {
                 "id": "c6a2f2d3-af1c-4da9-9b0c-d289eed202a4",
-                "resourcePath": "sprites\\sHuoping\\sHuoping.yy",
+                "resourcePath": "sprites\\sHolyWaterP\\sHolyWaterP.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3754,7 +3850,7 @@
             "Key": "e2cd2e7b-ea9c-4a5f-92d7-fa16316f2bab",
             "Value": {
                 "id": "47a3a323-2e06-43ea-b542-5a71b751cd6f",
-                "resourcePath": "objects\\oFT\\oFT.yy",
+                "resourcePath": "objects\\oAxe\\oAxe.yy",
                 "resourceType": "GMObject"
             }
         },
