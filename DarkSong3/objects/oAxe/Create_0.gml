@@ -3,7 +3,8 @@ ATK = 1;
 AFlyV = 1.5;
 ASTI = 10;
 
-
+AtkListCleanTime = 60;
+alarm[0] = AtkListCleanTime;
  var F = self//instance_create(x, y-16, oAxe);
          
                         //F = instance_create(x, y, oFT) ;

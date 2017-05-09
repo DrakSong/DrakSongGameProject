@@ -76,7 +76,7 @@ var BN = B[?"名字"]
 var BS = B[?"数量"]
 var BM = B[?"持有上限"]
 
-draw_sprite_part_ext(sUI2,1,0,0,20,20*(BS/BM),18-12+20,8-2+9+1,0.5,0.5,c_white,1)
+draw_sprite_part_ext(sUI2,1,0,0,20,20*(BS/BM),18-12+20+2,8-2+9+1,0.5,0.5,c_white,1)
 
 switch (BN)
 {
@@ -86,7 +86,7 @@ switch (BN)
 		case"回旋镖":SP = sBoomerang;break;
 		 default: SP = sNoSP;
 }
-draw_sprite_ext(SP,0,18-12+20+1,8-2+9+2,0.5,0.5,0,c_white,1);
+draw_sprite_ext(SP,0,18-12+20+1+2,8-2+9+2,0.5,0.5,0,c_white,1);
 
 /*
 draw_set_color(c_black)

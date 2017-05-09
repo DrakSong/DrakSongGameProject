@@ -1,4 +1,5 @@
 AtkList = ds_list_create();
+//为了进行不重复攻击 2间隔后 能再次攻击预留的部分
 AtkListCleanTime = -1;
 alarm[0] = AtkListCleanTime;
 Cid = id;

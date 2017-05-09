@@ -133,6 +133,7 @@ Map[?"A"] = H;
                 AtkMode = "L";
                 image_index = 0;
                 image_speed = 0.25;
+				sAtk = sPlayerJab;
                 sprite_index = sAtk;
                 attacking = true;
 
@@ -142,6 +143,13 @@ Map[?"A"] = H;
                 }
 				   if A[?"名字"] = "小刀" {
                        instance_create(x,y-16,oDagger)
+                }
+					if A[?"名字"] = "圣水" {
+                       instance_create(x,y-16,oHolyWater)
+                }
+				 if A[?"名字"] = "回旋镖"and AP - 16>0 and !instance_exists(oBoomerang){
+				 AP -=16;
+                       instance_create(x,y-16,oBoomerang)
                 }
 				
 				
@@ -180,10 +188,11 @@ Map[?"A"] = H;
                 AtkMode = "S";
                 image_index = 0;
                 image_speed = 0.45;
+				sAtk = sPlayerAtk;
                 sprite_index = sAtk;
                 attacking = true;
                 SoundPaly(SouAtk);
-                AP -= 6;
+                AP -= 4;
         }
 
         //蓄力攻击
@@ -271,19 +280,4 @@ var D = instance_place(x, y, oDoor) if D and tightRoomGoOn = false {
         tightRoomGoOn = true;
         room_goto(tightRM)
 }
-
-/// @description 在这里插入描述
-// 你可以在这个编辑器中写入代码
-
-
-
-//当两个物品都有东西后 来回切换
-
-//消耗物品
-if keyboard_check_pressed(ord("U")) 
-{
-	
-}
-
-//添加物体
 

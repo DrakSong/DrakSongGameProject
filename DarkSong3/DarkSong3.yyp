@@ -3479,6 +3479,14 @@
             }
         },
         {
+            "Key": "d39b2744-683f-43c1-817c-ab19e34dbdf4",
+            "Value": {
+                "id": "54fe4ba9-33e8-4b91-a117-a39cdd040902",
+                "resourcePath": "sprites\\sPlayerAtk\\sPlayerAtk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d39bbf84-2b7b-4403-88b8-88a4de39d214",
             "Value": {
                 "id": "d1470ae1-8cd6-45b6-aec9-caadd050afc7",
