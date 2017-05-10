@@ -18,6 +18,7 @@
     "androidsourcedir": "",
     "author": "",
     "classname": "",
+    "copyToTargets": -1,
     "date": "2017-01-11 02:03:08",
     "description": "",
     "extensionName": "",
@@ -26,18 +27,13 @@
             "id": "161f7bf3-dbdf-4c5f-91e8-0ed0cc752c27",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
-            "ConfigOptions": [
-                {
-                    "Key": "default",
-                    "Value": 9223372036854775807
-                }
-            ],
             "ProxyFiles": [
                 
             ],
             "constants": [
                 
             ],
+            "copyToTargets": 9223372036854775807,
             "filename": "cpu.dll",
             "final": "",
             "functions": [
@@ -59,7 +55,6 @@
             ],
             "init": "",
             "kind": 1,
-            "maskTarget": 0,
             "order": [
                 
             ],

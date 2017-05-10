@@ -7,7 +7,7 @@
 /// @description 在这里插入描述
 // 你可以在这个编辑器中写入代码
 GuiSet(2.5);
-
+texture_set_interpolation(false)
 var condition = true;
 if (condition)
 {

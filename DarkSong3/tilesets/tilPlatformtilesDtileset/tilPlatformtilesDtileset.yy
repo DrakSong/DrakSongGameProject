@@ -2,7 +2,7 @@
     "id": "57534512-65b9-4c0e-ab5c-2e9baf2ea9e4",
     "modelName": "GMTileSet",
     "mvc": "1.11",
-    "name": "til_platformtiles_tileset",
+    "name": "tilPlatformtilesDtileset",
     "auto_tile_sets": [
         
     ],
@@ -19,7 +19,7 @@
     "out_tilevborder": 2,
     "spriteId": "a30d7b09-e3e4-466c-a9a7-c2bb02af5a50",
     "sprite_no_export": false,
-    "textureGroup": 0,
+    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "tile_animation": {
         "AnimationCreationOrder": null,
         "FrameData": [

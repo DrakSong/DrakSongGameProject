@@ -68,8 +68,8 @@ switch (AN)
 draw_sprite_ext(SP,0,20-12+2,8-2+2,1,1,0,c_white,1);//对应的武器
 
 //后备箱
-draw_sprite_ext(sUI2,0,18-12+20,8-2+9+1,0.5,0.5,0,c_white,1);
-draw_sprite_ext(sUI2,1,18-12+20,8-2+9+1,0.5,0.5,0,c_white,0.4);
+draw_sprite_ext(sUI2,0,18-12+20+2,8-2+9+1,0.5,0.5,0,c_white,1);
+draw_sprite_ext(sUI2,1,18-12+20+2,8-2+9+1,0.5,0.5,0,c_white,0.4);
 var SPB;SPB = sNoSP;
 var B = Map[?"B"]
 var BN = B[?"名字"]

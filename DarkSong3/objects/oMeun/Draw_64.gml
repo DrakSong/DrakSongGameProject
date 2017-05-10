@@ -1,6 +1,7 @@
 {
 	///绘制背景
 GuiSet(1024/256);
+texture_set_interpolation(true)
 var _Y, van, fuck;
 van = (0.12450 / 4) * (sin(current_time / 450));
 _Y = (576 * (1 - 0.618));

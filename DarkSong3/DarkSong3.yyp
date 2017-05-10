@@ -1386,7 +1386,7 @@
             "Key": "57534512-65b9-4c0e-ab5c-2e9baf2ea9e4",
             "Value": {
                 "id": "ebaf81f4-82b0-45ba-b8c0-ca2e835f22e5",
-                "resourcePath": "tilesets\\til_platformtiles_tileset\\til_platformtiles_tileset.yy",
+                "resourcePath": "tilesets\\tilPlatformtilesDtileset\\tilPlatformtilesDtileset.yy",
                 "resourceType": "GMTileSet"
             }
         },
@@ -3167,14 +3167,6 @@
             }
         },
         {
-            "Key": "c39dbb8b-40d7-499f-b2ce-a4b39056cbc2",
-            "Value": {
-                "id": "3f8b6156-7835-4bca-99d2-3e9d0cba54e6",
-                "resourcePath": "datafiles_yy\\SwordsMan.json.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "c3abbd43-f71b-4ad6-bab1-c617ee88ac44",
             "Value": {
                 "id": "f3535287-2dba-4bb6-b342-3157220324ee",
@@ -3612,14 +3604,6 @@
                 "id": "6d8e76ac-7cb9-4691-960d-deb4b92094a9",
                 "resourcePath": "views\\d7a27221-caa7-4fa5-bc81-5a37909fe621.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "d7d1ca3a-0941-4b51-ba66-bb5ca4527085",
-            "Value": {
-                "id": "d67ec8c8-3428-4e01-9220-2001da87603e",
-                "resourcePath": "datafiles_yy\\Sheep_Ani_ske.json.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {

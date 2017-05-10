@@ -18,6 +18,7 @@
     "androidsourcedir": "",
     "author": "",
     "classname": "",
+    "copyToTargets": -1,
     "date": "2017-01-11 02:03:08",
     "description": "",
     "extensionName": "",
@@ -26,18 +27,13 @@
             "id": "aaa8014e-121c-4bf6-86a7-80456ad1694f",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
-            "ConfigOptions": [
-                {
-                    "Key": "default",
-                    "Value": 9223372036854775807
-                }
-            ],
             "ProxyFiles": [
                 
             ],
             "constants": [
                 
             ],
+            "copyToTargets": 9223372036854775807,
             "filename": "ram.dll",
             "final": "",
             "functions": [
@@ -104,7 +100,6 @@
             ],
             "init": "",
             "kind": 1,
-            "maskTarget": 0,
             "order": [
                 
             ],

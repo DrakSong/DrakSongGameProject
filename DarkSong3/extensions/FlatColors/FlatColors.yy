@@ -17,6 +17,7 @@
     "androidsourcedir": "",
     "author": "",
     "classname": "",
+    "copyToTargets": -1,
     "date": "2017-01-11 02:03:08",
     "description": "",
     "extensionName": "",
@@ -25,12 +26,6 @@
             "id": "2ae48f1f-ceeb-45cb-ba0f-a7547e3ad39e",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
-            "ConfigOptions": [
-                {
-                    "Key": "default",
-                    "Value": 9223372036854775807
-                }
-            ],
             "ProxyFiles": [
                 
             ],
@@ -196,6 +191,7 @@
                     "value": "make_color_rgb(127,140,141)"
                 }
             ],
+            "copyToTargets": 9223372036854775807,
             "filename": "FlatColors.gml",
             "final": "",
             "functions": [
@@ -203,7 +199,6 @@
             ],
             "init": "",
             "kind": 2,
-            "maskTarget": 0,
             "order": [
                 
             ],
