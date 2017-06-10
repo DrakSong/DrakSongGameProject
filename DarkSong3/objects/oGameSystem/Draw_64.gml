@@ -25,7 +25,7 @@ texture_set_interpolation(false);
 GuiSet(1);
 }
 //show_debug_overlay(Debug);
-if keyboard_check_pressed(vk_f1) Debug^=true;
+
 
 show_debug_overlay(Debug)
 texture_set_interpolation(false);

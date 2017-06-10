@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "oEFT",
     "eventList": [
-        {
-            "id": "562cf56f-fd62-4e78-952a-a6411bbea824",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "7810e0b9-7ead-4864-84d6-65be501fa09d"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "3d5becb3-b1bb-4327-97db-f2a2ee13e99a",

@@ -1,0 +1,255 @@
+Converting GML script : ${project_dir}\scripts\DEFAULT_SCALE\DEFAULT_SCALE.gml
+Converted description : /// @description DEFAULT_SCALE();/// @function DEFAULT_SCALE
+
+Converting GML script : ${project_dir}\scripts\DEFAULT_XYOFF\DEFAULT_XYOFF.gml
+Converted description : /// @description DEFAULT_XYOFF();/// @function DEFAULT_XYOFF
+
+Converting GML script : ${project_dir}\scripts\Scale\Scale.gml
+Converted description : /// @description Scale(percent,shift);/// @function Scale
+/// @param percent
+/// @param shift
+
+Converting GML script : ${project_dir}\scripts\drawBox\drawBox.gml
+Converted description : /// @description drawBox(color);/// @function drawBox
+/// @param color
+
+Converting GML script : ${project_dir}\scripts\ScaleX\ScaleX.gml
+Converted description : /// @description ScaleX(percent,shift);/// @function ScaleX
+/// @param percent
+/// @param shift
+
+Converting GML script : ${project_dir}\scripts\ScaleY\ScaleY.gml
+Converted description : /// @description ScaleY(percent,shift);/// @function ScaleY
+/// @param percent
+/// @param shift
+
+Converting GML script : ${project_dir}\scripts\TweenDir\TweenDir.gml
+Converted description : /// @description TweenDir(Xoff_Min, Xoff_Max, X_shift, Yoff_Min, Yoff_Max, Y_shift);/// @function TweenDir
+/// @param Xoff_Min
+/// @param  Xoff_Max
+/// @param  X_shift
+/// @param  Yoff_Min
+/// @param  Yoff_Max
+/// @param  Y_shift
+
+Converting GML script : ${project_dir}\scripts\Step\Step.gml
+Converted description : /// @description  Step(start, end, shift);/// @function  Step
+/// @param start
+/// @param  end
+/// @param  shift
+
+Converting GML script : ${project_dir}\scripts\TweenFlipHor\TweenFlipHor.gml
+Converted description : /// @description TweenFlipHor(shift);/// @function TweenFlipHor
+/// @param shift
+
+Converting GML script : ${project_dir}\scripts\TweenHorizontal\TweenHorizontal.gml
+Converted description : /// @description TweenVertical(Xoff set(In Pixels));/// @function TweenVertical
+/// @param Xoff set(In Pixels
+
+Converting GML script : ${project_dir}\scripts\TweenHorizontalLoop\TweenHorizontalLoop.gml
+Converted description : /// @description TweenHorizontalLoop(Yoff_Min, Yoff_Max, shift);/// @function TweenHorizontalLoop
+/// @param Yoff_Min
+/// @param  Yoff_Max
+/// @param  shift
+
+Converting GML script : ${project_dir}\scripts\TweenJiggle\TweenJiggle.gml
+Converted description : /// @description TweenJiggle(Xperc, Yperc);/// @function TweenJiggle
+/// @param Xperc
+/// @param  Yperc
+
+Converting GML script : ${project_dir}\scripts\TweenJiggleHor\TweenJiggleHor.gml
+Converted description : /// @description TweenJiggleHor(slow down perc);/// @function TweenJiggleHor
+/// @param slow down perc
+
+Converting GML script : ${project_dir}\scripts\TweenJiggleVer\TweenJiggleVer.gml
+Converted description : /// @description TweenJiggleVer(slow down perc);/// @function TweenJiggleVer
+/// @param slow down perc
+
+Converting GML script : ${project_dir}\scripts\TweenSquashHorizontal\TweenSquashHorizontal.gml
+Converted description : /// @description TweenSquashRepeat();/// @function TweenSquashRepeat
+
+Converting GML script : ${project_dir}\scripts\TweenSquashRepeat\TweenSquashRepeat.gml
+Converted description : /// @description TweenSquashRepeat(dir, offset, shift);  offset&shift in percents %/// @function TweenSquashRepeat
+/// @param dir
+/// @param  offset
+/// @param  shift
+
+Converting GML script : ${project_dir}\scripts\TweenVertical\TweenVertical.gml
+Converted description : /// @description TweenVertical(Yoff, shift);/// @function TweenVertical
+/// @param Yoff
+/// @param  shift
+
+Converting GML script : ${project_dir}\scripts\TweenVerticalLoop\TweenVerticalLoop.gml
+Converted description : /// @description TweenVerticalLoop(Yoff_Min, Yoff_Max, shift);/// @function TweenVerticalLoop
+/// @param Yoff_Min
+/// @param  Yoff_Max
+/// @param  shift
+
+Converting GML script : ${project_dir}\scripts\createOne\createOne.gml
+Converted description : /// @description createOne(object)/// @function createOne
+/// @param object
+
+Converting GML script : ${project_dir}\scripts\load_all\load_all.gml
+Converted string : line 24 : 'A' -> "A"
+Converted string : line 25 : 'S' -> "S"
+Converted string : line 26 : 'D' -> "D"
+
+Converting GML script : ${project_dir}\scripts\save_all\save_all.gml
+Converted description : /// @description save_all();/// @function save_all
+
+Converting GML script : ${project_dir}\scripts\set_all\set_all.gml
+Converted description : /// @description set_all();/// @function set_all
+
+Converting GML script : ${project_dir}\scripts\buttonSound\buttonSound.gml
+Converted description : /// @description buttonSound(mouseOver snd, mouseLeftPressed snd);/// @function buttonSound
+/// @param mouseOver snd
+/// @param  mouseLeftPressed snd
+
+Converting GML script : ${project_dir}\scripts\controls_setKeys\controls_setKeys.gml
+Converted description : /// @description controls_setKeys(num);/// @function controls_setKeys
+/// @param num
+
+Converting GML script : ${project_dir}\scripts\controls_drawKeys\controls_drawKeys.gml
+Converted description : /// @description controls_drawKeys(text);/// @function controls_drawKeys
+/// @param text
+
+Converting GML script : ${project_dir}\scripts\PauseMenu_PauseMenu\PauseMenu_PauseMenu.gml
+Converted description : /// @description / Set PauseButton positions /////
+
+Converting GML script : ${project_dir}\scripts\PauseMenu_Settings\PauseMenu_Settings.gml
+Converted description : /// @description PauseMenu_Settings();/// @function PauseMenu_Settings
+
+Converting GML script : ${project_dir}\scripts\PauseMenu_Sounds\PauseMenu_Sounds.gml
+Converted description : /// @description PauseMenu_Settings();/// @function PauseMenu_Settings
+
+Converting GML script : ${project_dir}\scripts\PauseMenu_Controls\PauseMenu_Controls.gml
+Converted builtin : line 72 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 91 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 73 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 91 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 72 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 91 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 73 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 91 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted description : /// @description PauseMenu_Settings();/// @function PauseMenu_Settings
+
+Converting GML script : ${project_dir}\scripts\buttonArrange_WIP\buttonArrange_WIP.gml
+Converted builtin : line 15 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 30 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 15 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 30 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 15 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 30 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 15 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 30 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted description : /// @description / Arrange all the buttons to the Center
+
+Converting GML script : ${project_dir}\scripts\buttonArrange_\buttonArrange_.gml
+Converted builtin : line 14 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 15 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 14 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 15 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted description : /// @description / Y-Axis Centered
+
+Converting GML script : ${project_dir}\scripts\scr_ParController_Create\scr_ParController_Create.gml
+Converted description : /// @description scr_ParController_Create( );/// @function scr_ParController_Create
+/// @param
+
+Converting GML script : ${project_dir}\scripts\scr_ParController_Draw\scr_ParController_Draw.gml
+Converted builtin : line 9 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 9 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 9 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 14 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 9 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted description : /// @description scr_ParController_Draw( );/// @function scr_ParController_Draw
+/// @param
+
+Converting GML script : ${project_dir}\scripts\scr_Resume\scr_Resume.gml
+Converted description : /// @description scr_Resume( );/// @function scr_Resume
+/// @param
+
+Converting GML script : ${project_dir}\scripts\scr_Pause\scr_Pause.gml
+Converted builtin : line 11 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 11 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted description : /// @description scr_Pause( );/// @function scr_Pause
+/// @param
+
+Converting GML script : ${project_dir}\objects\oCursor\Create_0.gml
+Converted description : /// @description scale = 1
+
+Converting GML script : ${project_dir}\objects\oCursor\Draw_0.gml
+Converted description : /// @description  Draw sprite ext
+
+Converting GML script : ${project_dir}\objects\oParController\Destroy_0.gml
+Converted builtin : line 15 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 15 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted description : /// @description / Delete all buttons & Free up Memory
+
+Converting GML script : ${project_dir}\objects\oSettings\Step_0.gml
+Converted builtin : line 9 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 9 : view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script : ${project_dir}\objects\oControls\Step_0.gml
+Converted builtin : line 9 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 9 : view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script : ${project_dir}\objects\oSounds\Step_0.gml
+Converted builtin : line 8 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 8 : view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script : ${project_dir}\objects\oPauseMenu\Destroy_0.gml
+Converted description : /// @description / Free memory
+
+Converting GML script : ${project_dir}\objects\oPauseMenu\Draw_0.gml
+Converted description : /// @description / Background (Black)/// @function / Background 
+/// @param Black
+
+Converting GML script : ${project_dir}\objects\oInitialize\Create_0.gml
+Converted description : /// @description  Set Fonts
+Converted string : line 44 : 'Z' -> "Z"
+Converted string : line 45 : 'X' -> "X"
+Converted string : line 46 : 'C' -> "C"
+Converted string : line 49 : 'Q' -> "Q"
+Converted string : line 50 : 'W' -> "W"
+Converted string : line 51 : 'E' -> "E"
+Converted string : line 52 : '1' -> "1"
+Converted string : line 53 : '2' -> "2"
+Converted string : line 54 : '3' -> "3"
+
+Converting GML script : ${project_dir}\objects\oGame\Draw_0.gml
+Converted builtin : line 7 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 10 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 14 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 7 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 10 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 14 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 7 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 10 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 14 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 7 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 10 : view_hview -> __view_get( e__VW.HView, 0 )
+Converted builtin : line 14 : view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\oFont\Step_0.gml
+ERROR : D:\jilcky\Documents\DrakSongGameProject\DarkSong3\objects\oFont\Step_0.gml : 7 : unexpected syntax error
+ERROR : D:\jilcky\Documents\DrakSongGameProject\DarkSong3\objects\oFont\Step_0.gml : 7 : expected expression
+ERROR : D:\jilcky\Documents\DrakSongGameProject\DarkSong3\objects\oFont\Step_0.gml : 34 : unexpected syntax error
+Too many errors - GML not processed : ${project_dir}\objects\oFont\Step_0.gml
+
+Converting GML script : ${project_dir}\objects\oControls_SetKey\Create_0.gml
+Converted description : /// @description  Set Key
+
+Converting GML script : ${project_dir}\objects\oControls_SetKey\Step_0.gml
+Converted description : /// @description  Delete
+
+Converting GML script : ${project_dir}\objects\oControls_SetKey\Draw_0.gml
+Converted builtin : line 10 : view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin : line 10 : view_yview -> __view_get( e__VW.YView, 0 )
+Converted builtin : line 10 : view_wview -> __view_get( e__VW.WView, 0 )
+Converted builtin : line 10 : view_hview -> __view_get( e__VW.HView, 0 )
+
+Converting GML script : ${project_dir}\objects\oControls_SetKey\KeyPress_1.gml
+Converted description : /// @description  SET KEY
+
+!!! Font pxfont uses a font (SomepxNew) not installed on this system. Font has NOT been regenerated.
+updated compatibility script __global_object_depths.gml

@@ -125,9 +125,10 @@ if (PauseGet() = false) and  KeyGet("P",2) == true{
         
 
 ///摄像鸡
-room_speed = 99999
+//room_speed = 99999
 ViewSet(0,1,1,oCamera);
-
+//debug开关
+if keyboard_check_pressed(vk_f1) Debug^=true;
 ///系统按钮
 var kRestart, kExit, kPrev, kNext;
 
@@ -136,21 +137,22 @@ kRestart = keyboard_check_pressed(ord("R"));
 kTitle = keyboard_check_pressed(ord("T"));
 kExit    = keyboard_check_pressed(vk_escape);
 
+if Debug=true{
 if (kTitle) 
 {game_restart();}
 if (kRestart)
   // game_restart();
   room_restart();
 if (kExit)
-    game_end();
+    game_end();}
     
 
 
-if keyboard_check_pressed(vk_home) global.Debug ^=true
+//if keyboard_check_pressed(vk_home) global.Debug ^=true
 
 
 
-if keyboard_check_pressed(ord("I"))
+if keyboard_check_pressed(ord("I"))and Debug=true
 {
 {
 for (var i = 0; i < 10; i += 1)
@@ -160,7 +162,7 @@ for (var i = 0; i < 10; i += 1)
 }
 }
 
-game_set_speed(60,gamespeed_fps)
+//game_set_speed(60,gamespeed_fps)
 
 //ShowMessage()
 

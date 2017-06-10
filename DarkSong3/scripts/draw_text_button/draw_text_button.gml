@@ -16,7 +16,8 @@ h=string_height(string_hash_to_newline(argument2));
 if(device_mouse_x(0)>argument0 &&
     device_mouse_x(0)<argument0+w &&
     device_mouse_y(0)>argument1 &&
-    device_mouse_y(0)<argument1+h)
+    device_mouse_y(0)<argument1+h
+	)
 {
     draw_set_color(argument5);
     f=1;

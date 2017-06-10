@@ -234,7 +234,8 @@ Map[?"A"] = H;
                 AtkBoxR = max(x + (5 * facing), x + (20 * facing));
                 AtkBoxU = y - 9-1;
                 AtkBoxD = y - 5+1;
-                AtkBoxCol = c_red AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemy);
+                AtkBoxCol = c_red;
+				 AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemy);
                 AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemyBarrage);
                 AtkBoxCollisonRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParDecorate)
         }
@@ -280,4 +281,11 @@ var D = instance_place(x, y, oDoor) if D and tightRoomGoOn = false {
         tightRoomGoOn = true;
         room_goto(tightRM)
 }
+
+/// Lantern
+/*
+with (instance_place(x, y, oRopeSegment))
+    if (light || sprite_index == sVineSegment)
+        physics_apply_impulse(phy_position_x, phy_position_y, other.vx * 8, other.vy * 8);
+
 

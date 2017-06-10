@@ -1,0 +1,30 @@
+{
+    "id": "c9ffe6af-74de-44aa-9aa8-1bc246459b2d",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "c9ffe6af-74de-44aa-9aa8-1bc246459b2d",
+    "children": [
+        "f9aaed83-7cb0-4aab-b8bd-6708a40d7f3f",
+        "ad9b9d3f-c2e6-4e00-893b-fcb86fb589ad",
+        "38f7b928-7f2b-435d-a4c3-1b331051aca7",
+        "344bc43e-0263-4f00-9835-6498874db673",
+        "888bf8ff-1a09-46ad-b47b-653996f4ac00",
+        "aade2a86-8e30-43c4-bf53-10db86396268",
+        "b561b08e-7f89-40c1-a7a9-4064913b76f0",
+        "f1921761-fcdc-44c8-931c-5e19fb8739a2",
+        "c97d3962-eb63-4f97-b758-6fdae7a5adcd",
+        "d79816b0-3d1a-43a3-a249-23f6a33e486c",
+        "794dfce0-d080-4dd7-b973-cd959ff0d257",
+        "10ea85ef-b2b0-4824-be5d-8ebe045b9cc6",
+        "6ba9082a-6518-4264-9945-bbbb133c4c6d",
+        "d05c0527-8d21-4011-9004-704bfd6e6eb5",
+        "263687f9-520f-4edf-ad07-9ad1264dbd82",
+        "c270c12f-64e6-4dba-8c03-205bdd229261",
+        "003356da-4880-466a-8d0d-f8f621246a28",
+        "100aef31-c316-4447-9793-4ff26b515568"
+    ],
+    "filterType": "GMIncludedFile",
+    "folderName": "vox",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}

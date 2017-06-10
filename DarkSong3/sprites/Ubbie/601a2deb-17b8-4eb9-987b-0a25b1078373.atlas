@@ -1,0 +1,125 @@
+
+Ubbie_tex.png
+size: 0,0
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shade
+  rotate: false
+  xy: 1 ,214
+  size: 130 ,30
+  orig: 130 ,30
+  offset: 0,0
+  index: -1
+pifeng
+  rotate: false
+  xy: 233 ,86
+  size: 174 ,106
+  orig: 174 ,106
+  offset: 0,0
+  index: -1
+hand_r1
+  rotate: false
+  xy: 468 ,1
+  size: 40 ,89
+  orig: 40 ,89
+  offset: 0,0
+  index: -1
+hand_r2
+  rotate: false
+  xy: 420 ,247
+  size: 68 ,39
+  orig: 68 ,39
+  offset: 0,0
+  index: -1
+hand_l11
+  rotate: false
+  xy: 469 ,156
+  size: 40 ,62
+  orig: 40 ,62
+  offset: 0,0
+  index: -1
+hand_l22
+  rotate: false
+  xy: 420 ,288
+  size: 38 ,61
+  orig: 38 ,61
+  offset: 0,0
+  index: -1
+leg_r
+  rotate: false
+  xy: 409 ,86
+  size: 57 ,80
+  orig: 57 ,80
+  offset: 0,0
+  index: -1
+leg_l
+  rotate: false
+  xy: 409 ,168
+  size: 58 ,77
+  orig: 58 ,77
+  offset: 0,0
+  index: -1
+body
+  rotate: false
+  xy: 233 ,194
+  size: 111 ,97
+  orig: 111 ,97
+  offset: 0,0
+  index: -1
+hand_l1
+  rotate: false
+  xy: 468 ,92
+  size: 40 ,62
+  orig: 40 ,62
+  offset: 0,0
+  index: -1
+head_2
+  rotate: false
+  xy: 1 ,1
+  size: 230 ,211
+  orig: 230 ,211
+  offset: 0,0
+  index: -1
+hand_l2
+  rotate: false
+  xy: 460 ,288
+  size: 38 ,61
+  orig: 38 ,61
+  offset: 0,0
+  index: -1
+eye_hmj
+  rotate: false
+  xy: 233 ,1
+  size: 225 ,83
+  orig: 225 ,83
+  offset: 0,0
+  index: -1
+eye
+  rotate: false
+  xy: 1 ,246
+  size: 100 ,25
+  orig: 100 ,25
+  offset: 0,0
+  index: -1
+eye2
+  rotate: false
+  xy: 103 ,246
+  size: 104 ,19
+  orig: 104 ,19
+  offset: 0,0
+  index: -1
+mouth
+  rotate: false
+  xy: 469 ,220
+  size: 29 ,17
+  orig: 29 ,17
+  offset: 0,0
+  index: -1
+apple_
+  rotate: false
+  xy: 346 ,247
+  size: 72 ,60
+  orig: 72 ,60
+  offset: 0,0
+  index: -1

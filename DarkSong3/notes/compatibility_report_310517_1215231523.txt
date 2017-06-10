@@ -1,0 +1,95 @@
+Converting GML script : ${project_dir}\scripts\ProcGen\ProcGen.gml
+Converted description : /// @description  ProcGen();/// @function  ProcGen
+Converted string : line 28 : ' ' -> " "
+Converted string : line 47 : 'P' -> "P"
+Converted string : line 50 : ' ' -> " "
+
+Converting GML script : ${project_dir}\scripts\GetZone\GetZone.gml
+Converted description : /// @description  GetZone(zoneChar);/// @function  GetZone
+/// @param zoneChar
+Converted string : line 12 : 'A' -> "A"
+Converted string : line 16 : 'B' -> "B"
+Converted string : line 20 : 'C' -> "C"
+Converted string : line 24 : 'D' -> "D"
+Converted string : line 28 : 'E' -> "E"
+Converted string : line 32 : 'F' -> "F"
+Converted string : line 36 : 'G' -> "G"
+Converted string : line 40 : 'H' -> "H"
+Converted string : line 44 : 'I' -> "I"
+Converted string : line 48 : 'J' -> "J"
+Converted string : line 52 : 'K' -> "K"
+Converted string : line 56 : 'L' -> "L"
+Converted string : line 60 : 'M' -> "M"
+Converted string : line 64 : 'N' -> "N"
+Converted string : line 68 : 'O' -> "O"
+Converted string : line 72 : 'P' -> "P"
+
+Converting GML script : ${project_dir}\scripts\BuildZone\BuildZone.gml
+Converted description : /// @description  BuildZone();/// @function  BuildZone
+Converted string : line 11 : '1' -> "1"
+Converted string : line 13 : '2' -> "2"
+Converted string : line 25 : ' ' -> " "
+
+Converting GML script : ${project_dir}\scripts\AddBgTiles\AddBgTiles.gml
+Converted description : /// @description  AddBgTiles();/// @function  AddBgTiles
+
+Converting GML script : ${project_dir}\scripts\GetLayout\GetLayout.gml
+Converted description : /// @description  GetLayout();/// @function  GetLayout
+
+Converting GML script : ${project_dir}\scripts\A\A.gml
+Converted description : /// @description  A();/// @function  A
+
+Converting GML script : ${project_dir}\scripts\C\C.gml
+Converted description : /// @description  C();/// @function  C
+
+Converting GML script : ${project_dir}\scripts\D\D.gml
+Converted description : /// @description  D();/// @function  D
+
+Converting GML script : ${project_dir}\scripts\B\B.gml
+Converted description : /// @description  B();/// @function  B
+
+Converting GML script : ${project_dir}\scripts\E\E.gml
+Converted description : /// @description  E();/// @function  E
+
+Converting GML script : ${project_dir}\scripts\G\G.gml
+Converted description : /// @description  G();/// @function  G
+
+Converting GML script : ${project_dir}\scripts\I\I.gml
+Converted description : /// @description  I();/// @function  I
+
+Converting GML script : ${project_dir}\scripts\F\F.gml
+Converted description : /// @description  F();/// @function  F
+
+Converting GML script : ${project_dir}\scripts\H\H.gml
+Converted description : /// @description  H();/// @function  H
+
+Converting GML script : ${project_dir}\scripts\K\K.gml
+Converted description : /// @description  K();/// @function  K
+
+Converting GML script : ${project_dir}\scripts\J\J.gml
+Converted description : /// @description  J();/// @function  J
+
+Converting GML script : ${project_dir}\scripts\L\L.gml
+Converted description : /// @description  L();/// @function  L
+
+Converting GML script : ${project_dir}\scripts\M\M.gml
+Converted description : /// @description  M();/// @function  M
+
+Converting GML script : ${project_dir}\scripts\N\N.gml
+Converted description : /// @description  N();/// @function  N
+
+Converting GML script : ${project_dir}\scripts\O\O.gml
+Converted description : /// @description  O();/// @function  O
+
+Converting GML script : ${project_dir}\scripts\P\P.gml
+Converted description : /// @description  P();/// @function  P
+
+Converting GML script : ${project_dir}\objects\oGame\Step_1.gml
+Converted description : /// @description  Room generation
+
+Converting GML script : ${project_dir}\objects\oGame\Step_0.gml
+Converted description : /// @description  Debug stuff
+Converted string : line 3 : 'R' -> "R"
+
+added compatibility script tile/tile_add.gml
+updated compatibility script __global_object_depths.gml

@@ -2,10 +2,10 @@
 var ID = argument0;
 var Use = argument1;
 
-var G,Width,Height;
-G = global.GameInfo[?"游戏固定设置"]
-Width = G[?"游戏原始宽度"]
-Height = G[?"游戏原始高度"]
+var VG,Width,Height;
+VG = global.GameInfo[?"游戏固定设置"]
+Width = VG[?"游戏原始宽度"]
+Height = VG[?"游戏原始高度"]
 //display_set_gui_size(Width*argument0,Height*argument0);
 
 __view_set( e__VW.Visible, ID, Use );

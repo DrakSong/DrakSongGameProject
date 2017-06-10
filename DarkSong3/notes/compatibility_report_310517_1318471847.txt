@@ -1,0 +1,14 @@
+Converting GML script : ${project_dir}\objects\oPlayer\Create_0.gml
+Converted builtin : line 43 : view_xview[0] = x - view_wport[0] * 0.5 -> __view_set( e__VW.XView, 0, x - view_wport[0] * 0.5 )
+Converted builtin : line 44 : view_yview[0] = y - view_hport[0] * 0.5 - 16 -> __view_set( e__VW.YView, 0, y - view_hport[0] * 0.5 - 16 )
+Converted description : /// @description  Variables
+Converted builtin : line 43 : view_wport[0] -> __view_get( e__VW.WPort, 0 )
+Converted builtin : line 44 : view_hport[0] -> __view_get( e__VW.HPort, 0 )
+
+Converting GML script : ${project_dir}\objects\oPlayer\Step_0.gml
+Converted description : /// @description  Movement
+Converted string : line 12 : 'Z' -> "Z"
+Converted string : line 13 : 'Z' -> "Z"
+Converted string : line 15 : 'X' -> "X"
+
+updated compatibility script __global_object_depths.gml

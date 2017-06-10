@@ -13,7 +13,7 @@
         "1e30114c-39df-47ef-8ee4-a535087a8967"
     ],
     "filterType": "GMScript",
-    "folderName": "Multiple Collisions",
+    "folderName": "群体碰撞检车",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

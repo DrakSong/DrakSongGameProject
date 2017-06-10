@@ -1,0 +1,12 @@
+
+NewProject.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+asdf
+  rotate: false
+  xy: 1, 1
+  size: 225, 149
+  orig: 225, 149
+  offset: 0, 0
+  index: -1

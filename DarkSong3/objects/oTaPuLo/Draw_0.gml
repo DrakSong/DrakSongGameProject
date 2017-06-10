@@ -13,3 +13,4 @@ draw_healthbar_circular(x,y-8,16+8,90,V,sprite_60)
 
 draw_set_alpha(1)
 action_inherited();
+

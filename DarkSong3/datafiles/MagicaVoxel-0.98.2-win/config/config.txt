@@ -1,0 +1,93 @@
+// [EPHTRACY 12/12/2016]
+
+workspace
+(
+	// notice :
+	// 1. use '$' for current directory, otherwise use actual full path
+	// 2. use single '/' or '\' in the path
+	// 3. don't have empty space at ends of path
+
+	dir_model		= [[$/vox]]
+	dir_pattern		= [[$/vox]]
+)
+
+view
+(
+	// 0 ~ 255
+	ground_color	= '179 217 255'
+
+	// 0 ~ 255
+	edge_color		= '255 51 102'
+
+	// 0.0 ~ 1.0
+	ambient_color	= '0.19 0.18 0.26'
+	
+	// 0.0 ~ 1.0
+	bgColor_top		= '0.1 0.1 0.1'
+	bgColor_bottom	= '0.4 0.4 0.4'
+)
+
+bake
+(
+	perface			= '0'	// per face or per vertex [0, 1]
+	ambient			= '0.1'	// constant ambient [0.0 - 1.0]
+	gamma			= '1.0' // gamma [1.0, 2.2]
+	
+	scale			= '1 1 1'
+	pivot			= '0.5 0.5 0.0'
+	tc_offset		= '0.5 0.5'
+	cw				= '0'
+	axis			= 'XYZ'
+)
+
+file_iso
+(
+	size			= '2' // voxel size : [1 - 8]
+	height			= '4' // height = size * 2 : [1 - 24]
+
+	view			= '1' // num of views : [1 - 4]
+	outline			= '1' // outline and highlight : [0, 1]
+
+	top				= '1.17 1.15 1.25'		// top lighting [0.0 - 1.0]
+	left			= '0.37 0.35 0.55'		// left lighting
+	right			= '0.87 0.85 0.95'		// right lighting
+	bevel			= '0.13 0.13 0.13'		// bevel highlight
+)
+
+file_2d
+(
+	size			= '16' // voxel size : [1 - 32]
+	shadow			= '1'  // enable shadow : [0, 1]
+	outline			= '0'  // enable outline : [0, 1]
+)
+
+file_obj
+(
+	scale			= '1 1 1'		// scale size
+	pivot			= '0.5 0.5 0.0'	// pivot point ( modelSize * 'pivot' )
+	tc_offset		= '0.5 0.5'		// texture coordinate offset ( 0 : corner; 0.5 : center )
+	cw				= '0'			// ( 0 : counter clockwise; 1 : clockwise )
+	axis			= 'XZ-Y'		// axis ( 'XYZ' : Z up; 'XZ-Y' Y up )
+
+	optimize		= '1'			// merge voxel faces with same color
+)
+
+file_ply
+(
+	scale			= '1 1 1'
+	pivot			= '0.5 0.5 0.0'
+	tc_offset		= '0.5 0.5'
+	cw				= '0'
+	axis			= 'XYZ'
+)
+
+file_3ds
+(
+	scale			= '1 1 1'
+	pivot			= '0.5 0.5 0.0'
+	tc_offset		= '0.5 0.5'
+	cw				= '0'
+	axis			= 'XYZ'
+)
+
+

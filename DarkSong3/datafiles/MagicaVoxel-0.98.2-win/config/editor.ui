@@ -1,0 +1,1228 @@
+layer(minSize = '100 100' fixed = '1') ::
+{
+	hbox ::
+	{
+		hbox(class = 'bg' id = 'v_1') ::
+		{
+			vbox(size = '12') ::
+			{	
+				button(class = 'bn-dark' onClick = 'set r_color edge 0' text = 'E')(size = '24' prev = '68')(hint = 'E : Choose Edge Color')
+				button(class = 'bn-dark' onClick = 'set r_color grd  0' text = 'G')(size = '24')(hint = 'G : Choose Ground Color')	
+			}
+	
+			//----------------
+			// Palette
+			//----------------
+			vpanel(id = 'v_pal')(size = '146') ::
+			{
+				viewSwitch(view = [['v_1' 'v_1_h']] selected = '1' text = 'Palette' text2 = 'Palette')(next = '4' size = '24')
+		
+				hbox(size = '18') ::
+				{
+					button(class = 'bn-save' onClick = 'ipal $/palette/pal0.png' text = '0')(flex = '1' prev = '1' next = '1')(corner = '4')(hint = 'Default Palette 0 : [/Palette]')
+					button(class = 'bn-save' onClick = 'ipal $/palette/pal1.png' text = '1')(flex = '1' next = '1')(hint = 'Default Palette 1 : [/Palette]')
+					button(class = 'bn-save' onClick = 'ipal $/palette/pal2.png' text = '2')(flex = '1' next = '1')(hint = 'Default Palette 2 : [/Palette]')
+					button(class = 'bn-save' onClick = 'ipal $/palette/pal3.png' text = '3')(flex = '1' next = '1')(corner = '8')(hint = 'Default Palette 3 : [/Palette]')
+				}
+			
+				layer(flex = '1') ::
+				{
+					vbox ::
+					{
+						palette(id = 'pal' onSelect = 'index' onCopy = 'rgb set' onGroup = 'pal grad')
+						(flex = '1' size = '260')
+						(hint = 'Copy [+CTRL] : Gradient [+ALT+SHIFT]')
+					}
+				}
+
+				hbox(size = '24' next = '1') ::
+				{
+					button(class = 'bn-save' onClick = 'opal' text = 'Save' delayed = '1' textSize = '8 17')(flex = '1' prev = '1' next = '1')(corner = '1')(hint = 'Save Palette')
+					button(class = 'bn-save' onClick = 'ipal' text = 'Open' delayed = '1' textSize = '8 17')(flex = '1' next = '1')(corner = '2')(hint = 'Open Palette')
+				}
+				
+				//----------------
+				// Color
+				//----------------
+				panelSwitch(id = 'v_col' selected = '0' text = 'HSV' arrowColor = '220 220 220 220')(size = '28')
+				vbox ::
+				{
+					hsvView(id = 'v_hsv' onChange = 'rgb') ::
+					{
+						vbox ::
+						{
+							bgslider(id = 'h' size = '18' next = '1')(hint = 'Hue')
+							bgslider(id = 's' size = '18' next = '1')(hint = 'Saturation')
+							bgslider(id = 'v' size = '18' next = '1')(hint = 'Value')
+						}
+					}
+					rgbView(id = 'v_rgb' onChange = 'rgb' hidden = '1') ::
+					{
+						vbox ::
+						{
+							bgslider(id = 'r' size = '18' next = '1')(hint = 'Red')
+							bgslider(id = 'g' size = '18' next = '1')(hint = 'Green')
+							bgslider(id = 'b' size = '18' next = '1')(hint = 'Blue')
+						}
+					}
+					hbox(size = '24' flex = '1' prev = '3' next = '3') ::
+					{
+						viewSwitch
+						(view = [['v_hsv' 'v_rgb']])
+						(onSelect   = 'ui_set v_col text HSV')
+						(onDeselect = 'ui_set v_col text RGB')
+						(selected = '1' text = '\x09' text2 = '\x09' textSize = '9 18')
+						(size = '27' next = '4')
+						(corner = '15' radius = '6')
+						(hint = 'Switch between HSV/RGB Color Picker')
+
+						textField(id = 'rgb' onEnter = 'rgb' default = 'rgb' enter = '1' align = 'center' maxLength = '11' textSize = '8 16')
+						(flex = '1')
+						(corner = '15')
+						(hint = '[R G B] : [Gray] : [#Hex]')
+					}
+				}			
+			}
+
+			sp(id = 'v_1_p' bgColor = '0 0 0 255' hidden = '1')(size = '1')
+		}
+
+		vbox(class = 'bg' id = 'v_1_h' hidden = '1')(size = '24' next = '1') ::
+		{
+			viewSwitch(view = [['v_1' 'v_1_h']] text = '\x1c' text2 = '\x1c' textSize = '10 14')(next = '4' size = '24')
+		}
+
+		vbox(class = 'bg' id = 'v_2_h' hidden = '1')(size = '24') ::
+		{
+			viewSwitch(view = [['v_2' 'v_2_h' 'v_1_p']] text = '\x1c' text2 = '\x1c' textSize = '10 14')(next = '4' size = '24')
+		}
+
+		hbox(class = 'bg' id = 'v_2') ::
+		{
+			//----------------
+			// Light
+			//----------------
+			vpanel(id = 'v_light' hidden = '1')(size = '121' flex = '1') ::
+			{
+				vpanel(margin = '12 12 0 0') ::
+				{
+					viewSwitch(view = [['v_2' 'v_2_h' 'v_1_p']] selected = '1' text = 'Light' text2 = 'Light')(next = '4' size = '24')
+
+					optionGroup(id = 'pt_bounce' onClick = 'set pt_bounce' value = '1') ::
+					{
+						vbox ::
+						{
+							hbox(size = '28' next = '1') ::
+							{
+								option(id = '0' text = '0')(flex = '1' next = '1'	)(hint = 'Light Bounces 0')
+								option(id = '1' text = '1')(flex = '1' next = '1'	)(hint = 'Light Bounces 1')
+								option(id = '2' text = '2')(flex = '1'				)(hint = 'Light Bounces 2')
+							}
+							hbox(size = '28' next = '2') ::
+							{
+								option(id = '4' text = '4')(flex = '1' next = '1'	)(hint = 'Light Bounces 4')
+								option(id = '6' text = '6')(flex = '1' next = '1'	)(hint = 'Light Bounces 6')
+								option(id = '8' text = '8')(flex = '1'				)(hint = 'Light Bounces 8')
+							}
+						}
+					}
+				
+					label(text = 'Sun' size = '28' next = '1')
+					hbox(size = '28' next = '8') ::
+					{
+						textField(id = 'pt_sun_p' onEnter = 'set pt_sun_p' enter = '1' maxLength = '3' textSize = '8 16' align = 'center' border = '3')
+						(corner = '5')(flex = '1')
+						(hint = 'Pitch Angle of Sun Light [-90 - +90]')
+						sbutton(onDrag = 'add pt_sun_p' step = '1')(size = '10')
+
+						textField(id = 'pt_sun_y' onEnter = 'set pt_sun_y' enter = '1' maxLength = '3' textSize = '8 16' align = 'center' border = '3')
+						(flex = '1')
+						(hint = 'Yaw Angle of Sun Light [0 - 360]')
+						sbutton(onDrag = 'add pt_sun_y' step = '1')(size = '10')
+					}
+				}
+
+				label(text = 'Shadow' size = '24' next = '1')
+				slider(id = 'pt_shadow' onChange = 'set pt_shadow')(margin = '9 9 0 0' size = '28' next = '3')(hint = 'Shadow Softness')
+
+				label(text = 'I-Sun' size = '24' next = '1')
+				hbox(size = '28' next = '3')(margin = '3 9 0 0') ::
+				{
+					cbutton(id = 'pt_sun_col' onClick = 'set pt_sun_col')(margin = '0 0 2 2' size = '24' prev = '4' next = '4')(corner = '15')(hint = 'Choose Sun Color')
+					slider(id = 'pt_isun' onChange = 'set pt_isun')(flex = '1')(hint = 'Sun Light Intensity')
+				}
+
+				label(text = 'I-Sky' size = '24' next = '1')
+				hbox(size = '28' next = '3')(margin = '3 9 0 0') ::
+				{
+					cbutton(id = 'pt_sky_col' onClick = 'set pt_sky_col')(margin = '0 0 2 2' size = '24' prev = '4' next = '4')(corner = '15')(hint = 'Choose Sky Color')
+					slider(id = 'pt_isky' onChange = 'set pt_isky')(flex = '1')(hint = 'Sky Light Intensity')
+				}
+
+				switch(id = 'pt_fog' onClick = 'ui_view "pt_fog_col" "sp_fog" | set pt_fog' text = 'Fog' selected = '0')
+				(size = '24' next = '1')(corner = '15' radius = '2' margin = '30 30 2 2')
+				(hint = 'Enable Fog Scattering')
+				hbox(size = '28' next = '3')(margin = '3 9 0 0') ::
+				{
+					cbutton(hidden = '1' id = 'pt_fog_col' onClick = 'set pt_fog_col')(margin = '0 0 2 2' size = '24' prev = '4' next = '4')(corner = '15')(hint = 'Choose In-Scattering Color')
+					sp(id = 'sp_fog' size = '6')
+					slider(id = 'pt_fog_et' onChange = 'set pt_fog_et')(flex = '1')(hint = 'Fog Density')
+				}
+		
+				sp(flex='1')
+
+				vpanel(margin = '12 12 0 0') ::
+				{
+					panelSwitch(text = 'Shape' selected = '0')(size = '28' next = '1')
+					optionGroup(onClick = 'set pt_prim' value = 'cube')(next = '1') ::
+					{
+						vbox(bgColor = '40 40 40')(corner = '15' radius = '2') ::
+						{
+							hbox(size = '24') ::
+							{
+								option(class = 'sw-bw' id = 'cube'	text = 'Cube'	)(flex = '1')(hint = 'Cube : Cubic Voxel')
+							}
+							hbox(size = '24') ::
+							{
+								option(class = 'sw-bw' id = 'lego'	text = 'Lego'	)(flex = '1')(hint = 'Lego : Lego Voxel')
+								option(class = 'sw-bw' id = 'mc'	text = 'MC'		)(flex = '1')(hint = 'MC : Marching Cube')
+							}
+							hbox(size = '24') ::
+							{
+								option(class = 'sw-bw' id = 'rg'	text = 'RG'		)(flex = '1')(hint = 'RG : Rounded Grids')
+								option(class = 'sw-bw' id = 're'	text = 'RE'		)(flex = '1')(hint = 'RE : Rounded Edges')
+							}
+							hbox(size = '24') ::
+							{
+								option(class = 'sw-bw' id = 'sphr'	text = 'Sphr'	)(flex = '1')(hint = 'Sphr : Sphere Voxel')
+								option(class = 'sw-bw' id = 'cyli' text = 'Cyli'	)(flex = '1')(hint = 'Cyli : Cylinder Voxel')
+							}
+						}
+					}
+
+					//----------------
+					// View
+					//----------------
+					panelSwitch(selected = '1' text = 'View')(size = '28' next = '1')
+					vbox(bgColor = '40 40 40')(corner = '15' radius = '2') ::
+					{
+						hbox(size = '24') ::
+						{
+							switch(class = 'sw-bw' id = 'r_pt_grd'  onClick = 'set r_show ground' selected = '1' text = 'GD'  )(flex = '1')(hint = 'GD : Display Ground [CTRL+U]')
+							switch(class = 'sw-bw' id = 'r_pt_edge' onClick = 'set r_show edge'   selected = '0' text = 'Edge')(flex = '1')(hint = 'Edge : Display Edges [CTRL+E]')
+						}
+		
+						hbox(size = '24') ::
+						{
+							switch(class = 'sw-bw' id = 'r_pt_shadow' onClick = 'set r_show shadow' selected = '1' text = 'SW'  )(flex = '1')(hint = 'SW : Display Shadow [CTRL+W]')
+							switch(class = 'sw-bw' id = 'r_pt_grid'   onClick = 'set r_show grid'   selected = '0' text = 'Grid')(flex = '1')(hint = 'Grid : Display Grids [CTRL+G]')
+						}
+
+						hbox(size = '24') ::
+						{
+							switch(class = 'sw-bw' id = 'r_pt_aa' onClick = 'set r_show aa' selected = '1' text = 'AA' )(flex = '1')(hint = 'AA : Enable Anti-Aliasing')
+							switch(class = 'sw-bw' id = 'r_pt_bg' onClick = 'set r_show bg' selected = '1' text = 'Back' )(flex = '1')(hint = 'Back : Display Background [CTRL+B]')
+						}
+					}
+				}
+			}
+
+			//----------------
+			// Brush
+			//----------------
+			vpanel(id = 'v_brush')(size = '121' flex = '1' margin = '12 12 0 0') ::
+			{
+				viewSwitch(view = [['v_2' 'v_2_h' 'v_1_p']] selected = '1' text = 'Brush' text2 = 'Brush')(next = '4' size = '24')
+		
+				//----------------
+				// Mode
+				//----------------
+				optionGroup(id = 'b_shape' onClick = 'set b_shape' value = 'box' next = '4') ::
+				{
+					vbox ::
+					{
+						hbox(id = 'v_shape' size = '28' next = '1') ::
+						{
+							option(id = 'line'	  text = 'L')(flex = '1' next = '1')(hint = 'L : Line Mode [L]')(onClick = [[ui_view 'v_line']])
+							option(id = 'center'  text = 'C')(flex = '1' next = '1')(hint = 'C : Center Mode [C]')(onClick = [[ui_view 'v_center']])
+							option(id = 'pattern' text = 'P')(flex = '1')(hint = 'Pattern [P] : Rot [-/+/0/9] : Move [Dir/Page/Home]')(onClick = [[ui_view 'v_pat']])
+						}
+
+						hbox(size = '28') ::
+						{
+							option(id = 'vox'	text = 'V')(flex = '1' next = '1')(hint = 'V : Voxel Mode [V] : Resize [-/+]')(onClick = [[ui_view 'v_vox']])
+							option(id = 'face'	text = 'F')(flex = '1' next = '1')(hint = 'F : Face Mode [F] : Extrude [Drag]')(onClick = [[ui_view 'v_face']])
+							option(id = 'box'	text = 'B')(flex = '1')(hint = 'B : Box Mode [B]')
+						}
+					}
+				}
+
+				//----------------
+				// Type
+				//----------------
+				optionGroup(id = 'b_type' onClick = 'set b_type' value = 'erase') ::
+				{
+					vbox ::
+					{
+						vbox(class = 'op-brush' bgColor = '172 172 174')(corner = '15') ::
+						{
+							option(class = 'op-brush' id = 'attach'	text = 'Attach'	)(size = '29')(corner = '15')(hint = 'Attach Voxels [T]')
+							(onClick = [[ui_view 'v_b_opt']])
+							option(class = 'op-brush' id = 'erase' 	text = 'Erase'	)(size = '29')(corner = '15')(hint = 'Erase Voxels [R]')
+							(onClick = [[ui_view 'v_b_opt']])
+							option(class = 'op-brush' id = 'paint' 	text = 'Paint'	)(size = '29')(corner = '15')(hint = 'Paint Voxels [G]')
+							(onClick = [[ui_view 'v_b_opt']])
+						}
+																																		
+						vbox(bgColor = '152 152 154' corner = '15' prev = '2' next = '2') ::
+						{
+							hbox(size = '30') ::
+							{
+								option(class = 'op-brush2' id = 'loop' text = '\x5' textSize = '20 22')(flex = '1')(corner = '15')(hint = 'Move [CTRL+LButton] : Normal Axis [+SHIFT]')
+								sp(class = 'sp-b')(size = '1')
+
+								option(class = 'op-brush2' id = 'bsel' text = '\x6' textSize = '19 21')(flex = '1')(corner = '15')(hint = 'Box Select [N] : Add [+SHIFT] : Remove [+SHIFT+ALT]')
+								(onClick = [[ui_view 'v_b_bsel']])
+								
+								sp(class = 'sp-b')(size = '1')
+								
+								option(class = 'op-brush2' id = 'rsel' text = '\x3' textSize = '20 22')(flex = '1')(corner = '15')(hint = 'Region Select : Add [+SHIFT] : Remove [+SHIFT+ALT]')
+								(onClick = [[ui_view 'v_b_rsel']])
+							}
+
+							sp(class = 'sp-b')(size = '1')
+
+							hbox(size = '30') ::
+							{
+								option(class = 'op-brush2' id = 'pick' text = '\x11' textSize = '12 14')(flex = '1')(corner = '15')(hint = 'Pick Voxel Color [ALT+LButton]')
+
+								sp(class = 'sp-b')(size = '1')
+								
+								option(class = 'op-brush2' id = 'remove' text = '\x18' textSize = '12 13')(flex = '1')(corner = '15')(hint = 'Remove Voxel Color')
+
+								sp(class = 'sp-b')(size = '1')
+								
+								option(class = 'op-brush2' id = 'replace' text = '\x12' textSize = '12 14')(flex = '1')(corner = '15')(hint = 'Replace Voxel Color')
+							}
+						}
+					}
+				}
+
+				vbox(id = 'v_b_opt') ::
+				{					
+					//----------------
+					// Mirror
+					//----------------
+					label(text = 'Mirror' size = '28' next = '1')(hint = 'Mirror : Mirror Mode')
+					hbox(size = '28' next = '1') ::
+					{
+						switch(id = 'm_x' onClick = 'mirror x' text = 'X' flex = '1' next = '1')(corner = '5')(hint = 'X : Mirror X [1]')
+						switch(id = 'm_y' onClick = 'mirror y' text = 'Y' flex = '1' next = '1')(hint = 'Y : Mirror Y [2]')
+						switch(id = 'm_z' onClick = 'mirror z' text = 'Z' flex = '1')(corner = '10')(hint = 'Z : Mirror Z [3]')
+					}
+		
+					//----------------
+					// Axis
+					//----------------
+					label(text = 'Axis' size = '28' next = '1')(hint = 'Axis : Whole Axis Mode')
+					hbox(size = '28' next = '1') ::
+					{
+						switch(id = 'l_x' onClick = 'loft x' text = 'X' flex = '1' next = '1')(corner = '5')(hint = 'X : Whole X Axis [CTRL+1]')
+						switch(id = 'l_y' onClick = 'loft y' text = 'Y' flex = '1' next = '1')(hint = 'Y : Whole Y Axis [CTRL+2]')
+						switch(id = 'l_z' onClick = 'loft z' text = 'Z' flex = '1')(corner = '10')(hint = 'Z : Whole Z Axis [CTRL+3]')
+					}
+
+					//----------------
+					// Voxel
+					//----------------
+					vpanel(id = 'v_vox' hidden = '1') ::
+					{					
+						panelSwitch(selected = '1' text = 'Vox' size = '28' next = '1')(hint = 'Voxel Mode Option')
+						vbox ::
+						{
+							hbox(size = '26') ::
+							{
+								sideSwitch(onClick = 'set b_vox_cube'	selected = '1' text = 'Cube' text2 = 'Sphr')
+								(flex = '1' next = '1')
+								(corner = '4')
+								(hint = 'Cubic or Spherical Brush Shape')
+
+								sideSwitch(onClick = 'set b_vox_vol' selected = '0' text = '2D' text2 = '3D')
+								(size = '35')
+								(corner = '10')
+								(hint = 'Volume or Flat Shape')
+							}
+				
+							hbox(size = '26' next = '2') ::
+							{
+								textField(class = 'tf' id = 'b_size' onEnter = 'set b_vox_size' maxLength = '3' textSize = '8 16')
+								(flex = '1')(corner = '1')
+								(hint = 'Brush Size [1 - 64] : Resize [-/+]')
+
+								sbutton(onDrag = 'add b_vox_size' step = '1' space = '4')(size = '10' next = '1')(corner = '10')
+
+								vbox(size = '16') ::
+								{
+									button(class = 'bn-tiny' text = '\x0f' textSize = '8 8' onClick = 'add b_vox_size +1' repeated = '1')
+									(flex = '1')(corner = '15')
+									button(class = 'bn-tiny' text = '\x0e' textSize = '8 8' onClick = 'add b_vox_size -1' repeated = '1')
+									(flex = '1')(corner = '15')
+								}
+							}
+						}
+					}
+			
+					//----------------
+					// Face
+					//----------------
+					vpanel(id = 'v_face' hidden = '1') ::
+					{
+						panelSwitch(selected = '1' text = 'Face' size = '28' next = '1')(hint = 'Face Mode Option')
+						hbox(size = '26' next = '2') ::
+						{
+							sideSwitch(onClick = 'set b_face_col' selected = '1' text = 'Co' text2 = 'Ge')
+							(flex = '1' next = '1')
+							(corner = '5')
+							(hint = 'Co/Ge : Color or Geometry Connectivity')
+
+							sideSwitch(onClick = 'set b_face_pal' selected = '1' text = 'Pa' text2 = 'Su')
+							(flex = '1' next = '1')
+							(hint = 'Pa/Su : Use Palette Color or Raw Surface Color')
+
+							sideSwitch(onClick = 'set b_face_4'	selected = '1' text = '4' text2 = '8')
+							(flex = '1')
+							(hint = '4/8 : Neighbor Searching Direction')
+							(corner = '10')
+						}
+					}
+
+					//----------------
+					// Line
+					//----------------
+					vpanel(id = 'v_line' hidden = '1') ::
+					{
+						panelSwitch(selected = '1' text = 'Line' size = '28' next = '1')(hint = 'Line Mode Option')
+						sideSwitch(onClick = 'set b_line_proj'	selected = '1' text = 'Project' text2 = 'Straight')
+						(size = '26' next = '2')
+						(corner = '15')
+						(hint = 'Project Line on Surface or Straight Line')
+					}
+
+					//----------------
+					// Center
+					//----------------
+					vpanel(id = 'v_center' hidden = '1') ::
+					{
+						panelSwitch(selected = '1' text = 'Center' size = '28' next = '1')(hint = 'Center Mode Option')
+						hbox(size = '26' next = '2') ::
+						{
+							sideSwitch(onClick = 'set b_c_circle' selected = '1' text = 'Circle' text2 = 'Square')
+							(flex = '1' next = '1')
+							(corner = '5')
+							(hint = 'Circle or Square Shape')
+				
+							sideSwitch(onClick = 'set b_c_even' selected = '0' text = 'E' text2 = 'O')
+							(size = '32')
+							(corner = '10')
+							(hint = 'Odd or Even Size')
+						}
+					}
+
+					//----------------
+					// Pattern
+					//----------------
+					vpanel(id = 'v_pat' hidden = '1') ::
+					{
+						panelSwitch(selected = '1' text = 'Patt' size = '28' next = '1')(hint = 'Pattern Mode Option')
+						hbox(size = '26' next = '2') ::
+						{
+							sideSwitch(onClick = 'set b_patt_pal' selected = '0' text = 'Pal' text2 = 'Raw')
+							(flex = '1' next = '1')
+							(corner = '5')
+							(hint = 'Use Raw Color or Palette Color')
+
+							button(class ='bn-dark' text = '\x6' textSize = '21 22' onClick = 'spatt')(corner = '10')(flex = '1')
+							(hint = 'Create Pattern from Selection')
+						}
+					}
+				}
+				
+				//----------------
+				// Box Select
+				//----------------
+				vpanel(id = 'v_b_bsel' hidden = '1') ::
+				{
+					panelSwitch(class = 'tit' selected = '1' text = '\x6' textSize = '20 21' size = '28' next = '1')(hint = 'Box Select Option')
+					
+					vbox ::
+					{
+						optionGroup(onClick = 'set b_bsel_type' index = '0')(next = '4')(size = '28') ::
+						{
+							hbox::
+							{
+								option(class = 'op-sel' id = '0' text = 'Box' )(margin = '1 1 2 2' flex = '1' next = '1')(hint = 'Box Select')
+								option(class = 'op-sel' id = '1' text = 'Rect')(margin = '1 1 2 2' flex = '1')(hint = 'Screen Rect Select')
+							}
+						}
+					}
+				}	
+				
+				//----------------
+				// Region Select
+				//----------------
+				vpanel(id = 'v_b_rsel' hidden = '1') ::
+				{
+					panelSwitch(class = 'tit' selected = '1' text = '\x3' textSize = '20 22' size = '28' next = '1')(hint = 'Region Select Option')
+					
+					vbox ::
+					{
+						optionGroup(onClick = 'set b_rsel_type' index = '0')(next = '6')(size = '28') ::
+						{
+							hbox ::
+							{
+								option(class = 'op-sel' id = '0' text = 'V')(flex = '1' next = '1')(hint = 'V : Voxels within Same Volume')
+								option(class = 'op-sel' id = '1' text = 'F')(flex = '1' next = '1')(hint = 'F : Voxels within Same Face')
+								option(class = 'op-sel' id = '2' text = 'A')(flex = '1')(hint = 'A : All Voxelx with Same Color')
+							}
+						}
+
+						hbox(size = '26' next = '4') ::
+						{
+							sideSwitch(onClick = 'set b_rsel_col' selected = '1' text = 'Col' text2 = 'Geo')
+							(flex = '1' next = '1')
+							(corner = '5')
+							(hint = 'Col/Geo : Color or Geometry Connectivity')
+
+							sideSwitch(onClick = 'set b_rsel_4' selected = '1' text = '4' text2 = '8')
+							(flex = '1')
+							(hint = '4/8 : Neighbor Searching Direction')
+							(corner = '10')
+						}
+					}
+				}			
+				
+				
+					
+				sp(flex='1')
+		
+				//----------------
+				// View
+				//----------------
+				panelSwitch(selected = '1' text = 'View')(size = '28' next = '1')
+				vbox(bgColor = '40 40 40' radius = '2' corner = '15') ::
+				{
+					hbox(size = '24') ::
+					{
+						switch(class = 'sw-bw' id = 'r_grd'		onClick = 'set r_show ground'	selected = '1' text = 'GD'  )(size = '40' corner = '4' radius = '2')(hint = 'GD : Display Ground [CTRL+U]')
+						switch(class = 'sw-bw' id = 'r_edge'	onClick = 'set r_show edge'		selected = '0' text = 'Edge')(flex = '1' corner = '8' radius = '2')(hint = 'Edge : Display Edges [CTRL+E]')
+					}
+		
+					hbox(size = '24') ::
+					{
+						switch(class = 'sw-bw' id = 'r_shadow'	onClick = 'set r_show shadow'	selected = '1' text = 'SW'  )(size = '40' hint = 'SW : Display Shadow [CTRL+W]')
+						switch(class = 'sw-bw' id = 'r_grid'	onClick = 'set r_show grid'		selected = '0' text = 'Grid')(flex = '1' hint = 'Grid : Display Grids [CTRL+G]')
+					}
+
+					hbox(size = '24') ::
+					{
+						textField(id = 'r_space' onEnter = 'set r_space' align = 'center' enter = '1' border = '0' maxLength = '2' textSize = '8 16' bgColor = '80 80 80' textColor = '255 255 255 255')
+						(size = '40' radius = '2' corner = '15' margin = '3 3 3 3')
+						(hint = 'Frame Grid Spacing [1 - 64]')
+				
+						switch(class = 'sw-bw' id = 'r_frame' onClick = 'set r_show frame' selected = '0' text = 'Frame')(flex = '1' corner = '2' radius = '2')(hint = 'Frame : Display Frame [CTRL+F]')
+					}
+				}
+			}
+		}
+
+		layer(flex = '1' prev = '1' next = '1') ::
+		{
+			vbox ::
+			{
+				//----------------
+				// Upper Bar
+				//----------------
+				vbox(bgColor = '58 58 58') ::
+				{
+					hbox(size = '26') ::
+					{
+						tab(index = '0') ::
+						{
+							hbox ::
+							{
+								option(class = 'op-title' id = [['top0' 'v_brush' 'v_edit']] text = 'Model')
+								(size = '65' prev ='2')
+								(hint = 'Switch to Model Editor')
+
+								option(class = 'op-title' id = [['top1' 'v_light' 'v_mtl']] onClick = 'set pt' text = 'Render')
+								(size = '65' next ='2')
+								(hint = 'Switch to Renderer')
+							}
+						}
+
+						textField(id = 'name' onEnter = 'name' default = 'Name' maxLength = '128' align = 'center' once = '1' enter = '1' textSize = '9 19' border = '12' textColor = '255 255 255 230' bgColor = '100 100 100')
+						(flex = '1' size = '150')(radius = '2' corner ='5')
+						(hint = 'Rename Model')
+				
+						sp(size = '1' bgColor = '10 10 10')
+						button(class = 'bn-dark' id = 'unsaved' onClick = 'save' delayed = '1' bgColor-s = '70 70 70')(size = '13')(hint = 'Save Model Changes')
+					}
+
+					vsep(size = '2')
+
+					vbox(hidden = '1' id = 'v_anim') ::
+					{
+						hbox(size = '60') ::
+						{
+							vbox(class = 'bn-dark')(prev = '4' next = '7' size = '52')(corner = '15' radius = '2')(margin = '0 0 6 6') ::
+							{
+								hbox(flex = '1') ::
+								{
+									button(class = 'bn-dark' id = 'frm_prev' onClick = 'frm_set -1' repeated = '1' timeStep = '120' text = '\x1b' textSize = '9 13')(corner = '15' radius = '2')(flex = '1')
+									(hint = 'Previous Frame')
+								
+									button(class = 'bn-dark' id = 'frm_next' onClick = 'frm_set -2' repeated = '1' timeStep = '120' text = '\x1c' textSize = '9 13')(corner = '15' radius = '2')(flex = '1')
+									(hint = 'Next Frame')
+								}
+
+								hbox(flex = '1') ::
+								{
+									button(class = 'bn-dark' id = 'frm_del' repeated = '1' timeStep = '150' onClick = 'frm_del' text = '-' textSize = '9 18')(corner = '15' radius = '2')(flex = '1')
+									(hint = 'Delete Frame')
+									button(class = 'bn-dark' id = 'frm_add' repeated = '1' timeStep = '150' onClick = 'frm_dup' text = '+' textSize = '9 22')(corner = '15' radius = '2')(flex = '1')
+									(hint = 'Add Frame')
+								}
+							}
+
+							layer(flex = '1') ::
+							{
+								anim(id = 'anim' onChange = 'frm_set' onMove = 'frm_mov' onInsert = 'frm_dup' bgColor = '224 97 138')
+								(hint = 'Move Frame [+CTRL] : Duplicate [+CTRL+SHIFT]')
+							}
+
+							vbox(size = '48' next = '4')(hint = 'Anim : Time Step (ms) [16-999]')(margin = '0 0 6 6') ::
+							{
+								label(text = 'step' textSize = '8 18')
+								(bgColor = '130 130 130' textColor = '10 10 10 230')
+								(flex = '1')(corner = '12' radius = '2')
+							
+								textField(id = 'frm_step' onEnter = 'set frm_step' enter = '1' once = '1' maxLength = '3' textSize = '8 16' textColor = '255 255 255 230' align = 'center')
+								(bgColor = '20 20 20')
+								(flex = '1')(corner = '3' radius = '2')
+							}
+						}
+						vsep(size = '2')
+					}
+			
+					
+					hbox(size = '28') ::
+					{
+
+						viewswitch(onClick = [[ui_view 'v_anim']])
+						(text = '\x0f' text2 = '\x0e' textSize = '12 13')
+						(size = '26' prev = '3' next = '3')(corner = '15' radius = '6' margin ='0 0 2 2')
+						(hint = 'Toggle Anim')
+					
+						sp(flex='1')
+
+						hbox(id = 'top0' hidden = '0') ::
+						{
+							label(text = 'Size' textColor = '255 255 255 180')(size = '50')
+
+							textField(class = 'tf' id = 'size' onEnter = 'size' default = 'Size' maxLength = '12')
+							(corner = '12')(size = '130' next = '4')(margin = '0 0 0 1')
+							(hint = 'Resize Model [1 - 126]')
+		
+							button(class = 'bn-dark' onClick = 'shrink' text = 'F' textSize = '8 18')
+							(corner = '15')
+							(margin = '0 0 2 2' size = '26' next = '4')	
+							(size = '28')
+							(hint = 'Fit Model Size')
+						}
+
+						hbox(id = 'top1' hidden = '1')(size = '24') ::
+						{
+							sp(flex='1')
+							sideswitch(onClick = 'set pt_auto' selected = '1' text = '\x1a' text2 = '\x1c' textSize = '12 12')
+							(corner = '15' radius = '4')(margin = '0 0 2 2' size = '26')(hint = 'Toggle Progressive Rendering')
+							
+							label(text = 'Image' textColor = '255 255 255 180')(size = '60')
+		
+							textField(class = 'tf' id = 'pt_image' onEnter = 'set pt_image' default = 'image' maxLength = '10')
+							(corner = '4')(size = '110')(margin = '0 0 0 1')
+							(hint = 'Image Size [16 - 2048]')
+							sbutton(onDrag = 'add pt_image' text = 'Drag' step = '10')(size = '10')(corner = '8')(margin = '0 0 0 1')
+
+							label(text = 'Sample' textColor = '255 255 255 180')(size = '65')
+		
+							textField(class = 'tf' id = 'pt_spp' onEnter = 'set pt_spp' default = 'sample' maxLength = '7')
+							(corner = '4')(size = '90')(margin = '0 0 0 1')
+							(hint = 'Samples Per Pixel [512 - 100000]')
+							sbutton(onDrag = 'add pt_spp' step = '10')(next = '4' size = '10')(corner = '8')(margin = '0 0 0 1')
+
+							switch(onClick = 'set pt_jit' selected = '0' text = 'GI')
+							(corner = '15')(margin = '0 0 2 2' size = '26' next = '4')																
+							(hint = 'GI : Stochastic Sampling Global Illumination')
+						}
+					}
+				}
+
+				//----------------
+				// Scene
+				//----------------
+				scene(id = 'scene' snapAngle = '5' ruler = '0')(flex = '1' prev = '1' next = '1')
+				(hint = 'Rotate [RButton] : Move [MButton]')
+		
+				//----------------
+				// Lower Bar
+				//----------------	
+				vbox(bgColor = '55 55 55') ::
+				{
+					hbox(size = '24' prev = '4' next = '4') ::
+					{
+						viewSwitch(view = [['hint']] selected = '1')
+						(text = '\x0e' text2 = '\x0f' textSize = '12 13')
+						(size = '26' prev = '3' next = '3')(corner = '15' radius = '6') 
+						(hint = 'Toggle Hint')
+
+						button(class = 'bn-dark' onClick = 'snap scene' delayed = '1' text = '\x08' textSize = '20 18')
+						(size = '32' next = '1')(corner = '5') 
+						(hint = 'Screenshot [F6] : [6]')
+			
+						switch(onClick = 'set snap_alpha' selected = '0' text = '')
+						(size = '14' next = '3')(corner = '10') 
+						(hint = 'Toggle Alpha Channel of Screenshot')
+			
+						textField(id = 'cmd' onEnter = '/' default = 'console' maxLength = '128' clear = '1' history = '1' textSize = '9 19')
+						(flex = '1' size = '90' next = '3')(corner = '15' radius = '8') 
+						(hint = 'Console : Active [TAB] : History [UP/DOWN]')
+
+						optiongroup(id = 'v_cam' value = '0' onClick = 'ui_set scene proj')(next = '3') ::
+						{
+							hbox ::
+							{
+								option(class = 'op-cam' id = '0' text = 'Pers')(size = '45')(corner = '15' radius = '1')(hint = 'Pers : Perspective Camera')
+								option(class = 'op-cam' id = '3' text = 'Free')(size = '45')(corner = '15' radius = '1')(hint = 'Free : Freestyle Camera : Move [WASDQE]')
+								option(class = 'op-cam' id = '1' text = 'Orth')(size = '45')(corner = '15' radius = '1')(hint = 'Orth : Orthogonal Camera')
+								option(class = 'op-cam' id = '2' text = 'Iso' )(size = '45')(corner = '15' radius = '1')(hint = 'Iso : Isometric Camera')
+							}
+						}
+
+						optiongroup(value = '0' onClick = 'cam')(size = '14' next = '1')(hint = 'Camera Slots : Save/Load [F5/F7] : [5/7]') ::
+						{
+							vbox ::
+							{
+								option(id = '1')(corner = '4')(flex = '1')
+								option(id = '0')(corner = '1')(flex = '1')
+							}
+						}
+				
+						sideSwitch(class = 'ssw-dark' onClick = 'ui_set scene ruler' selected = '0')
+						(text = '\xc' text2 = '\xc' textSize = '18 20' textColor = '240 240 240 210' bgColor = '105 105 105')
+						(size = '32' next = '1')
+						(hint = 'Camera Ruler : Drag on Ruler [RButton]')
+			
+						button(class = 'bn-dark' onClick = 'ui_set scene reset 1' text = '\x1e' textSize = '16 18')
+						(size = '32' next = '1')
+						(hint = 'Reset Camera')
+
+						switch(onClick = 'cam -3' selected = '1')(size = '14' next = '4')(corner = '10')(hint = 'Toggle Auto Camera Reset')
+					}
+			
+					vbox(id = 'hint') ::
+					{
+						vsep(size = '2')
+		
+						hint(size = '22')(hint = 'Hint : [HotKey]')
+					}
+				}	
+			}
+		}
+	
+		hbox(class = 'bg' id = 'v_3')::
+		{
+			layer( id = 'v_mtl' hidden = '1' size = '121'  ) ::
+			{
+				vpanel(margin = '12 12 0 0') ::
+				{
+					//----------------
+					// Material
+					//----------------
+					viewSwitch(view = [['v_3' 'v_3_h' 'v_4_p']] selected = '1' text = 'Matter' text2 = 'Matter')(next = '4' size = '24')
+
+					optionGroup(onClick = 'set pt_mod' value = '1')(size = '28' next = '4') ::
+					{
+						hbox ::
+						{
+							option(class = 'op-tool' id = '1' text = 'Sel')(flex = '1' next = '1' )(hint = 'Sel : Modify Selected Material [Alt+LButton]')
+							option(class = 'op-tool' id = '0' text = 'All')(flex = '1'	          )(hint = 'All : Modify All Materials')
+						}
+					}
+		
+					tab(id = "mtl_menu" index = '0' next = '6') ::
+					{
+						vbox ::
+						{
+							option(class = 'op-mtl' id = [['menu_diffuse']]	text = 'Diffuse'	)(corner = '12' radius = '2')(size = '28')(hint = 'Default Diffuse Material')
+							option(class = 'op-mtl' id = [['menu_metal']]	text = 'Metal'		)(size = '28')(hint = 'Metallic Material')
+							option(class = 'op-mtl' id = [['menu_glass']]	text = 'Glass'		)(size = '28')(hint = 'Glass Material')
+							option(class = 'op-mtl' id = [['menu_emit']]	text = 'Emission'	)(corner = '3' radius = '2')(size = '28')(hint = 'Emissive Material')
+						}
+					}	
+			
+					//----------------
+					// Diffuse
+					//----------------
+					vbox(id = 'menu_diffuse' hidden = '0') ::
+					{
+						hbox(size = '24') ::
+						{
+							label(text = 'Diffuse' align = 'left')(flex = '1')
+							button(class = 'bn-dark' text = 'R' onClick = 'set pt_mtl_t all 0' delayed = '1' textSize = '8 18')(corner = '15')(size = '24' margin = '0 0 1 1')
+							(hint = 'R : Reset to Diffuse Material')
+						}
+					}
+				
+					//----------------
+					// Metal
+					//----------------
+					vbox(id = 'menu_metal' hidden = '1') ::
+					{					
+						hbox(size = '24' next = '1') ::
+						{
+							label(text = 'Metal' align = 'left')(flex = '1')
+							button(class = 'bn-dark' text = 'R' onClick = 'set pt_mtl_t all 0' delayed = '1' textSize = '8 18')(corner = '15')(size = '24' margin = '0 0 1 1')
+							(hint = 'R : Reset to Diffuse Material')
+						}
+						slider(class = 'sl-mtl' id = 'pt_metal' onChange = 'set pt_mtl_t metal')(margin = '-4 -4 0 0' size = '28')(hint = 'Metalness')
+
+						label(text = 'Rough' align = 'left')(size = '24' next = '1')
+						slider(class = 'sl-mtl' id = 'pt_rough_m' onChange = 'set pt_mtl rough')(margin = '-4 -4 0 0' size = '28')(hint = 'Surface Roughness')
+
+						hbox(size = '24' next = '1') ::
+						{
+							label(text = 'Specular' align = 'left')(flex = '1')
+							switch(id = 'pt_plastic' selected = '0' onClick = 'set pt_mtl plastic' text = 'P')
+							(corner = '15')(size = '24' margin = '0 0 1 1')
+							(size = '20')(hint = 'P : Plastic')
+						}
+
+						slider(class = 'sl-mtl' id = 'pt_spec_m' onChange = 'set pt_mtl spec')(margin = '-4 -4 0 0' size = '28')(hint = 'Specular Reflectivity')
+					}
+
+					//----------------
+					// Glass
+					//----------------
+					vbox(id = 'menu_glass' hidden = '1') ::
+					{
+						hbox(size = '24' next = '1') ::
+						{
+							label(text = 'Glass' align = 'left')(flex = '1')
+							button(class = 'bn-dark' text = 'R' onClick = 'set pt_mtl_t all 0' delayed = '1' textSize = '8 18')(corner = '15')(size = '24' margin = '0 0 1 1')
+							(hint = 'R : Reset to Diffuse Material')
+						}
+						slider(class = 'sl-mtl' id = 'pt_glass' onChange = 'set pt_mtl_t glass')(margin = '-4 -4 0 0' size = '28')(hint = 'Transparency')
+
+						label(text = 'Rough' align = 'left' size = '24' next = '1')
+						slider(class = 'sl-mtl' id = 'pt_rough_g' onChange = 'set pt_mtl rough')(margin = '-4 -4 0 0' size = '28')(hint = 'Surface Roughness')
+
+						label(text = 'Refract' align = 'left' size = '24' next = '1')
+						slider(class = 'sl-mtl' id = 'pt_ior' onChange = 'set pt_mtl ior')(margin = '-4 -4 0 0' size = '28')(hint = 'Refractive Index')
+
+						label(text = 'Attenuate' align = 'left' size = '24' next = '1')
+						slider(class = 'sl-mtl' id = 'pt_att' onChange = 'set pt_mtl att')(margin = '-4 -4 0 0' size = '28')(hint = 'Attenuation')
+					}
+
+					//----------------
+					// Emission
+					//----------------
+					vbox(id = 'menu_emit' hidden = '1') ::
+					{
+						hbox(size = '24' next = '1') ::
+						{
+							label(text = 'Emit' align = 'left')(flex = '1')
+							button(class = 'bn-dark' text = 'R' onClick = 'set pt_mtl_t all 0' delayed = '1' textSize = '8 18')
+							(corner = '15')
+							(size = '24' margin = '0 0 1 1')
+							(hint = 'R : Reset to Diffuse Material')
+						}
+						slider(class = 'sl-mtl' id = 'pt_emit' onChange = 'set pt_mtl_t emit')(margin = '-4 -4 0 0' size = '28')(hint = 'Light Emission')
+
+						hbox(size = '24' next = '1') ::
+						{
+						
+							label(text = 'Power' align = 'left')(flex = '1')
+							switch(id = 'pt_total' selected = '0' onClick = 'set pt_mtl total' text = 'T')
+							(corner = '15')(size = '24' margin = '0 0 1 1')
+							(hint = 'T : Total Power or Power Density')
+						}
+						intslider(class = 'sl-mtl' id = 'pt_flux' onChange = 'set pt_mtl flux' total = '5')(margin = '-4 -4 3 4' size = '28')(hint = 'Radiant Flux')
+
+						label(text = 'Glow' align = 'left' size = '24' next = '1')
+						slider(class = 'sl-mtl' id = 'pt_glow' onChange = 'set pt_mtl glow')(margin = '-4 -4 0 0' size = '28')(hint = 'Light Glow')
+					}
+			
+					sp(flex='1')
+		
+					//----------------
+					// Camera
+					//----------------
+					panelSwitch(text = 'Camera' selected = '1' size = '28' next = '1')
+					vbox ::
+					{
+						hbox(size = '24' next = '3') ::
+						{
+							switch(onClick = 'set pt_proj' selected = '0' text = 'S')(size = '28' next = '7')(corner = '15')(margin = '2 2 1 1')(hint = 'S : Stereographics Projection')
+							textField(id = 'pt_fov' onEnter = 'set pt_fov' enter = '1' maxLength = '5' textSize = '8 16' align = 'center' border = '3')(corner = '5')
+							(flex = '1')
+							(hint = 'Field of View [45 - 360]')
+							sbutton(onDrag = 'add pt_fov' step = '1')(size = '10')
+						}
+
+						hbox(size = '24' next = '3')(hint = 'Depth of Field : Click Voxel to Set Focus [LButton]') ::
+						{
+							label(text = 'dof' textSize = '8 16')(size = '28' next = '7')
+							slider(class = 'sl-cam' id = 'pt_dof' onChange = 'set pt_dof')(margin = '-2 -2 0 0' flex = '1')
+						}
+					
+						hbox(size = '24' next = '3')(hint = 'exp : Exposure') ::
+						{
+							label(text = 'exp' textSize = '8 16')(size = '28' next = '7')
+							slider(class = 'sl-cam' id = 'pt_expo' onChange = 'set pt_expo')(margin = '-2 -2 0 0' flex = '1')
+						}
+					
+						hbox(size = '24' next = '3')(hint = 'vig : Vignette') ::
+						{
+							label(text = 'vig' textSize = '8 16')(size = '28' next = '7')
+							slider(class = 'sl-cam' id = 'pt_vig' onChange = 'set pt_vig')(margin = '-2 -2 0 0' flex = '1')
+						}
+
+						hbox(size = '24' next = '3') ::
+						{
+							textField(id = 'pt_gamma' onEnter = 'set pt_gamma' enter = '1' maxLength = '3' textSize = '8 16' align = 'center' border = '3')
+							(corner = '15')(size = '32' next = '3')
+							(hint = 'Gamma Correction [1 - 5]')
+							
+							switch(id = 'pt_aces' selected = '0' onClick = 'set pt_aces' text = 'ACES' textSize = '8 16')
+							(corner = '15' radius = '2')(margin = '4 4 3 3' flex = '1')
+							(hint = 'ACES Filmic Tone Mapping')
+						}
+					}
+
+					//----------------
+					// Bloom
+					//----------------
+					panelSwitch(text = 'Bloom' selected = '0' size = '28' next = '1')
+					vbox ::
+					{
+						hbox(size = '24' next = '3')(hint = 'Bloom Mix') ::
+						{
+							button(class = 'bn-save' onClick = 'set pt_bloom' text = '\x11' textSize = '12 14')(size = '28' next = '7')(corner = '15')(margin = '2 2 1 1')(hint = 'Compute Bloom')
+							slider(class = 'sl-cam' id = 'pt_bloom_mix' onChange = 'set pt_bloom_mix')(margin = '-2 -2 0 0' flex = '1')
+						}
+					
+						hbox(size = '24' next = '3') ::
+						{
+							sideSwitch
+							(class = 'op-tool' onClick = [[ui_view 'v_blm_s' 'v_blm_t']])
+							(selected = '1' text = 'S' text2 = 'T')
+							(size = '28' next = '7')(corner = '15')(margin = '2 2 1 1')
+							(hint = 'S/T : Switch between Bloom Scale/Threshold')
+
+							hbox(id = 'v_blm_s')(flex = '1') ::
+							{
+								textField(id = 'pt_bloom_sca' onEnter = 'set pt_bloom_sca' enter = '1' maxLength = '3' textSize = '8 16' align = 'center' border = '3')
+								(flex = '1')(corner = '5')(hint = 'Bloom Scale [1 - 100]')
+								sbutton(onDrag = 'add pt_bloom_sca' step = '1' space = '4')(size = '10')
+							}
+							
+							hbox(id = 'v_blm_t' hidden = '1')(flex = '1') ::
+							{
+								textField(id = 'pt_bloom_thr' onEnter = 'set pt_bloom_thr' enter = '1' maxLength = '5' textSize = '8 16' align = 'center' border = '3')
+								(flex = '1')(corner = '5')(hint = 'Bloom Threshold [0 - 100]')
+								sbutton(onDrag = 'add pt_bloom_thr' step = '0.1' space = '4')(size = '10')
+							}							
+						}
+					}
+				}
+			}
+		
+			layer(id = 'v_edit' size = '121') ::
+			{
+				vpanel(margin = '12 12 0 0') ::
+				{
+					//----------------
+					// Edit
+					//----------------
+					viewSwitch(view = [['v_3' 'v_3_h' 'v_4_p']] selected = '1' text = 'Edit' text2 = 'Edit')(next = '4' size = '24')
+
+					hbox(size = '28' next = '3') ::
+					{
+						button(class = 'bn-save' id = 'undo' onClick = 'undo' text = '\x15' textSize = '16 18' repeated = '1')(flex = '1' next = '1')(margin = '0 0 1 1' corner ='15')(hint = 'Undo [CTRL+Z]')
+						button(class = 'bn-save' id = 'redo' onClick = 'redo' text = '\x16' textSize = '16 18' repeated = '1')(flex = '1')(margin = '0 0 1 1' corner ='15')(hint = 'Redo [CTRL+Y] : [CTRL+SHIFT+Z]')
+					}
+		
+					//----------------
+					// Tool
+					//----------------
+					panelSwitch(selected = '0' text = 'Tool' size = '28')
+					vbox ::
+					{
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'full' text = 'Full' flex = '1' next = '1')(corner = '4')(hint = 'Full : Full Volume [U]')
+							button(onClick = 'fill' text = 'Fill' flex = '1')(corner = '8')(hint = 'Fill : Fill Voxels with Same Color [I]')
+						}
+		
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'zero' text = 'Zero' flex = '1' next = '1')(corner = '1')(hint = 'Zero : Delete Voxels [Backspace]')
+							button(onClick = 'x2'   text = '2X'   flex = '1')(corner = '2')(hint = '2X : Double Size')
+						}
+					}
+					
+					//----------------
+					// Select
+					//----------------
+					panelSwitch(selected = '0' text = 'Select' size = '28')
+					vbox ::
+					{
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'sel_all' text = 'All')(flex = '1' next = '1')(corner = '4')(hint = 'Select All [CTRL+A]')
+							button(onClick = 'sel_inv' text = 'Inv')(flex = '1')(corner = '8')(hint = 'Select Inverse [CTRL+R]')
+						}
+		
+						hbox(size = '28' next = '2') ::
+						{
+							button(onClick = 'sel_none' text = 'None')(flex = '1')(hint = 'Select None [CTRL+D]')
+						}
+
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'copy' text = 'Copy')(flex = '1' next = '1')(hint = 'Copy Voxels [CTRL+C]')
+							button(onClick = 'cut' text = 'Cut')(flex = '1')(hint = 'Cut Voxels [CTRL+X]')
+						}
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'paste' text = 'Paste')(flex = '1')(corner = '3')(hint = 'Paste Voxels [CTRL+V]')
+						}
+					}
+
+					//----------------
+					// Rot
+					//----------------
+					panelSwitch(selected = '0' text = 'Rot' size = '28')
+					hbox(size = '28' next = '1')(hint = 'Rot : Rotate Model 90 Degrees') ::
+					{
+						button(onClick = 'rot90 x' text = 'X' flex = '1' next = '1')(corner = '5')
+						button(onClick = 'rot90 y' text = 'Y' flex = '1' next = '1')
+						button(onClick = 'rot90 z' text = 'Z' flex = '1')(corner = '10')
+					}
+		
+					//----------------
+					// Flip
+					//----------------
+					panelSwitch(selected = '0' text = 'Flip' size = '28')
+					hbox(size = '28' next = '1')(hint = 'Flip : Flip Model') ::
+					{
+						button(onClick = 'flip x' text = 'X' flex = '1' next = '1')(corner = '5')
+						button(onClick = 'flip y' text = 'Y' flex = '1' next = '1')
+						button(onClick = 'flip z' text = 'Z' flex = '1')(corner = '10')
+					}
+		
+					//----------------
+					// Loop
+					//----------------
+					panelSwitch(selected = '0' text = 'Loop' size = '28')
+					vbox(hint = 'Loop : Move Model') ::
+					{
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'loop x +1' text = '+X' repeated = '1')(corner = '4')(flex = '1' next = '1')
+							button(onClick = 'loop y +1' text = '+Y' repeated = '1')(flex = '1' next = '1')
+							button(onClick = 'loop z +1' text = '+Z' repeated = '1')(corner = '8')(flex = '1')
+						}
+		
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'loop x -1' text = '-X' repeated = '1')(corner = '1')(flex = '1' next = '1')
+							button(onClick = 'loop y -1' text = '-Y' repeated = '1')(flex = '1' next = '1')
+							button(onClick = 'loop z -1' text = '-Z' repeated = '1')(corner = '2')(flex = '1')
+						}
+					}
+					
+					panelSwitch(selected = '0' text = 'Scale' size = '28')
+					textField(onEnter = 'scale' align = 'center' default = 'xyz 1.0' maxLength = '9' textSize = '8 16')
+					(size = '24' margin = '2 2 0 0')
+					(corner = '15')
+					(hint = 'Scale Model : [Axis] [Factor]')
+					
+					panelSwitch(selected = '0' text = 'Repeat' size = '28')
+					textField(onEnter = 'repeat' align = 'center' default = 'xyz 1.0' maxLength = '9' textSize = '8 16')
+					(size = '24' margin = '2 2 0 0')
+					(corner = '15')
+					(hint = 'Repeat Model : [Axis] [Factor]')
+	
+					sp(flex='1')
+					
+					//----------------
+					// Misc
+					//----------------
+					panelSwitch(selected = '0' text = 'Misc' size = '28')
+					vbox ::
+					{
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'flood 0' text = 'Shell')(flex = '1' next = '1')(corner = '4')(hint = 'Shell : Remove All Invisible Voxels')
+							button(onClick = 'flood'   text = 'I')(size = '28')(corner = '8')(hint = 'I : Fill All Invisible Space')
+						}
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'fractal' text = 'Fract')(flex = '1' next = '1')(hint = 'Fract : Fractal Model')
+							button(onClick = 'rand'    text = 'R')(size = '28')(hint = 'R : Random Color')
+						}
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'dil' repeated = '1'	text = 'Dilat')(flex = '1' next = '1')(corner = '1')(hint = 'Dilat : Dilation')
+							button(onClick = 'ero' repeated = '1'	text = 'E')(size = '28')(corner = '2')(hint = 'E : Erosion')
+						}
+					}
+					
+					//----------------
+					// Prim
+					//----------------
+					panelSwitch(selected = '0' text = 'Shape' size = '28')
+					vbox ::
+					{
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'prim elli'	text = 'Elli'	flex = '1' next = '1')(corner = '4')(hint = 'Elli : Ellipsoid')
+							button(onClick = 'prim cyli'	text = 'Cyli'	flex = '1')(corner = '8')(hint = 'Cyli : Cylinder')
+						}
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'prim pyra'	text = 'Pyra'	flex = '1' next = '1')(hint = 'Pyra : Pyramid')
+							button(onClick = 'prim cone'	text = 'Cone'	flex = '1')(hint = 'Cone : Cone')
+						}
+						hbox(size = '28') ::
+						{
+							button(onClick = 'maze'		text = 'Maze'	flex = '1' next = '1')(corner = '1')(hint = 'Maze : Maze [Edge Length]')
+							button(onClick = 'noise -1'	text = 'Perl'	flex = '1')(corner = '2')(hint = 'Perl : Perlin Noise')
+						}
+					}
+				}
+			}
+		}
+		
+		vbox(class = 'bg' id = 'v_3_h' hidden = '1')(size = '24') ::
+		{
+			viewSwitch(view = [['v_3' 'v_3_h' 'v_4_p']] text = '\x1b' text2 = '\x1b' textSize = '10 14')(size = '24')
+		}
+
+		vbox(class = 'bg' id = 'v_4_h' hidden = '1')(size = '24' prev = '1') ::
+		{
+			viewSwitch(view = [['v_4' 'v_4_h']] text = '\x1b' text2 = '\x1b' textSize = '10 14')(size = '24')
+		}
+
+		hbox(class = 'bg' id = 'v_4') ::
+		{
+			sp(id = 'v_4_p' bgColor = '0 0 0 255' hidden = '1')(size = '1')
+			
+			vpanel(id = 'v_file' size = '146') ::
+			{
+				viewSwitch(view = [['v_4' 'v_4_h']] selected = '1' text = 'File' text2 = 'File')(next = '4' size = '24')
+		
+				tab(value = [['menu_model' 'v_dup']] size = '28' next = '4') ::
+				{
+					hbox ::
+					{
+						option(class = 'op-tool' id = [['menu_model' 'v_dup']] text = 'Model')
+						(flex = '1' next = '1')(hint = 'Model List')
+						option(class = 'op-tool' id = [['menu_patt']]	text = 'Pattern')
+						(flex = '1')(hint = 'Model List for Pattern Brush')
+					}
+				}
+
+				//----------------
+				// Model File
+				//----------------
+				vbox(id = 'menu_model')(flex = '1') ::
+				{
+					hbox(size = '26') ::
+					{
+						button(class = 'bn-save' onClick = 'save'	text = 'Save'	delayed = '1' textSize = '8 17')(flex = '1')(corner = '4')(hint = 'Save Model [CTRL+S]')
+						sp(class = 'sp-f')(size = '2')
+						button(class = 'bn-save' onClick = 'save as'text = 'As'		delayed = '1' textSize = '8 17')(flex = '1')(hint = 'Save As [CTRL+SHIFT+S]')
+						sp(class = 'sp-f')(size = '2')
+						button(class = 'bn-save' onClick = 'new'	text = 'New'	delayed = '1' textSize = '8 17')(flex = '1')(hint = 'New Model [CTRL+N]')
+					}
+
+					sp(class = 'fileList')(size = '1')
+					layer(flex = '1') ::
+					{
+						fileList(id = 'file' root = [[$/vox]] ext = "vox" onSelect = 'open')(hint = 'Model List')
+					}
+					sp(class = 'fileList')(size = '1')
+				
+					hbox(size = '26') ::
+					{
+						button(class = 'bn-save' onClick = 'open'	text = 'Open'	delayed = '1' textSize = '8 17'	)(flex = '1')(corner = '1')(hint = 'Open Model [CTRL+O]')
+						sp(class = 'sp-f')(size = '2')
+						button(class = 'bn-save' onClick = 'i 0'	text = '...'	delayed = '1' textSize = '8 17'	)(flex = '1')(hint = 'Import Model [CTRL+SHIFT+O]')
+						sp(class = 'sp-f')(size = '2')
+						button(class = 'bn-save' onClick = 'del'	text = '\x13'	delayed = '1' textSize = '16 18')(flex = '1')(corner = '2')(hint = 'Remove Model to Trash')
+					}
+				}
+
+				vbox(id = 'menu_patt' flex = '1' hidden = '1') ::
+				{
+					layer(flex = '1') ::
+					{
+						fileList(id = 'file_patt' root = [[$/vox]] ext = 'vox' onSelect = 'ipatt')(flex = '1')(corner = '12')(hint = 'Model List for Pattern Brush')
+					}
+					sp(class = 'fileList')(size = '1')
+
+					hbox(size = '26') ::
+					{
+						button(class = 'bn-save' onClick = 'ipatt' text = 'Load' delayed = '1' textSize = '8 17')(flex = '1')(corner = '3')(hint = 'Load Pattern Model')
+					}
+				}
+		
+				//----------------
+				// Export
+				//----------------
+				vpanel(class = 'bg' prev = '1') ::
+				{
+					panelSwitch(selected = '0' text = 'Export' size = '28')
+					vbox ::
+					{
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'o obj'	text = 'obj'	delayed = '1' 	)(flex = '1' next = '1')(corner = '4')(hint = 'obj : Export obj Mesh')
+							button(onClick = 'o ply'	text = 'ply'	delayed = '1' 	)(flex = '1' next = '1')(hint = 'ply : Export ply Mesh')
+							button(onClick = 'o mc'		text = 'mc'		delayed = '1' 	)(flex = '1')(corner = '8')(hint = 'mc : Export Marching Cubes')
+						}
+						hbox(size = '28' next = '1') ::
+						{
+							button(onClick = 'o vox'    text = 'vox'	delayed = '1' 	)(flex = '1' next = '1')(hint = 'vox : Export vox Voxels')
+							button(onClick = 'o slab'	text = 'slab'	delayed = '1' 	)(flex = '1' next = '1')(hint = 'slab : Export slab6 vox Volume')
+							button(onClick = 'o qb'		text = 'qb'		delayed = '1' 	)(flex = '1')(hint = 'qb : Export qb Volume')
+						}
+						hbox(size = '28') ::
+						{
+							button(onClick = 'o iso'	text = 'iso'	delayed = '1' 	)(flex = '1' next = '1')(corner = '1')(hint = 'iso : Export Isometric Pixel Sprite')
+							button(onClick = 'o 2d'		text = '2d'		delayed = '1' 	)(flex = '1' next = '1')(hint = '2d : Export 2D Sprite')
+							button(onClick = 'bake'		text = 'bake'	delayed = '1' 	)(flex = '1')(corner = '2')(hint = 'bake : Bake Mesh')
+						}
+					}
+				}
+			}
+	
+			vbox(class = 'bg' size = '12') ::
+			{
+				button(class = 'bn-save' id = 'v_dup' onClick = 'dup' text = '\x17' delayed = '1' textSize = '8 10')(margin = '1 0 0 0' size = '26' prev = '60')(hint = 'Duplicate Model [CTRL+SHIFT+N]')
+			}
+		}		
+	}
+}

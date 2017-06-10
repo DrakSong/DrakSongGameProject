@@ -14,7 +14,8 @@
         "3ea8a237-6741-48a3-bfcd-4a1cf27381c8",
         "e1b4958f-5715-4264-b0f9-548326378e73",
         "8edc8f69-6cc9-460a-9bd6-c7e9307eea22",
-        "7c76a46a-7030-4b66-bafb-c7dad8387520"
+        "7c76a46a-7030-4b66-bafb-c7dad8387520",
+        "a03af518-3f9c-4a3c-b5f4-39dd43cc76ff"
     ],
     "filterType": "GMObject",
     "folderName": "通用父对象",

@@ -12,7 +12,7 @@ alarm[0] = AtkListCleanTime;
 						if oParPlayer.onGround AX=0
 						else 
 						AX = oParPlayer.vx;
-                        F.hspeed = oParPlayer.facing * 1.45+AX;
+                        F.hspeed = oParPlayer.facing * 1.45;
                         F.vspeed = -6.80;
                         F.gravity = 0.5;
                         F.image_xscale = oParPlayer.facing;
