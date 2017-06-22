@@ -53,11 +53,6 @@ if (state == ROLL) {
 }
 
 
-
-
-
-
-
 ///攻击
 if Mode = 1 {
         ChangeModeTime -= 0.25;
@@ -195,37 +190,7 @@ Map[?"A"] = H;
                 AP -= 4;
         }
 
-        //蓄力攻击
-		/*
-        if kActionK {
-                AtkTime+=room_speed/24;
-
-        }
-        if kActionR {
-                if AtkTime > 90 {
-
-                        AtkMode = "L";
-                        image_index = 0;
-                        image_speed = 0.25;
-                        sprite_index = sAtk;
-                        attacking = true;
-                        var F = instance_create(x, y, oAtkMax);
-                        F.sprite_index = sDagger;
-                        F.mask_index = sDagger;
-                        F.hspeed = facing * .4;
-                        F.image_xscale = facing * 2
-						F.x=x+facing*16;
-						F.image_yscale = 2
-  SoundPaly(SouAtk);
-                }
-                AtkTime = 0;
-        } //蓄力期间减速
-        if AtkTime > 30 {
-                vxMax = 1;
-        } else {
-                vxMax = 5.5 * (1 - 0.618)
-        }*/
-
+        
         ///攻击判定
         AtkBox = 0
         // Atk
@@ -281,11 +246,4 @@ var D = instance_place(x, y, oDoor) if D and tightRoomGoOn = false {
         tightRoomGoOn = true;
         room_goto(tightRM)
 }
-
-/// Lantern
-/*
-with (instance_place(x, y, oRopeSegment))
-    if (light || sprite_index == sVineSegment)
-        physics_apply_impulse(phy_position_x, phy_position_y, other.vx * 8, other.vy * 8);
-
 

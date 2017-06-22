@@ -1,0 +1,12 @@
+Converting GML script : ${project_dir}\scripts\draw_text_custom\draw_text_custom.gml
+Converted description : /// @description  draw_text_custom(x,y,string,alpha)/// @function  draw_text_custom
+/// @param x
+/// @param y
+/// @param string
+/// @param alpha
+
+Converting GML script : ${project_dir}\scripts\string_extract\string_extract.gml
+Converted description : /// @description  string_extract(str,sep,ind)/// @function  string_extract
+/// @param str
+/// @param sep
+/// @param ind
