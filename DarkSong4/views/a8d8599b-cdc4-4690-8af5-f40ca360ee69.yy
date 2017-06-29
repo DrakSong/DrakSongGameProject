@@ -12,7 +12,7 @@
         "44c40ce3-dab4-4e37-9862-e477e2062fa9"
     ],
     "filterType": "GMObject",
-    "folderName": "TapulLo",
+    "folderName": "TaPulLo",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

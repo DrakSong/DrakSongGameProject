@@ -49,7 +49,7 @@ switch (Post)
 			SoundPlay(snd_button)
         };
         global.Language = max(global.Language, 0);
-        global.Language = min(global.Language, ds_list_size( global.LanguageList)-1);
+        global.Language = min(global.Language,1)// ds_list_size( global.LanguageList)-1);
 		ChangeMeunSelectLanguage();
         break;
 		

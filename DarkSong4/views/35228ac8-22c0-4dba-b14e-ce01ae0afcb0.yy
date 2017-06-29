@@ -263,7 +263,9 @@
         "70580a6c-8477-4d55-92be-651af2843040",
         "8238f580-9d3c-483a-955f-1ffa09364b71",
         "9830d64f-ae84-4f3c-b63e-d0d318728462",
-        "e710758f-761b-4ffc-a1e3-d31bf48f620d"
+        "e710758f-761b-4ffc-a1e3-d31bf48f620d",
+        "464a3d34-7f88-4a8e-9927-996c2cde3ee6",
+        "c84de145-1597-4ee0-9e8e-944771bfbb94"
     ],
     "filterType": "",
     "folderName": "scripts",

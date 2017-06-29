@@ -18,7 +18,7 @@ if STITime > 0 {
 
 //硬直期间
 if STI {
- AtkTime = 0; //打断蓄力
+AtkTime = 0; //打断蓄力
 attacking = false;
 kLeft        = false;
 kRight       = false;
@@ -36,6 +36,7 @@ kBlock       = false;
 
 kRollL       = false;
 kRollR       = false;
+self.sprite_index=self.sInjured
 
         kControl = false;
 } else {

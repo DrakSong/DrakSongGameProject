@@ -991,6 +991,14 @@
             }
         },
         {
+            "Key": "200b8d71-a44b-46ed-a49a-bcf389c54006",
+            "Value": {
+                "id": "47b1a262-896a-493d-b3f0-ef645f3fb170",
+                "resourcePath": "views\\200b8d71-a44b-46ed-a49a-bcf389c54006.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "20420e4f-ddab-4e63-815d-56135f2b57a0",
             "Value": {
                 "id": "902f3184-b4a9-4cbc-b146-a3fb5bfd5811",
@@ -1959,6 +1967,14 @@
             }
         },
         {
+            "Key": "3f1ab53f-3223-4f47-989c-fa5a4793ef2a",
+            "Value": {
+                "id": "e728acd9-3b56-401f-9451-8bd01d0290cd",
+                "resourcePath": "scripts\\GlobalSet\\GlobalSet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3f68be8c-b9b4-4c3f-ac9f-e25c65cc8452",
             "Value": {
                 "id": "87bf32ed-34b5-4379-a81f-1e332f1432bd",
@@ -2115,6 +2131,14 @@
             "Value": {
                 "id": "1d5b430e-3525-4070-bab5-a873ec91827a",
                 "resourcePath": "scripts\\ref_move_contact_solid\\ref_move_contact_solid.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "464a3d34-7f88-4a8e-9927-996c2cde3ee6",
+            "Value": {
+                "id": "96bd1a0c-f871-4e3b-8fbf-b3800badeb85",
+                "resourcePath": "scripts\\ref_ds\\ref_ds.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -5290,7 +5314,7 @@
             "Key": "b6418a18-0b18-416e-9b41-4a76d3a1ad23",
             "Value": {
                 "id": "e254b71c-204f-4ef0-84ab-942acefe03d8",
-                "resourcePath": "datafiles_yy\\Enemy.lua.yy",
+                "resourcePath": "datafiles_yy\\oEnemy.lua.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -5908,6 +5932,14 @@
                 "id": "69bc4561-f40d-4c11-be21-b119d572f406",
                 "resourcePath": "objects\\oParPlayer\\oParPlayer.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c84de145-1597-4ee0-9e8e-944771bfbb94",
+            "Value": {
+                "id": "4b050239-dbf1-4fa0-94eb-f63efa7c0168",
+                "resourcePath": "scripts\\ref_ds_list_clear\\ref_ds_list_clear.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -7258,7 +7290,7 @@
             "Key": "f2a7542c-341f-46a2-962c-489b5d1c5a8e",
             "Value": {
                 "id": "28341bff-befb-4657-8d2d-ef2330702109",
-                "resourcePath": "datafiles_yy\\player.lua.yy",
+                "resourcePath": "datafiles_yy\\oTaPuLo.lua.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -7420,6 +7452,14 @@
                 "id": "ed020d87-569c-4559-9134-bbac19e1ee09",
                 "resourcePath": "views\\f71758f8-e351-45fc-a76f-ff338fe45c74.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f86fee22-b714-44f7-a80f-521c75014586",
+            "Value": {
+                "id": "7599d07b-acb0-4c1a-a550-97bdef0d1168",
+                "resourcePath": "scripts\\AtkBoxCollisionRectangle\\AtkBoxCollisionRectangle.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -8000,9 +8040,13 @@
         "6dfc45c1-fb33-4192-9919-023f8becc3ba",
         "ff6a0d1b-fc0a-42f6-b199-ecfb1d6411cd",
         "9830d64f-ae84-4f3c-b63e-d0d318728462",
-        "68187400-b387-41b3-89db-1819bffe6f47",
         "c36fb153-8fce-4283-a394-e982ea04afb2",
-        "28eafbd4-ec05-4fe5-b199-b7e3ee65455e"
+        "68187400-b387-41b3-89db-1819bffe6f47",
+        "f86fee22-b714-44f7-a80f-521c75014586",
+        "28eafbd4-ec05-4fe5-b199-b7e3ee65455e",
+        "464a3d34-7f88-4a8e-9927-996c2cde3ee6",
+        "c84de145-1597-4ee0-9e8e-944771bfbb94",
+        "3f1ab53f-3223-4f47-989c-fa5a4793ef2a"
     ],
     "tutorial": ""
 }

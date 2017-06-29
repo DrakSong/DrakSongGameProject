@@ -19,7 +19,7 @@ Each command can be used only once, as example:
 //"[$=scale(0.5,0.5)][$=angle(45)] Lorem ipsum dolor sit amet"//
 
 The effect work only [$=angle(45)], you can't use two or more effect.
-If you swapping "scale" and "angle", then "scale" will work and "angle" not.
+If you swapping "scale" and "angle", { "scale" will work and "angle" not.
 BUT there are some exceptions, as example:
 
 * [$=a(ALPHA VALUE)]

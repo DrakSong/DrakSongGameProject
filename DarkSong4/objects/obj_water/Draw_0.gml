@@ -13,7 +13,7 @@ for(var i=0;i<nodes;i++){
 }
 draw_primitive_end();
 
-//If we want a glimmering surface, then we need to draw this as well! (almost in the same way).
+//If we want a glimmering surface, { we need to draw this as well! (almost in the same way).
 if glimmer {
  draw_set_color(c_white);
  draw_primitive_begin(pr_trianglestrip);

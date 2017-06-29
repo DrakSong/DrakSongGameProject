@@ -177,12 +177,12 @@ if (!attacking) {
         case JUMP:
                 // Mid jump   
                 if (! (place_meeting(x, y + 2, oParSolid) && vy != 0) && vy >= -1.0 && vy <= 1.0) {
-                        if (blocking) sprite_index = sNoSP //sJumpM ;
+                        if (blocking) sprite_index = sJumpM ;
                         else sprite_index = sJumpM;
                 } else {
                         // Rise + fall
                         if (vy <= 0) {
-                                if (blocking) sprite_index = sNoSP //sJumpU ;
+                                if (blocking) sprite_index = sJumpU ;
                                 else sprite_index = sJumpU;
                         } else {
                                 if (blocking) sprite_index = sJumpD;
@@ -191,9 +191,13 @@ if (!attacking) {
                 }
 
                 // When against a wall   (封印)
+				/*
                 if (cRight || cLeft) and false
-                if (blocking) sprite_index = sNoSP //sSlide ;
-                else sprite_index = sNoSP //sSlide;  
+                if (blocking) 
+				sprite_index = sNoSP //sSlide ;
+                else 
+				sprite_index = sNoSP //sSlide;  
+				*/
                 break;
 
         case ROLL:
@@ -203,3 +207,5 @@ if (!attacking) {
 }
 
 }
+live_update()
+live_call("step", self);

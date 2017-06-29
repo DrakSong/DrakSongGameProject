@@ -2,7 +2,7 @@
 
         //draw_self();/// 画精灵
    //绘制无敌效果
-   if INV or  state  = ROLL 
+if INV or  state  = ROLL 
 {var C = c_white}
  else
 {var C = c_black}
@@ -10,27 +10,30 @@
  
  
  //判断僵直
-   // if STI
     {
-   //draw_sprite_outlined(sInjured, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, c_blue);    
-    }
-    //else
-    {
-    if (onGround){
-    draw_sprite_outlined(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, C);    }
+if (onGround){
+   
+    draw_sprite_outlined(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, C); 
+
+      }
 else
-    draw_sprite_outlined(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, C);
+ {
+   draw_sprite_outlined(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, C);
+   
+   
+   }
+   
 }    
    
     
-  
-
+  live_call("draw", self);
+//draw_text(x,y,"x")
    
 
 
 ///绘制攻击区域
-
 /*
+
 if oGameSystem.Debug
 if (sprite_index == sAtk  ) and  AtkBoxCol != c_white
 {
@@ -39,4 +42,3 @@ if (sprite_index == sAtk  ) and  AtkBoxCol != c_white
      AtkBoxCol = c_white
 }
 
-*/

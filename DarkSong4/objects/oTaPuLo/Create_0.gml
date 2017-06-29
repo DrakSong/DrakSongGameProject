@@ -10,5 +10,6 @@ ASTI = 30//攻击照成硬直
 AFlyH = 2;//击飞玩家
 AFlyV = 3;//击飞玩家
 
-live_init("player.lua");
 CanPushBlock = true
+
+

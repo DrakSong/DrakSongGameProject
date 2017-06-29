@@ -17,10 +17,10 @@ ref_draw(q);
 ref_text(q);
 ref_sprite(q);
 ref_background(q);
+ref_ds(q)
 
-ref_sound(q);//播放声音的的
-ref_Alarm(q);//计时器的
-ref_AtkBoxCollision(q)//攻击碰撞区域的
+
+
 
 
 for (i = 0; sprite_exists(i); i += 1) {
@@ -31,4 +31,7 @@ for (i = 0; object_exists(i); i += 1) {
 }
 for (i = 0; audio_exists(i); i += 1) {
     lua_global_set(q, audio_get_name(i), i);
+}
+for (i = 0; script_exists(i); i += 1) {
+lua_add_function(q, script_get_name(i), i);
 }

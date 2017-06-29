@@ -19,8 +19,8 @@ ATK = 1;//攻击力
 ASTI = 30//攻击照成硬直
 AFlyH = 4;//击飞玩家
 AFlyV = 3;//击飞玩家
-live_init("Enemy.lua");
 vxMax=1
 //D = oDagger.object_index
 
 Col = 0
+

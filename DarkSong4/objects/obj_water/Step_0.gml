@@ -29,7 +29,7 @@ for ( var i=0; i<nodes; i+=1)
  }
  ypos[i] = median(min(wave_max,sprite_height),ypos[i],-wave_max); //We limit this to be withing out wave_max range (and no deeper than our sprite is tall).
  
- //We then force down water touching with solids or water above itself
+ //We { force down water touching with solids or water above itself
  while ypos[i] < 0 && (collision_line(x+i*__ndist,y+ypos[i],x+i*__ndist,y,obj_water,false,true) || collision_line(x+i*__ndist,y+ypos[i],x+i*__ndist,y,solids,false,true)) {
   ypos[i]++;
  }

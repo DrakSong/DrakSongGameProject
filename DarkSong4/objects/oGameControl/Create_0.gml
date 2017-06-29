@@ -4,6 +4,7 @@
 globalvar Font;
 Font = font_add("Font.otf",32,0, 0, 0, 65535)
 
+
 /// @description 进行游戏内容的初化
 // You can write your code in this editor
 

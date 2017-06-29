@@ -1,5 +1,13 @@
 function step(self, other)
+
+
+	action_inherited();
+
+
 	--控制
+
+	self.jumpHeight =5.5*0.68
+
 	if (self.kControl > 0.5) then
 		self.kLeft = keyboard_check(_G.kLeft)
 		self.kRight = keyboard_check(_G.kRight)
@@ -12,19 +20,15 @@ function step(self, other)
 		self.kRollL = (keyboard_check_pressed(_G.kRoll) )and (self.kLeft > 0.5) and 1 or 0
 		self.kRollR = (keyboard_check_pressed(_G.kRoll) ) and (self.kRight > 0.5) and 1 or 0
 	end
-	--无法控制期间不能动
-	if (self.kControl < 0.5) then
-		self.kLeft = 0
-		self.kRight = 0
-		self.kUp = 0
-		self.kDown = 0
-		self.kJump = 0
-		self.kJumpRelease = 0
-		self.kAction = 0
-		self.kBlock = 0
-		self.kRollL = 0
-		self.kRollR = 0
-	end
+	
+self.AtkBoxD = self.y - 8;
+self.AtkBoxU = self.y - 6;
+self.AtkBoxL = self.x + self.facing * 1;
+self.AtkBoxR = self.x + self.facing * 18;
+
+
+
+
 	--滚动期间改变图片
 	if ((self.onGround > 0.5) and not (self.attacking > 0.5)) then
 		if (self.state ~= self.ROLL) then
@@ -88,6 +92,28 @@ function step(self, other)
 	if ((self.attacking > 0.5) and (self.onGround > 0.5)) then
 		self.vx = 0
 	end
-
+	
 	 
+	
+if (self.attacking > 0 ) and  (self.sprite_index == sPlayerAtk) then
+	if (random(self.image_index) > 1 and random(self.image_index) < 2) then
+	
+		
+		
+		AtkBoxCollisionRectangle(self.AtkBoxL, self.AtkBoxU, self.AtkBoxR, self.AtkBoxD, oParEnemy, 1, 1);
+		AtkBoxCollisionRectangle(self.AtkBoxL, self.AtkBoxU, self.AtkBoxR, self.AtkBoxD, oParDecorate, 1, 1);
+		
+		
+	
+else
+ ds_list_clear(self.AtkList)
+ end
+end
+
+
+if self.attacking <0   then
+ ds_list_clear(self.AtkList)
+end
+
+
 end

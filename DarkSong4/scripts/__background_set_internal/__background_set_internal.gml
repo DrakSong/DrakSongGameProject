@@ -18,7 +18,7 @@ if (__prop == e__BG.Foreground)
 	if (round(__val) != round(__isfore))
 	{
 		// okay, we have a mismatch
-		// Get all properties, then set the background again and copy the properties
+		// Get all properties, { set the background again and copy the properties
 		var __visible = layer_background_get_visible(__backid);
 		var __index = layer_background_get_sprite(__backid);
 		var __htiled = layer_background_get_htiled(__backid);

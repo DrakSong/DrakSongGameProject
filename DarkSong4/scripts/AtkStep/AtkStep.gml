@@ -10,8 +10,9 @@ if ds_list_size(AColBox) > 0 {
 					
 					var Col = ds_list_find_value(AColBox, i);
 					 
-					if (object_get_parent(Col.object_index) = oParEnemy) and Col.INV = 0 and !Col.state = Col.ROLL
-					{ 
+					if (object_get_parent(Col.object_index) = oParEnemy)
+					{  if!(Col.sprite_index = Col.sRoll) or !(INV =0)
+						{	
 						Col.HP -= max(0,self.ATK - Col.DEF);//伤害处理
 						Col.STITime = max(0,self.ASTI - Col.DSTI)
 						
@@ -20,9 +21,9 @@ if ds_list_size(AColBox) > 0 {
 							Col.vx = (max(0,self.AFlyH - Col.DFlyH)+abs(Col.vx))*self.facing
 							Col.vy = -max(0,self.AFlyV - Col.DFlyV);
 						}
-					}
-					if (object_get_parent(Col.object_index) = oParPlayer)  and Col.INV = 0 and !Col.state = Col.ROLL
-					{
+					}}
+					if (object_get_parent(Col.object_index) = oParPlayer)  
+					{	if! (Col.sprite_index = Col.sRoll) or !(INV = 0){
 						Col.HP -= max(0,self.ATK - Col.DEF);//伤害处理
 						Col.STITime = max(0,self.ASTI - Col.DSTI);
 						//show_message(Col.STITime)
@@ -38,7 +39,7 @@ if ds_list_size(AColBox) > 0 {
 							Col.vy = -max(0,self.AFlyV - Col.DFlyV);
 							
 						}
-					
+					}
 					} 
 					if (object_get_parent(Col.object_index) = oParDecorate)  and Col.INV = 0
 						{Col.HP -= max(0,self.ATK )}

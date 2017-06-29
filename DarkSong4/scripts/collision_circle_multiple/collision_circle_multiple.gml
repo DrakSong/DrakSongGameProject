@@ -19,7 +19,7 @@ do
     var hit = collision_circle(x1, y1, r, obj, prec, notme);
     if (hit != noone)
     {
-        ///Add the colliding object to the list then
+        ///Add the colliding object to the list {
         ///deactivate it so that we don't collide with it again.
         ///It'll be reactivated later on...
         ds_list_add(list, hit);

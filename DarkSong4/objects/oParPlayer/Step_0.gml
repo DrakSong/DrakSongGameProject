@@ -1,12 +1,13 @@
-action_inherited();
-
-
-///对话期间不动
 if instance_exists(oDialogueBox)
 {
 	kControl = false;
 }
 
+
+action_inherited();
+
+
+///对话期间不动
 
 
 

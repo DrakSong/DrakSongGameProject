@@ -92,6 +92,8 @@ SlideJumpON = false;//贴墙跳跃
 blocking  = false;//开启防御
 CanPushBlock = false//推石头
 
+
+
 ///绘制体系
 //精灵对应表
 sIdle = sNoSP; //战立
@@ -124,3 +126,5 @@ DSTI = 0//僵直补正
 DFlyH = 0//吹飞补正
 DFlyV = 0//击飞补正
 
+live_init(object_get_name(self.object_index)+".lua");
+live_call("create", self);

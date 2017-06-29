@@ -1,5 +1,32 @@
 action_inherited();
 
+
+
+/*
+
+
+if (self.attacking == true) and (self.sprite_index == sPlayerAtk) {
+	if (random(self.image_index) > 1 and random(self.image_index) < 2) {
+	
+		
+		
+		AtkBoxCollisionRectangle(self.AtkBoxL, self.AtkBoxU, self.AtkBoxR, self.AtkBoxD, oParEnemy, 1, 1);
+		
+		
+		AtkBoxCollisionRectangle(self.AtkBoxL, self.AtkBoxU, self.AtkBoxR, self.AtkBoxD, oParDecorate, 1, 1);
+		
+		}
+}
+
+if not self.attacking  {
+ ds_list_clear(self.AtkList)
+}
+
+
+
+
+/*
+
 self.AtkBoxD = self.y - 8;
 self.AtkBoxU = self.y - 6;
 self.AtkBoxL = self.x //+ self.facing * 8;
@@ -10,13 +37,12 @@ if (attacking = true) and sprite_index = sPlayerAtk {
 	if (random(image_index) > 1 and random(image_index) < 2)
 	{ //判断方式
 		
-		var AColBox = //collision_multiple(x,y,oParEnemy)
-		collision_rectangle_multiple(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemy, 1, 1);
-		AtkStep(AColBox);
 		
-		var AColBox = //collision_multiple(x,y,oParEnemy)
-		collision_rectangle_multiple(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParDecorate, 1, 1);
-		AtkStep(AColBox);
+		AtkBoxCollisionRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParEnemy, 1, 1);
+		
+		
+		AtkBoxCollisionRectangle(AtkBoxL, AtkBoxU, AtkBoxR, AtkBoxD, oParDecorate, 1, 1);
+		
 		
 	}
 }
@@ -47,8 +73,6 @@ if (kUp && kAction)
 
 
 
-live_update();
-live_call("step", self);
 
 /*
 //键入
