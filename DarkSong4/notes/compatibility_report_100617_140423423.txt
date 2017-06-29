@@ -1,0 +1,17 @@
+Converting GML script : ${project_dir}\scripts\string_extract\string_extract.gml
+Converted description : /// @description  string_extract(str,sep,index)/// @function  string_extract
+/// @param str
+/// @param sep
+/// @param index
+
+Converting GML script : ${project_dir}\scripts\string_typing_custom\string_typing_custom.gml
+Converted description : /// @description  string_typing_custom(str,count)/// @function  string_typing_custom
+/// @param str
+/// @param count
+
+Converting GML script : ${project_dir}\scripts\draw_text_custom\draw_text_custom.gml
+Converted description : /// @description  draw_text_custom(x,y,string,alpha)/// @function  draw_text_custom
+/// @param x
+/// @param y
+/// @param string
+/// @param alpha

@@ -1,0 +1,52 @@
+Converting GML script : ${project_dir}\scripts\collision_ellipse_multiple\collision_ellipse_multiple.gml
+Converted description : /// @description collision_ellipse_multiple(x1, y1, x2, y2, object, prec, notme)/// @function collision_ellipse_multiple
+/// @param x1
+/// @param  y1
+/// @param  x2
+/// @param  y2
+/// @param  object
+/// @param  prec
+/// @param  notme
+
+Converting GML script : ${project_dir}\scripts\collision_point_multiple\collision_point_multiple.gml
+Converted description : /// @description collision_point_multiple(x, y, object, prec, notme)/// @function collision_point_multiple
+/// @param x
+/// @param  y
+/// @param  object
+/// @param  prec
+/// @param  notme
+
+Converting GML script : ${project_dir}\scripts\collision_multiple\collision_multiple.gml
+Converted description : /// @description collision_multiple(x, y, object)/// @function collision_multiple
+/// @param x
+/// @param  y
+/// @param  object
+
+Converting GML script : ${project_dir}\scripts\collision_line_multiple\collision_line_multiple.gml
+Converted description : /// @description collision_line_multiple(x1, y1, x2, y2, object, prec, notme)/// @function collision_line_multiple
+/// @param x1
+/// @param  y1
+/// @param  x2
+/// @param  y2
+/// @param  object
+/// @param  prec
+/// @param  notme
+
+Converting GML script : ${project_dir}\scripts\collision_rectangle_multiple\collision_rectangle_multiple.gml
+Converted description : /// @description collision_rectangle_multiple(x1, y1, x2, y2, object, prec, notme)/// @function collision_rectangle_multiple
+/// @param x1
+/// @param  y1
+/// @param  x2
+/// @param  y2
+/// @param  object
+/// @param  prec
+/// @param  notme
+
+Converting GML script : ${project_dir}\scripts\collision_circle_multiple\collision_circle_multiple.gml
+Converted description : /// @description collision_circle_multiple(x1, y1, radius, object, prec, notme)/// @function collision_circle_multiple
+/// @param x1
+/// @param  y1
+/// @param  radius
+/// @param  object
+/// @param  prec
+/// @param  notme

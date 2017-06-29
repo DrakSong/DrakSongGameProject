@@ -1,0 +1,27 @@
+var state = argument0;
+lua_global_set(state, "fa_left", 0);
+lua_global_set(state, "fa_center", 1);
+lua_global_set(state, "fa_right", 2);
+lua_global_set(state, "fa_top", 0);
+lua_global_set(state, "fa_middle", 1);
+lua_global_set(state, "fa_bottom", 2);
+lua_add_function(state, "draw_set_font", ref_draw_set_font);
+lua_add_function(state, "draw_set_halign", ref_draw_set_halign);
+lua_add_function(state, "draw_set_valign", ref_draw_set_valign);
+lua_add_function(state, "string_width", ref_string_width);
+lua_add_function(state, "string_height", ref_string_height);
+lua_add_function(state, "string_width_ext", ref_string_width_ext);
+lua_add_function(state, "string_height_ext", ref_string_height_ext);
+lua_add_function(state, "draw_text", ref_draw_text);
+lua_add_function(state, "draw_text_ext", ref_draw_text_ext);
+lua_add_function(state, "draw_text_transformed", ref_draw_text_transformed);
+lua_add_function(state, "draw_text_ext_transformed", ref_draw_text_ext_transformed);
+lua_add_function(state, "draw_text_colour", ref_draw_text_colour);
+lua_add_function(state, "draw_text_color", ref_draw_text_color);
+lua_add_function(state, "draw_text_ext_colour", ref_draw_text_ext_colour);
+lua_add_function(state, "draw_text_ext_color", ref_draw_text_ext_color);
+lua_add_function(state, "draw_text_transformed_colour", ref_draw_text_transformed_colour);
+lua_add_function(state, "draw_text_transformed_color", ref_draw_text_transformed_color);
+lua_add_function(state, "draw_text_ext_transformed_colour", ref_draw_text_ext_transformed_colour);
+lua_add_function(state, "draw_text_ext_transformed_color", ref_draw_text_ext_transformed_color);
+

@@ -1,0 +1,20 @@
+var state = argument0;
+lua_add_function(state, "draw_get_colour", ref_draw_get_colour);
+lua_add_function(state, "draw_set_colour", ref_draw_set_colour);
+lua_add_function(state, "draw_get_color", ref_draw_get_color);
+lua_add_function(state, "draw_set_color", ref_draw_set_color);
+lua_add_function(state, "draw_get_alpha", ref_draw_get_alpha);
+lua_add_function(state, "draw_set_alpha", ref_draw_set_alpha);
+lua_add_function(state, "draw_clear", ref_draw_clear);
+lua_add_function(state, "draw_clear_alpha", ref_draw_clear_alpha);
+lua_add_function(state, "draw_point", ref_draw_point);
+lua_add_function(state, "draw_line", ref_draw_line);
+lua_add_function(state, "draw_line_width", ref_draw_line_width);
+lua_add_function(state, "draw_rectangle", ref_draw_rectangle);
+lua_add_function(state, "draw_roundrect", ref_draw_roundrect);
+lua_add_function(state, "draw_roundrect_ext", ref_draw_roundrect_ext);
+lua_add_function(state, "draw_triangle", ref_draw_triangle);
+lua_add_function(state, "draw_circle", ref_draw_circle);
+lua_add_function(state, "draw_ellipse", ref_draw_ellipse);
+lua_add_function(state, "draw_set_circle_precision", ref_draw_set_circle_precision);
+

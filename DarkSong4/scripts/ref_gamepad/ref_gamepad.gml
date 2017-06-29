@@ -1,0 +1,27 @@
+var state = argument0;
+lua_global_set(state, "gp_axislh", gp_axislh);
+lua_global_set(state, "gp_axislv", gp_axislv);
+lua_global_set(state, "gp_axisrh", gp_axisrh);
+lua_global_set(state, "gp_axisrv", gp_axisrv);
+lua_global_set(state, "gp_face1", gp_face1);
+lua_global_set(state, "gp_face2", gp_face2);
+lua_global_set(state, "gp_face3", gp_face3);
+lua_global_set(state, "gp_face4", gp_face4);
+lua_global_set(state, "gp_padd", gp_padd);
+lua_global_set(state, "gp_padl", gp_padl);
+lua_global_set(state, "gp_padr", gp_padr);
+lua_global_set(state, "gp_padu", gp_padu);
+lua_global_set(state, "gp_select", gp_select);
+lua_global_set(state, "gp_shoulderl", gp_shoulderl);
+lua_global_set(state, "gp_shoulderlb", gp_shoulderlb);
+lua_global_set(state, "gp_shoulderr", gp_shoulderr);
+lua_global_set(state, "gp_shoulderrb", gp_shoulderrb);
+lua_global_set(state, "gp_start", gp_start);
+lua_global_set(state, "gp_stickl", gp_stickl);
+lua_global_set(state, "gp_stickr", gp_stickr);
+lua_add_function(state, "gamepad_button_check", ref_gamepad_button_check);
+lua_add_function(state, "gamepad_button_check_pressed", ref_gamepad_button_check_pressed);
+lua_add_function(state, "gamepad_button_check_released", ref_gamepad_button_check_released);
+lua_add_function(state, "gamepad_button_value", ref_gamepad_button_value);
+lua_add_function(state, "gamepad_axis_value", ref_gamepad_axis_value);
+

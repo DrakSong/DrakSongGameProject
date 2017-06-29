@@ -1,0 +1,1 @@
+return BGMPlay(argument0);
