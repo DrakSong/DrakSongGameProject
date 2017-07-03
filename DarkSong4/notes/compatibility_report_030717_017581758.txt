@@ -1,0 +1,12 @@
+Font fontSFX has been converted to font family Arial (Regular). Font has been regenerated, small inconsistencies may occur.
+Converting GML script : ${project_dir}\objects\oSFXMixer\Alarm_0.gml
+Converted description : /// @description Stop Sound Playing
+
+Converting GML script : ${project_dir}\objects\oSFXMixer\Step_0.gml
+Converted builtin : line 150 : view_wport -> __view_get( e__VW.WPort, 0 )
+Converted builtin : line 151 : view_hport -> __view_get( e__VW.HPort, 0 )
+Converted description : /// @description  Perform all the logic for the SFX Mixer Window
+
+Converting GML script : ${project_dir}\objects\oSFXMixer\Draw_64.gml
+Converted builtin : line 5 : view_wport -> __view_get( e__VW.WPort, 0 )
+Converted builtin : line 5 : view_hport -> __view_get( e__VW.HPort, 0 )

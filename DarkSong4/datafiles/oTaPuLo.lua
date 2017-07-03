@@ -72,8 +72,7 @@ self.AtkBoxR = self.x + self.facing * 18;
 			self.sprite_index=self.sAtk
 			self.attacking = 1
 			
-			instance_create(self.x, self.y-16, oDagger)
-		
+			instance_create(self.x, self.y-16, oHolyWater)
 			SoundPlay(_G.SouAtk)
 		end
 	end

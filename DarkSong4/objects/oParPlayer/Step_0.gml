@@ -1,6 +1,23 @@
 if instance_exists(oDialogueBox)
 {
 	kControl = false;
+	
+	kLeft        = false;
+kRight       = false;
+kUp          = false;
+kDown        = false;
+
+kJump        = false;
+kJumpRelease = false;
+
+kAction      = false;
+kActionK     = false;
+kActionR     = false;
+
+kBlock       = false;
+
+kRollL       = false;
+kRollR       = false;
 }
 
 

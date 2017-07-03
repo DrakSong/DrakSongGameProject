@@ -39,7 +39,10 @@ kRollR       = false;
 self.sprite_index=self.sInjured
 
         kControl = false;
-} else {
+		
+} else 
+
+{
 
 
         kControl = true;

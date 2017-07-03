@@ -11,8 +11,8 @@ self.AFlyV = 0;--击飞玩家
 self.AtkListMax = 1;--穿透
 self.hspeed = oParPlayer.facing*3
 
-AlarmSet(0,1)
-AlarmSet(1,1)
+--AlarmSet(0,1)
+--AlarmSet(1,1)
 
 end
 function step(self)

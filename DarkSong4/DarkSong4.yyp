@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "04d349b8-17a3-4a81-af9a-990485d28c9f",
+            "Value": {
+                "id": "4e872b4a-fed5-4646-bfbc-e599fecb9ced",
+                "resourcePath": "datafiles_yy\\SFX_Mixer_Andrew_Gleeson.yy.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "055b54cc-2dd2-4a20-9201-64cff0971ced",
             "Value": {
                 "id": "a559d9d3-c13b-40f2-94cc-d740119df2db",
@@ -2359,6 +2367,14 @@
             }
         },
         {
+            "Key": "509aa34c-a4f2-4e5f-9f2a-6eebcacfe546",
+            "Value": {
+                "id": "1e3d6819-7f58-4f70-9e2f-f0c3e14c6c1f",
+                "resourcePath": "rooms\\room3\\room3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "50a62932-fd81-4d04-b314-b3b4acbb370d",
             "Value": {
                 "id": "9567293e-3371-47d3-bea8-45654853b1d9",
@@ -2895,6 +2911,14 @@
             }
         },
         {
+            "Key": "640365ee-5f42-4daa-b84e-9626af97bf94",
+            "Value": {
+                "id": "4c380690-c6a5-49ae-9ae8-e5dba3324eae",
+                "resourcePath": "fonts\\fontSFX\\fontSFX.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "643811ba-c33b-420d-a01d-601fa46459d2",
             "Value": {
                 "id": "16a0b453-982b-4010-9766-1183a77c2eda",
@@ -2932,6 +2956,14 @@
                 "id": "ab79e4d0-7890-43a2-8c64-1384538cb4f7",
                 "resourcePath": "scripts\\ref_draw_set_font\\ref_draw_set_font.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "65f46f55-6ed8-450d-a2b5-7c01acab3ddd",
+            "Value": {
+                "id": "49b52e42-051e-484c-8785-b2b8b80941a0",
+                "resourcePath": "extensions\\SFX_Mixer_Andrew_Gleeson\\SFX_Mixer_Andrew_Gleeson.yy",
+                "resourceType": "GMExtension"
             }
         },
         {
@@ -3812,6 +3844,14 @@
                 "id": "1897c081-3541-45dd-ad77-7145a26cea7a",
                 "resourcePath": "views\\82963773-522d-4b51-b369-c55bd0416f8c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "82de16b0-84ec-40bc-94d2-5e8910392700",
+            "Value": {
+                "id": "7fa454c1-654f-4480-ad21-25e1b53fe7ab",
+                "resourcePath": "objects\\oSFXMixer\\oSFXMixer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -6527,6 +6567,14 @@
             }
         },
         {
+            "Key": "db03b662-8d41-4d10-a4bf-98fc003aee47",
+            "Value": {
+                "id": "a37a7173-aea5-490c-9c49-db23af856e64",
+                "resourcePath": "sprites\\sSFXSlider\\sSFXSlider.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "db208041-a52a-45d4-a014-ed61c9bbf5ca",
             "Value": {
                 "id": "5295f99f-4943-4aa1-998c-6ede8ab474f4",
@@ -6708,6 +6756,14 @@
                 "id": "d05cacc9-e534-4adf-af54-3a73c2f63c2a",
                 "resourcePath": "views\\e0ce3ed0-aeea-4eb6-b375-00240e9661c8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e0fef752-6e43-479e-88f4-d7595bf3c1ae",
+            "Value": {
+                "id": "9f2c854b-874b-43c8-ab8e-ed49340a0aee",
+                "resourcePath": "notes\\compatibility_report_030717_017581758.yy",
+                "resourceType": "GMNotes"
             }
         },
         {
@@ -7380,6 +7436,14 @@
                 "id": "27310761-4b0f-49f8-a979-369d59ded8f1",
                 "resourcePath": "views\\f52ad225-4ac9-456f-a928-7a3fe4f10311.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f56c859d-2b9d-4362-ac1f-767e9f7228c6",
+            "Value": {
+                "id": "3f136bfe-b713-472c-a3a4-d858b7f6a722",
+                "resourcePath": "sprites\\sSFXButtons\\sSFXButtons.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
