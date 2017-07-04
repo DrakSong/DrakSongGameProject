@@ -1,0 +1,20 @@
+Converting GML script : ${project_dir}\objects\oGBoy\Create_0.gml
+Converted description : /// @description      Just some boring old randomization stuff.
+
+Converting GML script : ${project_dir}\objects\oGBoy\Step_0.gml
+Converted description : /// @description      Boring old step event.
+
+Converting GML script : ${project_dir}\objects\oShader\Create_0.gml
+Converted description : /// @description      Boring old create event.
+
+Converting GML script : ${project_dir}\objects\oShader\Step_0.gml
+Converted description : /// @description      Just some boring old palette selection code.
+
+Converting GML script : ${project_dir}\objects\oShader\Draw_64.gml
+Converted description : /// @description      Exciting Shader Stuff!
+
+Converting GML script : ${project_dir}\objects\oGrad\Draw_0.gml
+Converted description : /// @description      Just a boring old draw Event for the gradient.
+
+added compatibility script draw/draw_set_blend_mode.gml
+updated compatibility script __global_object_depths.gml

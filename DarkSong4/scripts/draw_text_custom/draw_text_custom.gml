@@ -389,4 +389,6 @@ _str[2] = str_height+(string_height(string_hash_to_newline("A")))
 draw_set_alpha(_prealpha)
 draw_set_color(_precol)
 
+
+
 return _str

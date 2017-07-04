@@ -20,3 +20,5 @@ for (var i=1; i<CSVH; i+=1)
 	ds_list_add(TextList,Map)
 };
 
+X= 720-96;
+Y = 420;
