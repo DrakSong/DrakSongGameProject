@@ -4,7 +4,11 @@
 count = 0;
 TextNo = 0;
 
-var CSV = load_csv(global.Text);
+CSV  =  load_csv(global.Text);
+
+//RCSV =csv_read(global.Text);
+
+
 var CSVH = ds_grid_height(CSV);
 var CSVW = ds_grid_width(CSV);
 
