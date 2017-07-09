@@ -199,26 +199,26 @@ while(string_length(_strab) > 0)
             str_command[i] = string_replace(str_command[i],"rgb(","")
             str_command[i] = string_replace(str_command[i],"make_color_rgb(","")
             str_command[i] = string_replace(str_command[i],")","")
-            r = string_extract(str_command[i],",",0)
-            g = string_extract(str_command[i],",",1)
-            b = string_extract(str_command[i],",",2)
+            r = string_extract(str_command[i],"`",0)
+            g = string_extract(str_command[i],"`",1)
+            b = string_extract(str_command[i],"`",2)
             d_color = make_color_rgb(real(r),real(g),real(b))
        }else if string_copy(str_command[i],0,4) = "hsv(" or string_copy(str_command[i],0,15) = "make_color_hsv("{
             var h,s,v;
             str_command[i] = string_replace(str_command[i],"hsv(","")
             str_command[i] = string_replace(str_command[i],"make_color_hsv(","")
             str_command[i] = string_replace(str_command[i],")","")
-            h = string_extract(str_command[i],",",0)
-            s = string_extract(str_command[i],",",1)
-            v = string_extract(str_command[i],",",2)
+            h = string_extract(str_command[i],"`",0)
+            s = string_extract(str_command[i],"`",1)
+            v = string_extract(str_command[i],"`",2)
             d_color = make_color_hsv(real(h),real(s),real(v))
        }else if string_copy(str_command[i],0,12) = "merge_color("{
             var c1,c2,v;
             str_command[i] = string_replace(str_command[i],"merge_color(","")
             str_command[i] = string_replace(str_command[i],")","")
-            c1 = string_extract(str_command[i],",",0)
-            c2 = string_extract(str_command[i],",",1)
-            v = string_extract(str_command[i],",",2)
+            c1 = string_extract(str_command[i],"`",0)
+            c2 = string_extract(str_command[i],"`",1)
+            v = string_extract(str_command[i],"`",2)
             if string_digits(c1) != c1{
                 c1 = asset_get_index(c1)
             }else if string_digits(c2) != c2{
@@ -229,10 +229,10 @@ while(string_length(_strab) > 0)
             var uy, uwidth, uc, ua, uprec, uprea;
             str_command[i] = string_replace(str_command[i],"u(","")
             str_command[i] = string_replace(str_command[i],")","")
-            uy = real(string_extract(str_command[i],",",0))
-            uwidth = real(string_extract(str_command[i],",",1))
-            uc = string_extract(str_command[i],",",2)
-            ua = real(string_extract(str_command[i],",",3))
+            uy = real(string_extract(str_command[i],"`",0))
+            uwidth = real(string_extract(str_command[i],"`",1))
+            uc = string_extract(str_command[i],"`",2)
+            ua = real(string_extract(str_command[i],"`",3))
             uprec = draw_get_color();
             uprea = draw_get_alpha();
             
@@ -258,13 +258,13 @@ while(string_length(_strab) > 0)
        }else if string_copy(str_command[i],0,4) = "pos("{
             str_command[i] = string_replace(str_command[i],"pos(","")
             str_command[i] = string_replace(str_command[i],")","")
-            _posx = real(string_extract(str_command[i],",",0))
-            _posy = real(string_extract(str_command[i],",",1))
+            _posx = real(string_extract(str_command[i],"`",0))
+            _posy = real(string_extract(str_command[i],"`",1))
        }else if string_copy(str_command[i],0,6) = "scale("{
             str_command[i] = string_replace(str_command[i],"scale(","")
             str_command[i] = string_replace(str_command[i],")","")
-            _xs = real(string_extract(str_command[i],",",0))
-            _ys = real(string_extract(str_command[i],",",1))
+            _xs = real(string_extract(str_command[i],"`",0))
+            _ys = real(string_extract(str_command[i],"`",1))
        }else if string_copy(str_command[i],0,2) = "a("{
             str_command[i] = string_replace(str_command[i],"a(","")
             str_command[i] = string_replace(str_command[i],")","")
@@ -273,8 +273,8 @@ while(string_length(_strab) > 0)
             str_command[i] = string_replace(str_command[i],"img(","")
             str_command[i] = string_replace(str_command[i],")","")
             var img, index,img_height, img_width;
-            img = asset_get_index(string_extract(str_command[i],",",0))
-            index = real(string_extract(str_command[i],",",1))
+            img = asset_get_index(string_extract(str_command[i],"`",0))
+            index = real(string_extract(str_command[i],"`",1))
             img_width = sprite_get_width(img)
             img_height = sprite_get_height(img)
             if img_h < img_height+4{
@@ -286,14 +286,14 @@ while(string_length(_strab) > 0)
             str_command[i] = string_replace(str_command[i],"img_ext(","")
             str_command[i] = string_replace(str_command[i],")","")
             var img, index, img_height, img_width, img_x, img_y, img_xscale, img_yscale, img_rot, img_alp;
-            img = asset_get_index(string_extract(str_command[i],",",0))
-            index = real(string_extract(str_command[i],",",1))
-            img_x = real(string_extract(str_command[i],",",2))
-            img_y = real(string_extract(str_command[i],",",3))
-            img_xscale = real(string_extract(str_command[i],",",4))
-            img_yscale = real(string_extract(str_command[i],",",5))
-            img_rot = real(string_extract(str_command[i],",",6))
-            img_alp = real(string_extract(str_command[i],",",7))
+            img = asset_get_index(string_extract(str_command[i],"`",0))
+            index = real(string_extract(str_command[i],"`",1))
+            img_x = real(string_extract(str_command[i],"`",2))
+            img_y = real(string_extract(str_command[i],"`",3))
+            img_xscale = real(string_extract(str_command[i],"`",4))
+            img_yscale = real(string_extract(str_command[i],"`",5))
+            img_rot = real(string_extract(str_command[i],"`",6))
+            img_alp = real(string_extract(str_command[i],"`",7))
             img_width = sprite_get_width(img)
             img_height = sprite_get_height(img)
             if img_h < img_height+4{
@@ -329,14 +329,14 @@ while(string_length(_strab) > 0)
             str_command[i] = string_replace(str_command[i],")","")
             mark = true
 
-            m_c = string_extract(str_command[i],",",0)
+            m_c = string_extract(str_command[i],"`",0)
             
             if (string_digits(m_c) != string(m_c)){
                 m_c = real(asset_get_index(m_c))
             }else{
                 m_c = real(m_c)
             }
-            m_a = real(string_extract(str_command[i],",",1))
+            m_a = real(string_extract(str_command[i],"`",1))
        }else{
             var constant;
             constant = (string_digits(str_command[i]) != str_command[i])
@@ -392,3 +392,4 @@ draw_set_color(_precol)
 
 
 return _str
+

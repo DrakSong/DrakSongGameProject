@@ -1,3 +1,0 @@
-Converting GML script : ${project_dir}\objects\CSV_DATA\Create_0.gml
-ERROR : D:\jilcky\Documents\DrakSongGameProject\DarkSong4\objects\CSV_DATA\Create_0.gml : 1 : number of arguments expected 0 got 1
-Too many errors - GML not processed : ${project_dir}\objects\CSV_DATA\Create_0.gml

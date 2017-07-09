@@ -28,10 +28,12 @@ if (string_length(str) = count) and(TextNo = ds_list_size(TextList) - 1) and(key
 }
 
 //最后绘制
-draw_set_color(c_red)
+//draw_set_color(c_red)
 //show_debug_message(draw_text_custom (10,10,string_typing_custom(str,count),1))
-var Text = draw_text_custom( - 100000000000, -10000000000, string_typing_custom(str, count), 1)
-//draw_text_custom (10,10,string_typing_custom(str,count),1)
+//var Text = draw_text_custom( - 100000000000, -10000000000, "FUCK", 1)
+var Text = draw_text_custom( -3200000000000000,  -320000000000,string_typing_custom(str, count) , 1)
+
+//draw_text_custom (10,10,str,1)
 
 //人物绘制
 var XX = 1024;
@@ -84,5 +86,8 @@ var XX = X - (Text[1] div 32) *32+32;
 var YY = Y;
 
 texture_set_interpolation(true)
-draw_set_color(c_white) draw_text_custom(XX + 32, YY + 32, string_typing_custom(str, count), 1)
+
+draw_set_color(c_white)
+draw_set_font(global.Font)
+ draw_text_custom(XX + 32, YY + 32,string_typing_custom(str, count) , 1)
 texture_set_interpolation(false)

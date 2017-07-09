@@ -1,5 +1,5 @@
 {
-    "id": "828d0086-81f5-4a9b-9679-8f39bf35ebe0",
+    "id": "a6b5ef4e-2071-4183-a31a-613896200e37",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "array_explode_escape",

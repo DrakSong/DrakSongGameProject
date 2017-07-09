@@ -545,7 +545,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": true,
+            "hierarchyVisible": false,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -557,7 +557,7 @@
             "m_serialiseFrozen": false,
             "name": "Assets_2",
             "userdefined_depth": false,
-            "visible": true,
+            "visible": false,
             "assets": [
                 {
                     "__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat",

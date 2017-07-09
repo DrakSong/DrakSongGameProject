@@ -1,8 +1,4 @@
-/// @description array_explode_escape(string, delim, escape)
-/// @function array_explode_escape
-/// @param string
-/// @param  delim
-/// @param  escape
+///array_explode_escape(string, delim, escape)
 //returns an array of conditions
 var a, c = "", escape=argument2, delim = argument1, s = argument0,
     is_escape = false, curChar, l = string_length(s);
@@ -38,5 +34,3 @@ for (var i = 1; i <= l; ++i) {
 }
 
 return a;
-
-

@@ -1,5 +1,8 @@
 ﻿No,Name,Text
-0,Name,1234567890ABCDEFGHIJKLMNOPQRS#TUVWXYZ1234567890ABCDEF#GHIJKLMNOPQRSTUVWXYZ
-1,Name2,看看有没有bug
-2,Name2,看看有没有bug23
-3,Name2,对话结束这句话不出现留个标记
+0,Name, I'LL KILL YOU
+1,Name2,[$=make_color_hsv(255`255`255)] Lorem ipsum dolor sit amet
+2,Name2,[$=font(fontSFX)] Lorem ipsum dolor sit amet #  [$=font(fontMin)] [$=make_color_hsv(255255`0)] Lorem ipsum dolor sit amet  
+4,Name2,Lorem  [$=pos(0`32)] ipsum dolor sit amet
+5,Name2,[$=scale(2`2)] Lorem [$=make_color_hsv(255`0`0)]ipsum dolor sit amet
+6,Name2,[$=img(spr_player_walk`-1)] Lorem ipsum dolor sit amet
+7,Name2,Hello [$=angle(90)]World[$=/], this is john.
