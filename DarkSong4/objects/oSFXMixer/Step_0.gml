@@ -1,5 +1,6 @@
 /// @description  Perform all the logic for the SFX Mixer Window
 //STEP //////////////////////////////////////////////////////////////////////////////////////////
+
 if keyboard_check_pressed(ord("M")) {debug = !debug; update = true;}
 
 if (debug)
@@ -23,7 +24,12 @@ if ((mouseY > yy && mouseY < yy+HEIGHT) && (mouseX > xx && mouseX < xx+WIDTH))
             saveHover = true;
             if mouse_check_button_pressed(mb_left) 
                 {
-                var fileOpen = get_open_filename("INI File|*.ini","");
+				
+				var file;
+	//	file = get_open_filename_ext("text file|*.txt", "", working_directory, "Open a saved level");
+
+				
+                var fileOpen =get_open_filename_ext("INI file|*.ini", "", working_directory, "") // get_open_filename("INI File|*.ini","");
                 
                     if fileOpen != ""
                     {
@@ -42,7 +48,7 @@ if ((mouseY > yy && mouseY < yy+HEIGHT) && (mouseX > xx && mouseX < xx+WIDTH))
             openHover = true;
             if mouse_check_button_pressed(mb_left) 
                 {
-                var fileSave = get_save_filename("INI File|*.ini","");  
+                var fileSave = get_save_filename_ext("INI file|*.ini", "", working_directory, "")// get_save_filename("INI File|*.ini","");  
                               
                     if fileSave != ""
                     {

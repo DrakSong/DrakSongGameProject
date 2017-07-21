@@ -47,6 +47,7 @@ ini_open("sfx.ini");
         }
 ini_close();
 
+
 //APPLY GAIN
 // This is just a general script which is already performed in the previous step.
 // Create your own setup to specify things like custom audio groups.

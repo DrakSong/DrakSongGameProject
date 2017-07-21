@@ -8,7 +8,8 @@
         "5282025c-ff95-4a4a-98a0-881886ea0cfe",
         "c0f005d7-01a3-4341-a0e1-66f19825bc4e",
         "d6890a38-0f3e-4557-aa05-054f55ea0c2a",
-        "dc7dc639-2d3d-487b-a52e-519ef6a9bf64"
+        "dc7dc639-2d3d-487b-a52e-519ef6a9bf64",
+        "5b0c360e-1d63-4e1f-9063-243d29db068f"
     ],
     "filterType": "GMScript",
     "folderName": "string系列",

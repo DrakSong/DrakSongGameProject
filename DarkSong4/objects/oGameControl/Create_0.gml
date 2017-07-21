@@ -2,7 +2,7 @@
 // You can write your code in this editor
 //载入拥有中文的字体
 globalvar Font;
-Font = fontSFX//font_add("msyh.ttc",32,0, 0, 0, 65535)
+Font = font32//font_add("msyh.ttc",32,0, 0, 0, 65535)
 
 
 /// @description 进行游戏内容的初化

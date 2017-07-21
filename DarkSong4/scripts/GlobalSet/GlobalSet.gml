@@ -1,1 +1,0 @@
-//globalvar argument0 = argument1
