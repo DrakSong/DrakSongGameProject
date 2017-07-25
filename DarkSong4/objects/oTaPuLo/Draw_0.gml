@@ -3,7 +3,7 @@
 action_inherited();
 
 
-if attacking{
+if attacking and debug_mode{
 draw_set_color(c_red)
 draw_rectangle(AtkBoxL,AtkBoxD,AtkBoxR,AtkBoxU,1)
 }

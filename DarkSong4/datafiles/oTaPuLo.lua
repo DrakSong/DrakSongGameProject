@@ -68,7 +68,7 @@ self.AtkBoxR = self.x + self.facing * 18;
 		if (not (self.attacking > 0.5) and (self.state ~= self.ROLL))  then
 			self.image_index=0
 			self.image_speed=0.25
-			self.sAtk = sPlayerJab
+			--self.sAtk = sPlayerJab
 			self.sprite_index=self.sAtk
 			self.attacking = 1
 			
@@ -80,8 +80,8 @@ self.AtkBoxR = self.x + self.facing * 18;
 	if (self.kAction > 0.5) then
 		if(not (self.attacking > 0.5) and (self.state ~= self.ROLL)) then
 			self.image_index=0
-			self.image_speed=0.45
-			self.sAtk = sPlayerAtk
+			self.image_speed=0.05
+			--self.sAtk = sPlayerAtk
 			self.sprite_index=self.sAtk
 			self.attacking = 1
 			SoundPlay(SouAtk)

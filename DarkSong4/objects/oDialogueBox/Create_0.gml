@@ -4,6 +4,8 @@ TextList = csv_read(global.Text)
 
 count = 0;
 TextNo = 0;
+
+
 /*
 var CSV = load_csv(global.Text);
 var CSVH = ds_grid_height(CSV);

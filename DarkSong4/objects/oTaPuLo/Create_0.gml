@@ -13,3 +13,12 @@ AFlyV = 3;//击飞玩家
 CanPushBlock = true
 
 
+
+sIdle = sNPC; //战立
+sRun = sShitaRun;//跑动
+//sRoll = sShitaRoll; //滚动
+sJumpU = sShitaJumpU;//上升
+sJumpM = sShitaJumpM;//维持
+sJumpD = sShitaJumpD;//下落
+sAtk = sShitaJab; //攻击;
+sInjured = sShitaInjured;//被攻击

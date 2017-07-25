@@ -3607,6 +3607,14 @@
             }
         },
         {
+            "Key": "5a1e0abf-a614-4451-a8ff-c0d1a56bdf8d",
+            "Value": {
+                "id": "78ab5e31-5a3f-405a-a98b-a68a065dd088",
+                "resourcePath": "sprites\\sShitaRun\\sShitaRun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5a3176f8-c733-49df-8568-64222f7d1ac1",
             "Value": {
                 "id": "fca32a38-562c-49cd-bc7f-65609ddccee9",
@@ -4271,6 +4279,14 @@
             }
         },
         {
+            "Key": "6a3e3e5e-88a8-4ea3-b7fc-953a31effb51",
+            "Value": {
+                "id": "1506ba28-cac2-4734-8565-31875877c33b",
+                "resourcePath": "sprites\\sShitaInjured\\sShitaInjured.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6a837682-b73c-414a-9625-a3b174e72a55",
             "Value": {
                 "id": "c2f06247-e91f-4768-b3b7-de9505d831cb",
@@ -4324,6 +4340,14 @@
                 "id": "b69c3211-4ce3-4fe9-8a11-d1ee3706a7b7",
                 "resourcePath": "views\\6bf5800e-76b4-43be-b7bb-dbd79f388fa8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6c15d72b-2fce-4aa3-9c3e-8a7d271459b4",
+            "Value": {
+                "id": "d57e446d-cb94-49ed-b4d8-8a138ac1c322",
+                "resourcePath": "sprites\\sShitaJab\\sShitaJab.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4572,6 +4596,14 @@
                 "id": "a19dadf4-3958-4c39-81a0-3bd0d1eb9082",
                 "resourcePath": "views\\7182486b-da67-472c-a1c3-d0aaeaac98e3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "718d7b7d-6e88-46d3-a25d-825dcd3fb8fd",
+            "Value": {
+                "id": "df0f1718-5ce6-4204-9fbb-cde72315930f",
+                "resourcePath": "sprites\\sShitaJumpD\\sShitaJumpD.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -10071,6 +10103,14 @@
             }
         },
         {
+            "Key": "f0d38b2c-1417-437f-926f-ad1cca0ba2dd",
+            "Value": {
+                "id": "3e0f60cf-4d06-4677-98b7-c11409fcc711",
+                "resourcePath": "sprites\\sShitaJumpU\\sShitaJumpU.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f0fdb908-15d8-4b9d-b88b-bbed996281e0",
             "Value": {
                 "id": "798adca0-9a9e-4536-ba64-256fd56bc951",
@@ -10316,6 +10356,14 @@
                 "id": "ad3b86f5-e335-40cf-a235-26a843d68eee",
                 "resourcePath": "views\\f67c08ee-823d-4e21-ad8d-221495cb3d8c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f6b33376-8383-4835-9167-0308a1f0dc71",
+            "Value": {
+                "id": "b4525bad-82f8-40bf-817c-edb39b347ada",
+                "resourcePath": "sprites\\sShitaJumpM\\sShitaJumpM.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
