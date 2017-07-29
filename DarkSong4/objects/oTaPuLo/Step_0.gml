@@ -1,6 +1,29 @@
 action_inherited();
 
 
+//背包的系统准备
+var A = Map[?"A"]
+var AN = A[?"名字"]
+var AS = A[?"数量"]
+
+var B = Map[?"B"]
+var BN = B[?"名字"]
+var BS = B[?"数量"]
+
+   //轻按下换武器 
+        if keyboard_check_pressed(ord("A"))  {
+                
+				
+				
+				
+                  //      ChangeModeTime = 0;
+if( B[?"名字"]!="" and  A[?"名字"] != "")
+ {
+var H = Map[?"B"];
+Map[?"B"] = Map[?"A"];
+Map[?"A"] = H;
+}
+}
 
 /*
 

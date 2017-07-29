@@ -11,7 +11,7 @@ var obj = argument2;
 var list = ds_list_create();
 do
 {
-    var hit = instance_place(x1, y1, obj);
+    var  hit = instance_place(x1, y1, obj);
     if (hit != noone)
     {
         ///Add the colliding object to the list {

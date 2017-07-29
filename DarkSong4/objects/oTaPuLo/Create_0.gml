@@ -12,13 +12,25 @@ AFlyV = 3;//击飞玩家
 
 CanPushBlock = true
 
+HP = 0 ;
+MaxHP = 32;
+MaxAP = 32;
+AP = 0;
 
+//塔普雷的攻击系统
+//__pos = 0;
+OtherAtkModeMax = 1;//默认刚开始有1把
 
-sIdle = sNPC; //战立
-sRun = sShitaRun;//跑动
-//sRoll = sShitaRoll; //滚动
-sJumpU = sShitaJumpU;//上升
-sJumpM = sShitaJumpM;//维持
-sJumpD = sShitaJumpD;//下落
-sAtk = sShitaJab; //攻击;
-sInjured = sShitaInjured;//被攻击
+Map = ds_map_create();
+
+var A = ds_map_create();
+ds_map_add(A,"名字","");
+ds_map_add(A,"数量",0);
+ds_map_add(A,"持有上限",0);
+ds_map_add(Map,"A",A);
+
+var B = ds_map_create();
+ds_map_add(B,"名字","");
+ds_map_add(B,"数量",0);
+ds_map_add(B,"持有上限",0);
+ds_map_add(Map,"B",B);

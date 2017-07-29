@@ -1,8 +1,8 @@
 if instance_exists(oDialogueBox)
 {
-	kControl = false;
+kControl = false;
 	
-	kLeft        = false;
+kLeft        = false;
 kRight       = false;
 kUp          = false;
 kDown        = false;

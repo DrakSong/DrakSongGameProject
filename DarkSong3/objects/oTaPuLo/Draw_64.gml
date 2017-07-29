@@ -15,7 +15,7 @@ draw_sprite_ext(sprUi,10+OtherAtkMode,16-8,8-1,1,1,0,c_white,1);
 // 你可以在这个编辑器中写入代码
 
 
-
+GuiSet(1);
 //绘制上限
 for (i=0; i<MaxHP*0.618; i+=1)
 {
