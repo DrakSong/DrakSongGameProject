@@ -11,7 +11,9 @@
         "5a1e0abf-a614-4451-a8ff-c0d1a56bdf8d",
         "f0d38b2c-1417-437f-926f-ad1cca0ba2dd",
         "6a3e3e5e-88a8-4ea3-b7fc-953a31effb51",
-        "f6b33376-8383-4835-9167-0308a1f0dc71"
+        "f6b33376-8383-4835-9167-0308a1f0dc71",
+        "dd9a3de9-6cee-44c4-9dda-02a3b0c66677",
+        "64960437-0e7d-4dd1-a64c-81ba31e46e86"
     ],
     "filterType": "GMSprite",
     "folderName": "西塔",

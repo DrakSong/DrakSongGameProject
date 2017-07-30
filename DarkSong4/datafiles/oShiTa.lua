@@ -16,7 +16,7 @@ function step(self, other)
 		self.kJump = (keyboard_check_pressed(_G.kJump) ) and not(self.attacking > 0.5) and 1 or 0
 		self.kJumpRelease = keyboard_check_released(_G.kJump)
 		self.kAction = keyboard_check_pressed(_G.kAttack)
-		self.kBlock = keyboard_check_pressed(_G.kRoll)
+		self.kRoll = keyboard_check_pressed(_G.kRoll)
 		--self.kRollL = (keyboard_check_pressed(_G.kRoll) )and (self.kLeft > 0.5) and 1 or 0
 		--self.kRollR = (keyboard_check_pressed(_G.kRoll) ) and (self.kRight > 0.5) and 1 or 0
 	end
@@ -80,7 +80,7 @@ self.AtkBoxR = self.x + self.facing * 18;
 	if (self.kAction > 0.5) then
 		if(not (self.attacking > 0.5) and (self.state ~= self.ROLL)) then
 			self.image_index=0
-			self.image_speed=0.05
+			self.image_speed=0.15
 			--self.sAtk = sPlayerAtk
 			self.sprite_index=self.sAtk
 			self.attacking = 1

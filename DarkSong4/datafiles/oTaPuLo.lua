@@ -80,7 +80,7 @@ self.AtkBoxR = self.x + self.facing * 18;
 	if (self.kAction > 0.5) then
 		if(not (self.attacking > 0.5) and (self.state ~= self.ROLL)) then
 			self.image_index=0
-			self.image_speed=0.05
+			self.image_speed=0.30
 			--self.sAtk = sPlayerAtk
 			self.sprite_index=self.sAtk
 			self.attacking = 1

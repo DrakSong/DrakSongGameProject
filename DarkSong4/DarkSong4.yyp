@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "01f2ec2e-d097-4929-b9cd-793545db83dd",
+            "Value": {
+                "id": "f69fb91b-42ff-4413-96bd-d0dac61caaf8",
+                "resourcePath": "sprites\\sMP\\sMP.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0229d800-155b-4dca-8e8f-20c30a7301c4",
             "Value": {
                 "id": "4e99131d-1606-4128-8474-a8cb08b83513",
@@ -4124,6 +4132,14 @@
                 "id": "ab79e4d0-7890-43a2-8c64-1384538cb4f7",
                 "resourcePath": "scripts\\ref_draw_set_font\\ref_draw_set_font.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "64960437-0e7d-4dd1-a64c-81ba31e46e86",
+            "Value": {
+                "id": "7f1549fe-ced6-400e-a469-e5aac8aff591",
+                "resourcePath": "sprites\\sShitaYX\\sShitaYX.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9017,7 +9033,7 @@
         {
             "Key": "d589844a-d325-4db2-8ffc-46886beac935",
             "Value": {
-                "id": "0dfd108a-ae4d-4287-9da7-df93c9412a3e",
+                "id": "dc8351fd-ffb7-425a-a727-365ca79d1711",
                 "resourcePath": "sprites\\sHolyWaterP\\sHolyWaterP.yy",
                 "resourceType": "GMSprite"
             }
@@ -9315,6 +9331,14 @@
             "Value": {
                 "id": "2980d137-c6d1-4592-9cb7-f68fb72e99b1",
                 "resourcePath": "views\\dd596419-bfdb-4e98-9000-8650ad34b351.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dd9a3de9-6cee-44c4-9dda-02a3b0c66677",
+            "Value": {
+                "id": "7a444448-04fd-4d7e-8955-ea22e8299f42",
+                "resourcePath": "views\\dd9a3de9-6cee-44c4-9dda-02a3b0c66677.yy",
                 "resourceType": "GMFolder"
             }
         },

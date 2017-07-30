@@ -12,7 +12,8 @@
         "816a181c-e76a-4187-b953-26c4e1a693f5",
         "267703b4-b48f-47ef-8d6c-c6ab53398dfd",
         "c24ae689-e5ba-4f52-a0da-118b979c2b1e",
-        "09729e15-ceac-4e20-a232-f0ac29812574"
+        "09729e15-ceac-4e20-a232-f0ac29812574",
+        "01f2ec2e-d097-4929-b9cd-793545db83dd"
     ],
     "filterType": "GMSprite",
     "folderName": "UI界面",

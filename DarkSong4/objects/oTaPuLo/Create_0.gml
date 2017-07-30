@@ -12,10 +12,10 @@ AFlyV = 3;//击飞玩家
 
 CanPushBlock = true
 
-HP = 0 ;
-MaxHP = 32;
+HP = 16 ;
+MaxHP = 48;
 MaxAP = 32;
-AP = 0;
+AP = 15;
 
 //塔普雷的攻击系统
 //__pos = 0;
