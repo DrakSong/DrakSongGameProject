@@ -8,8 +8,6 @@ draw_set_color(c_red)
 //fuck
 draw_rectangle(AtkBoxL,AtkBoxD,AtkBoxR,AtkBoxU,1)
 }
-
-
 if  keyboard_check_pressed(ord("A"))
 {
 
@@ -60,7 +58,8 @@ for (i=0; i<4; i+=1)
 
   {
 	  
-	  TopYX ^= true} 
+	//  TopYX ^= true
+	} 
 	
 	 
 	  YX = i
@@ -91,7 +90,6 @@ if TopYX = true top = 4
 //上
 
 draw_sprite_ext(sShitaYX,0+top,x,y-16-8,UPS,UPS,0,c_white,1)
-
 //左
 draw_sprite_ext(sShitaYX,1+top,x-16,y-8,LeftS,LeftS,90,c_white,1)
 //下
@@ -102,3 +100,6 @@ draw_sprite_ext(sShitaYX,3+top,x+16,y-8,RightS,RightS,270,c_white,1)
 
 
 }
+/*draw_set_font(fontMin)
+draw_set_color(C)
+draw_text(x,y-32,AtkTime)

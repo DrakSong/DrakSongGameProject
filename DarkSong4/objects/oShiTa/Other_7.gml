@@ -1,7 +1,11 @@
+
 //攻击复位
 if (sprite_index == sAtk)
 {  
     attacking = false;
+	AtkUse = false;
+	AtkTime = false;
+	AtkMode = ""
     }
 	
 	
@@ -13,4 +17,6 @@ if (sprite_index == sRoll) {
     state = IDLE;
 
 }
+
+
 

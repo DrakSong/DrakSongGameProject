@@ -9,7 +9,7 @@ self.ASTI = 12--攻击照成硬直
 self.AFlyH = 0;--击飞玩家
 self.AFlyV = 0;--击飞玩家
 self.AtkListMax = 1;--穿透
-self.hspeed = oParPlayer.facing*3
+self.hspeed = self.facing*3
 
 --AlarmSet(0,1)
 --AlarmSet(1,1)
@@ -20,6 +20,4 @@ function step(self)
 AtkBoxCollision(oEnemy)
 
 end
-function draw(self)
-draw_self(self);
-end
+

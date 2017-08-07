@@ -64,7 +64,7 @@ self.AtkBoxR = self.x + self.facing * 18;
 		end
 	end
 	--上+攻击
-	if ((self.kUp > 0.5) and (self.kAction > 0.5)) then
+	if ((self.kUp > 0.5) and (self.kAction > 0.5) and (self.OtherAtk > 0.5) and false)  then
 		if (not (self.attacking > 0.5) and (self.state ~= self.ROLL))  then
 			self.image_index=0
 			self.image_speed=0.25
@@ -72,12 +72,12 @@ self.AtkBoxR = self.x + self.facing * 18;
 			self.sprite_index=self.sAtk
 			self.attacking = 1
 			
-			instance_create(self.x, self.y-16, oHolyWater)
+			instance_create(self.x, self.y-16, self.OtherAtk)
 			SoundPlay(_G.SouAtk)
 		end
 	end
 	--通常攻击
-	if (self.kAction > 0.5) then
+	if (self.kAction > 0.5 and false) then
 		if(not (self.attacking > 0.5) and (self.state ~= self.ROLL)) then
 			self.image_index=0
 			self.image_speed=0.30
@@ -93,7 +93,7 @@ self.AtkBoxR = self.x + self.facing * 18;
 	end
 	
 	 
-	
+	--攻击在这几针上才有攻击判定
 if (self.attacking > 0 ) and  (self.sprite_index == sPlayerAtk) then
 	if (random(self.image_index) > 1 and random(self.image_index) < 2) then
 	

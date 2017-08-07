@@ -1,17 +1,6 @@
 ///没HP质保
 
 
-if hspeed>0
-{
-facing = 1
-image_xscale = facing
-}
-if hspeed<0
-{
-facing = -1
-image_xscale = facing
-
-}
 
 var ALM;
 if  AtkListMax > 0

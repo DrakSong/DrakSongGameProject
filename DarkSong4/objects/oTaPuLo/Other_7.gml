@@ -1,7 +1,10 @@
+/// @description Insert description here
+// You can write your code in this editor
 //攻击复位
 if (sprite_index == sAtk)
 {  
     attacking = false;
+	AtkUse = false;
     }
 	
 	
@@ -13,4 +16,6 @@ if (sprite_index == sRoll) {
     state = IDLE;
 
 }
+
+
 

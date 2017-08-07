@@ -63,6 +63,7 @@ kJump        = false;
 kJumpRelease = false;
 
 kAction      = false;
+kActionP   = false;
 kActionK     = false;
 kActionR     = false;
 

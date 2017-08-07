@@ -19,6 +19,7 @@ if STITime > 0 {
 //硬直期间
 if STI {
 AtkTime = 0; //打断蓄力
+AtkMode = ""
 attacking = false;
 kLeft        = false;
 kRight       = false;
@@ -29,6 +30,7 @@ kJump        = false;
 kJumpRelease = false;
 
 kAction      = false;
+kActionP     = false;
 kActionK     = false;
 kActionR     = false;
 

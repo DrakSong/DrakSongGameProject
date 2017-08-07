@@ -15,7 +15,7 @@ CanPushBlock = true
 
 TowJumpON = false;
 
-sIdle = sShitaIder; //战立
+sIdle =sShitaIder //战立
 sRun = sShitaRun;//跑动
 //sRoll = sShitaRoll; //滚动
 sJumpU = sShitaJumpU;//上升
@@ -30,8 +30,23 @@ TopYX = false;
 OldYX  = -1;
 OldTopYX = -1;
 
+AtkMode = "";
+AtkUse = false;
+AtkTime = 0;
 
 HP = 15 ;
 MaxHP = 32;
 MaxMP = 64;
 MP = 16;
+
+C = c_white;
+
+
+MagicList = ds_list_create();
+//火 0
+var MagicMap = ds_map_create(); 
+ds_map_add(MagicMap, "成功蓄力", oAxe)
+ds_map_add(MagicMap, "非蓄力", oDagger)
+ds_map_add(MagicMap, "辅助魔法", oHolyWater)
+ds_list_add(MagicList, MagicMap)
+
