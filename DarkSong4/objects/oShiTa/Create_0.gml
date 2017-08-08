@@ -45,8 +45,21 @@ C = c_white;
 MagicList = ds_list_create();
 //火 0
 var MagicMap = ds_map_create(); 
-ds_map_add(MagicMap, "成功蓄力", oAxe)
-ds_map_add(MagicMap, "非蓄力", oDagger)
+ds_map_add(MagicMap, "小型魔法", oFireball)
 ds_map_add(MagicMap, "辅助魔法", oHolyWater)
 ds_list_add(MagicList, MagicMap)
 
+var MagicMap = ds_map_create(); 
+ds_map_add(MagicMap, "小型魔法", oThorn)
+ds_map_add(MagicMap, "辅助魔法", oHolyWater)
+ds_list_add(MagicList, MagicMap)
+
+var MagicMap = ds_map_create(); 
+ds_map_add(MagicMap, "小型魔法", oIce)
+ds_map_add(MagicMap, "辅助魔法", oHolyWater)
+ds_list_add(MagicList, MagicMap)
+//风元素
+var MagicMap = ds_map_create(); 
+ds_map_add(MagicMap, "小型魔法", oCyclone)
+ds_map_add(MagicMap, "辅助魔法", oHolyWater)
+ds_list_add(MagicList, MagicMap)

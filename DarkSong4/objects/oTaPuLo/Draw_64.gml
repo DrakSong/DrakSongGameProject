@@ -59,7 +59,7 @@ switch (AN)
 		 
 }
  
-draw_sprite_ext(SP,0,20-12+2,8-2+2,1,1,0,c_white,1);//对应的武器
+draw_sprite_ext(SP,0,20-12+2+8,8+8-2+2,1,1,0,c_white,1);//对应的武器
 
 //后备箱
 draw_sprite_ext(sUI2,0,18-12+20+2,8-2+9+1,0.5,0.5,0,c_white,1);
@@ -82,4 +82,4 @@ switch (BN)
 }
 
 
-draw_sprite_part_ext(SP,1,0,0,20,20*(1),2+18-12+20+2,8+9+1,0.5,0.5,c_white,1)
+draw_sprite_part_ext(SP,1,0,0,20,20*(1),2+18-12+20+1,8+9,0.5,0.5,c_white,1)

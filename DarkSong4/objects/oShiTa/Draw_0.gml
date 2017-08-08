@@ -101,5 +101,10 @@ draw_sprite_ext(sShitaYX,3+top,x+16,y-8,RightS,RightS,270,c_white,1)
 
 }
 /*draw_set_font(fontMin)
-draw_set_color(C)
+
 draw_text(x,y-32,AtkTime)
+*/
+draw_set_alpha(AtkTime/60);
+draw_set_color(c_blue);
+draw_rectangle(x-16,y-32-8,x-16+32*(AtkTime/60),y-32-4,0)
+draw_set_alpha(1)

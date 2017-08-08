@@ -10,7 +10,7 @@ var BN = B[? "名字"]
 var BS = B[? "数量"]
 
 //轻按下换武器 
-if keyboard_check_pressed(ord("A")) {
+if keyboard_check_pressed(ord("A")) and kControl {
 	if (B[?"名字"] != ""and A[?"名字"] != "") {
 		var H = Map[? "B"];
 		Map[?"B"] = Map[? "A"];
@@ -19,12 +19,13 @@ if keyboard_check_pressed(ord("A")) {
 }
 
 //根据物品民智决定发射啥 
-if AN = ""OtherAtk = -1
-else OtherAtk = OtherAtkMap[?AN]
+if AN = "" {
+	OtherAtk = -1}
+else {
+	OtherAtk = OtherAtkMap[?AN]}
 
 
-
-//上A
+//上A 
 if (kUp && kAction) and ! attacking and state != ROLL and kControl and OtherAtk {
 
 	// Atk in place
@@ -58,20 +59,17 @@ if (kUp && kAction) and ! attacking and state != ROLL and kControl and OtherAtk 
 	}
 
 }
-
+//上A后第1帧发射
 if attacking and sprite_index = sPlayerJab and (image_index >1 and image_index<1.5) and !AtkUse and OtherAtk
 {
-
-
-		var A = instance_create(self.x, self.y - 16,OtherAtk) ;
-			A.facing = facing;
-			A.hspeed = A.facing *3
-			A.image_xscale = 1*facing
-AtkUse = true;
-
+	var A = instance_create(self.x + facing*8, self.y -8,OtherAtk) ;
+	A.facing = facing;
+	A.hspeed = A.facing *3
+	A.image_xscale = 1*facing
+	AtkUse = true;
 }
 
-//A
+//通常攻击
 if ( kAction) and ! attacking and state != ROLL and kControl  {
 
 	// Atk in place
