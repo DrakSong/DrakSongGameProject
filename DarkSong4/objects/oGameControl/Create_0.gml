@@ -47,28 +47,19 @@ Controls 键位控制部分
   global.kRoll =  ini_read_real("Controls","Roll",ord("C"))
   global.kChange = ini_read_real("Controls","Change",vk_space)
   
-  kUp =  ini_read_real("Controls","UP",vk_up);
-  kLeft =  ini_read_real("Controls","Left",vk_left);
-  kDown =  ini_read_real("Controls","Down",vk_down);
-  kRight =  ini_read_real("Controls","Right",vk_right);
-
-  kAttack =  ini_read_real("Controls","Attack",ord("Z"));
-  kJump = ini_read_real("Controls","Jump",ord("X"));
-  kRoll =  ini_read_real("Controls","Roll",ord("C"))
-  kChange = ini_read_real("Controls","Change",vk_space)
- // global.kPause = ini_read_real("Controls","Pause",ord("P"))
   
-ini_close()
 
-display_set_gui_size(1280,720)
+ini_close();
+
+display_set_gui_size(1280,720);//设置GUi为基准
 
 global.Text = "";//记录对话框读取的对话id
 global.DialogueBox = 0;//记录对话框
-BGMPlay(SouTitle);
 
+
+//LUa控制系统
 chat_init();
 live_init("ui.lua");
-
 
 
 
