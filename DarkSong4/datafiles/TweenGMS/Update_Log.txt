@@ -1,0 +1,286 @@
+
+=========================
+== TweenGMS Update Log ==
+=========================
+
+****************************************************************
+** PLEASE MAKE THE REQUIRED CHANGES IF UPGRADING FROM v0.9.6_ **
+****************************************************************
+
+****************************************************************
+** PLEASE CLEAR COMPILER CACHE FOR YYC TARGETS AFTER UPDATING **
+****************************************************************
+
+===============
+    v0.9.74 
+===============
+
+- Fixed EaseInOutQuad for YYC exports
+
+- Deprecated TweenCopy() and TweenDefine() due to complications with coming future updates
+
+- Removed previously deprecated functions
+  * Can be downloaded, if needed, from link in included file: "Project_Downloads.txt"
+
+- Optimised callback reference management (internal changes)
+
+- Moved demo projects and previous version to external download links: "Project_Downloads.txt"
+
+- Improved handling of obj_SharedTweener destroy event to prevent unexepected crashes/behaviour
+
+- Shared Tweener is now persistent by default
+
+
+===============
+    v0.9.73 
+===============
+
+- Added fix for HTML5 export not automatically pausing tweens when target is deactivated
+
+- Added property setters for default view
+  * view_xview__
+  * view_yview__
+  * view_angle__
+  * view_wview__
+  * view_hview__
+
+- Made adjustments to demo project
+
+- TPSetExt is now obsolete
+  * Please change to use TPExt()
+
+- TweenIterator scripts are now obsolete
+  * Please change to use TweensExecute()
+
+- x__int and y__int property setters are now obsolete
+  * Please change to use roundx__/roundy__
+
+
+===============
+    v0.9.72 
+===============
+
+- Fixed tweens starting updates too soon (racing ahead) when played from various events or when delays finish
+  * Creates more consistent timings, regardless of when tween is played/fired
+  * Change affects all tweens started in events executed before Begin Step
+  * Time critical tweens may need to be adjusted by 1 step
+
+- TweenExists() no longer spams HTML5 console when tween doesn't exist
+
+
+===============
+    v0.9.71 
+===============
+
+- Fix for tween being calculated with time outside expected boundaries (0 - DURATION)
+  * Fixes negative sqrt() error with Ease*Circ algorithms when using various modes (BOUNCE/PATROL/LOOP/REPEAT)
+  * Epsilon!!! *shakes fist*
+
+- Modified TweenSystemFlushDestroyed() to use Shared Tweener's garbage collector in step event
+  * Prevents chance of error when called during tween callbacks and other edge cases
+  * Removes redundant code
+
+- Optimised shared tweener destruction
+  * Removed needless list deletions before destroying whole tween list (derp)
+
+- Fixed TweenStep() creating "_time" as an instance variable instead of local variable
+
+- Added safety check to ensure obj_SharedTweener never calls Destroy/Room_End events if already destroyed
+
+- Added missing auto-complete parameter ("deactivated") for TweenReverseTarget()
+
+- Minor ease algorithm tweaks
+
+- Minor documentation tweaks
+
+
+
+===============
+    v0.9.70 
+===============
+
+-- Performance optimisations
+   * HTML5/JS performance greatly improved (300%-400%)
+   * YYC targets should also see performance gains
+
+
+-- Major restructuring of extension standards and project management
+   * Many scripts have been modified, deprecated, or made obsolete (100+ redundant scripts have been removed)
+   * Macros are now used for tween play modes and events (TWEEN_MODE_* / TWEEN_EV_*)
+
+
+-- Changed standard for creating property setter scripts
+   * tween's target id is now passed to script as argument1 (use of target id not required if property variable is global)
+   * for extended property setters, target id is passed to argument2
+   * PLEASE UPDATE YOUR CUSTOM PROPERTY SETTERS!!!
+   * e.g.
+	// OLD
+	x = argument0;
+
+	// NEW
+	argument1.x = argument0;
+
+
+-- TweenFire(), TweenPlay(), and TweenCreate() argument definitions have been changed
+   * Old definitions are still supported but deprecated
+   * Please update script calls to reflect this as old definitions will not be supported in the future
+   * Redundant TweenFire*(), TweenPlay*(), TweeFire*Delay, and TweenPlay*Delay scripts are now deprecated
+
+	* TweenFire(target,property,ease,mode,delta,delay,dur,start,dest,...)
+	
+	* TweenCreate(target[,property,ease,mode,delta,delay,dur,start,dest,...])
+	
+	* TweenPlay(tween[,property,ease,mode,delta,delay,dur,start,dest,...])
+
+
+-- TweenFire(), TweenCreate(), and TweenPlay() have been modified to take a play mode macro and delay parameter
+	
+	[ Play Mode Macros ]
+	0 = TWEEN_MODE_ONCE
+	1 = TWEEN_MODE_BOUNCE
+	2 = TWEEN_MODE_PATROL
+	3 = TWEEN_MODE_LOOP
+	4 = TWEEN_MODE_REPEAT
+  
+     * e.g.
+	mode = TWEEN_MODE_ONCE;
+	delay = 0;
+	TweenFire(id, x__, EaseLinear, mode, true, delay, 1.0, x, mouse_x);
+	
+	mode = TWEEN_MODE_PATROL;
+	delay = 60;
+	TweenFire(id, ext_xy__, EaseLinear, mode, false, delay, 120, 0, 1, x, mouse_x, y, mouse_y);
+
+
+-- TweenOn****() scripts are now obsolete
+   * Added new event scripts which use TWEEN_EV_**** macros:
+
+	TweenAddCallback(tween,EVENT,target,script,arg0,arg1,...)
+	TweenEventClear(tween,EVENT)
+	TweenEventEnable(tween,EVENT,enable)
+
+	TWEEN_EV_PLAY
+	TWEEN_EV_FINISH
+	TWEEN_EV_CONTINUE
+	TWEEN_EV_STOP
+	TWEEN_EV_PAUSE
+	TWEEN_EV_RESUME
+	TWEEN_EV_REVERSE
+	
+	TWEEN_EV_FINISH_DELAY
+	TWEEN_EV_STOP_DELAY
+	TWEEN_EV_PAUSE_DELAY
+	TWEEN_EV_RESUME_DELAY
+
+
+-- Target scripts now support object indexes and parenting
+   * Added 'deactivated' parameter to Tween**Target() scripts
+   * e.g. 
+	// Pause tweens for all instances of type
+	TweenPauseTarget(obj_Baddie, false);
+
+	// Pause tweens for instances belonging to parent
+	TweenPauseTarget(obj_Parent, false);
+
+
+-- Heavily updated handling of tween delays
+   * Tweens and delays are now unified
+   * TweenPause/TweenResume/TweenStop now affect associated delay
+   * Removed many TweenDelay**** and TweenDelayOn**** scripts which are now obsolete
+   * Only one delay can now be associated with a tween
+
+
+-- Combined callback events {BOUNCE, LOOP, REPEAT} into single TWEEN_EV_CONTINUE constant
+   * e.g.
+	// Show message when tween bounces back
+	tween_x = TweenFire(id, x__, EaseLinear, TWEEN_MODE_BOUNCE, true, 0, 2.0, x, mouse_x);
+	TweenAddCallback(tween, TWEEN_EV_CONTINUE, id, ShowMessage, "Bounced!");
+	
+	// Show message when tween loops
+	tween_y = TweenFire(id, y__, EaseLinear, TWEEN_MODE_LOOP, true, 0, 2.0, y, mouse_y);
+	TweenAddCallback(tween_y, TWEEN_EV_CONTINUE, id, ShowMessage, "Looped!");
+
+
+-- TweenSimple*Delay scripts have been depecrated
+   * Optional delay argument added to regular scripts
+
+
+-- Changes to "Simple Tween" behaviour
+   * Delays will now be automatically overridden
+   * No longer recycles tween ids -- new tween id is now returned for each call
+
+
+-- TweenOn****Remove() and TweenDelayOn****Remove() are now obsolete
+   * Use TweenCallbackInvalidate() for removing specific callbacks
+
+
+-- Modified TweenStep*() scripts to take a direction
+   * Removed redundant TweenStepNext/Previous scripts
+   * Positive directions step forward and negative directions step back
+  
+    e.g.
+	// Step forward 1 step
+	TweenStep(tween, 1.0);
+	
+	// Step forward half a step
+	TweenStep(tween, 0.5);
+	
+	// Step back 2 steps
+	TweenStep(tween, -2.0);
+
+
+-- Changed TweenFinishAll()/TweenFinishGroup() definitions
+   * Swapped "call_event" and "deactivated" argument order to be more consistent with other scripts
+
+
+-- Removed TweenDefault***() scripts
+   * A single TweenDefault() script has been added for modifying any default tween properties as desired
+   * e.g.
+	// Set default group of new tweens to '5'
+	TweenSetGroup(TweenDefault(), 5);
+
+
+-- TPSetExt() has been replaced with TPExt()
+   * Please see Script Reference or Starter Guide for more information
+
+
+-- Added TweensExecute() for iterating through tween's
+   * Replaces TweenIterator scripts which are now deprecated
+
+
+-- Updated TweenSystemUpdateInterval() to properly support tweens using delta timing
+   * Can be used to force TweenGMS to run at 30fps if game runs at 60fps
+   * e.g.
+	// Run TweenGMS at half the room speed
+	TweenSystemSetUpdateInterval(2);
+
+
+-- Added scripts for tweening views, backgrounds, tiles, arrays, and data structures
+
+-- TweenPlay(), TweenCreate(), and TweenPlay have been updated to take optional extended parameters
+
+-- Added TweenPlayDelay() for easily delaying a defined tween without modifying definition
+
+-- Changed TweenSetPlayMode() to TweenSetMode()
+
+-- Individual callbacks can now be enabled/disabled using TweenCallbackEnable()
+
+-- TweenStep() now affects delayed tweens
+
+-- Improved error reporting when using invalid tween id
+
+-- Improved performance for Tween**All(), Tween**Group(), and Tween**Target() when 'deactivated' is true
+
+-- Improved script reference documentation and greatly reduced its file size
+
+-- Added TweenForcePropertyUpdate() to force a tween to immediately reflect any changes
+
+-- Adjusted TweenSetEase() to force property update
+
+-- Adjustments to demo project
+
+-- Removed old "ghost scripts" being needlessly packaged with extension
+
+-- Fixed bug where TweenSetTime() could update property while tween is delayed
+
+-- Greatly reduced demo and game project file sizes

@@ -1,0 +1,704 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>TweenGMS Starter Guide</title>
+	<meta name="generator" content="LibreOffice 4.4.5.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2015-08-20T15:06:48.497000000"/>
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-13T21:54:16.136000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-11T17:19:58.186000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-10T16:24:24.464000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T11:49:37.471000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T02:23:36.858000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T02:09:03.436000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T02:02:13.138000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T01:57:44.972000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T01:56:30.901000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-08-09T01:53:20.810000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-29T00:44:31.938000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-29T00:14:43.266000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-28T00:59:43.140000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-28T00:54:53.916000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-28T00:50:08.730000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-28T00:47:14.962000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-28T00:40:35.332000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-27T19:56:27.186000000">
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2015-07-23T18:19:24.744000000">
+	<style type="text/css">
+		p { color: #000000 }
+		h1 { color: #000000 }
+		pre { color: #000000 }
+		pre.cjk { font-family: "NSimSun", monospace }
+		code.cjk { font-family: "NSimSun", monospace }
+	</style>
+</head>
+<body lang="en-CA" text="#000000" dir="ltr">
+<h1><font face="Liberation Serif, serif">TweenGMS Starter Guide
+v0.9.70</font></h1>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>0.
+<a href="#What is Tweening|region">What is Tweening</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>1.
+<a href="#Basic Setup|region">Basic Setup</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>2.
+<a href="#Simple Tweens|region">Simple Tweens</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>3.
+<a href="#Property Setters|region">Property Setters</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>4.
+<a href="#Creating and Playing Tweens|region">Creating and Playing
+Tweens</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>5.
+<a href="#Fire Tweens|region">Fire Tweens</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>6.
+<a href="#Play Modes|region">Play Modes</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>7.
+<a href="#Tween Callbacks|region">Tween Callbacks</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>8.
+<a href="#Extended Property Setters|region">Extended Property Setters</a></b></font></font></p>
+<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>9.</b></font></font>
+<a href="#Troubleshooting|region"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><b>Troubleshooting</b></font></font></a></p>
+<p><br/>
+<br/>
+
+</p>
+<div id="What is Tweening" dir="ltr"><a name="What is Tweening|region"></a>
+	<p style="margin-top: 0.42cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>0.
+	<span style="font-variant: normal"><span style="font-style: normal"><u>What
+	is Tweening?</u></span></span></b></font></font></p>
+	<p><font face="Liberation Serif, serif"><span style="font-weight: normal">Tweening
+	is the interpolation of two values determined by a specified
+	algorithm over a set duration of time. It lets you</span> <span style="font-weight: normal">set
+	a start and destination value which are</span> <span style="font-weight: normal">automatically
+	eased</span> <span style="font-weight: normal">between. Using
+	different easing algorithms produces different behaviours for how
+	the points between the start and destination values</span> <span style="font-weight: normal">are
+	filled in.</span></font></p>
+	<p><font face="Liberation Serif, serif">For example, we can tween an
+	object's x position from 0 to 100 over 3 seconds:</font></p>
+	<pre class="western" style="margin-bottom: 0.5cm">        <font size="2" style="font-size: 10pt"><b>TweenFire(id, x__, EaseInOutQuad, TWEEN_MODE_ONCE, true, 0.0, 3.0, 0, 100);</b></font></pre><p>
+	<font face="Liberation Serif, serif">Using the </font><font face="Liberation Serif, serif"><b>EaseInOutQuad
+	</b></font><font face="Liberation Serif, serif">algorithm, the
+	object will smoothly accelerate from its starting position (0) and
+	automatically move to it's destination point (100) where it will
+	smoothly slow down before finishing. There are various easing
+	algorithms you can choose from to help achieve the look you want. </font>
+	</p>
+	<p><font face="Liberation Serif, serif">You can find more
+	information regarding the standard easing algorithms at </font><font color="#000080"><font face="Liberation Serif, serif"><b>easings.net.</b></font></font></p>
+	<p><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt">Additionally,
+	a good video to watch regarding tweening is </font></font><font color="#000080"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><u><b>Juice
+	It or Lose It</b></u></font></font></font><font color="#000080"><span style="text-decoration: none">
+	</span></font><span style="display: inline-block; border: none; padding: 0cm"><font color="#000000"><span style="text-decoration: none"><font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal"><span style="background: transparent"><span style="font-variant: normal">(YouTube)
+	by Martin Jonasson and Petri Purho.</span></span></span></span></span></font></font></span></font></span></p>
+</div>
+<p style="margin-top: 0.42cm"><br/>
+<br/>
+
+</p>
+<div id="Basic Setup" dir="ltr"><a name="Basic Setup|region"></a>
+	<p style="margin-top: 0.42cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>1.
+	<span style="font-variant: normal"><span style="font-style: normal"><u>Basic
+	Setup</u></span></span></b></font></font></p>
+	<p><font face="Liberation Serif, serif">Import <span style="font-weight: normal">all</span>
+	resources associated with the TweenGMS extension into your project. </font>
+	</p>
+	<p><font face="Liberation Serif, serif"><b>Note:</b> scripts located
+	in the <b>[Extra] </b>and <b>[Deprecated] </b>folders are <b>not</b>
+	required.</font></p>
+	<p><font face="Liberation Serif, serif"><b>Do not</b> manually
+	create or destroy obj_SharedTweener. An instance of the object will,
+	automatically, be created and destroyed, as needed, by the system.
+	Try not to deactivate obj_SharedTweener with instance deactivation
+	functions. If you do, call <b>SharedTweenerActivate()</b> to
+	activate it again.</font></p>
+	<p><font face="Liberation Serif, serif">It is suggested to create
+	custom property setters and ease algorithms independent of
+	<b>[Default_Property_Setters]</b>, <b>[Default_Property_Setters_Ext]</b>
+	and <b>[Default_Ease_Algorithms]</b>. This will prevent future
+	updates from accidentally deleting any custom scripts you choose to
+	add.</font></p>
+	<p><font face="Liberation Serif, serif">When updating TweenGMS,
+	delete all outdated files and import the new ones to replace them.</font></p>
+	<p><font face="Liberation Serif, serif">Links to example projects can be found in the included "Project_Downloads.txt" file.</font></p>
+</div>
+<p style="margin-top: 0.42cm; page-break-after: avoid"><br/>
+<br/>
+
+</p>
+<div id="Simple Tweens" dir="ltr"><a name="Simple Tweens|region"></a>
+	<p style="margin-top: 0.42cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>2.
+	<u>Simple Tweens</u></b></font></font></p>
+	<p><font face="Liberation Serif, serif">To start tweening things as
+	easily and quickly as possible, you can use <b>TweenSimple*</b>
+	scripts for basic easing of various object properties. </font>
+	</p>
+	<p><font face="Liberation Serif, serif">By default, simple tweens
+	use <b>STEP </b>timing, but you can switch them to <b>SECONDS</b>(delta)
+	timing by using the script <b>TweenSimpleUseDelta(use_delta)</b>.
+	Every new simple tween will use the previously set <b>STEP/DELTA
+	</b>flag. Each simple tween can, optionally, supply a delay value
+	for delaying the start of a tween. A unique tween id is returned
+	from simple tweens which can be used to manipulate their state.</font></p>
+	<p><font face="Liberation Serif, serif">The following simple tweens
+	are provided:</font></p>
+	<pre class="western" style="margin-left: 1.25cm; font-weight: normal"><font size="2" style="font-size: 11pt"><b>TweenSimpleMove()       </b>                </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Move instance's x/y position</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleMoveInt()    </b>        </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Move instance's x/y position (eased x/y values are rounded)</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleScale()      </b>                </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Scale instance's image x/y scale</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleRotate()     </b>        </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Rotate instance's image angle</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleTurn()       </b>                </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Turn instance's direction</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleFade()       </b>                </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Fade in or out an instance's image alpha</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleColour()             </b></font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Change instance's image blend colour</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleImageCycle() </b>        </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Animate sprite through given image indexes</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleSpeedRamp()  </b>        </font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Gradually increase or decrease instance's speed</span></font>
+
+<font size="2" style="font-size: 11pt"><b>TweenSimpleHVSpeedRamp()        </b></font>
+        <font size="2" style="font-size: 11pt"><span style="font-weight: normal">Gradually increase or decreases instance's hspeed and vspeed</span></font></pre><p>
+	<font face="Liberation Serif, serif"><b>Example:</b></font></p>
+	<pre class="western">        <font color="#008000"><b>// Move from current x/y position to mouse position over 30 steps</b></font>
+        <b>tween = TweenSimpleMove(x, y, mouse_x, mouse_y, 30, EaseInOutQuad);</b>
+        
+        <font color="#008000"><b>// Pause the tween</b></font>
+        <b>TweenPause(tween);</b>
+        
+        <font color="#008000"><b>// Have following simple tweens use seconds(delta) timing</b></font>
+        <b>TweenSimpleUseDelta(true);</b>
+        
+        <font color="#008000"><b>// Rotate from 0 to 360 over 1 second after a 2 second delay</b></font>
+        <b>TweenSimpleRotate(0, 360, 1.0, EaseInOutElastic, 2.0);</b>
+
+
+<b>NOTE:</b> TweenSimple* scripts are not required and can be safely deleted from your project if desired.</pre>
+</div>
+<p><br/>
+<br/>
+
+</p>
+<div id="Property Setters" dir="ltr"><a name="Property Setters|region"></a>
+	<p style="margin-top: 0.42cm; page-break-after: avoid"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>3.
+	<u>Property Setters</u></b></font></font></p>
+	<p><font face="Liberation Serif, serif">In order for TweenGMS to
+	access and ease different variables, property setter scripts must be
+	created for each variable. Default property setter scripts are
+	included with TweenGMS for various built-in object and global
+	variables. They can be found in the tabbed script
+	<b>Default_Property_setters.</b></font></p>
+	<p><font face="Liberation Serif, serif">To create your own property
+	setter scripts, you must create a new script and have the relevant
+	variable equal <b>argument0.</b> If the variable is for an instance,
+	you must use <b>argument1</b> for assigning the value to the
+	appropriate target instance. Property setter scripts for global
+	variables are not required to use argument1 if a specific target
+	isn't needed. It is suggested to name property setter scripts with a
+	post-fixed double underscore &ldquo;__&rdquo; or a simliar
+	convention to prevent potential variable naming conflicts.</font></p>
+	<pre class="western"><code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>/// my_variable__(value,target)</b></font></font></font></code>
+<code class="western"><font color="#008000">        </font></code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>argument1.my_variable</b></font></font></code><code class="western"> </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>= argument0;</b></font></font></code>
+
+<code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>/// g_variable__(value)</b></font></font></font></code>
+<code class="western"><font color="#008000">        </font></code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>global.variable</b></font></font></code><code class="western"> </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>= argument0;</b></font></font></code></pre><p>
+	<font face="Liberation Serif, serif">The property can then be used
+	with TweenGMS' to tween the appropriate value:</font></p>
+	<pre class="western" style="margin-bottom: 0.5cm"><code class="western">        </code><code class="western"><font size="2" style="font-size: 10pt"><b>TweenFire(id, </b></font></code><code class="western"><font size="3" style="font-size: 12pt"><b>my_variable__</b></font></code><code class="western"><font size="2" style="font-size: 10pt"><b>, EaseLinear, TWEEN_MODE_ONCE, true, 0.0, 1.0, 0, 100);</b></font></code>
+<code class="western">        </code><code class="western"><font size="2" style="font-size: 10pt"><b>TweenFire(id, </b></font></code><code class="western"><font size="3" style="font-size: 12pt"><b>g_variable__</b></font></code><code class="western"><font size="2" style="font-size: 10pt"><b>, EaseLinear, TWEEN_MODE_ONCE, true, 0.0, 1.0, 0, 100);</b></font></code></pre><p>
+	<font face="Liberation Serif, serif">However, there are a couple of
+	alternatives to using property setter scripts. One alternative is to
+	create single-index arrays and pass them directly as the tween
+	property. The tweened value can then be accessed from the array's
+	[0] index value.</font></p>
+	<pre class="western"><font color="#008000">        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>// Create single-index array and assign it a value</b></font></font></font>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>myArray[0] = 0;</b></font></font></code>
+
+<font color="#008000">        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>// Pass array (name only) as property of tween</b></font></font></font>
+<code class="western"><font color="#008000">        </font></code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>TweenFire(id, </b></font></font></code><code class="western"><font face="Liberation Mono, monospace"><font size="3" style="font-size: 12pt"><b>myArray</b></font></font></code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>, EaseInOutQuart, TWEEN_MODE_PATROL, true, 0.0, 1.0, 0, 100);</b></font></font></code>
+
+<font color="#008000">        </font><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>// Draw</b></font></font></font><font color="#008000"> </font><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>value by accessing myArray[0]</b></font></font></font>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>draw_text(x, y, myArray[0]);</b></font></font></code></pre><p>
+	<font face="Liberation Serif, serif">Another alternative is to
+	supply a property as an empty string </font>&ldquo;&rdquo; <font face="Liberation Serif, serif">which
+	tells</font> <font face="Liberation Serif, serif">the system to not
+	calculate</font> <font face="Liberation Serif, serif">a value
+	automatically. The value will only be calculated and returned, when
+	needed, using </font><font face="Liberation Serif, serif"><b>TweenCalc()</b></font><font face="Liberation Serif, serif">.</font></p>
+	<pre class="western"><code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>// Fire tween using &ldquo;&rdquo; null property</b></font></font></font></code>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>tween = TweenFire(id, </b></font></font></code><code class="western">&ldquo;&rdquo;</code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>, EaseInQuad, TWEEN_MODE_LOOP, true, 0.0, 1.0, 0, 100);</b></font></font></code>
+
+<code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>// Show value by calculating value from tween's state</b></font></font></font></code>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt"><b>draw_text(x, y, TweenCalc(tween));</b></font></font></code>
+
+<font face="Liberation Serif, serif"><font size="3" style="font-size: 12pt"><b>Note:</b> <span style="font-weight: normal">T</span>here are two additional versions of TweenCalc() --&gt; <b>TweenCalcAmount()</b> and <b>TweenCalcTime()</b></font></font></pre>
+</div>
+<p style="margin-top: 0.42cm"><br/>
+<br/>
+
+</p>
+<div id="Creating and Playing Tweens" dir="ltr"><a name="Creating and Playing Tweens|region"></a>
+	<p style="margin-top: 0.42cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>4.
+	<u>Creating and Playing Tweens</u></b></font></font></p>
+	<p><font face="Liberation Serif, serif"><b>TweenCreate() </b>creates
+	and returns a new tween which exists in memory until its associated
+	target instance is destroyed or it is manually destroyed with
+	TweenDestroy(). When creating tweens this way, you can declare
+	<b>defined</b> or <b>undefined</b> tweens.</font></p>
+	<p><font face="Liberation Serif, serif"><b>Defintion:</b></font></p>
+	<pre class="western">        <font size="2" style="font-size: 11pt"><b>TweenCreate(target[,property,ease,mode,delta,delay,dur,start,dest,...])</b></font>
+  
+        <font size="2" style="font-size: 11pt"><b>@target         instance to associate with tween (passed to property setter)</b></font>
+        <font size="2" style="font-size: 11pt"><b>(Optional if defining)</b></font>
+        <font size="2" style="font-size: 11pt"><b>@property       property setter script</b></font>
+        <font size="2" style="font-size: 11pt"><b>@ease           ease algorithm script</b></font>
+        <font size="2" style="font-size: 11pt"><b>@mode           play mode constant (0-4) TWEEN_MODE_****</b></font>
+        <font size="2" style="font-size: 11pt"><b>@delta          timing uses SECONDS if true or</b></font> <font size="2" style="font-size: 11pt"><b>STEPS</b></font> <font size="2" style="font-size: 11pt"><b>if false</b></font>
+        <font size="2" style="font-size: 11pt"><b>@delay          time to delay start of tween</b></font>
+        <font size="2" style="font-size: 11pt"><b>@dur            duration of time for tween to play</b></font>
+        <font size="2" style="font-size: 11pt"><b>@start          start value of eased property</b></font>
+        <font size="2" style="font-size: 11pt"><b>@dest           destination value of eased</b></font> <font size="2" style="font-size: 11pt"><b>property      </b></font>
+        <font size="2" style="font-size: 11pt"><b>@...            additional parameters for extended property setters</b></font>
+
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>Returns: tween id</b></font></font></pre><p>
+	<font face="Liberation Serif, serif"><b>Example:</b></font></p>
+	<pre class="western"><code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Create undefined tween</b></font></font></code>
+<code class="western">        </code><code class="western"><font size="2" style="font-size: 11pt"><b>tween_undef</b></font></code><code class="western"> </code><code class="western"><font size="2" style="font-size: 11pt"><b>= TweenCreate(id);</b></font></code>
+
+<code class="western">        </code><code class="western"><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Create defined tween</b></font></font></code>
+<code class="western">        </code><code class="western"><font size="2" style="font-size: 11pt"><b>tween_def</b></font></code><code class="western"> </code><code class="western"><font size="2" style="font-size: 11pt"><b>= TweenCreate(id, x__, EaseInQuad, TWEEN_MODE_LOOP, true, 0.0, 1.0, x, mouse_x);</b></font></code></pre><p>
+	<font face="Liberation Serif, serif"><b>TweenPlay() </b>can then be
+	used to play previously created tweens. Undefined tweens <b>must</b>
+	supply the remaining parameters when they are played. However, a
+	defined tween only needs to supply it's unique id handle and will
+	play according to its previously defined parameters.</font></p>
+	<p><font face="Liberation Serif, serif"><b>Defintion:</b></font></p>
+	<pre class="western">        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>TweenPlay(tween[,property,ease,mode,delta,delay,duration,start,destination,...])</b></font></font>
+        
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@tween          previously created tween id</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>(Optional if tween defined)</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@property       property setter script</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@ease           ease algorithm script</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@mode           play mode constant (0-4) TWEEN_MODE_****</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@delta          timing will use</b></font></font> <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>SECONDS</b></font></font> <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>if true or</b></font></font> <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>STEPS</b></font></font> <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>if false</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@delay          time to delay start of tween</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@dur            duration of time for tween to play</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@start          start value of eased property</b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@dest           destination value of eased</b></font></font> <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>property      </b></font></font>
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>@...            additional parameters for extended property setters</b></font></font>
+
+        <font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>Returns: na</b></font></font></pre><p style="margin-bottom: 0cm">
+	<font face="Liberation Serif, serif"><b>Example:</b></font></p>
+	<pre class="western"><code class="western"><font color="#008000">        </font></code>
+<code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>// Play undefined tween</b></font></font></font></code>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>TweenPlay(tween_undef, x__, EaseInElastic, TWEEN_MODE_REPEAT, true, 0.0, 1.0, x, mouse_x)</b></font></font></code>
+
+<code class="western">        </code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>// Play defined tween</b></font></font></font></code>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>TweenPlay(tween_def);</b></font></font></code></pre><p style="font-variant: normal; font-style: normal; font-weight: normal">
+	<font face="Liberation Serif, serif">TweenCreate() and TweenPlay()
+	can use the following play mode constants:</font></p>
+	<pre class="western">        <font size="3" style="font-size: 12pt"><b>0 = TWEEN_MODE_ONCE</b></font>
+        <font size="3" style="font-size: 12pt"><b>1 = TWEEN_MODE_BOUNCE </b></font>
+        <font size="3" style="font-size: 12pt"><b>2 = TWEEN_MODE_PATROL </b></font>
+        <font size="3" style="font-size: 12pt"><b>3 = TWEEN_MODE_LOOP</b></font>
+        <font size="3" style="font-size: 12pt"><b>4 = TWEEN_MODE_REPEAT</b></font></pre><p>
+	<font face="Liberation Serif, serif"><b>NOTE: </b><span style="font-weight: normal">A</span>
+	fully defined tween can, optionally, still have its previously set
+	values overridden when played.</font></p>
+	<pre class="western"><code class="western">        </code><code class="western"><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Override defined tween</b></font></font></code>
+<code class="western">        </code><code class="western"><font size="2" style="font-size: 11pt"><b>TweenPlay(tween_def, y__, EaseInQuad, TWEEN_MODE_PATROL, false, 0, 30, y, mouse_y);</b></font></code></pre><p>
+	<font face="Liberation Serif, serif"><b>NOTE</b>: Tween's will <b>NOT</b>
+	be automatically updated if their target instance is deactivated.
+	They will continue once their target instance becomes active again.</font></p>
+</div>
+<p style="margin-top: 0.42cm; page-break-after: avoid"><br/>
+<br/>
+
+</p>
+<div id="Fire Tweens" dir="ltr"><a name="Fire Tweens|region"></a>
+	<p style="margin-top: 0.42cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>5.
+	<u>Fire Tweens</u></b></font></font></p>
+	<p><font face="Liberation Serif, serif"><b>TweenFire() </b>is an
+	alternative to using <b>TweenCreate() </b><span style="font-weight: normal">and</span>
+	<b>TweenPlay()</b>. It allows you to create and play a tween from a
+	single script call which returns a unique tween id. Tweens created
+	this way differ from tweens created with TweenCreate() in that they
+	are destroyed and become invalid as soon as they are finished or
+	stopped. Like TweenCreate(), however, they will also be destroyed
+	automatically if their target instance is destroyed or if
+	TweenDestroy() is manually called.</font></p>
+	<p><font face="Liberation Serif, serif"><b>Defintion:</b></font></p>
+	<pre class="western">        <font size="2" style="font-size: 11pt"><b>TweenFire(target,property,ease,mode,delta,delay,duration,start,destination,...)</b></font>
+        
+        <font size="2" style="font-size: 11pt"><b>@target         instance to associate with tween (passed to property setter)</b></font>
+        <font size="2" style="font-size: 11pt"><b>@property       property setter script</b></font>
+        <font size="2" style="font-size: 11pt"><b>@ease           ease algorithm script</b></font>
+        <font size="2" style="font-size: 11pt"><b>@mode           play mode constant (0-4) TWEEN_MODE_****</b></font>
+        <font size="2" style="font-size: 11pt"><b>@delta          timing will use</b></font> <font size="2" style="font-size: 11pt"><b>SECONDS</b></font> <font size="2" style="font-size: 11pt"><b>if true or</b></font> <font size="2" style="font-size: 11pt"><b>STEPS</b></font> <font size="2" style="font-size: 11pt"><b>if false</b></font>
+        <font size="2" style="font-size: 11pt"><b>@delay          time to delay start of tween in seconds or steps</b></font>
+        <font size="2" style="font-size: 11pt"><b>@dur            duration of time for tween to play</b></font>
+        <font size="2" style="font-size: 11pt"><b>@start          start value of eased property</b></font>
+        <font size="2" style="font-size: 11pt"><b>@dest           destination value of ease property      </b></font>
+        <font size="2" style="font-size: 11pt"><b>@...            (optional) additional parameters for extended property setters</b></font>
+
+        <font size="2" style="font-size: 11pt"><b>Returns: tween id</b></font></pre><p style="margin-bottom: 0cm">
+	<font face="Liberation Serif, serif"><b>Example:</b></font></p>
+	<pre class="western"><code class="western"><span style="font-variant: normal"><font color="#008000">        </font></span></code>
+<code class="western"><span style="font-variant: normal"><font color="#008000">        </font></span></code><code class="western"><span style="font-variant: normal"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><span style="font-style: normal"><b>// Fire tween</b></span></font></font></font></span></code>
+<code class="western"><span style="font-variant: normal">        </span></code><code class="western"><span style="font-variant: normal"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><span style="font-style: normal"><b>tween = TweenFire(id, x__, EaseOutCubic, TWEEN_MODE_ONCE, true, 0.0, 1.0, x, mouse_x);</b></span></font></font></span></code>
+
+<code class="western"><span style="font-variant: normal">        </span></code><code class="western"><span style="font-variant: normal"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><span style="font-style: normal"><b>// Stop tween &ndash; will be immediately destroyed and removed from system</b></span></font></font></font></span></code>
+<code class="western"><span style="font-variant: normal">        </span></code><code class="western"><span style="font-variant: normal"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><span style="font-style: normal"><b>TweenStop(tween);</b></span></font></font></span></code></pre><p>
+	<font face="Liberation Serif, serif">Supplying a positive delay
+	value will delay the start of the fired tween.</font></p>
+	<pre class="western"><font color="#008000">        <font size="2" style="font-size: 11pt"><b>// Fire tween with a 5 second delay</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>tween = TweenFire(id, x__, EaseInCubic, 0, true, 5.0, 1.0, x, mouse_x);</b></font>
+        </pre><p style="font-weight: normal">
+	<font face="Liberation Serif, serif">TweenFire() can use the
+	following play mode constants:</font></p>
+	<pre class="western">        <font size="3" style="font-size: 12pt"><b>0 = TWEEN_MODE_ONCE</b></font>
+        <font size="3" style="font-size: 12pt"><b>1 = TWEEN_MODE_BOUNCE </b></font>
+        <font size="3" style="font-size: 12pt"><b>2 = TWEEN_MODE_PATROL </b></font>
+        <font size="3" style="font-size: 12pt"><b>3 = TWEEN_MODE_LOOP</b></font>
+        <font size="3" style="font-size: 12pt"><b>4 = TWEEN_MODE_REPEAT</b></font>
+        
+
+<font size="3" style="font-size: 12pt"><font face="Liberation Serif, serif"><b>NOTE: </b></font><font face="Liberation Serif, serif"><span style="font-weight: normal">There is an additional script, </span></font><font face="Liberation Serif, serif"><b>TweenGo(), </b></font><font face="Liberation Serif, serif"><span style="font-weight: normal">which is a simplified version of TweenFire() with only essential parameters required.</span></font></font>
+
+<font size="3" style="font-size: 12pt"><font face="Liberation Serif, serif"><b>IMPORTANT</b></font><font face="Liberation Serif, serif">: Tween's will </font><font face="Liberation Serif, serif"><b>NOT</b></font> <font face="Liberation Serif, serif">be updated if their target instance is deactivated. They will continue once their target instance becomes active again.</font></font></pre>
+</div>
+<p><br/>
+<br/>
+
+</p>
+<div id="Play Modes" dir="ltr"><a name="Play Modes|region"></a>
+	<p><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>6.
+	<u>Play Modes</u></b></font></font></p>
+	<p style="margin-top: 0.42cm">Tweens can be played using one of five
+	different play mode types. Macros are available for selecting the
+	desired mode. Simply supplying a number (0-4) is also sufficient.</p>
+	<pre class="western"><font size="3" style="font-size: 12pt"><b>0 = TWEEN_MODE_ONCE</b></font>
+        <font size="3" style="font-size: 12pt">The default tween mode which will play a tween once from start to destination.</font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_FINISH</b></font> <font size="3" style="font-size: 12pt">is called when the tween reaches its destination</font>
+
+<font size="3" style="font-size: 12pt"><b>1 = TWEEN_MODE_BOUNCE</b></font>
+        <font size="3" style="font-size: 12pt">Plays a tween once from start to destination before it returns back to its start value and finishes.</font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_CONTINUE </b></font><font size="3" style="font-size: 12pt">is called when a tween reaches its destination</font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_FINISH</b></font> <font size="3" style="font-size: 12pt">is called when a tween returns to its start value</font>
+
+<font size="3" style="font-size: 12pt"><b>2 = TWEEN_MODE_PATROL</b></font>
+        <font size="3" style="font-size: 12pt">Plays a tween endlessly back and forth between its start and destination values.</font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_CONTINUE</b></font> <font size="3" style="font-size: 12pt">is called when a tween reaches its start or destination values</font>
+
+<font size="3" style="font-size: 12pt"><b>3 = TWEEN_MODE_LOOP</b></font>
+        <font size="3" style="font-size: 12pt">Plays a tween, endlessly, from start to destination before jumping back to start and continuing.</font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_CONTINUE</b></font> <font size="3" style="font-size: 12pt">is called when tween loops back to its start</font>
+
+<font size="3" style="font-size: 12pt"><b>4 = TWEEN_MODE_REPEAT</b></font>
+        <font size="3" style="font-size: 12pt">Plays a tween endlessly, using its destination as a new relative start value when destination is reached.</font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_CONTINUE</b></font> <font size="3" style="font-size: 12pt">is called when a tween repeats from its relative destination</font></pre>
+</div>
+<p style="margin-top: 0.42cm"><br/>
+<br/>
+
+</p>
+<div id="Tween Callbacks" dir="ltr"><a name="Tween Callbacks|region"></a>
+	<p style="margin-top: 0.42cm"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>7.
+	</b></font></font></code><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><u><b>Tween
+	Callbacks</b></u></font></font></code></p>
+	<p><font face="Liberation Serif, serif">Tweens can have script
+	callbacks attached to various events. You can add multiple callbacks
+	to events by using <b>TweenAddCallback() </b>which returns a unique
+	callback id. Up to <b>12</b> <b>arguments</b> can be passed to
+	callback scripts.</font></p>
+	<p><font face="Liberation Serif, serif"><b>Defintion:</b></font></p>
+	<pre class="western">        <font size="2" style="font-size: 11pt"><b>TweenAddCallback(tween,event,target,script[,arg0,arg1,...])</b></font>
+        
+        <font size="2" style="font-size: 11pt"><b>@tween   = tween id</b></font>
+        <font size="2" style="font-size: 11pt"><b>@event   = tween event constant -- TWEEN_EV_****</b></font>
+        <font size="2" style="font-size: 11pt"><b>@target  = instance environment to use when calling script</b></font>
+        <font size="2" style="font-size: 11pt"><b>@script  = script to be executed</b></font>
+        <font size="2" style="font-size: 11pt"><b>@arg0... = (optional) arguments to pass to script</b></font></pre><p>
+	<font face="Liberation Serif, serif">Tweens support the following
+	<b>EVENT CONSTANTS</b> for when they are <b>playing:</b></font></p>
+	<pre class="western">        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_PLAY           tween starts to play</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_FINISH         playing tween finished</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_CONTINUE       playing tween bounces, loops, or repeats</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_PAUSE          playing tween is paused</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_RESUME         playing tween is resumed</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_STOP           playing tween is stopped</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_REVERSE        playing tween is reversed</b></font>
+          
+
+<font size="3" style="font-size: 12pt"><b>Example:</b></font>
+
+<code class="western">        </code><code class="western"><font size="3" style="font-size: 12pt"><b>tween = TweenCreate(id);</b></font></code>
+<code class="western">        </code>
+<code class="western">        </code><code class="western"><font color="#008000"><font size="3" style="font-size: 12pt"><b>// Show &ldquo;42&rdquo; when tween is paused</b></font></font></code>
+<code class="western">        </code><code class="western"><font size="3" style="font-size: 12pt"><b>cb1 = TweenAddCallback(tween, TWEEN_EV_PAUSE, id, ShowNumber, 42);</b></font></code>
+<code class="western">        </code><code class="western"><font color="#008000"><font size="3" style="font-size: 12pt"><b>// Show &ldquo;Don't Panic!&rdquo; when tween finishes</b></font></font></code>
+<code class="western">        </code><code class="western"><font size="3" style="font-size: 12pt"><b>cb2 = TweenAddCallback(tween, TWEEN_EV_FINISH, id, ShowMessage, &ldquo;Don't Panic!&rdquo;);</b></font></code></pre><p>
+	<font face="Liberation Serif, serif">Tweens also support the
+	following <b>EVENT CONSTANTS </b>for when they are <b>delayed</b><font face="Liberation Mono, monospace"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font></p>
+	<pre class="western">        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_FINISH_DELAY           tween's</b></font> <font size="3" style="font-size: 12pt"><b>delay finishes</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_PAUSE_DELAY            delayed</b></font> <font size="3" style="font-size: 12pt"><b>tween is paused</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_RESUME_DELAY           delayed</b></font> <font size="3" style="font-size: 12pt"><b>tween is resumed</b></font>
+        <font size="3" style="font-size: 12pt"><b>TWEEN_EV_STOP_DELAY             delayed</b></font> <font size="3" style="font-size: 12pt"><b>tween is stopped</b></font>
+
+
+<code class="western"><font face="Liberation Mono, monospace"><font size="3" style="font-size: 12pt"><b>Example:</b></font></font></code>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>tween = TweenFire(id, x__, EaseOutQuad, 0, true, 5.0, 1.0, x, mouse_x);</b></font></font></code>
+
+<code class="western"><font color="#008000">        </font></code><code class="western"><font color="#008000"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>// Show message when tween's delay finishes</b></font></font></font></code>
+<code class="western">        </code><code class="western"><font face="Liberation Mono, monospace"><font size="2" style="font-size: 11pt"><b>cb = TweenAddCallback(tween, TWEEN_EV_FINISH_DELAY, id, ShowMessage, &ldquo;Delay finished! Lets start playing!&rdquo;);</b></font></font></code></pre><p>
+	<br/>
+<br/>
+
+	</p>
+	<p><font face="Liberation Serif, serif"><b>IMPORTANT: </b>Like
+	tweens, callbacks are associated with a designated target instance
+	which uses its environment to execute the script. Any callback
+	associated with a deactivated target instance will not be executed.
+	Those associated with destroyed target instances will be
+	automatically removed and cleared from the system.</font></p>
+	<p style="margin-top: 0.42cm">Note: <font face="Liberation Serif, serif">If
+	needed, specific tween events can be suppressed by using the
+	</font><font face="Liberation Serif, serif"><b>TweenEventEnable()</b></font><font face="Liberation Serif, serif">.
+	Individual callbacks can also be suppressed by using
+	</font><font face="Liberation Serif, serif"><b>TweenCallbackEnable()</b></font><font face="Liberation Serif, serif">.</font></p>
+</div>
+<p style="margin-top: 0.42cm"><br/>
+<br/>
+
+</p>
+<div id="Extended Property Setters" dir="ltr"><a name="Extended Property Setters|region"></a>
+	<p style="margin-top: 0.42cm"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>8.
+	</b></font></font></code><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><u><b>Extended
+	Property Setters</b></u></font></font></code><code class="western"><span style="text-decoration: none">
+	</span></code><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>(Advanced)</b></font></font></code></p>
+	<p style="margin-top: 0.42cm"><font face="Liberation Serif, serif">Extended
+	property setters allow you to access</font> <font face="Liberation Serif, serif">custom
+	data passed to tweens. This data can be passed to tweens as optional
+	arguments at the end of TweenFire(), TweenCreate(), or</font>
+	<font face="Liberation Serif, serif">TweenPlay().</font></p>
+	<p><font face="Liberation Serif, serif">If you pass <b>only one</b>
+	extra argument, the value will directly override the default
+	<b>argument1</b> (target) value passed to the property setter
+	script. If you supply more than one extra argument, an array of
+	extended data will override the default argument1 (target) value. If
+	needed, the tween's target instance can still be accessed from
+	<b>argument2</b>. L<span style="font-weight: normal">ike standard
+	property setters, t</span>he eased value <span style="font-weight: normal">is
+	contained in </span><b>argument0</b>.</font></p>
+	<p><font face="Liberation Serif, serif">The following are some
+	examples:</font></p>
+	<pre class="western"><font size="2" style="font-size: 11pt"><b>#1      <font color="#008000">[Override &ldquo;target&rdquo; with view index]</font></b></font>
+        
+        <font size="2" style="font-size: 11pt"><b>var _view = 0;</b></font>
+        <font size="2" style="font-size: 11pt"><b>TweenFire(id, ext_view_xview__, EaseInQuad, 0, true, 0.0, 1.0, 0, 320, _view);</b></font>
+
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>*** EXT SETTER ***</b></font></font>
+<font color="#008000">        <font size="2" style="font-size: 11pt"><b>/// ext_view_xview__(value,view)</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>{</b></font>
+                <font size="2" style="font-size: 11pt"><b>view_xview[argument1] = argument0;</b></font>
+        <font size="2" style="font-size: 11pt"><b>}</b></font>
+        
+        
+
+<font size="2" style="font-size: 11pt"><b>#2      <font color="#008000">[Override &ldquo;target&rdquo; with view array data]</font></b></font>
+
+        <font size="2" style="font-size: 11pt"><b>var _view = 0;</b></font>
+        <font size="2" style="font-size: 11pt"><b>TweenFire(id, ext_view_xyview__, EaseInQuad, 0, true, 0.0, 1.0, 0, 1, _view, 0, 320, 0, 240);</b></font>
+
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>*** EXT SETTER ***</b></font></font>
+<font color="#008000">        <font size="2" style="font-size: 11pt"><b>/// ext_view_xyview(amount,[view,x1,x2,y1,y2])</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>{</b></font>
+                <font size="2" style="font-size: 11pt"><b>var _amount = argument0;</b></font>
+                <font size="2" style="font-size: 11pt"><b>var _data   = argument1;</b></font>
+                <font size="2" style="font-size: 11pt"><b>var _view   = _data[0];</b></font>
+                
+                <font size="2" style="font-size: 11pt"><b>view_xview[_view] = lerp(_data[1], _data[2], _amount);</b></font>
+                <font size="2" style="font-size: 11pt"><b>view_yview[_view] = lerp(_data[3], _data[4], _amount);</b></font>
+        <font size="2" style="font-size: 11pt"><b>}</b></font>
+
+
+
+<font size="2" style="font-size: 11pt"><b>#3      <font color="#008000">[Override target with position data and use target in argument2]</font></b></font>
+
+        <font size="2" style="font-size: 11pt"><b>TweenFire(id, ext_xy__, EaseOutSine, 0, true, 0.0, 1.0, 0, 1, x, mouse_x, y, mouse_y);</b></font>
+        
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>*** EXT SETTER ***</b></font></font>
+<font color="#008000">        <font size="2" style="font-size: 11pt"><b>/// ext_xy__(amount,[x1,x2,y1,y2],target)</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>{</b></font>
+                <font size="2" style="font-size: 11pt"><b>var _amount = argument0;</b></font>
+                <font size="2" style="font-size: 11pt"><b>var _data   = argument1;</b></font>
+                <font size="2" style="font-size: 11pt"><b>var _target = argument2;</b></font>
+
+                <font size="2" style="font-size: 11pt"><b>_target.x = lerp(_data[0], _data[1], _amount);</b></font>
+                <font size="2" style="font-size: 11pt"><b>_target.y = lerp(_data[2], _data[3], _amount);</b></font>
+        <font size="2" style="font-size: 11pt"><b>}</b></font></pre><p>
+	<font face="Liberation Serif, serif">If you need to pass a large
+	number of arguments to extended property setters, for convenience,
+	you can use <b>TPExt() </b>which returns an array of data. The
+	following example works exactly the same as the previous example
+	above: </font>
+	</p>
+	<pre class="western">        <font size="2" style="font-size: 11pt"><b>var _extData = TPExt(x, mouse_x, y, mouse_y);</b></font>
+        <font size="2" style="font-size: 11pt"><b>TweenFire(id, ext_xy__, EaseInQuad, 0, true, 0.0, 1.0, 0, 1, _extData);</b></font></pre><p>
+	<br/>
+<br/>
+
+	</p>
+	<p><font face="Liberation Serif, serif">When using extended property
+	setters, it is often useful to create tweens with a start value of 0
+	and destination value of 1. The value between 0 and 1 can then be
+	accessed from the extended property setter as a relative amount
+	reflecting the tween's ease algorithm over time. This value can be
+	used with GameMaker's lerp() function to calculate the custom data
+	supplied to the extended property setter.</font></p>
+	<p><font face="Liberation Serif, serif">e.g.</font></p>
+	<pre class="western"><font color="#008000"><font size="2" style="font-size: 11pt"><b>/// ext_xy__(amount,data[x1|x2|y1|y2],target)</b></font></font>
+<font size="2" style="font-size: 11pt"><b>{</b></font>
+        
+        <font size="2" style="font-size: 11pt"><b>var _amount = argument0; </b></font><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Get amount reflecting ease algorithm over time</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>var _data   = argument1; </b></font><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Get extended data array</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>var _target = argument2; </b></font><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Get relative target instance</b></font></font>
+
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>// Extract</b></font></font><font color="#008000"> </font><font color="#008000"><font size="2" style="font-size: 11pt"><b>extended data</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>var _x1 = _data[0];</b></font>
+        <font size="2" style="font-size: 11pt"><b>var _x2 = _data[1];</b></font>
+        <font size="2" style="font-size: 11pt"><b>var _y1 = _data[2];</b></font>
+        <font size="2" style="font-size: 11pt"><b>var _y2 = _data[3]; </b></font>
+
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>// Update x/y position by using lerp() with extended</b></font></font><font color="#008000"> </font><font color="#008000"><font size="2" style="font-size: 11pt"><b>data and amount</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>_target.x = lerp(_x1, _x2, _amount);</b></font>
+        <font size="2" style="font-size: 11pt"><b>_target.y = lerp(_y1, _y2, _amount);</b></font>
+<font size="2" style="font-size: 11pt"><b>}</b></font></pre><p>
+	<font face="Liberation Serif, serif">As shown in the example above,
+	the eased amount is passed to the extended property setter as
+	<b>argument0</b>. We can use this value as an amount for the lerp
+	function and fill in the custom start/destination values as needed.
+	Any extended values passed to the property setter are accessible via
+	<b>argument1</b> which holds an override value or an array of data
+	in the order you supplied it. If needed, the tween's target can be
+	accessed from <b>argument2</b>.</font></p>
+	<p><font face="Liberation Serif, serif">You can also have extended
+	properties use different tweening algorithms for each eased
+	variable. You can achieve this by using a linear tween (<b>EaseLinear</b>)
+	with a start value of <b>0 </b>and a destination value of <b>1</b>.
+	You can then use the <b>Ease() </b>function in the extended property
+	setter with the linear value reflecting the total time elapsed. The
+	modified version of the above example could look like this:</font></p>
+	<pre class="western"><font color="#008000"><font size="2" style="font-size: 11pt"><b>/// ext_xy__(amount,data[x1|x2|y1|y2],target)</b></font></font>
+<font size="2" style="font-size: 11pt"><b>{</b></font>
+        
+        <font size="2" style="font-size: 11pt"><b>var _amount = argument0; </b></font><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Get amount representing time elapsed (0.0 &ndash; 1.0)</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>var _data   = argument1; </b></font><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Get extended data</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>var _target = argument2; </b></font><font color="#008000"><font size="2" style="font-size: 11pt"><b>// Get target instance</b></font></font>
+
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>// Extract</b></font></font><font color="#008000"> </font><font color="#008000"><font size="2" style="font-size: 11pt"><b>extended data</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>var _x1 = _data[0];</b></font>
+        <font size="2" style="font-size: 11pt"><b>var _x2 = _data[1];</b></font>
+        <font size="2" style="font-size: 11pt"><b>var _y1 = _data[2];</b></font>
+        <font size="2" style="font-size: 11pt"><b>var _y2 = _data[3];</b></font>
+
+        <font color="#008000"><font size="2" style="font-size: 11pt"><b>// Update x/y position by using Ease() with custom data and amount</b></font></font>
+        <font size="2" style="font-size: 11pt"><b>_target.x = Ease(_x1, _x2, _amount, EaseInOutQuad);</b></font>
+        <font size="2" style="font-size: 11pt"><b>_target.y = Ease(_y1, _y2, _amount, EaseInOutElastic);</b></font>
+<font size="2" style="font-size: 11pt"><b>}</b></font></pre><p style="margin-top: 0.42cm">
+	<font face="Liberation Serif, serif"><b>NOTE:</b> It is advised to
+	add custom extended property setters outside of
+	Default_Property_Setters_Ext. It is also advised to use the
+	&quot;ext_property__&quot; convention when naming custom extended
+	property setters but is not required.</font></p>
+</div>
+<p style="margin-top: 0.42cm"><br/>
+<br/>
+
+</p>
+<div id="Troubleshooting" dir="ltr"><a name="Troubleshooting|region"></a>
+	<p style="margin-top: 0.42cm"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><b>9.
+	</b></font></font></code><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 16pt"><u><b>Troubleshooting</b></u></font></font></code></p>
+	<p><font face="Liberation Serif, serif">A) When using native YYC
+	targets, <b>clear the compiler cache</b> (broom button at top) if
+	strange errors occur. This should always be done after updating
+	TweenGMS.</font></p>
+	<p><font face="Liberation Serif, serif">B) If nothing seems to be
+	working, check that &ldquo;Copies To:&rdquo; is selected for your
+	target platform. This can be done by going to <b>[Extensions] </b>-&gt;
+	<b>[TweenGMS]</b> -&gt; <b>right-clicking</b> <b>on</b>
+	<b>[TGMS_Setup.gml] and selecting [Properties]</b>. Make sure all
+	target platforms are checked!!</font></p>
+	<p><font face="Liberation Serif, serif">C) For debugging purposes,
+	TweenSystemCount() can help track the number of tweens in the
+	system, and to make sure tweens are being added or cleared as
+	expected.</font></p>
+</div>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>

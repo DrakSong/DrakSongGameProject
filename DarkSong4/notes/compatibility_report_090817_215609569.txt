@@ -1,13 +1,0 @@
-Converting GML script : ${project_dir}\objects\ACCESSOR_TEST\Create_0.gml
-Error : variable "ds_map_set" has same name as a built-in (function, constant or variable), it must be renamed to function correctly
-
-Converting GML script : ${project_dir}\scripts\ds_get_s\ds_get_s.gml
-Converted description : /// @description ds_get_s(structure,accessstring)/// @function ds_get_s
-/// @param structure
-/// @param accessstring
-
-Converting GML script : ${project_dir}\scripts\ds_get\ds_get.gml
-Converted description : /// @description ds_get(datastructure[,accessor,value])/// @function ds_get
-/// @param datastructure[
-/// @param accessor
-/// @param value]

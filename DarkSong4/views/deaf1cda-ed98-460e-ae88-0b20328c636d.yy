@@ -10,7 +10,7 @@
         "f8ae65f3-056f-4ebf-97aa-9c84cd7e2409",
         "f128c17e-52c7-4bb4-b213-6b4e6b1db889",
         "68fde38f-a9cc-450b-b94d-b050fb22102a",
-        "227f2fea-c1c9-4a2a-a52b-2a7c92f504c2"
+        "82de16b0-84ec-40bc-94d2-5e8910392700"
     ],
     "filterType": "GMObject",
     "folderName": "游戏运行部件",

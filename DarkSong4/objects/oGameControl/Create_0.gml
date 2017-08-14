@@ -2,7 +2,9 @@
 // You can write your code in this editor
 //载入拥有中文的字体
 globalvar Font;
-Font =font32 // font_add("msyh.ttc",32,0, 0, 0, 65535)
+Font = 
+
+font_add("msyh.ttc",32,0, 0, 0, 65535)//font32//
 
 
 /// @description 进行游戏内容的初化
@@ -47,19 +49,28 @@ Controls 键位控制部分
   global.kRoll =  ini_read_real("Controls","Roll",ord("C"))
   global.kChange = ini_read_real("Controls","Change",vk_space)
   
+  kUp =  ini_read_real("Controls","UP",vk_up);
+  kLeft =  ini_read_real("Controls","Left",vk_left);
+  kDown =  ini_read_real("Controls","Down",vk_down);
+  kRight =  ini_read_real("Controls","Right",vk_right);
+
+  kAttack =  ini_read_real("Controls","Attack",ord("Z"));
+  kJump = ini_read_real("Controls","Jump",ord("X"));
+  kRoll =  ini_read_real("Controls","Roll",ord("C"))
+  kChange = ini_read_real("Controls","Change",vk_space)
+ // global.kPause = ini_read_real("Controls","Pause",ord("P"))
   
+ini_close()
 
-ini_close();
-
-display_set_gui_size(1280,720);//设置GUi为基准
+display_set_gui_size(1280,720)
 
 global.Text = "";//记录对话框读取的对话id
 global.DialogueBox = 0;//记录对话框
+BGMPlay(SouTitle);
 
-
-//LUa控制系统
 chat_init();
 live_init("ui.lua");
+
 
 
 

@@ -1,0 +1,342 @@
+
+********************************************
+*** Required changes from 0.9.6 to 0.9.7 ***
+********************************************
+
+=====================================
+===== TweenFire and TweenCreate =====
+=====================================
+
+The parameter definitions for TweenFire() and TweenCreate() have changed.
+
+// OLD
+TweenFire(target,property,delta,ease,start,dest,dur)
+TweenCreate(target,property,delta[,ease,start,dest,dur])
+
+// NEW
+TweenFire(id,prop,ease,mode,delta,delay,dur,start,dest,...)
+TweenCreate(id[,prop,ease,mode,delta,delay,dur,start,dest,...])
+
+The old definitions are still supported for backwards compatiblity, but a future version
+of TweenGMS will remove this and cause outdated calls to error.
+
+As a result of these changes, all TweenFire**** and TweenPlay**** variants are now deprecated.
+See updated script reference for more details.
+
+
+=====================================
+===== Standard Property Setters =====
+=====================================
+
+Property setter scripts no longer use a tween's target instance as the calling environment. 
+This means that you must now use 'argument1' for referencing a tween's target instance.
+
+The OLD VERSION looked like this...
+
+	/// x__(value)
+	x = argument0;
+
+The NEW VERSION looks like this...
+
+	/// x__(value,target)
+	argument1.x = argument0;
+
+However, no changes are needed for global variables...
+
+	/// score__(value)
+	score = argument0;
+
+*** PLEASE MAKE NEEDED CHANGES TO YOUR CUSTOM PROPERTY SETTER SCRIPTS ***
+
+
+=====================================
+=====       Tween Delays	=====
+=====================================
+
+Tween's and their delays are now unified. As a result, all TweenDelay**** scripts are now obsolete.
+
+Calling TweenPause()/TweenResume()/TweenStop() will now affect a tween's delay.
+
+For callback events, TWEEN_EV_****_DELAY constants have been added for use with the TweenAddCallback() script.
+
+Only one delay can set per each tween.
+
+Please remove all TweenDelay**** calls and update your code to reflect the changes.
+
+
+=====================================
+===== 	Events and Callbacks 	=====
+=====================================
+
+Event constants have been added to use with TweenAddCallback(). As a result, all TweenOn**** scripts are now obsolete.
+
+TWEEN_EV_PLAY
+TWEEN_EV_STOP
+TWEEN_EV_PAUSE
+TWEEN_EV_RESUME
+TWEEN_EV_FINISH
+...
+
+To remove a callback, use TweenCallbackInvalidate() with a specified callback.
+
+	cb = TweenAddCallback(id, TWEEN_EV_FINISH, id, ShowMessage, "Hello!");
+
+	TweenCallbackInvalidate(cb);
+
+
+=====================================
+===== 	   Tween Stepping	=====
+=====================================
+
+Tween stepping scripts have been replaced with a single TweenStep() script.
+The script takes a parameter which indicates the direction to step (1.0 = step forward | -1.0 = step backward)
+The default stepping values are 1.0 and -1.0, but you can use decimal values for varying step amounts.
+
+TweenStep(1.0)  // Step forward
+TweenStep(-1.0) // Step backwards
+TweenStep(2.0)  // Step forward at 2 times speed
+TweenStep(-0.5) // Step back at half speed
+
+
+=====================================
+===== Extended Property Setters =====
+=====================================
+
+Like standard property setters, extended property setters no longer use a tween's target instance as the calling environment.
+If needed, the tween's target instance can be accessed from 'argument2'
+
+Example:
+	/// ext_xy__(amount,data[x1,x2,y1,y2],target)
+	{
+	   var _amount = argument0;
+	   var _data   = argument1;
+	   var _target = argument2;
+	   ...
+	}
+
+	// SOME EVENT
+	TweenFire(id, ext_xy__, EaseLinear, 0, true, 0.0, 1.0, 0, 1, x, mouse_x, y, mouse_y);
+	
+	
+Parameters for extended property setters can now be passed directly at the end of
+TweenFire(), TweenCreate(), and TweenPlay()...
+
+	var viewID = 2;
+	var xStart = 0; xDest = 640;
+	var yStart = 0; yDest = 480;
+	TweenFire(id, ext_view_xyview__, EaseLinear, 0, true, 0.0, 1.0, 0, 1, viewID, xStart, xDest, yStart, yDest);
+
+If only one extended parameter is supplied, that value will directly override 'argument1' in the property setter script.
+But, if more than one extra parameter is supplied, then an array containing the data will be passed to 'argument1'.
+
+	** Property setter overriding 'target' with 'view' index **
+	/// ext_view_xview__(value,view)
+	{
+	   var _value = argument0;
+	   var _view  = argument1; // View index passed directly to argument1
+	   // target not needed
+	   ...
+	}
+
+	** Property setter overriding 'target' with view data **
+	/// ext_view_xyview__(amount,data[view,x1,x2,y1,y2])
+	{
+	   var _amount = argument0;
+	   var _data  = argument1; // Data passed as array to argument1
+	   
+	   var _view  = _data[0]; // Extract data from array
+	   var _x1    = _data[1];
+	   var _x2    = _data[2];
+	   var _y1    = _data[3];
+	   var _y2    = _data[4];
+	   ...
+	} 
+
+
+TPExt() has replaced TPSetExt() which has been deprecated. See script reference for more details.
+
+	var _coords = TPExt(x, mouse_x, y, mouse_y);
+	TweenFire(id, ext_xy__, EaseLinear, 0, true, 0.0, 1.0, 0, 1, _coords);
+
+
+=======================================
+=========[Depcrecated Scripts]=========
+=======================================
+
+-- Deprecrated scripts still work but will be removed in future versions of TweenGMS --
+-- Please see the script reference for more details regarding new scripts --
+
+** Change following scripts to use TweenPlay() with relevant TWEEN_MODE_ constant **
+TweenPlayOnce			-> 0 = TWEEN_MODE_ONCE
+TweenPlayBounce			-> 1 = TWEEN_MODE_BOUNCE
+TweenPlayPatrol			-> 2 = TWEEN_MODE_PATROL
+TweenPlayLoop			-> 3 = TWEEN_MODE_LOOP
+TweenPlayrepeat			-> 4 = TWEEN_MODE_REPEAT
+
+TweenPlayOnceDelay		-> Delay parameter included with TweenPlay()
+TweenPlayBounceDelay
+TweenPlayPatrolDelay
+TweenPlayLoopDelay
+TweenPlayRepeatDelay
+
+
+** Change following scripts to use TweenFire() with relevant TWEEN_MODE_ constant **
+TweenFire			-> 0 = TWEEN_MODE_ONCE
+TweenFireBounce			-> 1 = TWEEN_MODE_BOUNCE
+TweenFirePatrol			-> 2 = TWEEN_MODE_PATROL
+TweenFireLoop			-> 3 = TWEEN_MODE_LOOP
+TweenFireRepeat			-> 4 = TWEEN_MODE_REPEAT
+
+TweenFireDelay			-> Delay parameter included with TweenFire()
+TweenFireBounceDelay
+TweenFirePatrolDelay
+TweenFireLoopDelay
+TweenFireRepeatDelay
+
+
+** Change following to use TweenAddCallback() with relevant TWEEN_EV_ constant**
+TweenOnFinishAdd		-> TWEEN_EV_FINISH
+TweenOnBounceAdd		-> TWEEN_EV_CONTINUE
+TweenOnLoopAdd			-> TWEEN_EV_CONTINUE
+TweenOnRepeatAdd		-> TWEEN_EV_CONTINUE
+
+
+** Change following to use TweensExecute() **
+TweenIterator
+TweenIteratorNext
+TweenIteratorReset
+
+
+** Change following to use TweenDefault() **
+TweenDefaultSetTimeScale
+TweenDefaultGetTimeScale
+TweenDefaultSetGroup
+TweenDefaultGetGroup
+
+
+** Please see TPExt() in documentation **
+TPSetExt
+
+
+====================================
+=========[Obsolete Scripts]=========
+====================================
+
+-- Obsolete functions have been removed and are no longer supported --
+-- Please see the script reference for more details regarding new scripts --
+
+** Change following scripts to TweenPath() **
+TweenPathFire
+TweenPathFireBounce
+TweenPathFirePatrol
+TweenPathFireLoop
+TweenPathFireRepeat
+
+
+** Change following scripts to standard TweenSimple*() scripts with optional delay **
+TweenSimpleMoveDelay
+TweenSimpleMoveIntDelay
+TweenSimpleFadeDelay
+TweenSimpleRotateDelay
+TweenSimpleScaleDelay
+TweenSimpleCycleImagesDelay
+TweenSimpleColourDelay
+TweenSimpleSpeedRampDelay
+TweenSimpleHVSpeedRampDelay
+
+
+** Tween delays are now directly affected by tween's state **
+TweenDelayCancel         	-> TweenStop()
+TweenDelayPause          	-> TweenPause()
+TweenDelayResume         	-> TweenResume()
+TweenDelayFinish         	-> TweenFinishDelay()
+TweenDelayGetTime        	-> TweenGetDelay()
+TweenDelaySetTime        	-> TweenSetDelay()
+TweenDelayExists         	-> n/a
+TweenDelayNull           	-> n/a
+TweenDelayPropertySetter 	-> n/a
+
+
+** Change following to use TweenAddCallback() with relevant TWEEN_EV_ constant **
+TweenOnPlayAdd			-> TWEEN_EV_PLAY
+TweenOnStopAdd			-> TWEEN_EV_STOP
+TweenOnPauseAdd			-> TWEEN_EV_PAUSE
+TweenOnResumeAdd		-> TWEEN_EV_RESUME
+TweenOnReverseAdd		-> TWEEN_EV_REVERSE
+
+TweenDelayOnFinishAdd		-> TWEEN_EV_FINISH_DELAY
+TweenDelayOnCancelAdd		-> TWEEN_EV_STOP_DELAY
+TweenDelayOnPauseAdd		-> TWEEN_EV_PAUSE_DELAY
+TweenDelayOnResumeAdd		-> TWEEN_EV_RESUME_DELAY
+
+
+** Change following to use TweenEventEnable() with relevant TWEEN_EV_ constant **
+TweenOnPlayEnable		-> TWEEN_EV_PLAY
+TweenOnFinishEnable		-> TWEEN_EV_FINISH
+TweenOnStopEnable		-> TWEEN_EV_STOP
+TweenOnPauseEnable		-> TWEEN_EV_PAUSE
+TweenOnResumeEnable		-> TWEEN_EV_RESUME
+TweenOnReverseEnable		-> TWEEN_EV_REVERSE
+TweenOnBounceEnable		-> TWEEN_EV_CONTINUE
+TweenOnPatrolEnable		-> TWEEN_EV_CONTINUE
+TweenOnLoopEnable		-> TWEEN_EV_CONTINUE
+TweenOnRepeatEnable		-> TWEEN_EV_CONTINUE
+
+TweenDelayOnFinishEnable	-> TWEEN_EV_FINISH_DELAY
+TweenDelayOnCancelEnable	-> TWEEN_EV_STOP_DELAY
+TweenDelayOnPauseEnable		-> TWEEN_EV_PAUSE_DELAY
+TweenDelayOnResumeEnable	-> TWEEN_EV_RESUME_DELAY
+
+
+** Change following to use TweenEventClear() with relevant TWEEN_EV_ constant **
+TweenOnPlayClear		-> TWEEN_EV_PLAY	
+TweenOnFinishClear		-> TWEEN_EV_FINISH
+TweenOnStopClear		-> TWEEN_EV_STOP
+TweenOnPauseClear		-> TWEEN_EV_PAUSE
+TweenOnResumeClear		-> TWEEN_EV_RESUME
+TweenOnReverseClear		-> TWEEN_EV_REVERSE
+TweenOnBounceClear		-> TWEEN_EV_CONTINUE
+TweenOnPatrolClear		-> TWEEN_EV_CONTINUE
+TweenOnLoopClear		-> TWEEN_EV_CONINTUE
+TweenOnRepeatClear		-> TWEEN_EV_CONTINUE
+
+TweenDelayOnFinishClear		-> TWEEN_EV_FINISH_DELAY
+TweenDelayOnCancelClear		-> TWEEN_EV_STOP_DELAY
+TweenDelayOnPauseClear		-> TWEEN_EV_PAUSE_DELAY
+TweenDelayOnResumeClear		-> TWEEN_EV_RESUME_DELAY
+
+
+** Change following to use TweenCallbackInvalidate() **
+TweenOnPlayRemove
+TweenOnFinishRemove
+TweenOnStopRemove
+TweenOnPauseRemove
+TweenOnResumeRemove
+TweenOnReverseRemove
+TweenOnBounceRemove
+TweenOnPatrolRemove
+TweenOnLoopRemove
+TweenOnRepeatRemove
+
+TweenDelayOnFinishRemove
+TweenDelayOnCancelRemove
+TweenDelayOnPauseRemove
+TweenDelayOnResumeRemove
+
+
+** Change following to use TweenCallbackIsValid() **
+TweenCallbackExists
+
+
+** Change following to use TweenStep()
+TweenStepNext
+TweenStepPrevious
+
+
+** Change following script to use TweenSetMode() and TweenGetMode() **
+TweenSetPlayMode
+TweenGetPlayMode
+
+
+
+

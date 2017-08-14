@@ -1,0 +1,25 @@
+
+****************************
+ TweenGMS Project Downloads
+****************************
+
+**********************
+** EXAMPLE PROJECTS **
+**********************
+
+[TweenGMS Demo Project]
+http://8bitwarrior.com/tools/TweenGMS/v0974/Demo_Project.zip
+
+[Alien Odds Game Project]
+http://8bitwarrior.com/tools/TweenGMS/v0974/AlienOdds_Game_Project.zip
+
+
+***********************
+** AND JUST IN CASE! **
+***********************
+
+[Previous TweenGMS version v0_9_65]
+http://8bitwarrior.com/tools/TweenGMS/v0974/TweenGMS_v0_9_65.zip
+
+[Removed Deprecated Scripts]
+http://8bitwarrior.com/tools/TweenGMS/v0974/TGMS_Deprecated.zip

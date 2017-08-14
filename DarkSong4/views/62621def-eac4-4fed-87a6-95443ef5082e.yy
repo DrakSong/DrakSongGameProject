@@ -12,9 +12,7 @@
         "65f46f55-6ed8-450d-a2b5-7c01acab3ddd",
         "00033747-a30f-45c4-be01-6d53120b1a48",
         "0490ff93-df09-4207-b32c-a657517fbc52",
-        "1386099e-668c-4986-a96b-31ab92959d0f",
-        "d0ec3209-19f9-4318-b14e-4bae35a53043",
-        "01434721-3f56-4ccf-a4eb-bc5658743202"
+        "1386099e-668c-4986-a96b-31ab92959d0f"
     ],
     "filterType": "GMExtension",
     "folderName": "extensions",
