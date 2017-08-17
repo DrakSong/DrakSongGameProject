@@ -8,22 +8,23 @@ draw_set_color(c_red)
 //fuck
 draw_rectangle(AtkBoxL,AtkBoxD,AtkBoxR,AtkBoxU,1)
 }
-if  keyboard_check_pressed(ord("A"))
+if  keyboard_check_pressed(global.kChange)
 {
 
 	  OldYX = YX; //记录一下 检测条件的符合
 	  OldTopYX = TopYX;
 	  }
 	  
-	  if keyboard_check_released(ord("A"))
+	  if keyboard_check_released(global.kChange)
 	  {//这个是处理条件不合适的机制
 	//  YX = OldYX;
 	  //TopYX = OldTopYX;
 	  
 	  }
 
-if  keyboard_check(ord("A"))
+if  keyboard_check(global.kChange)
 {
+
 kLeft        = false;
 kRight       = false;
 kUp          = false;

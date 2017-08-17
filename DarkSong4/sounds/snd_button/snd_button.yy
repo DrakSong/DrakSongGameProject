@@ -10,5 +10,5 @@
     "preload": true,
     "sampleRate": 44100,
     "type": 1,
-    "volume": 0.6
+    "volume": 1
 }
