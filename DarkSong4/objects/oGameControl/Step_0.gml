@@ -20,6 +20,16 @@ if keyboard_check_pressed(vk_anykey) or true
 	room_goto_next();
 }
 }
+else
+{
+
+if keyboard_check_pressed(ord("P")) and!  instance_exists(oPause)
+{
+instance_create_depth(x,y,self.depth,oPause)
+
+
+}
+}
 
 
 /*

@@ -6783,6 +6783,14 @@
             }
         },
         {
+            "Key": "a2e0918f-8c66-42af-8f18-42a27113d3d5",
+            "Value": {
+                "id": "f6e8da8e-fa32-4943-aa42-13abf02550b0",
+                "resourcePath": "objects\\oPause\\oPause.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a30a658d-afe8-442f-8319-146915dfa3b5",
             "Value": {
                 "id": "f6138dcc-89da-48cb-afa8-a0c607cbe58f",
@@ -8708,6 +8716,14 @@
                 "id": "93433b77-9d69-4d0c-81c3-4fed9a5f6f9a",
                 "resourcePath": "views\\c9e670a2-0566-4c65-a97e-fbf521e3bfcd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ca009e20-b468-45b0-a75e-bb8dab1f3842",
+            "Value": {
+                "id": "fc734557-16e4-4e44-a7c2-13b8dfcf29e2",
+                "resourcePath": "scripts\\draw_enable_alphablend\\draw_enable_alphablend.yy",
+                "resourceType": "GMScript"
             }
         },
         {

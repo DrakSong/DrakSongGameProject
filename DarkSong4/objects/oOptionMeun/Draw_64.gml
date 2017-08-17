@@ -18,21 +18,20 @@ draw_sprite(sTopandDown,0,0,720-87)
 
 draw_text(1280/2,32,"-设置-")
 //写返回用的
-if (Post==3)
+
 	draw_set_alpha(0.72)
-	else
-	draw_set_alpha(0.32)
 	draw_sprite(sBUll,0,0,(500)+2*(169/3))
-	
-  draw_text_button(0,(500)+2*(169/3),Select[3],Post==3)
+	draw_text_button(0,(500)+2*(169/3),Select[3],false)
+
 for (i=0; i<3; i+=1)
 {	if (Post==i)
 	draw_set_alpha(0.72)
 	else
 	draw_set_alpha(0.32)
-	draw_sprite(sBUll,0,1280/2,(87+40/2)+i*(40 ));
+
+	draw_sprite(sBUll,0,1280/2,(87+40/2)+i*(169/3 ));
 	draw_set_alpha(1);
-	   draw_text_button(1280/2,(87+40/2)+i*(40),Select[i],Post==i);
+	   draw_text_button(1280/2,(87+40/2)+i*(169/3),Select[i],Post==i);
 	   draw_set_alpha(1);
 };
 

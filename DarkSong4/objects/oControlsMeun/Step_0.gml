@@ -31,7 +31,7 @@ if ! instance_exists(oControlsChangeKey)
 	 instance_change(oOptionMeun,true)
 	 }
 	}
-	if keyboard_check_pressed(vk_backspace)
+	if keyboard_check_pressed(vk_home)
 	{
 	  global.kUp = vk_up ;
 	 global.kDown =  vk_down;
