@@ -13,7 +13,7 @@ draw_text(0,0,"按下任意键开始游戏")
 
 
 
-live_call("draw");
-chat_draw();
+//live_call("draw");
+//chat_draw();
 
 
