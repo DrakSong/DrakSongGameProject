@@ -207,5 +207,5 @@ if (!attacking) {
 }
 
 }
-live_update()
-live_call("step", self);
+//live_update()
+//live_call("step", self);

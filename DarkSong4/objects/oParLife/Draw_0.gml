@@ -26,7 +26,7 @@ else
 }    
    
     
-  live_call("draw", self);
+ // live_call("draw", self);
 //draw_text(x,y,"x")
    
 

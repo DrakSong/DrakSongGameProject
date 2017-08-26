@@ -23,13 +23,15 @@ Setting 游戏设置 部分
 	global.DebugMode = debug_mode //ini_read_real("Settings","WindowsSize",2);
   //载入拥有中文的字体
   globalvar Font;
+  
+  Font = fontText
   if global.DebugMode
-    {Font = font32}
+    {Font = fontText}
   else
   {
- Font = font_add("msyh.ttc",32,0, 0, 0, 65535)//font32//    
+// Font = font_add("msyh.ttc",28,0, 0, 0, 65535)//fontText//    
   }
- 
+//  Font = font_add("msyh.ttc",32,0, 0, 0, 65535)
 
 
 	//**************全屏与否
@@ -71,7 +73,7 @@ ini_close()
 
 
 //检测输入
-/*
+
 global.KeyChenckMap = ds_map_create();
 var KeyList = ds_list_create();
 ds_list_add(KeyList,"上" ,"下", "左", "右", "攻击", "跳跃" ,"切换武器" ,"切换角色","特殊键")
@@ -84,7 +86,7 @@ ds_map_add(Map,"松开",0)
 
 ds_map_add(global.KeyChenckMap,KeyList[|i],Map)
 };
-*/
+
 display_set_gui_size(1280,720)
 
 global.Text = "";//记录对话框读取的对话id
