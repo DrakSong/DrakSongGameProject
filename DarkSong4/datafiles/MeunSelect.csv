@@ -1,29 +1,29 @@
-﻿中文,English
-新游戏,New Game
-继续游戏,Load Game
-游戏设置,Option
-退出,Eixt
-角色选择,CharacterSelect
-设置,Settings
-语言,Language
-声音,Sound
-键位控制,Controls
-BGM音量,BGMvolume
-SE音量,SEvolume
-全屏,Full Screen
-开,On
-关,Off
-窗口分辨率,Window Resolution
-Debug模式,DebugMode
-上,Up
-下,Down
-左,Left
-右,Right
-攻击,Attack
-跳跃,Jump
-翻滚,Roll
-切换,Change
-暂停,Pause
-确定,Confirm
-返回,Back
-取消,Cancel
+引索,中文,English,FLC
+新游戏,新游戏,New Game,New Game
+继续游戏,继续游戏,Load Game,Load Game
+游戏设置,游戏设置,Option,Option
+退出,退出,Eixt,Eixt
+角色选择,角色选择,CharacterSelect,CharacterSelect
+设置,设置,Settings,Settings
+语言,语言,Language,Language
+声音,声音,Sound,Sound
+键位控制,键位控制,Controls,Controls
+BGM音量,BGM音量,BGMvolume,BGMvolume
+SE音量,SE音量,SEvolume,SEvolume
+全屏,全屏,Full Screen,Full Screen
+开,开,On,On
+关,关,Off,Off
+窗口分辨率,窗口分辨率,Window Resolution,Window Resolution
+Debug模式,Debug模式,DebugMode,DebugMode
+上,上,Up,Up
+下,下,Down,Down
+左,左,Left,Left
+右,右,Right,Right
+攻击,攻击,Attack,Attack
+跳跃,跳跃,Jump,Jump
+翻滚,翻滚,Roll,Roll
+切换,切换,Change,Change
+暂停,暂停,Pause,Pause
+确定,确定,Confirm,Confirm
+返回,返回,Back,Back
+取消,取消,Cancel,Cancel

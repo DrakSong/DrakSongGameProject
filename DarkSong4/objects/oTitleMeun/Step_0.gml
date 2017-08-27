@@ -7,17 +7,17 @@ if (Post = 3 ) {
 if (Post = - 1) {
     Post = 2
 }
-if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(global.kUp)) {
+if KeyCheck("上","按下") {
     Post--;
 	SoundPlay(snd_button)
 }
-if (keyboard_check_pressed(vk_down) or keyboard_check_pressed(global.kDown) ) {
+if   KeyCheck("下","按下") {
     Post++;
 	SoundPlay(snd_button)
 }
 
 
-if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(global.kAttack))
+if ( KeyCheck("菜单确认","按下"))
 { SoundPlay(snd_button2)
     switch (Post)
     {

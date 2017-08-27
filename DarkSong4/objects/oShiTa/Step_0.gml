@@ -3,16 +3,16 @@ action_inherited()
 AtkTime = min(AtkTime,60)
 //按钮控制
 if (self.kControl) {
-	self.kLeft = keyboard_check(global.kLeft);
-	self.kRight = keyboard_check(global.kRight);
-	self.kUp = keyboard_check(global.kUp);
-	self.kDown = keyboard_check(global.kDown);
-	self.kJump = (keyboard_check_pressed(global.kJump)) and ! (self.attacking);
-	self.kJumpRelease = keyboard_check_released(global.kJump);
-	self.kActionP = keyboard_check_pressed(global.kAttack);
-	self.kActionK = keyboard_check(global.kAttack);
-	self.kActionR = keyboard_check_released(global.kAttack);
-	self.kRoll = keyboard_check_pressed(global.kRoll);
+	self.kLeft = KeyCheck("左","按住")
+	self.kRight = KeyCheck("右","按住")
+	self.kUp = KeyCheck("上","按住")
+	self.kDown =KeyCheck("下","按住")
+	self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
+	self.kJumpRelease = (KeyCheck("跳跃","松开"));
+	self.kActionP =(KeyCheck("攻击","按下"));
+	self.kActionK =(KeyCheck("攻击","按住"))
+	self.kActionR = (KeyCheck("攻击","松开"))
+	self.kRoll = (KeyCheck("特殊键","按下"));
 } else {
 	self.kLeft = 0;
 	self.kRight = 0;

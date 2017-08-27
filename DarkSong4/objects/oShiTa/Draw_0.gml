@@ -8,21 +8,21 @@ draw_set_color(c_red)
 //fuck
 draw_rectangle(AtkBoxL,AtkBoxD,AtkBoxR,AtkBoxU,1)
 }
-if  keyboard_check_pressed(global.kChange)
+if  KeyCheck("切换武器","按下") 
 {
 
 	  OldYX = YX; //记录一下 检测条件的符合
 	  OldTopYX = TopYX;
 	  }
 	  
-	  if keyboard_check_released(global.kChange)
+	  if KeyCheck("切换武器","按下") 
 	  {//这个是处理条件不合适的机制
 	//  YX = OldYX;
 	  //TopYX = OldTopYX;
 	  
 	  }
 
-if  keyboard_check(global.kChange)
+if  KeyCheck("切换武器","按住") 
 {
 
 kLeft        = false;
@@ -46,15 +46,17 @@ var DownS = 0.5;
 var RightS =0.5;
 
 var key;
- key[0]= global.kUp;
-key [1] = global.kLeft
-key[2] = global.kDown
-key[3]= global.kRight
+ key[0]= "上"
+key [1] = "左"
+key[2] = "下"
+key[3]= "右"
 
   
 for (i=0; i<4; i+=1)
 {
-   if keyboard_check_pressed(key[i]) 
+   if KeyCheck(key[i],"按下") 
+   
+   
 {	 if  YX = i
 
   {

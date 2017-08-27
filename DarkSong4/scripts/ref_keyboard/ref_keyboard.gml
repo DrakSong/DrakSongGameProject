@@ -56,6 +56,7 @@ lua_global_set(state, "vk_subtract", vk_subtract);
 lua_global_set(state, "vk_tab", vk_tab);
 lua_global_set(state, "vk_up", vk_up);
 
+/*
 lua_global_set(state, "kLeft", global.kLeft);
 lua_global_set(state, "kUp", global.kUp);
 lua_global_set(state, "kDown", global.kDown);
@@ -64,7 +65,7 @@ lua_global_set(state, "kAttack", global.kAttack);
 lua_global_set(state, "kJump", global.kJump);
 lua_global_set(state, "kRoll", global.kRoll);
 lua_global_set(state, "kChange", global.kChange);
-
+*/
 
 
 lua_add_function(state, "keyboard_check", ref_keyboard_check);

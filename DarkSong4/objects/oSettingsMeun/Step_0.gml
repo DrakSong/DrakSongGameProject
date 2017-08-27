@@ -5,28 +5,28 @@ if (Post = PostMax ) {
 if (Post = - 1) {
     Post = PostMax - 1
 }
-if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(global.kUp)) {
+if (KeyCheck("上","按下")) {
     Post--;
 	SoundPlay(snd_button)
 }
-if (keyboard_check_pressed(vk_down) or keyboard_check_pressed(global.kDown) ) {
+if ( KeyCheck("下","按下") ) {
     Post++;
 	SoundPlay(snd_button)
 }
 switch (Post) 
 {
     case (0):
-        if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(global.kAttack)) {
+        if ( KeyCheck("菜单确认","按下")) {
             global.WindowFullscreen ^= true;
             window_set_fullscreen(global.WindowFullscreen);
 			SoundPlay(snd_button2)
         }
         break;
     case (1):
-        if (keyboard_check_pressed(vk_left) or keyboard_check_pressed(global.kLeft)) {
+        if (  KeyCheck("左","按下")) {
             global.WindowsSize-=0.25;SoundPlay(snd_button)
         };
-        if (keyboard_check_pressed(vk_right) or keyboard_check_pressed(global.kRight)) {
+        if (KeyCheck("右","按下")) {
             global.WindowsSize+=0.25;SoundPlay(snd_button)
         };
         global.WindowsSize = max(global.WindowsSize, 1);
@@ -34,34 +34,36 @@ switch (Post)
 		GameWindowSize( global.WindowsSize);
         break;
     case (2):
-        if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(global.kAttack)) {
+        if ( KeyCheck("菜单确认","按下")) {
             global.DebugMode ^= true;
 			SoundPlay(snd_button2)
         }
         break;
 		case (3):
-        if (keyboard_check_pressed(vk_left) or keyboard_check_pressed(global.kLeft)) {
+        if ( KeyCheck("左","按下")) {
             global.Language--;
+			   global.Language = max(global.Language, 0);
 			SoundPlay(snd_button)
         };
-        if (keyboard_check_pressed(vk_right) or keyboard_check_pressed(global.kRight)) {
+        if ( KeyCheck("右","按下")) {
             global.Language++;
+			global.Language = min(global.Language,3)// ds_list_size( global.LanguageList)-1);
 			SoundPlay(snd_button)
         };
-        global.Language = max(global.Language, 0);
-        global.Language = min(global.Language,1)// ds_list_size( global.LanguageList)-1);
+     
+        
 		ChangeMeunSelectLanguage();
         break;
 		
     case (4):
-        if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(global.kAttack)) {
+        if ( KeyCheck("菜单确认","按下")) {
 		SoundPlay(snd_button2)
             instance_change(oOptionMeun, true)
 			
         }
         break;
 }
-if keyboard_check_pressed(vk_escape)or keyboard_check_pressed(global.kJump)
+if  KeyCheck("菜单返回","按下")
 {
 SoundPlay(snd_button2)
 instance_change(oOptionMeun,true)};

@@ -8,17 +8,17 @@ if (Post = - 1) {
 }
 if ! instance_exists(oControlsChangeKey)
 {
-    if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(global.kUp)) {
+    if ( KeyCheck("上","按下") ) {
         Post--;
 		SoundPlay(snd_button)
     }
-    if (keyboard_check_pressed(vk_down) or keyboard_check_pressed(global.kDown) ) {
+    if ( KeyCheck("下","按下")  ) {
         Post++;
 		SoundPlay(snd_button)
     }
     if Post != 8
     {
-        if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(global.kAttack)) {
+        if ( KeyCheck("菜单确认","按下")) {
 		SoundPlay(snd_button2)
             var CK = instance_create_depth(x, y,0, oControlsChangeKey);
             CK.Post = Post;
@@ -26,7 +26,7 @@ if ! instance_exists(oControlsChangeKey)
     }
 	else
 	{
-	 if (keyboard_check_pressed(vk_enter) or keyboard_check_pressed(global.kAttack)) {
+	 if (KeyCheck("菜单确定","按下") ) {
 	 SoundPlay(snd_button2)
 	 instance_change(oOptionMeun,true)
 	 }
@@ -44,7 +44,7 @@ if ! instance_exists(oControlsChangeKey)
 	}
 	
 }
-if keyboard_check_pressed(vk_escape)or keyboard_check_pressed(global.kJump)
+if  KeyCheck("菜单返回","按下") 
 {
 SoundPlay(snd_button2)
 instance_change(oOptionMeun,true)};

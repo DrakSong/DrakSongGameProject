@@ -10,11 +10,12 @@ ds_map_clear(global.MeunSelectMap);
     ds_map_add(global.MeunSelectMap,Csv[#0,H],Csv[#W,H])
 }
 
-
+//ds_map_clear(global.LanguageList);
 var i;
 for (i=0; i<ds_grid_width(Csv); i+=1)
 {
+	if !ds_list_find_index(global.LanguageList,ds_grid_get(Csv,i,0))
    ds_list_add(global.LanguageList,ds_grid_get(Csv,i,0))
 };
 
-ds_grid_destroy(Csv);
+//ds_grid_destroy(Csv);

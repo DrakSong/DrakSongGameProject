@@ -10,7 +10,7 @@ var BN = B[? "名字"]
 var BS = B[? "数量"]
 
 //轻按下换武器 
-if keyboard_check_pressed(global.kChange) and kControl {
+if KeyCheck("切换武器","按下") and kControl {
 	if (B[?"名字"] != ""and A[?"名字"] != "") {
 		var H = Map[? "B"];
 		Map[?"B"] = Map[? "A"];

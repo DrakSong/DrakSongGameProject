@@ -36,11 +36,15 @@ texture_set_interpolation(true)
 for (i=0; i<3; i+=1)
 {
 	
-if  (Post==i)
+if  (Post==i){
 	draw_set_alpha(0.72)
-	else
-	draw_set_alpha(0.32)
-	draw_sprite(sBUll,0,1280/2,(500)+i*(169/3 ))
+	draw_sprite(sBUll,0,1280/2,(500)+i*(169/3 ))}
+	//else
+	//draw_set_alpha(0.32)
+	
+	
+	
+	
 	draw_set_alpha(1)
 	
 	   draw_text_button(1280/2,(500)+i*(169/3),Select[i],Post==i)
