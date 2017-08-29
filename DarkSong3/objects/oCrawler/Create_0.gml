@@ -1,6 +1,6 @@
 image_speed = 0.33;
 
-speed = 1;
+speed = 8;
 
 vx = 0;
 vy = 0;

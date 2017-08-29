@@ -1,4 +1,4 @@
-
+//file_delete("GameInfo.ini")
 
 ini_open("GameInfo.ini")//读取设置
 
@@ -93,6 +93,8 @@ ini_close()
 
 display_set_gui_size(1280,720)
 
+
+global.Map = 0
 global.Text = "";//记录对话框读取的对话id
 global.DialogueBox = 0;//记录对话框
 
@@ -110,5 +112,4 @@ live_init("ui.lua");
 
 
 
-   
    

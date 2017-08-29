@@ -1,5 +1,15 @@
 action_inherited();
 
+self.kLeft = KeyCheck("左","按住")
+	self.kRight = KeyCheck("右","按住")
+	self.kUp = KeyCheck("上","按住")
+	self.kDown =KeyCheck("下","按住")
+	self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
+	self.kJumpRelease = (KeyCheck("跳跃","松开"));
+	self.kActionP =(KeyCheck("攻击","按下"));
+	self.kActionK =(KeyCheck("攻击","按住"))
+	self.kActionR = (KeyCheck("攻击","松开"))
+	self.kRoll = (KeyCheck("特殊键","按下"));
 //背包的系统准备
 var A = Map[?"A"]
 var AN = A[?"名字"]

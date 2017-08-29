@@ -22,6 +22,8 @@ if ( KeyCheck("菜单确认","按下"))
     switch (Post)
     {
         case (0):
+		instance_create(64,-32,oShiTa)
+		instance_create(64,-32,oCamera)
 		room_goto_next()
             //instance_change(oNewGameMeun, true);
             break;

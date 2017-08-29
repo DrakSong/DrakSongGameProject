@@ -5,6 +5,11 @@ var Px = oParPlayer.x
 var V = 0;
 var sp = abs(oParPlayer.vx)+(1.2)*1.618;//1.618;
 
+x = oParPlayer.x div (320/2) *320/2
+
+y = oParPlayer.y div(180/2)*180/2
+}
+/*
 if oParPlayer.facing = -1
 { 
 

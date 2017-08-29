@@ -51,7 +51,15 @@ DSTI = 0//僵直补正
 DFlyH = 0//吹飞补正
 DFlyV = 0//击飞补正
 
-
-
-
+//记录房间转移的
+OldRoom = -1;
+OldDoor = -1;
+TargetGoTo = -1;
+TargetX = -1;//相对与门的位置
+TargetY = -1;//相对与门的位置
+TargetGoToFacing = -1;//进入方向
+TargetDoorXscale = 0
+TargetDoorYscale = 0
+TargetGoToVX = 0;
+TargetGoToVY = 0;
 

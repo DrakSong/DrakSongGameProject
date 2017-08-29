@@ -1,18 +1,28 @@
 {
-    "id": "beaeb6a4-37e6-4599-aecf-d8776c52be82",
+    "id": "8b292f8b-ce2e-459f-a9e6-342b42bb67cd",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "object41",
+    "name": "oDoor",
     "eventList": [
         {
-            "id": "b79b20f7-bd6b-403c-aa61-89b2e606f844",
+            "id": "3419d830-d7b1-4aa6-9f13-c4276c4fa662",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "beaeb6a4-37e6-4599-aecf-d8776c52be82"
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "8b292f8b-ce2e-459f-a9e6-342b42bb67cd"
+        },
+        {
+            "id": "b7bd8f80-1cd7-415b-8c15-63ed423054c5",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "8b292f8b-ce2e-459f-a9e6-342b42bb67cd"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -31,6 +41,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "25ada7ee-c158-4117-a609-4d2e876f372b",
     "visible": true
 }

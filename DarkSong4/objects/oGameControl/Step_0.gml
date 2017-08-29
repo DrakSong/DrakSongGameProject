@@ -65,3 +65,16 @@ Map[?"松开"] =  gamepad_button_check_released(0,Key)
 chat_update();
 live_update();
 
+if instance_exists(oParPlayer) 
+{
+if  oParPlayer.x<=room_width and oParPlayer>=0 and oParPlayer.y<=room_width and oParPlayer.y>=0{
+var X =( oParPlayer.x div (320/2));
+var Y =( oParPlayer.y div (180/2));
+
+if  global.Map[# X,Y] = 0 
+{
+	 global.Map[# X,Y] = true;
+	 show_debug_message("拓展地图方块X"+string(X)+"Y"+string(Y))
+}
+}
+}
