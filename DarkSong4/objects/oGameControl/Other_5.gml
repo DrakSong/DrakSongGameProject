@@ -1,5 +1,6 @@
 ini_open("Map.ini")
 
+/*
 var W = ds_grid_width(global.Map)
 var H = ds_grid_height(global.Map)
 ini_write_real(room_get_name(room),"W", W)

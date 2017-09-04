@@ -1,2 +1,2 @@
-//draw_rectangle(x-32,y-32,x+32,y+32,1)
+draw_rectangle(x-32,y-32,x+32,y+32,1)
 

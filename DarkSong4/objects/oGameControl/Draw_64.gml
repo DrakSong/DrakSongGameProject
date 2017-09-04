@@ -6,7 +6,7 @@ draw_set_alpha(1)
 draw_set_color(c_white)
 draw_text(1100,0,"FPS"+string(fps));
 
-
+/*
 var Ht ;
 for (b=0; b<ds_grid_height(global.Map); b+=1)
 {
@@ -20,7 +20,7 @@ for (b=0; b<ds_grid_height(global.Map); b+=1)
 };
 
 
-
+*/
 
 live_call("draw");
 chat_draw();

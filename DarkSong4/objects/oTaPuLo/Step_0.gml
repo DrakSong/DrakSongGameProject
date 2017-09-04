@@ -1,5 +1,5 @@
 action_inherited();
-
+#region 持续键位检测
 self.kLeft = KeyCheck("左","按住")
 	self.kRight = KeyCheck("右","按住")
 	self.kUp = KeyCheck("上","按住")
@@ -8,33 +8,11 @@ self.kLeft = KeyCheck("左","按住")
 	self.kJumpRelease = (KeyCheck("跳跃","松开"));
 	self.kActionP =(KeyCheck("攻击","按下"));
 	self.kActionK =(KeyCheck("攻击","按住"))
+	self.kAction =(KeyCheck("攻击","按下"))
 	self.kActionR = (KeyCheck("攻击","松开"))
 	self.kRoll = (KeyCheck("特殊键","按下"));
-//背包的系统准备
-var A = Map[?"A"]
-var AN = A[?"名字"]
-var AS = A[? "数量"]
-
-var B = Map[? "B"]
-var BN = B[? "名字"]
-var BS = B[? "数量"]
-
-//轻按下换武器 
-if KeyCheck("切换武器","按下") and kControl {
-	if (B[?"名字"] != ""and A[?"名字"] != "") {
-		var H = Map[? "B"];
-		Map[?"B"] = Map[? "A"];
-		Map[?"A"] = H;
-	}
-}
-
-//根据物品民智决定发射啥 
-if AN = "" {
-	OtherAtk = -1}
-else {
-	OtherAtk = OtherAtkMap[?AN]}
-
-
+#endregion
+#region 上+攻击发射 副武器
 //上A 
 if (kUp && kAction) and ! attacking and state != ROLL and kControl and OtherAtk {
 
@@ -45,30 +23,9 @@ if (kUp && kAction) and ! attacking and state != ROLL and kControl and OtherAtk 
 	sprite_index = sAtk;
 	attacking = true;
 
-	
-
-	if AS != -1 //排除无限使用道具
-	{
-		if AS - 1 >= 0 //使用后还有剩余的
-		{
-			A[? "数量"] = AS - 1;
-
-		}
-		if AS - 1 = 0 {
-			A[? "数量"] = AS - 1;
-			A[? "名字"] = "";
-
-			//现有的 被清理后把如果备用的有 就吧备用的拿上来 
-			if BN != "" {
-				var H = Map[?"B"];
-				Map[?"B"] = Map[?"A"];
-				Map[?"A"] = H;
-			}
-
-		}
 	}
 
-}
+	
 //上A后第1帧发射
 if attacking and sprite_index = sPlayerJab and (image_index >1 and image_index<1.5) and !AtkUse and OtherAtk
 {
@@ -78,17 +35,49 @@ if attacking and sprite_index = sPlayerJab and (image_index >1 and image_index<1
 	A.image_xscale = 1*facing
 	AtkUse = true;
 }
-
-//通常攻击
+#endregion
+#region //通常攻击
 if ( kAction) and ! attacking and state != ROLL and kControl  {
 
 	// Atk in place
 	image_index = 0;
-	image_speed = 0.25;
+	image_speed = 0.45;
 	sAtk = sPlayerAtk;
 	sprite_index = sAtk;
 	attacking = true;
-
+	SoundPlay(SouAtk)
 	//instance_create(x, y - 16, OtherAtk)
 
 }
+#endregion
+#region 地面攻击期间不许动
+  if onGround && attacking {
+                vx = 0
+        }
+		#endregion
+#region //攻击在这几针上才有攻击判定
+
+	
+if (self.attacking > 0 ) and  (self.sprite_index == sPlayerAtk) {
+	if (random(self.image_index) > 1 and random(self.image_index) < 2) {
+	
+		
+			
+self.AtkBoxD = self.y - 8;
+self.AtkBoxU = self.y - 6;
+self.AtkBoxL = self.x + self.facing * 1;
+self.AtkBoxR = self.x + self.facing * 18;
+
+		AtkBoxCollisionRectangle(self.AtkBoxL, self.AtkBoxU, self.AtkBoxR, self.AtkBoxD, oParEnemy, 1, 1);
+		AtkBoxCollisionRectangle(self.AtkBoxL, self.AtkBoxU, self.AtkBoxR, self.AtkBoxD, oParDecorate, 1, 1);
+		
+		
+	}
+else
+ ds_list_clear(self.AtkList)
+}
+
+#endregion
+
+
+

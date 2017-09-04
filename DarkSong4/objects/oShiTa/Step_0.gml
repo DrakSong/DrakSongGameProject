@@ -1,31 +1,23 @@
 //继承运动
-action_inherited()
+ action_inherited()
+ x = oTaPuLo.x - oTaPuLo.facing*18
+ y = oTaPuLo.y - 8
+ facing = oTaPuLo.facing
 AtkTime = min(AtkTime,60)
 //按钮控制
 if (self.kControl) {
-	self.kLeft = KeyCheck("左","按住")
-	self.kRight = KeyCheck("右","按住")
-	self.kUp = KeyCheck("上","按住")
-	self.kDown =KeyCheck("下","按住")
-	self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
-	self.kJumpRelease = (KeyCheck("跳跃","松开"));
+	//self.kLeft = KeyCheck("左","按住")
+	//self.kRight = KeyCheck("右","按住")
+	//self.kUp = KeyCheck("上","按住")
+	//self.kDown =KeyCheck("下","按住")
+	//self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
+	//self.kJumpRelease = (KeyCheck("跳跃","松开"));
 	self.kActionP =(KeyCheck("攻击","按下"));
 	self.kActionK =(KeyCheck("攻击","按住"))
 	self.kActionR = (KeyCheck("攻击","松开"))
 	self.kRoll = (KeyCheck("特殊键","按下"));
-} else {
-	self.kLeft = 0;
-	self.kRight = 0;
-	self.kUp = 0;
-	self.kDown = 0;
-	self.kJump = 0;
-	self.kJumpRelease = 0;
-	self.kActionP = 0;
-	self.kActionK = 0;
-	self.kActionR = 0;
-	self.kRoll = 0;
-};
-//上+攻击 长按 完全咏唱 松开发射 大型aoe魔法 aoe 魔法还在期间 不能动弹 能切换出塔普罗继续攻击 
+} 
+#region //上+攻击 长按 完全咏唱 松开发射 大型aoe魔法 aoe 魔法还在期间 不能动弹 能切换出塔普罗继续攻击 
 if false {
 	//按下启动
 	if (kActionP and kUp) and ! attacking and state != ROLL and kControl and onGround {
@@ -59,9 +51,10 @@ if false {
 	}
 
 };
-// 攻击  按下（长短） +	松开发射 （大小） 火球
+#endregion
+#region // 攻击  按下（长短） +	松开发射 （大小） 火球
 if true {
-	if (kActionK) and ! attacking and state != ROLL and kControl and onGround{
+	if (kActionK) and ! attacking and state != ROLL and kControl and !onGround{
 
 		AtkMode = "小型魔法";
 		image_index = 0;
@@ -177,10 +170,10 @@ if true {
 		AtkUse = true;
 	}
 };
-
-//辅助键 发动辅助技能
+#endregion
+#region  //辅助键 发动辅助技能
 if true {
-	if (kRoll) and ! attacking and state != ROLL and kControl {
+	if (kRoll) and ! attacking and state != ROLL and !kControl {
 
 		AtkMode = "辅助魔法"image_index = 0;
 		image_speed = 0.25;
@@ -193,16 +186,17 @@ if true {
 
 	}
 };
-//攻击期间 不能动弹
-if true and attacking {
+#endregion
+////攻击期间 不能动弹
+//if true and attacking {
 
-	if onGround {
-		self.kLeft = 0;
-		self.kRight = 0;
-	}
-	self.kUp = 0;
-	self.kDown = 0;
-	self.kJump = 0;
-	self.kJumpRelease = 0;
-	self.kRoll = 0;
-};
+//	if onGround {
+//		self.kLeft = 0;
+//		self.kRight = 0;
+//	}
+//	self.kUp = 0;
+//	self.kDown = 0;
+//	self.kJump = 0;
+//	self.kJumpRelease = 0;
+//	self.kRoll = 0;
+//};

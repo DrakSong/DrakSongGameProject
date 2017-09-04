@@ -1,3 +1,4 @@
+/*
 ini_open("Map.ini")
 if ini_read_real(room_get_name(room),"MapOpen",0)
 {
