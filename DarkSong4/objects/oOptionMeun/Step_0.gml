@@ -29,7 +29,7 @@ SoundPlay(snd_button2)
             instance_change(oSoundMeun, true);
             break;
         case (2):
-            instance_change(oControlsMeun, true);
+          //  instance_change(oControlsMeun, true);
             break;
         case (3):
 

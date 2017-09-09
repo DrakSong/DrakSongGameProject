@@ -7,8 +7,9 @@ RollLong = 3.25;//滚动距离
 //攻击
 ATK = 1;//攻击力
 ASTI = 30//攻击照成硬直
-AFlyH = 1.4//击飞玩家
-AFlyV = 1.2;//击飞玩家
+AFlyH = 0//击退玩家
+AFlyV = 1.3;//击飞玩家
+
 
 CanPushBlock = true
 
@@ -19,9 +20,8 @@ AP = 15;
 MaxMP = 32;
 MP = 15;
 
+APhui = 0
 //塔普雷的攻击系统
-//__pos = 0;
+
 AtkUse = false;
-
-
 OtherAtk = -1

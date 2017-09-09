@@ -19,7 +19,9 @@
         "9830d64f-ae84-4f3c-b63e-d0d318728462",
         "c36fb153-8fce-4283-a394-e982ea04afb2",
         "200b8d71-a44b-46ed-a49a-bcf389c54006",
-        "d5f3fba1-1889-431a-8de5-7ca5a85189f6"
+        "d5f3fba1-1889-431a-8de5-7ca5a85189f6",
+        "0e142ae3-a46d-4fea-8580-671a7b6cefbf",
+        "370b20d2-a1c1-45a7-ada4-060aa0b07661"
     ],
     "filterType": "GMScript",
     "folderName": "游戏运行处理",

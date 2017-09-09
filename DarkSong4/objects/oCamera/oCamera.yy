@@ -5,7 +5,7 @@
     "name": "oCamera",
     "eventList": [
         {
-            "id": "b29b994d-d585-4d52-80b6-650a54a667a2",
+            "id": "edb7d7a1-40ce-43c3-b1dd-b11b65fdfb8d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "bff8b25c-bddf-4890-8d9d-133466f209a5"
         },
         {
-            "id": "97a37c0e-fb54-497e-9d82-d07468d15edb",
+            "id": "713d36ba-ee41-46a3-bff4-5cff1497e0ee",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "bff8b25c-bddf-4890-8d9d-133466f209a5"
         },
         {
-            "id": "1570569d-3b24-40d7-b9b8-6b03d91fb01d",
+            "id": "7fe1f565-7762-4868-8b73-65ee9c5886f2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -33,21 +33,11 @@
             "enumb": 0,
             "eventtype": 8,
             "m_owner": "bff8b25c-bddf-4890-8d9d-133466f209a5"
-        },
-        {
-            "id": "11d4c4f3-9e51-4b5a-8b07-acf0c0607e6c",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "bff8b25c-bddf-4890-8d9d-133466f209a5"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": false,
+    "persistent": true,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,

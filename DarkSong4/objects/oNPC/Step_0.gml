@@ -4,7 +4,7 @@ and  KeyCheck("上","按下")
 and !instance_exists(oDialogueBox) 
  {
 	global.Text = Text
-	global.DialogueBox = instance_create(x,y,oDialogueBox)
+	global.DialogueBox = instance_create_layer(x,y,"lMeun",oDialogueBox)  //  instance_create(x,y,oDialogueBox)
 }
 
 

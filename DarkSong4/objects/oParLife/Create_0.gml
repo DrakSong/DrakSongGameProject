@@ -39,6 +39,7 @@ INV = false//开启不吸收伤害
 //受伤害回复的时长
 STITime = 0; //硬直时间
 INVTime = 0;//无敌时间
+
 mask_index = sLifeMask;
 
 Parent = object_get_parent(self)

@@ -21,24 +21,18 @@ released = "松开"
 };
 */
 
-
-if keyboard_check(vk_anykey) or keyboard_check_pressed(vk_anykey) or keyboard_check_released(vk_anykey)  or  true
+if ds_map_exists(global.KeyMap,argument0)
 {
-var K = global.KeyChenckMap ;
-var K = K[?argument0]
-var KC = K[?argument1]
+if argument1 = "松开"
+if keyboard_check_released(global.KeyMap[?argument0]) return true
 
-//if KC {show_debug_message(current_second)}
+if argument1 = "按下"
+if keyboard_check_pressed(global.KeyMap[?argument0]) return true
 
-//if KC = false
-{
-var P = global.PadChenckMap ;
-var P = P[?argument0]
-var PC = P[?argument1]
-
+if argument1 = "按住"
+if keyboard_check(global.KeyMap[?argument0]) return true
 }
 
-return KC or PC
-//return false
-}
+
+
 

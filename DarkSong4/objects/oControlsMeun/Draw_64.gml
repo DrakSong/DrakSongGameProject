@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+/*
 
 var TextK;
 TextK[0] = global.MeunSelectMap[?"上"]+"  :  "+KeyChr(oGameControl.kUp);

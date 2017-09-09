@@ -1,1 +1,0 @@
-//draw_text(128,512,Size)

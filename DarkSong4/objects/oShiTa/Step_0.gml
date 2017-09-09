@@ -1,26 +1,49 @@
-//继承运动
- action_inherited()
- x = oTaPuLo.x - oTaPuLo.facing*18
- y = oTaPuLo.y - 8
- facing = oTaPuLo.facing
-AtkTime = min(AtkTime,60)
-//按钮控制
+#region 检测玩家存在不 以及同步信息
+if  instance_exists(oTaPuLo)
+{
+
+
+if !attacking {//攻击期间不动
+facing = oTaPuLo.facing
+x = oTaPuLo.x - facing*16
+y = oTaPuLo.y
+}
+}
+#endregion
+
+#region 按钮控制检测
 if (self.kControl) {
-	//self.kLeft = KeyCheck("左","按住")
-	//self.kRight = KeyCheck("右","按住")
-	//self.kUp = KeyCheck("上","按住")
-	//self.kDown =KeyCheck("下","按住")
-	//self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
-	//self.kJumpRelease = (KeyCheck("跳跃","松开"));
-	self.kActionP =(KeyCheck("攻击","按下"));
-	self.kActionK =(KeyCheck("攻击","按住"))
-	self.kActionR = (KeyCheck("攻击","松开"))
+	self.kLeft = KeyCheck("左","按住")
+	self.kRight = KeyCheck("右","按住")
+	self.kUp = KeyCheck("上","按住")
+	self.kDown =KeyCheck("下","按住")
+	self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
+	self.kJumpRelease = (KeyCheck("跳跃","松开"));
+	self.kActionP =(KeyCheck("攻击2","按下"));
+	self.kActionK =(KeyCheck("攻击2","按住"))
+	self.kActionR = (KeyCheck("攻击2","松开"))
 	self.kRoll = (KeyCheck("特殊键","按下"));
-} 
-#region //上+攻击 长按 完全咏唱 松开发射 大型aoe魔法 aoe 魔法还在期间 不能动弹 能切换出塔普罗继续攻击 
+} else {
+	self.kLeft = 0;
+	self.kRight = 0;
+	self.kUp = 0;
+	self.kDown = 0;
+	self.kJump = 0;
+	self.kJumpRelease = 0;
+	self.kActionP = 0;
+	self.kActionK = 0;
+	self.kActionR = 0;
+	self.kRoll = 0;
+};
+#endregion
+#region 攻击发射部分
+
+AtkTime = min(AtkTime,60)//设置蓄力上限
+#region 吃灰  呼叫使用大型魔法（关闭）
+
 if false {
 	//按下启动
-	if (kActionP and kUp) and ! attacking and state != ROLL and kControl and onGround {
+	if (kActionP and kUp) and ! attacking and true and kControl and onGround {
 		AtkMode = "大型魔法"image_index = 0;
 		image_speed = 0;
 		sprite_index = sAtk;
@@ -28,12 +51,12 @@ if false {
 		AtkTime++;
 	};
 	//持续
-	if (kActionK) and attacking and state != ROLL and kControl and AtkTime and AtkMode = "大型魔法" {
+	if (kActionK) and attacking and true and kControl and AtkTime and AtkMode = "大型魔法" {
 		C = c_red AtkTime++;
 
 	}
 	//松开发射
-	if (kActionR) and attacking and state != ROLL and kControl and AtkTime and image_index = 0 and AtkMode = "大型魔法" {
+	if (kActionR) and attacking and true and kControl and AtkTime and image_index = 0 and AtkMode = "大型魔法" {
 
 		image_index = 1;
 		image_speed = 0.25;
@@ -52,9 +75,10 @@ if false {
 
 };
 #endregion
-#region // 攻击  按下（长短） +	松开发射 （大小） 火球
+#region 蓄力和飞蓄力的魔法攻击
+// 攻击  按下（长短） +	松开发射 （大小） 火球
 if true {
-	if (kActionK) and ! attacking and state != ROLL and kControl and !onGround{
+	if (kActionK) and ! attacking and true and kControl {
 
 		AtkMode = "小型魔法";
 		image_index = 0;
@@ -62,6 +86,7 @@ if true {
 		sprite_index = sAtk;
 		attacking = true;
 		AtkTime++;
+		oTaPuLo.MP -= 7
 		//空中瞬发无法蓄力 和使用大型魔法
 		if onGround and false {
 			image_speed = 0.25;
@@ -69,18 +94,18 @@ if true {
 		}
 	}
 	//持续
-	if (kActionK) and attacking and state != ROLL and kControl and AtkTime and AtkMode = "小型魔法" {
+	if (kActionK) and attacking and true and kControl and AtkTime and AtkMode = "小型魔法" {
 		
 		C = (c_blue) AtkTime++;
 
 	}
 	//松开发射
-	if (kActionR) and attacking and state != ROLL and kControl and AtkTime and image_index = 0 and AtkMode = "小型魔法" {
+	if (kActionR) and attacking and true and kControl and AtkTime and image_index = 0 and AtkMode = "小型魔法" {
 
 		image_index = 1;
 		image_speed = 0.25;
 
-		var M = MagicList[| YX]; //读取对应元素 现在默认搓火球
+		var M = MagicList[| 0]; //读取对应元素 现在默认搓火球
 		var N = M[?"小型魔法"]
 		switch (N) {
 		//火球
@@ -171,9 +196,9 @@ if true {
 	}
 };
 #endregion
-#region  //辅助键 发动辅助技能
+#region//辅助键 发动辅助技能
 if true {
-	if (kRoll) and ! attacking and state != ROLL and !kControl {
+	if (kRoll) and ! attacking and true and kControl {
 
 		AtkMode = "辅助魔法"image_index = 0;
 		image_speed = 0.25;
@@ -187,16 +212,4 @@ if true {
 	}
 };
 #endregion
-////攻击期间 不能动弹
-//if true and attacking {
-
-//	if onGround {
-//		self.kLeft = 0;
-//		self.kRight = 0;
-//	}
-//	self.kUp = 0;
-//	self.kDown = 0;
-//	self.kJump = 0;
-//	self.kJumpRelease = 0;
-//	self.kRoll = 0;
-//};
+#endregion

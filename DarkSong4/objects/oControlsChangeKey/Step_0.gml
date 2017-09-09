@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+/*
 if keyboard_check_pressed(vk_anykey) and !(keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_escape))
 {
 

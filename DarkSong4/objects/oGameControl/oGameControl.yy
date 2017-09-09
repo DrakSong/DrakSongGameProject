@@ -5,16 +5,6 @@
     "name": "oGameControl",
     "eventList": [
         {
-            "id": "4dcd44ab-d64f-4f63-b658-72cfabd91d54",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 2,
-            "eventtype": 7,
-            "m_owner": "f128c17e-52c7-4bb4-b213-6b4e6b1db889"
-        },
-        {
             "id": "9e313013-435e-4835-9ccb-577e112e452c",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -55,43 +45,13 @@
             "m_owner": "f128c17e-52c7-4bb4-b213-6b4e6b1db889"
         },
         {
-            "id": "641ec316-be81-4530-b3a8-f8c9f9f2cb8f",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 60,
-            "eventtype": 7,
-            "m_owner": "f128c17e-52c7-4bb4-b213-6b4e6b1db889"
-        },
-        {
-            "id": "536b646b-f67c-4e96-add0-263642e776fe",
+            "id": "7add8828-4573-417a-9f79-a42655a615bc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "f128c17e-52c7-4bb4-b213-6b4e6b1db889"
-        },
-        {
-            "id": "6245560c-813f-4585-98fc-6da139956020",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 4,
-            "eventtype": 7,
-            "m_owner": "f128c17e-52c7-4bb4-b213-6b4e6b1db889"
-        },
-        {
-            "id": "a8c21b4e-c9c4-457d-900f-030792fb2ead",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 5,
-            "eventtype": 7,
             "m_owner": "f128c17e-52c7-4bb4-b213-6b4e6b1db889"
         }
     ],
