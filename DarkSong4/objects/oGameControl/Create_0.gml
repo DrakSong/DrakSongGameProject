@@ -122,11 +122,11 @@ global.DialogueBox = 0;//记录对话框
 
 BGMPlay(SouTitle);
 
-chat_init();
-live_init("ui.lua");
+//chat_init();
+//live_init("ui.lua");
 
 //作死
-//gml_release_mode(true)
+gml_release_mode(true)
 
 
 

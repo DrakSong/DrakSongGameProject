@@ -1,5 +1,7 @@
 ///运动处理
 //判断陆空
+//var onGround = OnGround()
+
 if (onGround) {
         tempAccel = groundAccel;
         tempFric = groundFric;

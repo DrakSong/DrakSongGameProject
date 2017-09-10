@@ -108,6 +108,8 @@ repeat(abs(vx)) {
 						
                 }
         } // End push block //          
+		
+	
         if (!place_meeting(x + sign(vx), y, oParSolid)) x += sign(vx);
         else vx = 0;
 }

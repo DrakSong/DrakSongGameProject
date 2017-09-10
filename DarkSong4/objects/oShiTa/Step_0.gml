@@ -19,9 +19,9 @@ if (self.kControl) {
 	self.kDown =KeyCheck("下","按住")
 	self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
 	self.kJumpRelease = (KeyCheck("跳跃","松开"));
-	self.kActionP =(KeyCheck("攻击2","按下"));
-	self.kActionK =(KeyCheck("攻击2","按住"))
-	self.kActionR = (KeyCheck("攻击2","松开"))
+	self.kActionP =(KeyCheck("攻击2","按下")) and MP>8
+	self.kActionK =(KeyCheck("攻击2","按住")) and MP >8
+	self.kActionR = (KeyCheck("攻击2","松开")) and MP>8
 	self.kRoll = (KeyCheck("特殊键","按下"));
 } else {
 	self.kLeft = 0;
@@ -86,7 +86,7 @@ if true {
 		sprite_index = sAtk;
 		attacking = true;
 		AtkTime++;
-		oTaPuLo.MP -= 7
+		oTaPuLo.MP -= 8
 		//空中瞬发无法蓄力 和使用大型魔法
 		if onGround and false {
 			image_speed = 0.25;

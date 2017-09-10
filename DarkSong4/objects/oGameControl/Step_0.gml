@@ -35,6 +35,6 @@ instance_create_depth(x,y,self.depth,oPause)
 
 
 #endregion
-chat_update();
-live_update();
+//chat_update();
+//live_update();
 
