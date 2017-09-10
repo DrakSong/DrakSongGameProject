@@ -97,6 +97,26 @@ for (i=0; i<W; i+=1)
 draw_sprite_ext(sprUi,9,16-8,8-1,1,1,0,c_white,1);
 #endregion
 
+//var BN = "斧头"
+switch (OtherAtk)
+{
+    case oAxe: SP = sAxe ; break;
+	    case oDagger: SP = sDagger ; break;
+		case oHolyWater:SP = sHolyWater;break;
+		case oBoomerang:SP = sBoomerang;break;
+		 default: SP = sNoSP;
+}
+draw_sprite_ext(SP,9,16-8+8,8-1+8,0.75,0.75,0,c_white,1);
+
+//switch (OtherAtk)
+//{
+//    case "斧头": SP = sAxe ; break;
+//	    case "小刀": SP = sDagger ; break;
+//		case"圣水":SP = sHolyWater;break;
+//		case"回旋镖":SP = sBoomerang;break;
+//		 default: SP = sNoSP;
+//}
+////draw_sprite_ext(SP,0,20-12+2+8,8+8-2+2,1,1,0,c_white,1);//对应的武器
 
 /*
 GameGuiSetSize(256/1280)

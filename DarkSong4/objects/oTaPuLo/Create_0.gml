@@ -10,7 +10,7 @@ ASTI = 30//攻击照成硬直
 AFlyH = 0//击退玩家
 AFlyV = 1.3;//击飞玩家
 
-
+Outlined = true
 CanPushBlock = true
 
 HP = 16 ;

@@ -1,6 +1,18 @@
 /// @description 在这里插入描述
 // 你可以在这个编辑器中写入代码
 
+var SP ;
+
+switch (OtherAtk)
+{
+    case oAxe: SP = sAxe ; break;
+	    case oDagger: SP = sDagger ; break;
+		case oHolyWater:SP = sHolyWater;break;
+		case oBoomerang:SP = sBoomerang;break;
+		 default: SP = sNoSP;
+}
+
+sprite_index = SP
 draw_sprite_ext(sprite_index,0,x,y,1,1,0,c_white,Col);
 
 if Col = 0

@@ -4,7 +4,7 @@ self.INV = false;--无敌否
 self.HP =  1;
 
 --攻击
-self.ATK = 0;--攻击力
+self.ATK = 1;--攻击力
 self.ASTI = 12--攻击照成硬直
 self.AFlyH = 0;--击飞玩家
 self.AFlyV = 0;--击飞玩家

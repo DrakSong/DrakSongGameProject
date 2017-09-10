@@ -3,7 +3,7 @@ if  instance_exists(oTaPuLo)
 {
 
 
-if !attacking {//攻击期间不动
+if true {//攻击期间不动
 facing = oTaPuLo.facing
 x = oTaPuLo.x - facing*16
 y = oTaPuLo.y
@@ -112,9 +112,11 @@ if true {
 		case(oFireball):
 			var A = instance_create(self.x, self.y, oFireball);
 			A.facing = facing;
+			
 			A.hspeed = A.facing * 3 A.image_xscale = 1 * facing
 			if AtkTime = 60 {
 				A.image_xscale = 1.5 * facing A.image_yscale = 1.5
+				A.ATK = 3;
 
 			}
 			break;

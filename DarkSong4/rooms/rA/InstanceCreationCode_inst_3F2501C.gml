@@ -1,0 +1,1 @@
+OtherAtk = oAxe

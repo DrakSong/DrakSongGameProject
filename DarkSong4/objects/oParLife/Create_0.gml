@@ -7,7 +7,7 @@ event_inherited();//继承
 //CBox.mask_index = sprite_index;
 //CBox.Cid = id;
 
-
+Outlined = false
 
 // States 的模式
 IDLE     = "站立";

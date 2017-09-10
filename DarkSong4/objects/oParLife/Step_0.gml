@@ -136,7 +136,7 @@ if (kJump) {
 // Jump state
 if (!onGround) state = JUMP;
 // Run particles
-else if (random(100) > 85 && abs(vx) > 0.5){}// instance_create(x, y, oParticle); //粒子特效
+else if (random(100) > 85 && abs(vx) > 0.5) instance_create(x, y, oParticle); //粒子特效
 //落地刷新二段跳
 if (onGround) TowJump = true;
 //交换墙滑动过程中面临

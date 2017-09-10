@@ -12,14 +12,17 @@ if INV or  state  = ROLL
  //判断僵直
     {
 if (onGround){
-   
+   if Outlined
     draw_sprite_outlined(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, C); 
-
+	else
+	draw_sprite_ext(sprite_index, image_index, x, y + (16 - 16 * yscale) * 0.25, facing * xscale, yscale, 0, c_white, 1)
       }
 else
  {
+ if Outlined
    draw_sprite_outlined(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, C);
-   
+   else
+   draw_sprite_ext(sprite_index, image_index, x, y, facing * xscale, yscale, 0, c_white, 1);
    
    }
    

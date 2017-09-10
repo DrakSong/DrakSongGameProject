@@ -55,14 +55,15 @@ ini_open("GameInfo.ini")//读取设置
   ds_map_add( global.KeyMap,"下",vk_down)
    ds_map_add( global.KeyMap,"左",vk_left)
     ds_map_add( global.KeyMap,"右",vk_right)
-	 ds_map_add( global.KeyMap,"菜单确认",ord("Z"))
-	  ds_map_add( global.KeyMap,"菜单返回",ord("X"))
+	
  
  ds_map_add( global.KeyMap,"攻击",ord("Z"))
  ds_map_add( global.KeyMap,"攻击2",vk_space)
  ds_map_add( global.KeyMap,"翻滚",ord("C"))
  ds_map_add( global.KeyMap,"跳跃",ord("X"))
  
+  ds_map_add( global.KeyMap,"菜单确认",ord("Z"))
+	  ds_map_add( global.KeyMap,"菜单返回",ord("X"))
  
   //kChange = ini_read_real("Controls","Change",vk_space)
   
@@ -124,7 +125,8 @@ BGMPlay(SouTitle);
 chat_init();
 live_init("ui.lua");
 
-
+//作死
+//gml_release_mode(true)
 
 
 

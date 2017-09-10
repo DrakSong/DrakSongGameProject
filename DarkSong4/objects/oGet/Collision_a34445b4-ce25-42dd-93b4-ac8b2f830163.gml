@@ -1,6 +1,16 @@
 /// @description 在这里插入描述
 // 你可以在这个编辑器中写入代码
 
+if Col = true and OtherAtk
+{
+if other.OtherAtk
+ {var Ot = instance_create_layer(x+6*oParPlayer.facing,y-8,"lDropObject",oGet)
+ Ot.OtherAtk = other.OtherAtk}
+ other.OtherAtk = OtherAtk
+}
+
+
+/*
 if Col =  true
 {
 var PMap = oTaPuLo.Map

@@ -14,7 +14,7 @@ sJumpD = spr_jerry_down2;//下落
 sAtk = spr_jerry_shoot; //攻击;
 sInjured = spr_jerry_kb;//被攻击
 
-
+HP = 5
 
 //攻击
 ATK = 1;//攻击力
