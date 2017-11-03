@@ -3,10 +3,10 @@
 
 
 var Select;
-Select[0] = global.MeunSelectMap[?"全屏"]+"  "+StringONorOFF(global.WindowFullscreen)
-Select[1] = global.MeunSelectMap[?"窗口分辨率"]+ "  "+string(global.WindowsSize)+"X"
-Select[2] = global.MeunSelectMap[?"Debug模式"]+ "  "+StringONorOFF(debug_mode)
-Select[3] = global.MeunSelectMap[?"语言"]+ "  "+string( ds_list_find_value(global.LanguageList,global.Language))
+Select[0] = MeunStr("全屏")+"  "+StringONorOFF(global.WindowFullscreen)
+Select[1] = MeunStr("窗口分辨率")+ "  "+string(global.WindowsSize)+"X"
+Select[2] = MeunStr("Debug模式")+ "  "+StringONorOFF(debug_mode)
+Select[3] = MeunStr("语言")+ "  "+string( ds_list_find_value(global.LanguageList,global.Language))
 
 
 
@@ -28,7 +28,7 @@ draw_sprite(sTopandDown,0,0,0)
 draw_sprite(sTopandDown,0,0,720-87)
 
 draw_text(1280/2,32,"-画面-")
-//写返回用的
+//写取消用的
 
 	
 

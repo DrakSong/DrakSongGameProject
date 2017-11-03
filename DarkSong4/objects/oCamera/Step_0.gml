@@ -29,6 +29,7 @@ x =min(x, Px+Long)
 
 }
 
+/*
 if  (oParPlayer.x <= __view_get( e__VW.XView, 0 )+Long*2)
 {
 x = min(x,Px);
@@ -37,7 +38,7 @@ if oParPlayer.x > __view_get( e__VW.XView, 0 )+256 - Long*2
 {
 x = max(x,Px)
 }
-
+*/
 
 //x = MinMax(x,Long*2,room_width-2*Long);
 

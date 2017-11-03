@@ -4,9 +4,7 @@
     "mvc": "1.1",
     "name": "3c32b98b-4543-4471-a4d8-3deba004af4e",
     "children": [
-        "23852355-3f6c-43dc-a5ec-446af05dfd9f",
         "166290c0-b7e6-4da9-aa67-12eb524a85fb",
-        "c8d44d05-cf83-4288-8119-5cd2e44c1576",
         "47ad0c8c-9b98-4c7e-b85d-054f2821205e",
         "164103b7-7a90-4516-ae28-2b5cd4ea50a9",
         "e3a57596-4710-4c10-84ad-28d95ed5778b",
@@ -21,7 +19,8 @@
         "200b8d71-a44b-46ed-a49a-bcf389c54006",
         "d5f3fba1-1889-431a-8de5-7ca5a85189f6",
         "0e142ae3-a46d-4fea-8580-671a7b6cefbf",
-        "370b20d2-a1c1-45a7-ada4-060aa0b07661"
+        "370b20d2-a1c1-45a7-ada4-060aa0b07661",
+        "88aec056-e729-493b-a255-516ce902b71d"
     ],
     "filterType": "GMScript",
     "folderName": "游戏运行处理",

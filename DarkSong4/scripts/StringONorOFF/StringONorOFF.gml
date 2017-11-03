@@ -1,5 +1,5 @@
 
 if argument0 = true
-{ return global.MeunSelectMap[?"开"]}
+{ return MeunStr("开")}
 else
-{ return global.MeunSelectMap[?"关"]}
+{ return MeunStr("关")}

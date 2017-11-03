@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 //TitleMeun最多4个选项 达到尽头就跳转
 if (Post = 3 ) {
     Post = 0
@@ -17,7 +16,7 @@ if   KeyCheck("下","按下") {
 }
 
 
-if ( KeyCheck("菜单确认","按下"))
+if ( KeyCheck("确认","按下"))
 { SoundPlay(snd_button2)
     switch (Post)
     {

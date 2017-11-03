@@ -21,7 +21,7 @@ if (kUp && kAction) and ! attacking and state != ROLL and kControl and OtherAtk 
 
 	// Atk in place
 	image_index = 0;
-	image_speed = 0.25;
+	image_speed = 1;
 	sAtk = sPlayerJab;
 	sprite_index = sAtk;
 	attacking = true;
@@ -30,7 +30,7 @@ if (kUp && kAction) and ! attacking and state != ROLL and kControl and OtherAtk 
 
 	
 //上A后第1帧发射
-if attacking and sprite_index = sPlayerJab and (image_index >1 and image_index<1.5) and !AtkUse and OtherAtk
+if attacking and sprite_index = sPlayerJab and (image_index >2 and image_index<2.5) and !AtkUse and OtherAtk
 {
 	var A = instance_create(self.x + facing*8, self.y -8,OtherAtk) ;
 	A.facing = facing;
@@ -44,7 +44,7 @@ if ( kAction) and ! attacking and state != ROLL and kControl and AP -1>0  {
 	// Atk in place
 	AP -= 1
 	image_index = 0;
-	image_speed = 0.40;
+	image_speed = 1
 	sAtk = sPlayerAtk;
 	sprite_index = sAtk;
 	attacking = true;
@@ -62,7 +62,7 @@ APhui = 0
 
 	
 if (self.attacking > 0 ) and  (self.sprite_index == sPlayerAtk) {
-	if (random(self.image_index) > 1 and random(self.image_index) < 2) {
+	if (random(self.image_index) > 2 and random(self.image_index) < 3) {
 	
 		
 			

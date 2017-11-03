@@ -5,6 +5,7 @@ if (sprite_index == sAtk)
 {  
     attacking = false;
 	AtkUse = false;
+	image_index = 0
     }
 	
 	

@@ -25,10 +25,10 @@ draw_set_color(c_white);
 
 
 var Select;
-Select[0] = global.MeunSelectMap[?"新游戏"]//假如读取到了存档 就变成继续游戏
-//Select[1] = global.MeunSelectMap[?"继续游戏"]
-Select[1] = global.MeunSelectMap[?"游戏设置"]
-Select[2] = global.MeunSelectMap[?"退出"]
+Select[0] = MeunStr("新游戏")//假如读取到了存档 就变成继续游戏
+//Select[1] = MeunStr("继续游戏"]
+Select[1] = MeunStr("游戏设置")
+Select[2] = MeunStr("退出")
 var i;
 draw_set_halign(1)
 draw_set_valign(1)

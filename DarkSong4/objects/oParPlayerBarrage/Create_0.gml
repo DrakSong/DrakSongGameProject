@@ -22,6 +22,3 @@ STI = false;
 
 facing = 0
 
-var File = string(object_get_name(self.object_index));
-live_init(File+".lua");
-live_call("create",id)

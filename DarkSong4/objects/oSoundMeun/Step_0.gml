@@ -33,13 +33,13 @@ SoundPlay(snd_button)
 			global.SEvolume = max(global.SEvolume,0);
             break;
         case (2):
-		if ( KeyCheck("菜单确认","按下"))
+		if ( KeyCheck("确认","按下"))
             {
 			SoundPlay(snd_button2)
 			instance_change(oOptionMeun,true)}
             break;
     }
-if  KeyCheck("菜单返回","按下")
+if  KeyCheck("取消","按下")
 {
 SoundPlay(snd_button2)
 instance_change(oOptionMeun,true)};

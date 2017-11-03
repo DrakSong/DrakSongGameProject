@@ -1,3 +1,4 @@
+/*
 ///ViewSet(编号,使用,Size倍数,跟随obj)
 var ID = argument0;
 var Use = argument1;

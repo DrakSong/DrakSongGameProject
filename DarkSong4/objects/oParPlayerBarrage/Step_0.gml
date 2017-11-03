@@ -13,6 +13,3 @@ if (HP<=0 and !INV) or ALM
    instance_destroy();
 }
 
-
-live_update();
-live_call("step", id);

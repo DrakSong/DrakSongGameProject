@@ -1,8 +1,8 @@
 {
-    "id": "d5f3fba1-1889-431a-8de5-7ca5a85189f6",
+    "id": "696af575-8fe8-4416-9eff-15194179311f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "KeyCheck",
+    "name": "MeunStr",
     "IsCompatibility": false,
     "IsDnD": false
 }

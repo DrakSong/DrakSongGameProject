@@ -1,4 +1,7 @@
-///结算硬质
+
+
+#region 结算硬直
+
 //进入硬直
 if STITime > 0 {
         STI = true;
@@ -65,6 +68,11 @@ if INVTime = 0 and INV = true {
 
 
 
+#endregion
+
+
+#region 修正坐标
+
 /// Entity Step 2.0
 /// EntityStep();
 jumped = false;
@@ -88,29 +96,36 @@ repeat(abs(vx)) {
 
         if (place_meeting(x + sign(vx), y + 2, oParSolid) && !place_meeting(x + sign(vx), y + 1, oParSolid)) y += 1;
 
-        // Push block // //推动石头
-        if (place_meeting(x + sign(vx), y, oPushBlock))and CanPushBlock {
-                // Push slowly
-                vx = clamp(vx, -0.5, 0.5);
-				if !instance_place(x + sign(vx)+16, y, oParEnemy) and !instance_place(x + sign(vx)+16, y, oParPlayer)//加入另一边没有怪物或者玩家 才能推
-                with(instance_place(x + sign(vx), y, oPushBlock)) {
-                        // UP slope
-                        if (place_meeting(x + sign(other.vx), y, oParSolid) && !place_meeting(x + sign(other.vx), y - 1, oParSolid))--y;
-
-                        // DOWN slope
-                        if (!place_meeting(x + sign(other.vx), y, oParSolid) && !place_meeting(x + sign(other.vx), y + 1, oParSolid) && place_meeting(x + sign(other.vx), y + 2, oParSolid))++y;
-
-                        if (!place_meeting(x + sign(other.vx), y, oParSolid)) x += sign(other.vx);
-                        else {
-                                other.h = 0;
-                                break;
-                        }
-						
-                }
-        } // End push block //          
+      
 		
+		#region   // Push block // //推动石头
+		
+		//   if (place_meeting(x + sign(vx), y, oPushBlock))and CanPushBlock {
+        //        // Push slowly
+        //        vx = clamp(vx, -0.5, 0.5);
+		//		if !instance_place(x + sign(vx)+16, y, oParEnemy) and !instance_place(x + sign(vx)+16, y, oParPlayer)//加入另一边没有怪物或者玩家 才能推
+        //        with(instance_place(x + sign(vx), y, oPushBlock)) {
+        //                // UP slope
+        //                if (place_meeting(x + sign(other.vx), y, oParSolid) && !place_meeting(x + sign(other.vx), y - 1, oParSolid))--y;
+
+        //                // DOWN slope
+        //                if (!place_meeting(x + sign(other.vx), y, oParSolid) && !place_meeting(x + sign(other.vx), y + 1, oParSolid) && place_meeting(x + sign(other.vx), y + 2, oParSolid))++y;
+
+        //                if (!place_meeting(x + sign(other.vx), y, oParSolid)) x += sign(other.vx);
+        //                else {
+        //                        other.h = 0;
+        //                        break;
+        //                }
+						
+        //        }
+        //} // End push block //          
+		
+		#endregion
+     
 	
         if (!place_meeting(x + sign(vx), y, oParSolid)) x += sign(vx);
         else vx = 0;
 }
+
+#endregion
 

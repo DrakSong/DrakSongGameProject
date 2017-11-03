@@ -8,8 +8,8 @@ texture_set_interpolation(true)
 
 
 var Select;
-Select[0] = global.MeunSelectMap[?"BGM音量"]+"  "+string(global.BGMvolume)
-Select[1] = global.MeunSelectMap[?"SE音量"]+ "  "+string(global.SEvolume)
+Select[0] = MeunStr("BGM音量")+"  "+string(global.BGMvolume)
+Select[1] = MeunStr("SE音量")+ "  "+string(global.SEvolume)
 
 
 

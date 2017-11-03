@@ -70,6 +70,7 @@ kActionR     = false;
 
 kBlock       = false;
 
+kRoll       = false;
 kRollL       = false;
 kRollR       = false;
 

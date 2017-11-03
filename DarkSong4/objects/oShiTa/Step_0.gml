@@ -13,16 +13,10 @@ y = oTaPuLo.y
 
 #region 按钮控制检测
 if (self.kControl) {
-	self.kLeft = KeyCheck("左","按住")
-	self.kRight = KeyCheck("右","按住")
-	self.kUp = KeyCheck("上","按住")
-	self.kDown =KeyCheck("下","按住")
-	self.kJump = (KeyCheck("跳跃","按下")) and ! (self.attacking);
-	self.kJumpRelease = (KeyCheck("跳跃","松开"));
-	self.kActionP =(KeyCheck("攻击2","按下")) and MP>8
-	self.kActionK =(KeyCheck("攻击2","按住")) and MP >8
-	self.kActionR = (KeyCheck("攻击2","松开")) and MP>8
-	self.kRoll = (KeyCheck("特殊键","按下"));
+	self.kActionP =(KeyCheck("魔法","按下")) and oTaPuLo.MP>8
+	self.kActionK =(KeyCheck("魔法","按住")) and oTaPuLo.MP >8
+	self.kActionR = (KeyCheck("魔法","松开"))// and oTaPuLo.MP>8
+	//self.kRoll = (KeyCheck("翻滚","按下"));
 } else {
 	self.kLeft = 0;
 	self.kRight = 0;
@@ -35,6 +29,9 @@ if (self.kControl) {
 	self.kActionR = 0;
 	self.kRoll = 0;
 };
+
+	self.kRoll = 0;
+	
 #endregion
 #region 攻击发射部分
 

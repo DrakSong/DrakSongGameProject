@@ -5,9 +5,9 @@ texture_set_interpolation(true)
 
 
 var Select;
-Select[0] = global.MeunSelectMap[?"设置"]
-Select[1] = global.MeunSelectMap[?"声音"]
-Select[2] = global.MeunSelectMap[?"键位控制"]
+Select[0] = MeunStr("设置")
+Select[1] = MeunStr("声音")
+
 //Select[3] = "               "+string(chr(global.kJump))+"离开"
 var i;
 
@@ -17,11 +17,11 @@ draw_sprite(sTopandDown,0,0,0)
 draw_sprite(sTopandDown,0,0,720-87)
 
 draw_text(1280/2,32,"-设置-")
-//写返回用的
+//写取消用的
 
 
 
-for (i=0; i<3; i+=1)
+for (i=0; i<2; i+=1)
 {	if (Post==i)
 	draw_set_alpha(0.72)
 	else
